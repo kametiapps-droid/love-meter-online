@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import LoveCalculator from "@/components/LoveCalculator";
 import FloatingHearts from "@/components/FloatingHearts";
 import AboutSection from "@/components/AboutSection";
+import ZodiacCompatibility from "@/components/ZodiacCompatibility";
 import { Heart } from "lucide-react";
 
 const Index = () => {
@@ -47,6 +48,15 @@ const Index = () => {
 
         <AboutSection />
 
+        {/* Ad Space Placeholder - Middle */}
+        <div className="max-w-4xl mx-auto px-4 my-8">
+          <div className="h-24 rounded-xl bg-muted/50 flex items-center justify-center border-2 border-dashed border-border">
+            <span className="text-muted-foreground text-sm">Advertisement Space</span>
+          </div>
+        </div>
+
+        <ZodiacCompatibility />
+
         {/* Ad Space Placeholder - Bottom */}
         <div className="max-w-4xl mx-auto px-4 my-8">
           <div className="h-24 rounded-xl bg-muted/50 flex items-center justify-center border-2 border-dashed border-border">
@@ -73,6 +83,20 @@ const Index = () => {
                 <h3 className="font-semibold text-foreground mb-2">Is the Love Calculator accurate?</h3>
                 <p className="text-muted-foreground text-sm">
                   The love calculator is meant for entertainment purposes only. Real love and relationships are complex and can't be measured by any algorithm. Use it to have fun with friends and loved ones!
+                </p>
+              </div>
+              
+              <div className="card-romantic rounded-xl p-6">
+                <h3 className="font-semibold text-foreground mb-2">How does zodiac compatibility work?</h3>
+                <p className="text-muted-foreground text-sm">
+                  Zodiac compatibility is based on traditional astrology that considers the elements (Fire, Earth, Air, Water) and qualities of each sign. While fun and insightful, remember that real relationships depend on many factors beyond star signs!
+                </p>
+              </div>
+
+              <div className="card-romantic rounded-xl p-6">
+                <h3 className="font-semibold text-foreground mb-2">Which zodiac signs are most compatible?</h3>
+                <p className="text-muted-foreground text-sm">
+                  Generally, signs of the same element pair well: Fire signs (Aries, Leo, Sagittarius), Earth signs (Taurus, Virgo, Capricorn), Air signs (Gemini, Libra, Aquarius), and Water signs (Cancer, Scorpio, Pisces). However, opposite signs often have strong attraction too!
                 </p>
               </div>
               

@@ -21,6 +21,12 @@ const Header = () => {
             Calculate
           </a>
           <a 
+            href="#zodiac" 
+            className="text-muted-foreground hover:text-primary transition-colors font-medium"
+          >
+            Zodiac
+          </a>
+          <a 
             href="#about" 
             className="text-muted-foreground hover:text-primary transition-colors font-medium"
           >
