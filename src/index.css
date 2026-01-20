@@ -36,6 +36,9 @@
     --ring: 350 80% 60%;
 
     --radius: 1rem;
+    
+    /* Gold accent for zodiac */
+    --gold-accent: 45 90% 50%;
 
     /* Custom romantic colors */
     --rose-light: 350 100% 95%;
