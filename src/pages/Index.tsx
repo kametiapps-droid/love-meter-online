@@ -5,6 +5,8 @@ import FloatingHearts from "@/components/FloatingHearts";
 import AboutSection from "@/components/AboutSection";
 import ZodiacCompatibility from "@/components/ZodiacCompatibility";
 import LoveQuiz from "@/components/LoveQuiz";
+import DailyHoroscope from "@/components/DailyHoroscope";
+import LoveFortuneBall from "@/components/LoveFortuneBall";
 import { Heart } from "lucide-react";
 
 const Index = () => {
@@ -74,7 +76,16 @@ const Index = () => {
           </div>
         </div>
 
+        <DailyHoroscope />
 
+        {/* Ad Space Placeholder */}
+        <div className="max-w-4xl mx-auto px-4 my-8">
+          <div className="h-24 rounded-xl bg-muted/50 flex items-center justify-center border-2 border-dashed border-border">
+            <span className="text-muted-foreground text-sm">Advertisement Space</span>
+          </div>
+        </div>
+
+        <LoveFortuneBall />
 
         {/* Ad Space Placeholder - Bottom */}
         <div className="max-w-4xl mx-auto px-4 my-8">
@@ -123,6 +134,20 @@ const Index = () => {
                 <h3 className="font-semibold text-foreground mb-2">What is the Love Style Quiz?</h3>
                 <p className="text-muted-foreground text-sm">
                   Our Love Style Quiz helps you discover your unique approach to love and relationships through fun personality questions. Find out if you're a Hopeless Romantic, Thrill Seeker, Caring Soul, Deep Thinker, or Intense Lover!
+                </p>
+              </div>
+              
+              <div className="card-romantic rounded-xl p-6">
+                <h3 className="font-semibold text-foreground mb-2">What is the Daily Love Horoscope?</h3>
+                <p className="text-muted-foreground text-sm">
+                  Our daily love horoscope provides personalized romantic predictions based on your zodiac sign. Check back each day for new insights about your love life, lucky numbers, and best matches!
+                </p>
+              </div>
+              
+              <div className="card-romantic rounded-xl p-6">
+                <h3 className="font-semibold text-foreground mb-2">How does the Love Fortune Ball work?</h3>
+                <p className="text-muted-foreground text-sm">
+                  The Love Fortune Ball is like a mystical Magic 8 Ball for love! Ask any yes or no question about your love life, and the fortune ball will reveal your destiny with a magical answer.
                 </p>
               </div>
               

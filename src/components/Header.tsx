@@ -13,7 +13,7 @@ const Header = () => {
           </span>
         </a>
         
-        <nav className="flex items-center gap-3 md:gap-4 text-sm">
+        <nav className="flex items-center gap-2 md:gap-3 text-sm">
           <a 
             href="#calculator" 
             className="text-muted-foreground hover:text-primary transition-colors font-medium"
@@ -33,8 +33,20 @@ const Header = () => {
             Quiz
           </a>
           <a 
-            href="#about" 
+            href="#horoscope" 
             className="text-muted-foreground hover:text-primary transition-colors font-medium hidden sm:block"
+          >
+            Horoscope
+          </a>
+          <a 
+            href="#fortune" 
+            className="text-muted-foreground hover:text-primary transition-colors font-medium hidden md:block"
+          >
+            Fortune
+          </a>
+          <a 
+            href="#about" 
+            className="text-muted-foreground hover:text-primary transition-colors font-medium hidden lg:block"
           >
             About
           </a>
