@@ -4,7 +4,6 @@ import LoveCalculator from "@/components/LoveCalculator";
 import FloatingHearts from "@/components/FloatingHearts";
 import AboutSection from "@/components/AboutSection";
 import ZodiacCompatibility from "@/components/ZodiacCompatibility";
-import CelebrityLoveCalculator from "@/components/CelebrityLoveCalculator";
 import { Heart } from "lucide-react";
 
 const Index = () => {
@@ -65,7 +64,7 @@ const Index = () => {
           </div>
         </div>
 
-        <CelebrityLoveCalculator />
+        
 
         {/* Ad Space Placeholder - Bottom */}
         <div className="max-w-4xl mx-auto px-4 my-8">
@@ -107,13 +106,6 @@ const Index = () => {
                 <h3 className="font-semibold text-foreground mb-2">Which zodiac signs are most compatible?</h3>
                 <p className="text-muted-foreground text-sm">
                   Generally, signs of the same element pair well: Fire signs (Aries, Leo, Sagittarius), Earth signs (Taurus, Virgo, Capricorn), Air signs (Gemini, Libra, Aquarius), and Water signs (Cancer, Scorpio, Pisces). However, opposite signs often have strong attraction too!
-                </p>
-              </div>
-              
-              <div className="card-romantic rounded-xl p-6">
-                <h3 className="font-semibold text-foreground mb-2">How does the Celebrity Love Calculator work?</h3>
-                <p className="text-muted-foreground text-sm">
-                  Our celebrity love calculator lets you check your compatibility with your favorite stars! Enter your name, select a celebrity, and discover your love percentage. It's a fun way to see if you're meant for the red carpet!
                 </p>
               </div>
               

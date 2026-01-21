@@ -27,12 +27,6 @@ const Header = () => {
             Zodiac
           </a>
           <a 
-            href="#celebrity" 
-            className="text-muted-foreground hover:text-primary transition-colors font-medium"
-          >
-            Celebrity
-          </a>
-          <a 
             href="#about" 
             className="text-muted-foreground hover:text-primary transition-colors font-medium hidden sm:block"
           >
