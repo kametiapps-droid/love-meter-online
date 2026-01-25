@@ -7,6 +7,9 @@ import ZodiacCompatibility from "@/components/ZodiacCompatibility";
 import LoveQuiz from "@/components/LoveQuiz";
 import DailyHoroscope from "@/components/DailyHoroscope";
 import LoveFortuneBall from "@/components/LoveFortuneBall";
+import CoupleNameGenerator from "@/components/CoupleNameGenerator";
+import KidsNameGenerator from "@/components/KidsNameGenerator";
+import LoveAdjectiveGame from "@/components/LoveAdjectiveGame";
 import { Heart } from "lucide-react";
 
 const Index = () => {
@@ -86,6 +89,33 @@ const Index = () => {
         </div>
 
         <LoveFortuneBall />
+
+        {/* Ad Space Placeholder */}
+        <div className="max-w-4xl mx-auto px-4 my-8">
+          <div className="h-24 rounded-xl bg-muted/50 flex items-center justify-center border-2 border-dashed border-border">
+            <span className="text-muted-foreground text-sm">Advertisement Space</span>
+          </div>
+        </div>
+
+        <CoupleNameGenerator />
+
+        {/* Ad Space Placeholder */}
+        <div className="max-w-4xl mx-auto px-4 my-8">
+          <div className="h-24 rounded-xl bg-muted/50 flex items-center justify-center border-2 border-dashed border-border">
+            <span className="text-muted-foreground text-sm">Advertisement Space</span>
+          </div>
+        </div>
+
+        <KidsNameGenerator />
+
+        {/* Ad Space Placeholder */}
+        <div className="max-w-4xl mx-auto px-4 my-8">
+          <div className="h-24 rounded-xl bg-muted/50 flex items-center justify-center border-2 border-dashed border-border">
+            <span className="text-muted-foreground text-sm">Advertisement Space</span>
+          </div>
+        </div>
+
+        <LoveAdjectiveGame />
 
         {/* Ad Space Placeholder - Bottom */}
         <div className="max-w-4xl mx-auto px-4 my-8">
