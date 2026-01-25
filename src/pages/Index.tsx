@@ -9,7 +9,7 @@ import DailyHoroscope from "@/components/DailyHoroscope";
 import LoveFortuneBall from "@/components/LoveFortuneBall";
 import CoupleNameGenerator from "@/components/CoupleNameGenerator";
 import KidsNameGenerator from "@/components/KidsNameGenerator";
-import LoveAdjectiveGame from "@/components/LoveAdjectiveGame";
+import LoveHeartsCatchGame from "@/components/LoveHeartsCatchGame";
 import { Heart } from "lucide-react";
 
 const Index = () => {
@@ -115,7 +115,7 @@ const Index = () => {
           </div>
         </div>
 
-        <LoveAdjectiveGame />
+        <LoveHeartsCatchGame />
 
         {/* Ad Space Placeholder - Bottom */}
         <div className="max-w-4xl mx-auto px-4 my-8">
