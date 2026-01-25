@@ -45,10 +45,16 @@ const Header = () => {
             Fortune
           </a>
           <a 
-            href="#about" 
+            href="#couple-names" 
             className="text-muted-foreground hover:text-primary transition-colors font-medium hidden lg:block"
           >
-            About
+            Names
+          </a>
+          <a 
+            href="#love-game" 
+            className="text-muted-foreground hover:text-primary transition-colors font-medium hidden xl:block"
+          >
+            Game
           </a>
         </nav>
       </div>
