@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import logo from "@/assets/logo.png";
 
 const Footer = () => {
@@ -18,15 +19,18 @@ const Footer = () => {
             </div>
             
             <div className="flex items-center gap-6 text-sm text-muted-foreground">
-              <a href="#privacy" className="hover:text-primary transition-colors">
+              <Link to="/privacy-policy" className="hover:text-primary transition-colors">
                 Privacy Policy
-              </a>
-              <a href="#terms" className="hover:text-primary transition-colors">
-                Terms of Use
-              </a>
-              <a href="#contact" className="hover:text-primary transition-colors">
+              </Link>
+              <Link to="/terms-of-service" className="hover:text-primary transition-colors">
+                Terms of Service
+              </Link>
+              <Link to="/disclaimer" className="hover:text-primary transition-colors">
+                Disclaimer
+              </Link>
+              <Link to="/contact" className="hover:text-primary transition-colors">
                 Contact
-              </a>
+              </Link>
             </div>
           </div>
           
