@@ -1,0 +1,26 @@
+{
+  "name": "Love Calculator",
+  "short_name": "Love Calc",
+  "description": "Calculate your love compatibility with our free online Love Calculator. Enter two names and discover your love percentage instantly!",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FFF5F8",
+  "theme_color": "#E91E63",
+  "icons": [
+    {
+      "src": "/favicon.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/logo.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
