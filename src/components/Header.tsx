@@ -1,10 +1,11 @@
 import logo from "@/assets/logo.png";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
     <header className="w-full py-4 px-4 md:px-6">
       <div className="max-w-6xl mx-auto flex items-center justify-between">
-        <a href="/" className="flex items-center gap-2 group">
+        <Link to="/" className="flex items-center gap-2 group">
           <img 
             src={logo} 
             alt="Love Calculator Logo" 
@@ -13,51 +14,51 @@ const Header = () => {
           <span className="font-display text-xl font-bold text-foreground hidden sm:block">
             Love Calculator
           </span>
-        </a>
+        </Link>
         
         <nav className="flex items-center gap-2 md:gap-3 text-sm">
-          <a 
-            href="#calculator" 
+          <Link 
+            to="/love-calculator" 
             className="text-muted-foreground hover:text-primary transition-colors font-medium"
           >
             Calculate
-          </a>
-          <a 
-            href="#zodiac" 
+          </Link>
+          <Link 
+            to="/zodiac-compatibility" 
             className="text-muted-foreground hover:text-primary transition-colors font-medium"
           >
             Zodiac
-          </a>
-          <a 
-            href="#quiz" 
+          </Link>
+          <Link 
+            to="/love-quiz" 
             className="text-muted-foreground hover:text-primary transition-colors font-medium"
           >
             Quiz
-          </a>
-          <a 
-            href="#horoscope" 
+          </Link>
+          <Link 
+            to="/daily-horoscope" 
             className="text-muted-foreground hover:text-primary transition-colors font-medium hidden sm:block"
           >
             Horoscope
-          </a>
-          <a 
-            href="#fortune" 
+          </Link>
+          <Link 
+            to="/love-fortune-ball" 
             className="text-muted-foreground hover:text-primary transition-colors font-medium hidden md:block"
           >
             Fortune
-          </a>
-          <a 
-            href="#couple-names" 
+          </Link>
+          <Link 
+            to="/couple-name-generator" 
             className="text-muted-foreground hover:text-primary transition-colors font-medium hidden lg:block"
           >
             Names
-          </a>
-          <a 
-            href="#love-game" 
+          </Link>
+          <Link 
+            to="/love-game" 
             className="text-muted-foreground hover:text-primary transition-colors font-medium hidden xl:block"
           >
             Game
-          </a>
+          </Link>
         </nav>
       </div>
     </header>
