@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingHearts from "@/components/FloatingHearts";
@@ -244,10 +245,34 @@ const Contact = () => {
                     Spread the Love!
                   </h3>
                 </div>
-                <p className="text-sm text-muted-foreground">
+                <p className="text-sm text-muted-foreground mb-4">
                   Enjoying Love Calculator? Share it with your friends and help spread the love! 💕
                 </p>
+                <Link to="/">
+                  <Button className="btn-romantic w-full">
+                    <Heart className="w-4 h-4 mr-2 fill-current" />
+                    Try Love Calculator
+                  </Button>
+                </Link>
               </div>
+            </div>
+          </div>
+
+          {/* Bottom CTA */}
+          <div className="mt-8 text-center">
+            <p className="text-muted-foreground mb-4">While you wait for our response, try our fun tools!</p>
+            <div className="flex flex-wrap justify-center gap-4">
+              <Link to="/#calculator">
+                <Button className="btn-romantic" size="lg">
+                  <Heart className="w-5 h-5 mr-2 fill-current" />
+                  Love Calculator
+                </Button>
+              </Link>
+              <Link to="/#zodiac">
+                <Button variant="outline" size="lg" className="border-primary/30 hover:bg-primary/10">
+                  Zodiac Compatibility
+                </Button>
+              </Link>
             </div>
           </div>
         </div>

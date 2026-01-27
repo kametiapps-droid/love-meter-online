@@ -1,6 +1,9 @@
+import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingHearts from "@/components/FloatingHearts";
+import { Button } from "@/components/ui/button";
+import { Heart, FileText, ArrowRight } from "lucide-react";
 
 const TermsOfService = () => {
   return (
@@ -10,14 +13,31 @@ const TermsOfService = () => {
       
       <main className="flex-1 relative z-10 py-12 px-4">
         <div className="max-w-4xl mx-auto">
-          <div className="card-romantic rounded-2xl p-8 md:p-12">
-            <h1 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-8">
+          {/* Hero CTA Section */}
+          <div className="card-romantic rounded-2xl p-6 md:p-8 mb-8 text-center bg-gradient-to-br from-primary/10 to-secondary/20">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary/80 backdrop-blur-sm mb-4">
+              <FileText className="w-4 h-4 text-primary" />
+              <span className="text-sm font-medium text-foreground">Our Terms</span>
+            </div>
+            <h1 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
               Terms of Service
             </h1>
-            
+            <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
+              Please read these terms carefully before using our love calculator and entertainment tools.
+            </p>
+            <Link to="/#calculator">
+              <Button className="btn-romantic">
+                <Heart className="w-4 h-4 mr-2 fill-current" />
+                Try Love Calculator
+                <ArrowRight className="w-4 h-4 ml-2" />
+              </Button>
+            </Link>
+          </div>
+
+          <div className="card-romantic rounded-2xl p-8 md:p-12">
             <div className="prose prose-pink max-w-none text-muted-foreground space-y-6">
               <p className="text-sm text-muted-foreground">
-                Last updated: January 26, 2026
+                Last updated: January 27, 2026
               </p>
 
               <section>
@@ -141,6 +161,17 @@ const TermsOfService = () => {
                 </p>
               </section>
             </div>
+          </div>
+
+          {/* Bottom CTA */}
+          <div className="mt-8 text-center">
+            <p className="text-muted-foreground mb-4">Ready to discover your love compatibility?</p>
+            <Link to="/">
+              <Button className="btn-romantic" size="lg">
+                <Heart className="w-5 h-5 mr-2 fill-current" />
+                Start Your Love Journey
+              </Button>
+            </Link>
           </div>
         </div>
       </main>
