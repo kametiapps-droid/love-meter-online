@@ -11,7 +11,6 @@ Allow: /
 # Google Search Crawler
 User-agent: Googlebot
 Allow: /
-Crawl-delay: 1
 
 User-agent: Googlebot-Image
 Allow: /
@@ -22,7 +21,6 @@ Allow: /
 # Bing Crawler
 User-agent: Bingbot
 Allow: /
-Crawl-delay: 1
 
 # Social Media Crawlers
 User-agent: Twitterbot
@@ -90,10 +88,9 @@ Disallow: /
 User-agent: YandexBot
 Disallow: /
 
-# Default Rule - Allow all others with delay
+# Default Rule - Allow all others
 User-agent: *
 Allow: /
-Crawl-delay: 2
 
 # Sitemap Location
-Sitemap: https://lovecalculator.space/sitemap.xml
+Sitemap: https://www.lovecalculator.space/sitemap.xml
