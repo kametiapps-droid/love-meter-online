@@ -45,84 +45,21 @@ const Index = () => {
           <LoveCalculator />
         </section>
 
-        {/* Ad Space Placeholder - Top */}
-        <div className="max-w-4xl mx-auto px-4 my-8">
-          <div className="h-24 rounded-xl bg-muted/50 flex items-center justify-center border-2 border-dashed border-border">
-            <span className="text-muted-foreground text-sm">Advertisement Space</span>
-          </div>
-        </div>
-
         <AboutSection />
-
-        {/* Ad Space Placeholder - Middle */}
-        <div className="max-w-4xl mx-auto px-4 my-8">
-          <div className="h-24 rounded-xl bg-muted/50 flex items-center justify-center border-2 border-dashed border-border">
-            <span className="text-muted-foreground text-sm">Advertisement Space</span>
-          </div>
-        </div>
 
         <ZodiacCompatibility />
 
-        {/* Ad Space Placeholder */}
-        <div className="max-w-4xl mx-auto px-4 my-8">
-          <div className="h-24 rounded-xl bg-muted/50 flex items-center justify-center border-2 border-dashed border-border">
-            <span className="text-muted-foreground text-sm">Advertisement Space</span>
-          </div>
-        </div>
-
         <LoveQuiz />
-
-        {/* Ad Space Placeholder */}
-        <div className="max-w-4xl mx-auto px-4 my-8">
-          <div className="h-24 rounded-xl bg-muted/50 flex items-center justify-center border-2 border-dashed border-border">
-            <span className="text-muted-foreground text-sm">Advertisement Space</span>
-          </div>
-        </div>
 
         <DailyHoroscope />
 
-        {/* Ad Space Placeholder */}
-        <div className="max-w-4xl mx-auto px-4 my-8">
-          <div className="h-24 rounded-xl bg-muted/50 flex items-center justify-center border-2 border-dashed border-border">
-            <span className="text-muted-foreground text-sm">Advertisement Space</span>
-          </div>
-        </div>
-
         <LoveFortuneBall />
-
-        {/* Ad Space Placeholder */}
-        <div className="max-w-4xl mx-auto px-4 my-8">
-          <div className="h-24 rounded-xl bg-muted/50 flex items-center justify-center border-2 border-dashed border-border">
-            <span className="text-muted-foreground text-sm">Advertisement Space</span>
-          </div>
-        </div>
 
         <CoupleNameGenerator />
 
-        {/* Ad Space Placeholder */}
-        <div className="max-w-4xl mx-auto px-4 my-8">
-          <div className="h-24 rounded-xl bg-muted/50 flex items-center justify-center border-2 border-dashed border-border">
-            <span className="text-muted-foreground text-sm">Advertisement Space</span>
-          </div>
-        </div>
-
         <KidsNameGenerator />
 
-        {/* Ad Space Placeholder */}
-        <div className="max-w-4xl mx-auto px-4 my-8">
-          <div className="h-24 rounded-xl bg-muted/50 flex items-center justify-center border-2 border-dashed border-border">
-            <span className="text-muted-foreground text-sm">Advertisement Space</span>
-          </div>
-        </div>
-
         <LoveHeartsCatchGame />
-
-        {/* Ad Space Placeholder - Bottom */}
-        <div className="max-w-4xl mx-auto px-4 my-8">
-          <div className="h-24 rounded-xl bg-muted/50 flex items-center justify-center border-2 border-dashed border-border">
-            <span className="text-muted-foreground text-sm">Advertisement Space</span>
-          </div>
-        </div>
 
         {/* FAQ Section for SEO */}
         <section className="py-12 px-4">
