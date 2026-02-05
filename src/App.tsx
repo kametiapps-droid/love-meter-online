@@ -17,6 +17,9 @@ import LoveFortuneBallPage from "./pages/LoveFortuneBallPage";
 import CoupleNameGeneratorPage from "./pages/CoupleNameGeneratorPage";
 import KidsNameGeneratorPage from "./pages/KidsNameGeneratorPage";
 import LoveGamePage from "./pages/LoveGamePage";
+ import Blog from "./pages/Blog";
+ import BlogPost1 from "./pages/BlogPost1";
+ import BlogPost2 from "./pages/BlogPost2";
 
 const queryClient = new QueryClient();
 
@@ -36,6 +39,9 @@ const App = () => (
           <Route path="/couple-name-generator" element={<CoupleNameGeneratorPage />} />
           <Route path="/kids-name-generator" element={<KidsNameGeneratorPage />} />
           <Route path="/love-game" element={<LoveGamePage />} />
+           <Route path="/blog" element={<Blog />} />
+           <Route path="/blog/love-relationships-guide" element={<BlogPost1 />} />
+           <Route path="/blog/zodiac-compatibility-guide" element={<BlogPost2 />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/terms-of-service" element={<TermsOfService />} />
           <Route path="/disclaimer" element={<Disclaimer />} />

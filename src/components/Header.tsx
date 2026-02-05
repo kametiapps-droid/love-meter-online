@@ -59,6 +59,12 @@ const Header = () => {
           >
             Game
           </Link>
+           <Link 
+             to="/blog" 
+             className="text-muted-foreground hover:text-primary transition-colors font-medium hidden xl:block"
+           >
+             Blog
+           </Link>
         </nav>
       </div>
     </header>
