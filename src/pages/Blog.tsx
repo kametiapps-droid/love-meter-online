@@ -1,6 +1,7 @@
  import Header from "@/components/Header";
  import Footer from "@/components/Footer";
  import FloatingHearts from "@/components/FloatingHearts";
+ import InternalLinks from "@/components/InternalLinks";
  import { Link } from "react-router-dom";
  import { BookOpen, Calendar, Clock, ArrowRight } from "lucide-react";
  import blogLoveImage from "@/assets/blog-love-relationships.jpg";
@@ -94,9 +95,10 @@
              ))}
            </div>
          </section>
-       </main>
-       
-       <Footer />
+          <InternalLinks currentPage="/blog" />
+        </main>
+        
+        <Footer />
      </div>
    );
  };

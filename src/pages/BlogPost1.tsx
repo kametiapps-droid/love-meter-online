@@ -1,6 +1,7 @@
  import Header from "@/components/Header";
  import Footer from "@/components/Footer";
  import FloatingHearts from "@/components/FloatingHearts";
+ import InternalLinks from "@/components/InternalLinks";
  import { Link } from "react-router-dom";
  import { Calendar, Clock, ArrowLeft, Heart, MessageCircle, Users, Sparkles } from "lucide-react";
  import blogImage from "@/assets/blog-love-relationships.jpg";
@@ -193,6 +194,8 @@
              </div>
            </div>
          </article>
+
+         <InternalLinks currentPage="/blog" />
        </main>
        
        <Footer />
