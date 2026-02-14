@@ -2,57 +2,105 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://lovecalculator.space/</loc>
-    <lastmod>2026-01-29</lastmod>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://lovecalculator.space/love-calculator</loc>
-    <lastmod>2026-01-29</lastmod>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://lovecalculator.space/zodiac-compatibility</loc>
-    <lastmod>2026-01-29</lastmod>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://lovecalculator.space/love-quiz</loc>
-    <lastmod>2026-01-29</lastmod>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://lovecalculator.space/daily-horoscope</loc>
-    <lastmod>2026-01-29</lastmod>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://lovecalculator.space/love-fortune-ball</loc>
-    <lastmod>2026-01-29</lastmod>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://lovecalculator.space/couple-name-generator</loc>
-    <lastmod>2026-01-29</lastmod>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://lovecalculator.space/kids-name-generator</loc>
-    <lastmod>2026-01-29</lastmod>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://lovecalculator.space/love-game</loc>
-    <lastmod>2026-01-29</lastmod>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lovecalculator.space/blog</loc>
+    <lastmod>2026-02-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lovecalculator.space/blog/love-relationships-guide</loc>
+    <lastmod>2026-02-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lovecalculator.space/blog/zodiac-compatibility-guide</loc>
+    <lastmod>2026-02-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lovecalculator.space/blog/name-meanings-origins</loc>
+    <lastmod>2026-02-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lovecalculator.space/blog/love-facts-trivia</loc>
+    <lastmod>2026-02-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lovecalculator.space/blog/five-love-languages</loc>
+    <lastmod>2026-02-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lovecalculator.space/blog/long-distance-relationships</loc>
+    <lastmod>2026-02-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lovecalculator.space/blog/romantic-date-ideas</loc>
+    <lastmod>2026-02-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://lovecalculator.space/privacy-policy</loc>
@@ -78,22 +126,4 @@
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-   <url>
-     <loc>https://lovecalculator.space/blog</loc>
-     <lastmod>2026-02-05</lastmod>
-     <changefreq>weekly</changefreq>
-     <priority>0.8</priority>
-   </url>
-   <url>
-     <loc>https://lovecalculator.space/blog/love-relationships-guide</loc>
-     <lastmod>2026-02-05</lastmod>
-     <changefreq>monthly</changefreq>
-     <priority>0.7</priority>
-   </url>
-   <url>
-     <loc>https://lovecalculator.space/blog/zodiac-compatibility-guide</loc>
-     <lastmod>2026-02-05</lastmod>
-     <changefreq>monthly</changefreq>
-     <priority>0.7</priority>
-   </url>
 </urlset>
