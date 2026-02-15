@@ -14,6 +14,7 @@ const allTools = [
   { path: "/couple-name-generator", label: "Couple Name Generator", icon: Heart, description: "Create your couple name" },
   { path: "/kids-name-generator", label: "Kids Name Generator", icon: Baby, description: "Find perfect baby names" },
   { path: "/love-game", label: "Love Hearts Game", icon: Gamepad2, description: "Play the hearts catch game" },
+  { path: "/love-poetry", label: "Love Poetry", icon: BookOpen, description: "Beautiful romantic love poems" },
   { path: "/blog", label: "Love Blog", icon: BookOpen, description: "Read love & relationship articles" },
 ];
 

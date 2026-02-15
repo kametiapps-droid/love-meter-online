@@ -25,6 +25,7 @@ import BlogPost4 from "./pages/BlogPost4";
 import BlogPost5 from "./pages/BlogPost5";
 import BlogPost6 from "./pages/BlogPost6";
 import BlogPost7 from "./pages/BlogPost7";
+import LovePoetryPage from "./pages/LovePoetryPage";
 
 const queryClient = new QueryClient();
 
@@ -37,6 +38,7 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/love-calculator" element={<LoveCalculatorPage />} />
+          <Route path="/love-poetry" element={<LovePoetryPage />} />
           <Route path="/zodiac-compatibility" element={<ZodiacCompatibilityPage />} />
           <Route path="/love-quiz" element={<LoveQuizPage />} />
           <Route path="/daily-horoscope" element={<DailyHoroscopePage />} />
