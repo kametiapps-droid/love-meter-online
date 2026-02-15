@@ -44,6 +44,10 @@ const Footer = () => {
                 Love Game
               </Link>
               <span className="text-border">•</span>
+              <Link to="/love-poetry" className="text-muted-foreground hover:text-primary transition-colors">
+                Poetry
+              </Link>
+              <span className="text-border">•</span>
               <Link to="/blog" className="text-muted-foreground hover:text-primary transition-colors">
                 Blog
               </Link>

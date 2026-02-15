@@ -55,6 +55,12 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://lovecalculator.space/love-poetry</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://lovecalculator.space/blog</loc>
     <lastmod>2026-02-14</lastmod>
     <changefreq>weekly</changefreq>
