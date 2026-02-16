@@ -10,6 +10,8 @@ import LoveFortuneBall from "@/components/LoveFortuneBall";
 import CoupleNameGenerator from "@/components/CoupleNameGenerator";
 import KidsNameGenerator from "@/components/KidsNameGenerator";
 import LoveHeartsCatchGame from "@/components/LoveHeartsCatchGame";
+import LoveLetterGenerator from "@/components/LoveLetterGenerator";
+import RelationshipTimeline from "@/components/RelationshipTimeline";
 import BlogPreview from "@/components/BlogPreview";
 import { Heart } from "lucide-react";
 
@@ -61,6 +63,10 @@ const Index = () => {
         <KidsNameGenerator />
 
         <LoveHeartsCatchGame />
+
+        <LoveLetterGenerator />
+
+        <RelationshipTimeline />
 
         {/* Blog Preview Section */}
         <BlogPreview />
