@@ -26,6 +26,8 @@ import BlogPost5 from "./pages/BlogPost5";
 import BlogPost6 from "./pages/BlogPost6";
 import BlogPost7 from "./pages/BlogPost7";
 import LovePoetryPage from "./pages/LovePoetryPage";
+import LoveLetterPage from "./pages/LoveLetterPage";
+import RelationshipTimelinePage from "./pages/RelationshipTimelinePage";
 
 const queryClient = new QueryClient();
 
@@ -46,6 +48,8 @@ const App = () => (
           <Route path="/couple-name-generator" element={<CoupleNameGeneratorPage />} />
           <Route path="/kids-name-generator" element={<KidsNameGeneratorPage />} />
           <Route path="/love-game" element={<LoveGamePage />} />
+          <Route path="/love-letter-generator" element={<LoveLetterPage />} />
+          <Route path="/relationship-timeline" element={<RelationshipTimelinePage />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/love-relationships-guide" element={<BlogPost1 />} />
           <Route path="/blog/zodiac-compatibility-guide" element={<BlogPost2 />} />
