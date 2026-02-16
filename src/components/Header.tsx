@@ -12,6 +12,8 @@ const navLinks = [
   { to: "/couple-name-generator", label: "Names" },
   { to: "/kids-name-generator", label: "Kids Names" },
   { to: "/love-game", label: "Game" },
+  { to: "/love-letter-generator", label: "Letters" },
+  { to: "/relationship-timeline", label: "Timeline" },
   { to: "/love-poetry", label: "Poetry" },
   { to: "/blog", label: "Blog" },
 ];
