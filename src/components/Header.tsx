@@ -16,6 +16,7 @@ const navLinks = [
   { to: "/relationship-timeline", label: "Timeline" },
   { to: "/love-poetry", label: "Poetry" },
   { to: "/blog", label: "Blog" },
+  { to: "/about", label: "About" },
 ];
 
 const Header = () => {

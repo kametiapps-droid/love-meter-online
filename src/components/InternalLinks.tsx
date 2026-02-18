@@ -18,6 +18,7 @@ const allTools = [
   { path: "/relationship-timeline", label: "Relationship Timeline", icon: Calendar, description: "Create your love story timeline" },
   { path: "/love-poetry", label: "Love Poetry", icon: BookOpen, description: "Beautiful romantic love poems" },
   { path: "/blog", label: "Love Blog", icon: BookOpen, description: "Read love & relationship articles" },
+  { path: "/about", label: "About Us", icon: Heart, description: "Learn more about Love Calculator" },
 ];
 
 const InternalLinks = ({ currentPage }: InternalLinksProps) => {

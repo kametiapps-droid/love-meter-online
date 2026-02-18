@@ -28,6 +28,8 @@ import BlogPost7 from "./pages/BlogPost7";
 import LovePoetryPage from "./pages/LovePoetryPage";
 import LoveLetterPage from "./pages/LoveLetterPage";
 import RelationshipTimelinePage from "./pages/RelationshipTimelinePage";
+import AboutUs from "./pages/AboutUs";
+import CookieConsent from "./components/CookieConsent";
 
 const queryClient = new QueryClient();
 
@@ -62,9 +64,11 @@ const App = () => (
           <Route path="/terms-of-service" element={<TermsOfService />} />
           <Route path="/disclaimer" element={<Disclaimer />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/about" element={<AboutUs />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
+        <CookieConsent />
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
