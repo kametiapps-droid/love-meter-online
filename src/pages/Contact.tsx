@@ -10,6 +10,7 @@ import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
 import { Mail, MessageSquare, User, Send, Heart } from "lucide-react";
 import { z } from "zod";
+import emailjs from "@emailjs/browser";
 
 const contactSchema = z.object({
   name: z.string().trim().min(1, "Name is required").max(100, "Name must be less than 100 characters"),
@@ -47,14 +48,23 @@ const Contact = () => {
     try {
       const validatedData = contactSchema.parse(formData);
       
-      // Create mailto link with form data
-      const mailtoLink = `mailto:contact@lovecalculator.space?subject=${encodeURIComponent(validatedData.subject)}&body=${encodeURIComponent(`Name: ${validatedData.name}\nEmail: ${validatedData.email}\n\nMessage:\n${validatedData.message}`)}`;
-      
-      window.location.href = mailtoLink;
+      const templateParams = {
+        from_name: validatedData.name,
+        from_email: validatedData.email,
+        subject: validatedData.subject,
+        message: validatedData.message,
+      };
+
+      await emailjs.send(
+        "service_g8fbeje",
+        "template_5uca9dh",
+        templateParams,
+        "gmq5lCwIfK_nLsvnw"
+      );
       
       toast({
-        title: "Opening Email Client 💕",
-        description: "Your default email client should open with your message.",
+        title: "Message Sent Successfully! 💕",
+        description: "We'll get back to you within 24-48 hours.",
       });
       
       // Reset form
