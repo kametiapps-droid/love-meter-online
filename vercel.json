@@ -1,5 +1,18 @@
 {
   "rewrites": [
+
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "header",
+          "key": "user-agent",
+          "value": "(?i)(googlebot|bingbot|adsbot)"
+        }
+      ],
+      "destination": "https://service.prerender.io/https://lovecalculator.space/$1"
+    },
+
     {
       "source": "/sitemap.xml",
       "destination": "/sitemap.xml"
@@ -21,7 +34,18 @@
       "destination": "/index.html"
     }
   ],
+
   "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Prerender-Token",
+          "value": "xj9vSIiKlMS1iwqQF6NX"
+        }
+      ]
+    },
+
     {
       "source": "/sitemap.xml",
       "headers": [
