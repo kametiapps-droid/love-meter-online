@@ -1,47 +1,30 @@
 {
   "routes": [
-
-    {
-      "src": "/sitemap.xml",
-      "dest": "/sitemap.xml",
-      "headers": {
-        "Content-Type": "application/xml",
-        "Cache-Control": "public,max-age=86400"
-      }
-    },
-
-    {
-      "src": "/robots.txt",
-      "dest": "/robots.txt",
-      "headers": {
-        "Content-Type": "text/plain"
-      }
-    },
-
-    {
-      "src": "/ads.txt",
-      "dest": "/ads.txt"
-    },
-
     {
       "src": "/(.*)",
       "has": [
         {
           "type": "header",
           "key": "user-agent",
-          "value": "(?i)(googlebot|bingbot|adsbot|twitterbot|facebookexternalhit|linkedinbot|slackbot)"
+          "value": "(?i)(googlebot|bingbot|yahoo|baiduspider|twitterbot|facebookexternalhit|linkedinbot|slackbot)"
         }
       ],
-      "dest": "https://service.prerender.io/https://www.lovecalculator.space/$1",
-      "headers": {
-        "X-Prerender-Token": "xj9vSIiKlMS1iwqQF6NX"
-      }
+      "dest": "https://service.prerender.io/https://www.lovecalculator.space/$1"
     },
-
     {
       "src": "/(.*)",
       "dest": "/index.html"
     }
-
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Prerender-Token",
+          "value": "xj9vSIiKlMS1iwqQF6NX"
+        }
+      ]
+    }
   ]
 }
