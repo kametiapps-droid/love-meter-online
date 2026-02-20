@@ -7,10 +7,10 @@
         {
           "type": "header",
           "key": "user-agent",
-          "value": "(?i)(googlebot|bingbot|adsbot|twitterbot|facebookexternalhit)"
+          "value": "(?i)(googlebot|bingbot|adsbot|twitterbot|facebookexternalhit|linkedinbot|slackbot)"
         }
       ],
-      "destination": "https://service.prerender.io/https://lovecalculator.space/$1"
+      "destination": "https://service.prerender.io/https://lovecalculator.space/$1?prerenderToken=xj9vSIiKlMS1iwqQF6NX"
     },
 
     {
@@ -29,22 +29,15 @@
       "source": "/ads.txt",
       "destination": "/ads.txt"
     },
+
     {
       "source": "/((?!assets|favicon|logo|manifest|og-image|placeholder|sitemap|robots|ads).*)",
       "destination": "/index.html"
     }
+
   ],
 
   "headers": [
-    {
-      "source": "/(.*)",
-      "headers": [
-        {
-          "key": "X-Prerender-Token",
-          "value": "xj9vSIiKlMS1iwqQF6NX"
-        }
-      ]
-    },
 
     {
       "source": "/sitemap.xml",
@@ -59,6 +52,7 @@
         }
       ]
     },
+
     {
       "source": "/robots.txt",
       "headers": [
@@ -68,5 +62,6 @@
         }
       ]
     }
+
   ]
 }
