@@ -1,8 +1,8 @@
 {
-  "rewrites": [
+  "routes": [
 
     {
-      "source": "/(.*)",
+      "src": "/(.*)",
       "has": [
         {
           "type": "header",
@@ -10,57 +10,32 @@
           "value": "(?i)(googlebot|bingbot|adsbot|twitterbot|facebookexternalhit|linkedinbot|slackbot)"
         }
       ],
-      "destination": "https://service.prerender.io/https://lovecalculator.space/$1?prerenderToken=xj9vSIiKlMS1iwqQF6NX"
+      "dest": "https://service.prerender.io/https://www.lovecalculator.space/$1",
+      "headers": {
+        "X-Prerender-Token": "xj9vSIiKlMS1iwqQF6NX"
+      }
     },
 
     {
-      "source": "/sitemap.xml",
-      "destination": "/sitemap.xml"
+      "src": "/sitemap.xml",
+      "dest": "/sitemap.xml"
     },
     {
-      "source": "/Sitemap.xml",
-      "destination": "/sitemap.xml"
+      "src": "/Sitemap.xml",
+      "dest": "/sitemap.xml"
     },
     {
-      "source": "/robots.txt",
-      "destination": "/robots.txt"
+      "src": "/robots.txt",
+      "dest": "/robots.txt"
     },
     {
-      "source": "/ads.txt",
-      "destination": "/ads.txt"
-    },
-
-    {
-      "source": "/((?!assets|favicon|logo|manifest|og-image|placeholder|sitemap|robots|ads).*)",
-      "destination": "/index.html"
-    }
-
-  ],
-
-  "headers": [
-
-    {
-      "source": "/sitemap.xml",
-      "headers": [
-        {
-          "key": "Content-Type",
-          "value": "application/xml"
-        },
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=86400"
-        }
-      ]
+      "src": "/ads.txt",
+      "dest": "/ads.txt"
     },
 
     {
-      "source": "/robots.txt",
-      "headers": [
-        {
-          "key": "Content-Type",
-          "value": "text/plain"
-        }
-      ]
+      "src": "/((?!assets|favicon|logo|manifest|og-image|placeholder|sitemap|robots|ads).*)",
+      "dest": "/index.html"
     }
 
   ]
