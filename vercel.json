@@ -7,7 +7,7 @@
         {
           "type": "header",
           "key": "user-agent",
-          "value": "(?i)(googlebot|bingbot|adsbot)"
+          "value": "(?i)(googlebot|bingbot|adsbot|twitterbot|facebookexternalhit)"
         }
       ],
       "destination": "https://service.prerender.io/https://lovecalculator.space/$1"
