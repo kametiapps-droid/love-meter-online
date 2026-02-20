@@ -2,6 +2,28 @@
   "routes": [
 
     {
+      "src": "/sitemap.xml",
+      "dest": "/sitemap.xml",
+      "headers": {
+        "Content-Type": "application/xml",
+        "Cache-Control": "public,max-age=86400"
+      }
+    },
+
+    {
+      "src": "/robots.txt",
+      "dest": "/robots.txt",
+      "headers": {
+        "Content-Type": "text/plain"
+      }
+    },
+
+    {
+      "src": "/ads.txt",
+      "dest": "/ads.txt"
+    },
+
+    {
       "src": "/(.*)",
       "has": [
         {
@@ -17,24 +39,7 @@
     },
 
     {
-      "src": "/sitemap.xml",
-      "dest": "/sitemap.xml"
-    },
-    {
-      "src": "/Sitemap.xml",
-      "dest": "/sitemap.xml"
-    },
-    {
-      "src": "/robots.txt",
-      "dest": "/robots.txt"
-    },
-    {
-      "src": "/ads.txt",
-      "dest": "/ads.txt"
-    },
-
-    {
-      "src": "/((?!assets|favicon|logo|manifest|og-image|placeholder|sitemap|robots|ads).*)",
+      "src": "/(.*)",
       "dest": "/index.html"
     }
 
