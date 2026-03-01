@@ -2,12 +2,18 @@ import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingHearts from "@/components/FloatingHearts";
+import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { Heart, Shield, ArrowRight } from "lucide-react";
 
 const PrivacyPolicy = () => {
   return (
     <div className="min-h-screen flex flex-col romantic-gradient-bg relative overflow-hidden">
+      <SEO
+        title="Privacy Policy - Love Calculator"
+        description="Read our privacy policy to understand how Love Calculator collects, uses, and protects your personal information."
+        path="/privacy-policy"
+      />
       <FloatingHearts />
       <Header />
       

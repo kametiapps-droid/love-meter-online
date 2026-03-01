@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingHearts from "@/components/FloatingHearts";
+import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -92,6 +93,11 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen flex flex-col romantic-gradient-bg relative overflow-hidden">
+      <SEO
+        title="Contact Us - Love Calculator"
+        description="Get in touch with the Love Calculator team. Send us your feedback, questions, or suggestions. We'd love to hear from you!"
+        path="/contact"
+      />
       <FloatingHearts />
       <Header />
       

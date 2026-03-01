@@ -2,12 +2,18 @@ import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingHearts from "@/components/FloatingHearts";
+import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { Heart, FileText, ArrowRight } from "lucide-react";
 
 const TermsOfService = () => {
   return (
     <div className="min-h-screen flex flex-col romantic-gradient-bg relative overflow-hidden">
+      <SEO
+        title="Terms of Service - Love Calculator"
+        description="Read the terms of service for using Love Calculator. Understand your rights and responsibilities when using our free love tools."
+        path="/terms-of-service"
+      />
       <FloatingHearts />
       <Header />
       

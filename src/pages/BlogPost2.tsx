@@ -2,6 +2,7 @@
  import Footer from "@/components/Footer";
  import FloatingHearts from "@/components/FloatingHearts";
  import InternalLinks from "@/components/InternalLinks";
+ import SEO from "@/components/SEO";
  import { Link } from "react-router-dom";
  import { Calendar, Clock, ArrowLeft, Star, Moon, Sun, Flame } from "lucide-react";
  import blogImage from "@/assets/blog-zodiac-astrology.jpg";
@@ -9,6 +10,12 @@
  const BlogPost2 = () => {
    return (
      <div className="min-h-screen flex flex-col romantic-gradient-bg relative overflow-hidden">
+       <SEO
+         title="Zodiac Compatibility Guide - Which Signs Match Best?"
+         description="Explore zodiac compatibility and find your perfect star sign match. Learn which signs are most compatible in love and relationships."
+         path="/blog/zodiac-compatibility-guide"
+         type="article"
+       />
        <FloatingHearts />
        <Header />
        

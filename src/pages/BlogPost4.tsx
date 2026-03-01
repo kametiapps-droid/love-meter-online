@@ -2,12 +2,19 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingHearts from "@/components/FloatingHearts";
 import InternalLinks from "@/components/InternalLinks";
+import SEO from "@/components/SEO";
 import { Calendar, Clock, Heart, Star, Sparkles, TrendingUp, Globe } from "lucide-react";
 import blogImage from "@/assets/blog-love-facts.jpg";
 
 const BlogPost4 = () => {
   return (
     <div className="min-h-screen flex flex-col romantic-gradient-bg relative overflow-hidden">
+      <SEO
+        title="50 Amazing Love Facts & Trivia You Never Knew"
+        description="Discover fascinating love facts and trivia about romance, relationships, and the science of love. Fun facts that will surprise you!"
+        path="/blog/love-facts-trivia"
+        type="article"
+      />
       <FloatingHearts />
       <Header />
       

@@ -3,12 +3,18 @@ import Footer from "@/components/Footer";
 import CoupleNameGenerator from "@/components/CoupleNameGenerator";
 import FloatingHearts from "@/components/FloatingHearts";
 import InternalLinks from "@/components/InternalLinks";
+import SEO from "@/components/SEO";
 import { Heart } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const CoupleNameGeneratorPage = () => {
   return (
     <div className="min-h-screen flex flex-col romantic-gradient-bg relative overflow-hidden">
+      <SEO
+        title="Couple Name Generator - Create Fun Mashup Names for Couples"
+        description="Generate fun celebrity-style couple names by combining two names. Create your unique relationship nickname with our free Couple Name Generator."
+        path="/couple-name-generator"
+      />
       <FloatingHearts />
       <Header />
       

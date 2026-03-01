@@ -3,12 +3,18 @@ import Footer from "@/components/Footer";
 import LoveQuiz from "@/components/LoveQuiz";
 import FloatingHearts from "@/components/FloatingHearts";
 import InternalLinks from "@/components/InternalLinks";
+import SEO from "@/components/SEO";
 import { ClipboardList } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const LoveQuizPage = () => {
   return (
     <div className="min-h-screen flex flex-col romantic-gradient-bg relative overflow-hidden">
+      <SEO
+        title="Love Quiz - How Strong Is Your Relationship? Take the Test"
+        description="Take our fun Love Quiz to discover your relationship style and how strong your bond really is. Free personality-based love test with instant results."
+        path="/love-quiz"
+      />
       <FloatingHearts />
       <Header />
       

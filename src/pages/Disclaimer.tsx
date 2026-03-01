@@ -2,12 +2,18 @@ import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingHearts from "@/components/FloatingHearts";
+import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { Heart, AlertCircle, ArrowRight, Sparkles } from "lucide-react";
 
 const Disclaimer = () => {
   return (
     <div className="min-h-screen flex flex-col romantic-gradient-bg relative overflow-hidden">
+      <SEO
+        title="Disclaimer - Love Calculator"
+        description="Read our disclaimer about Love Calculator tools. All love tests and compatibility results are for entertainment purposes only."
+        path="/disclaimer"
+      />
       <FloatingHearts />
       <Header />
       
