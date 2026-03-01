@@ -3,12 +3,18 @@ import Footer from "@/components/Footer";
 import FloatingHearts from "@/components/FloatingHearts";
 import RelationshipTimeline from "@/components/RelationshipTimeline";
 import InternalLinks from "@/components/InternalLinks";
+import SEO from "@/components/SEO";
 import { Calendar } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const RelationshipTimelinePage = () => {
   return (
     <div className="min-h-screen flex flex-col romantic-gradient-bg relative overflow-hidden">
+      <SEO
+        title="Relationship Timeline - Track Your Love Journey Together"
+        description="Create and visualize your relationship timeline. Track milestones, anniversaries, and special moments in your love story."
+        path="/relationship-timeline"
+      />
       <FloatingHearts />
       <Header />
       <main className="flex-1 relative z-10">

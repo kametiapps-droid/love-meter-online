@@ -2,12 +2,19 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingHearts from "@/components/FloatingHearts";
 import InternalLinks from "@/components/InternalLinks";
+import SEO from "@/components/SEO";
 import { Calendar, Clock, Heart, MapPin, Phone, Video, MessageSquare, Star } from "lucide-react";
 import blogImage from "@/assets/blog-long-distance.jpg";
 
 const BlogPost6 = () => {
   return (
     <div className="min-h-screen flex flex-col romantic-gradient-bg relative overflow-hidden">
+      <SEO
+        title="Long Distance Relationship Tips - Make It Work"
+        description="Expert tips for making long distance relationships work. Communication strategies, date ideas, and advice for staying connected across the miles."
+        path="/blog/long-distance-relationships"
+        type="article"
+      />
       <FloatingHearts />
       <Header />
       

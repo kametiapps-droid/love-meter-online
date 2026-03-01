@@ -3,12 +3,18 @@ import Footer from "@/components/Footer";
 import ZodiacCompatibility from "@/components/ZodiacCompatibility";
 import FloatingHearts from "@/components/FloatingHearts";
 import InternalLinks from "@/components/InternalLinks";
+import SEO from "@/components/SEO";
 import { Stars } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const ZodiacCompatibilityPage = () => {
   return (
     <div className="min-h-screen flex flex-col romantic-gradient-bg relative overflow-hidden">
+      <SEO
+        title="Zodiac Compatibility - Check Your Star Sign Love Match"
+        description="Discover your zodiac love compatibility. Find out which star signs are your best match and explore astrological relationship insights for free."
+        path="/zodiac-compatibility"
+      />
       <FloatingHearts />
       <Header />
       

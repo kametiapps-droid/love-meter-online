@@ -2,12 +2,18 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingHearts from "@/components/FloatingHearts";
 import InternalLinks from "@/components/InternalLinks";
+import SEO from "@/components/SEO";
 import { Heart, Users, Target, Shield, Award, Globe } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const AboutUs = () => {
   return (
     <div className="min-h-screen flex flex-col romantic-gradient-bg relative overflow-hidden">
+      <SEO
+        title="About Us - Love Calculator | Our Mission & Story"
+        description="Learn about Love Calculator, our mission to spread love, and the team behind your favorite free online love compatibility tools."
+        path="/about"
+      />
       <FloatingHearts />
       <Header />
 

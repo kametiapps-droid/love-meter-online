@@ -3,12 +3,18 @@ import Footer from "@/components/Footer";
 import LoveHeartsCatchGame from "@/components/LoveHeartsCatchGame";
 import FloatingHearts from "@/components/FloatingHearts";
 import InternalLinks from "@/components/InternalLinks";
+import SEO from "@/components/SEO";
 import { Gamepad2 } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const LoveGamePage = () => {
   return (
     <div className="min-h-screen flex flex-col romantic-gradient-bg relative overflow-hidden">
+      <SEO
+        title="Love Hearts Catch Game - Fun Free Online Love Game"
+        description="Play the Love Hearts Catch Game! Catch falling hearts in this fun, free online love-themed game. Test your reflexes and score high!"
+        path="/love-game"
+      />
       <FloatingHearts />
       <Header />
       

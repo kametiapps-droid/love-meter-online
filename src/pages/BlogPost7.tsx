@@ -2,12 +2,19 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingHearts from "@/components/FloatingHearts";
 import InternalLinks from "@/components/InternalLinks";
+import SEO from "@/components/SEO";
 import { Calendar, Clock, Heart, Sunset, Music, Utensils, Mountain, Palette } from "lucide-react";
 import blogImage from "@/assets/blog-date-ideas.jpg";
 
 const BlogPost7 = () => {
   return (
     <div className="min-h-screen flex flex-col romantic-gradient-bg relative overflow-hidden">
+      <SEO
+        title="75 Romantic Date Ideas for Every Budget"
+        description="Never run out of date ideas! Discover 75 creative, romantic, and unforgettable date ideas for every budget, from free adventures to luxury experiences."
+        path="/blog/romantic-date-ideas"
+        type="article"
+      />
       <FloatingHearts />
       <Header />
       

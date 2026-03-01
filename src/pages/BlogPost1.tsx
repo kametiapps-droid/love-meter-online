@@ -2,13 +2,20 @@
  import Footer from "@/components/Footer";
  import FloatingHearts from "@/components/FloatingHearts";
  import InternalLinks from "@/components/InternalLinks";
+ import SEO from "@/components/SEO";
  import { Link } from "react-router-dom";
  import { Calendar, Clock, ArrowLeft, Heart, MessageCircle, Users, Sparkles } from "lucide-react";
  import blogImage from "@/assets/blog-love-relationships.jpg";
  
  const BlogPost1 = () => {
    return (
-     <div className="min-h-screen flex flex-col romantic-gradient-bg relative overflow-hidden">
+      <div className="min-h-screen flex flex-col romantic-gradient-bg relative overflow-hidden">
+      <SEO
+        title="The Ultimate Guide to Love & Relationships | Love Calculator Blog"
+        description="Discover expert insights on building stronger relationships, understanding love languages, and creating lasting romantic connections."
+        path="/blog/love-relationships-guide"
+        type="article"
+      />
        <FloatingHearts />
        <Header />
        

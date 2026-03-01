@@ -13,11 +13,17 @@ import LoveHeartsCatchGame from "@/components/LoveHeartsCatchGame";
 import LoveLetterGenerator from "@/components/LoveLetterGenerator";
 import RelationshipTimeline from "@/components/RelationshipTimeline";
 import BlogPreview from "@/components/BlogPreview";
+import SEO from "@/components/SEO";
 import { Heart } from "lucide-react";
 
 const Index = () => {
   return (
     <div className="min-h-screen flex flex-col romantic-gradient-bg relative overflow-hidden">
+      <SEO
+        title="Love Calculator - Find Your True Love Compatibility | Free Online Love Test"
+        description="Calculate your love compatibility with our free online Love Calculator. Enter two names and discover your love percentage instantly. Fun, accurate & easy to use!"
+        path="/"
+      />
       <FloatingHearts />
       
       <Header />

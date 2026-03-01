@@ -3,12 +3,18 @@ import Footer from "@/components/Footer";
 import KidsNameGenerator from "@/components/KidsNameGenerator";
 import FloatingHearts from "@/components/FloatingHearts";
 import InternalLinks from "@/components/InternalLinks";
+import SEO from "@/components/SEO";
 import { Baby } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const KidsNameGeneratorPage = () => {
   return (
     <div className="min-h-screen flex flex-col romantic-gradient-bg relative overflow-hidden">
+      <SEO
+        title="Kids Name Generator - Baby Name Ideas Based on Astrology"
+        description="Find the perfect baby name with our Kids Name Generator. Get personalized name suggestions based on birth dates and zodiac astrology."
+        path="/kids-name-generator"
+      />
       <FloatingHearts />
       <Header />
       

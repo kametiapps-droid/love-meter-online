@@ -3,12 +3,18 @@ import Footer from "@/components/Footer";
 import LoveCalculator from "@/components/LoveCalculator";
 import FloatingHearts from "@/components/FloatingHearts";
 import InternalLinks from "@/components/InternalLinks";
+import SEO from "@/components/SEO";
 import { Heart } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const LoveCalculatorPage = () => {
   return (
     <div className="min-h-screen flex flex-col romantic-gradient-bg relative overflow-hidden">
+      <SEO
+        title="Love Calculator - Test Your Love Compatibility Online Free"
+        description="Use our free Love Calculator to find out your love compatibility. Enter two names and get your love percentage instantly. Fun and easy love test!"
+        path="/love-calculator"
+      />
       <FloatingHearts />
       <Header />
       

@@ -3,12 +3,18 @@ import Footer from "@/components/Footer";
 import FloatingHearts from "@/components/FloatingHearts";
 import LoveLetterGenerator from "@/components/LoveLetterGenerator";
 import InternalLinks from "@/components/InternalLinks";
+import SEO from "@/components/SEO";
 import { Send } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const LoveLetterPage = () => {
   return (
     <div className="min-h-screen flex flex-col romantic-gradient-bg relative overflow-hidden">
+      <SEO
+        title="Love Letter Generator - Write Romantic Letters Instantly"
+        description="Create beautiful, personalized love letters with our free Love Letter Generator. Express your feelings with romantic words crafted just for you."
+        path="/love-letter-generator"
+      />
       <FloatingHearts />
       <Header />
       <main className="flex-1 relative z-10">

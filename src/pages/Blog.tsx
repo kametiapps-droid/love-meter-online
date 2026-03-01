@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingHearts from "@/components/FloatingHearts";
 import InternalLinks from "@/components/InternalLinks";
+import SEO from "@/components/SEO";
 import { Link } from "react-router-dom";
 import { BookOpen, Calendar, Clock, ArrowRight } from "lucide-react";
 import blogLoveImage from "@/assets/blog-love-relationships.jpg";
@@ -81,6 +82,11 @@ const blogPosts = [
 const Blog = () => {
   return (
     <div className="min-h-screen flex flex-col romantic-gradient-bg relative overflow-hidden">
+      <SEO
+        title="Love Blog - Relationship Advice, Tips & Guides"
+        description="Read our love blog for relationship advice, zodiac compatibility guides, romantic date ideas, and expert tips on building stronger relationships."
+        path="/blog"
+      />
       <FloatingHearts />
       <Header />
       

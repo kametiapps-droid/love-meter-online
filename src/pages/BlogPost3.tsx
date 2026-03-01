@@ -2,12 +2,19 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingHearts from "@/components/FloatingHearts";
 import InternalLinks from "@/components/InternalLinks";
+import SEO from "@/components/SEO";
 import { Calendar, Clock, User, BookOpen, Heart, Star, Sparkles } from "lucide-react";
 import blogImage from "@/assets/blog-name-meanings.jpg";
 
 const BlogPost3 = () => {
   return (
     <div className="min-h-screen flex flex-col romantic-gradient-bg relative overflow-hidden">
+      <SEO
+        title="Name Meanings & Origins - Discover What Your Name Means"
+        description="Explore the fascinating meanings and origins behind popular names. Discover the history and significance of your name."
+        path="/blog/name-meanings-origins"
+        type="article"
+      />
       <FloatingHearts />
       <Header />
       

@@ -3,12 +3,18 @@ import Footer from "@/components/Footer";
 import LoveFortuneBall from "@/components/LoveFortuneBall";
 import FloatingHearts from "@/components/FloatingHearts";
 import InternalLinks from "@/components/InternalLinks";
+import SEO from "@/components/SEO";
 import { Sparkles } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const LoveFortuneBallPage = () => {
   return (
     <div className="min-h-screen flex flex-col romantic-gradient-bg relative overflow-hidden">
+      <SEO
+        title="Love Fortune Ball - Ask a Love Question & Get Your Answer"
+        description="Shake the magic Love Fortune Ball and get instant answers to your love questions. A fun, mystical love prediction tool for entertainment."
+        path="/love-fortune-ball"
+      />
       <FloatingHearts />
       <Header />
       

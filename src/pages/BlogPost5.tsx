@@ -2,12 +2,19 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingHearts from "@/components/FloatingHearts";
 import InternalLinks from "@/components/InternalLinks";
+import SEO from "@/components/SEO";
 import { Calendar, Clock, Heart, MessageCircle, Gift, HandHeart, Timer } from "lucide-react";
 import blogImage from "@/assets/blog-love-languages.jpg";
 
 const BlogPost5 = () => {
   return (
     <div className="min-h-screen flex flex-col romantic-gradient-bg relative overflow-hidden">
+      <SEO
+        title="The 5 Love Languages Explained - Find Your Love Language"
+        description="Learn about the 5 love languages and discover how you and your partner express love. Improve your relationship with this guide."
+        path="/blog/five-love-languages"
+        type="article"
+      />
       <FloatingHearts />
       <Header />
       

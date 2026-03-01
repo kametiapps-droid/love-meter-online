@@ -3,12 +3,18 @@ import Footer from "@/components/Footer";
 import DailyHoroscope from "@/components/DailyHoroscope";
 import FloatingHearts from "@/components/FloatingHearts";
 import InternalLinks from "@/components/InternalLinks";
+import SEO from "@/components/SEO";
 import { Sun } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const DailyHoroscopePage = () => {
   return (
     <div className="min-h-screen flex flex-col romantic-gradient-bg relative overflow-hidden">
+      <SEO
+        title="Daily Love Horoscope - Free Zodiac Reading for Today"
+        description="Read your free daily love horoscope. Get personalized zodiac predictions for romance, relationships, and love life based on your star sign."
+        path="/daily-horoscope"
+      />
       <FloatingHearts />
       <Header />
       

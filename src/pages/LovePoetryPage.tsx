@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import InternalLinks from "@/components/InternalLinks";
+import SEO from "@/components/SEO";
 import heroImage from "@/assets/poetry-hero.jpg";
 import { Heart, Feather, Sparkles, BookHeart } from "lucide-react";
 
@@ -91,6 +92,11 @@ const categoryIcons = [Heart, Feather, Sparkles, BookHeart, Heart, Feather];
 const LovePoetryPage = () => {
   return (
     <>
+      <SEO
+        title="Love Poetry - Beautiful Romantic Poems & Verses"
+        description="Read beautiful love poems and romantic verses. Explore collections of poetry about eternal love, heartbreak, devotion, and passion."
+        path="/love-poetry"
+      />
       <div className="min-h-screen flex flex-col romantic-gradient-bg relative overflow-hidden">
         <Header />
 
