@@ -1,6 +1,30 @@
 {
   "rewrites": [
-    { "source": "/(.*)", "destination": "/" }
+    { "source": "/love-calculator", "destination": "/love-calculator.html" },
+    { "source": "/zodiac-compatibility", "destination": "/zodiac-compatibility.html" },
+    { "source": "/love-quiz", "destination": "/love-quiz.html" },
+    { "source": "/daily-horoscope", "destination": "/daily-horoscope.html" },
+    { "source": "/love-fortune-ball", "destination": "/love-fortune-ball.html" },
+    { "source": "/couple-name-generator", "destination": "/couple-name-generator.html" },
+    { "source": "/kids-name-generator", "destination": "/kids-name-generator.html" },
+    { "source": "/love-game", "destination": "/love-game.html" },
+    { "source": "/love-letter-generator", "destination": "/love-letter-generator.html" },
+    { "source": "/relationship-timeline", "destination": "/relationship-timeline.html" },
+    { "source": "/love-poetry", "destination": "/love-poetry.html" },
+    { "source": "/blog", "destination": "/blog.html" },
+    { "source": "/blog/love-relationships-guide", "destination": "/blog/love-relationships-guide.html" },
+    { "source": "/blog/zodiac-compatibility-guide", "destination": "/blog/zodiac-compatibility-guide.html" },
+    { "source": "/blog/name-meanings-origins", "destination": "/blog/name-meanings-origins.html" },
+    { "source": "/blog/love-facts-trivia", "destination": "/blog/love-facts-trivia.html" },
+    { "source": "/blog/five-love-languages", "destination": "/blog/five-love-languages.html" },
+    { "source": "/blog/long-distance-relationships", "destination": "/blog/long-distance-relationships.html" },
+    { "source": "/blog/romantic-date-ideas", "destination": "/blog/romantic-date-ideas.html" },
+    { "source": "/privacy-policy", "destination": "/privacy-policy.html" },
+    { "source": "/terms-of-service", "destination": "/terms-of-service.html" },
+    { "source": "/disclaimer", "destination": "/disclaimer.html" },
+    { "source": "/contact", "destination": "/contact.html" },
+    { "source": "/about", "destination": "/about.html" },
+    { "source": "/(.*)", "destination": "/index.html" }
   ],
   "env": {
     "PRERENDER_TOKEN": "xj9vSIiKlMS1iwqQF6NX"
@@ -9,49 +33,28 @@
     {
       "source": "/(.*)",
       "headers": [
-        {
-          "key": "X-Content-Type-Options",
-          "value": "nosniff"
-        },
-        {
-          "key": "X-Frame-Options",
-          "value": "DENY"
-        },
-        {
-          "key": "X-XSS-Protection",
-          "value": "1; mode=block"
-        },
-        {
-          "key": "Referrer-Policy",
-          "value": "strict-origin-when-cross-origin"
-        }
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "X-Frame-Options", "value": "DENY" },
+        { "key": "X-XSS-Protection", "value": "1; mode=block" },
+        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" }
       ]
     },
     {
       "source": "/assets/(.*)",
       "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=31536000, immutable"
-        }
+        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
       ]
     },
     {
       "source": "/(.*).js",
       "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=31536000, immutable"
-        }
+        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
       ]
     },
     {
       "source": "/(.*).css",
       "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=31536000, immutable"
-        }
+        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
       ]
     }
   ]
