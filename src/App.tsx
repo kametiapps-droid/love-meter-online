@@ -25,6 +25,11 @@ import BlogPost4 from "./pages/BlogPost4";
 import BlogPost5 from "./pages/BlogPost5";
 import BlogPost6 from "./pages/BlogPost6";
 import BlogPost7 from "./pages/BlogPost7";
+import BlogPost8 from "./pages/BlogPost8";
+import BlogPost9 from "./pages/BlogPost9";
+import BlogPost10 from "./pages/BlogPost10";
+import BlogPost11 from "./pages/BlogPost11";
+import BlogPost12 from "./pages/BlogPost12";
 import LovePoetryPage from "./pages/LovePoetryPage";
 import LoveLetterPage from "./pages/LoveLetterPage";
 import RelationshipTimelinePage from "./pages/RelationshipTimelinePage";
@@ -60,6 +65,11 @@ const App = () => (
           <Route path="/blog/five-love-languages" element={<BlogPost5 />} />
           <Route path="/blog/long-distance-relationships" element={<BlogPost6 />} />
           <Route path="/blog/romantic-date-ideas" element={<BlogPost7 />} />
+          <Route path="/blog/signs-partner-truly-loves-you" element={<BlogPost8 />} />
+          <Route path="/blog/keep-spark-alive-relationship" element={<BlogPost9 />} />
+          <Route path="/blog/science-of-attraction" element={<BlogPost10 />} />
+          <Route path="/blog/relationship-goals-couples" element={<BlogPost11 />} />
+          <Route path="/blog/how-to-write-love-letter" element={<BlogPost12 />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/terms-of-service" element={<TermsOfService />} />
           <Route path="/disclaimer" element={<Disclaimer />} />

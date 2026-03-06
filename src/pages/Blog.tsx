@@ -12,8 +12,58 @@ import blogFactsImage from "@/assets/blog-love-facts.jpg";
 import blogLanguagesImage from "@/assets/blog-love-languages.jpg";
 import blogDistanceImage from "@/assets/blog-long-distance.jpg";
 import blogDateImage from "@/assets/blog-date-ideas.jpg";
+import blogSignsImage from "@/assets/blog-signs-true-love.jpg";
+import blogSparkImage from "@/assets/blog-keep-spark-alive.jpg";
+import blogScienceImage from "@/assets/blog-science-attraction.jpg";
+import blogGoalsImage from "@/assets/blog-relationship-goals.jpg";
+import blogLetterImage from "@/assets/blog-write-love-letter.jpg";
 
 const blogPosts = [
+  {
+    id: "signs-partner-truly-loves-you",
+    title: "15 Unmistakable Signs Your Partner Truly Loves You",
+    excerpt: "Learn to recognize the genuine signs of true love beyond words — through actions, consistency, and deep emotional connection.",
+    image: blogSignsImage,
+    date: "March 1, 2026",
+    readTime: "10 min read",
+    category: "Love & Relationships"
+  },
+  {
+    id: "keep-spark-alive-relationship",
+    title: "How to Keep the Spark Alive in Your Relationship: A Complete Guide",
+    excerpt: "Proven strategies to maintain passion, excitement, and deep emotional connection in your long-term relationship.",
+    image: blogSparkImage,
+    date: "March 2, 2026",
+    readTime: "10 min read",
+    category: "Relationships"
+  },
+  {
+    id: "science-of-attraction",
+    title: "The Science of Attraction: Why We Fall in Love",
+    excerpt: "Discover the fascinating psychology, biology, and chemistry behind why we're drawn to certain people.",
+    image: blogScienceImage,
+    date: "March 3, 2026",
+    readTime: "11 min read",
+    category: "Psychology"
+  },
+  {
+    id: "relationship-goals-couples",
+    title: "30 Meaningful Relationship Goals Every Couple Should Set",
+    excerpt: "Beyond Instagram-perfect moments, these are the real relationship goals that build lasting love.",
+    image: blogGoalsImage,
+    date: "March 4, 2026",
+    readTime: "10 min read",
+    category: "Couple Goals"
+  },
+  {
+    id: "how-to-write-love-letter",
+    title: "How to Write the Perfect Love Letter: Tips & Examples",
+    excerpt: "Master the timeless art of writing love letters that capture your deepest feelings and make hearts sing.",
+    image: blogLetterImage,
+    date: "March 5, 2026",
+    readTime: "10 min read",
+    category: "Romance"
+  },
   {
     id: "love-relationships-guide",
     title: "The Complete Guide to Building Strong and Lasting Relationships",
