@@ -1,46 +1,46 @@
 import { Link } from "react-router-dom";
 import { Calendar, Clock, ArrowRight, BookOpen } from "lucide-react";
-import blogNameImage from "@/assets/blog-name-meanings.jpg";
-import blogFactsImage from "@/assets/blog-love-facts.jpg";
-import blogLanguagesImage from "@/assets/blog-love-languages.jpg";
-import blogDistanceImage from "@/assets/blog-long-distance.jpg";
+import blogSignsImage from "@/assets/blog-signs-true-love.jpg";
+import blogSparkImage from "@/assets/blog-keep-spark-alive.jpg";
+import blogScienceImage from "@/assets/blog-science-attraction.jpg";
+import blogGoalsImage from "@/assets/blog-relationship-goals.jpg";
 
 const blogPosts = [
   {
-    id: "name-meanings-origins",
-    title: "The Beautiful World of Name Meanings: Origins, History & Significance",
-    excerpt: "Explore the fascinating stories behind popular names, their cultural origins, and how they shape our identity.",
-    image: blogNameImage,
-    date: "February 14, 2026",
+    id: "signs-partner-truly-loves-you",
+    title: "15 Unmistakable Signs Your Partner Truly Loves You",
+    excerpt: "Learn to recognize the genuine signs of true love beyond words — through actions and emotional connection.",
+    image: blogSignsImage,
+    date: "March 1, 2026",
     readTime: "10 min read",
-    category: "Name Meanings"
+    category: "Love & Relationships"
   },
   {
-    id: "love-facts-trivia",
-    title: "50 Fascinating Love Facts & Trivia That Will Blow Your Mind",
-    excerpt: "Discover surprising statistics, scientific findings, and cultural traditions about love from around the world.",
-    image: blogFactsImage,
-    date: "February 13, 2026",
-    readTime: "9 min read",
-    category: "Fun Facts"
-  },
-  {
-    id: "five-love-languages",
-    title: "The 5 Love Languages: Understanding How You Give and Receive Love",
-    excerpt: "Master the art of expressing love in the way your partner truly understands and appreciates it.",
-    image: blogLanguagesImage,
-    date: "February 12, 2026",
+    id: "keep-spark-alive-relationship",
+    title: "How to Keep the Spark Alive in Your Relationship",
+    excerpt: "Proven strategies to maintain passion, excitement, and deep emotional connection.",
+    image: blogSparkImage,
+    date: "March 2, 2026",
     readTime: "10 min read",
     category: "Relationships"
   },
   {
-    id: "long-distance-relationships",
-    title: "Long Distance Relationships: Making Love Work Across Miles",
-    excerpt: "Proven strategies, communication tips, and creative ideas to keep your long-distance love strong.",
-    image: blogDistanceImage,
-    date: "February 11, 2026",
+    id: "science-of-attraction",
+    title: "The Science of Attraction: Why We Fall in Love",
+    excerpt: "Discover the fascinating psychology, biology, and chemistry behind attraction.",
+    image: blogScienceImage,
+    date: "March 3, 2026",
+    readTime: "11 min read",
+    category: "Psychology"
+  },
+  {
+    id: "relationship-goals-couples",
+    title: "30 Relationship Goals Every Couple Should Set",
+    excerpt: "Beyond Instagram-perfect moments, real goals that build lasting love.",
+    image: blogGoalsImage,
+    date: "March 4, 2026",
     readTime: "10 min read",
-    category: "Relationships"
+    category: "Couple Goals"
   }
 ];
 
