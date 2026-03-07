@@ -30,6 +30,11 @@ import BlogPost9 from "./pages/BlogPost9";
 import BlogPost10 from "./pages/BlogPost10";
 import BlogPost11 from "./pages/BlogPost11";
 import BlogPost12 from "./pages/BlogPost12";
+import BlogPost13 from "./pages/BlogPost13";
+import BlogPost14 from "./pages/BlogPost14";
+import BlogPost15 from "./pages/BlogPost15";
+import BlogPost16 from "./pages/BlogPost16";
+import BlogPost17 from "./pages/BlogPost17";
 import LovePoetryPage from "./pages/LovePoetryPage";
 import LoveLetterPage from "./pages/LoveLetterPage";
 import RelationshipTimelinePage from "./pages/RelationshipTimelinePage";
@@ -70,6 +75,11 @@ const App = () => (
           <Route path="/blog/science-of-attraction" element={<BlogPost10 />} />
           <Route path="/blog/relationship-goals-couples" element={<BlogPost11 />} />
           <Route path="/blog/how-to-write-love-letter" element={<BlogPost12 />} />
+          <Route path="/blog/first-date-tips" element={<BlogPost13 />} />
+          <Route path="/blog/healthy-communication-relationships" element={<BlogPost14 />} />
+          <Route path="/blog/beautiful-love-quotes" element={<BlogPost15 />} />
+          <Route path="/blog/marriage-proposal-ideas" element={<BlogPost16 />} />
+          <Route path="/blog/how-to-apologize-relationship" element={<BlogPost17 />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/terms-of-service" element={<TermsOfService />} />
           <Route path="/disclaimer" element={<Disclaimer />} />
