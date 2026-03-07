@@ -17,8 +17,58 @@ import blogSparkImage from "@/assets/blog-keep-spark-alive.jpg";
 import blogScienceImage from "@/assets/blog-science-attraction.jpg";
 import blogGoalsImage from "@/assets/blog-relationship-goals.jpg";
 import blogLetterImage from "@/assets/blog-write-love-letter.jpg";
+import blogFirstDateImage from "@/assets/blog-first-date-tips.jpg";
+import blogCommunicationImage from "@/assets/blog-healthy-communication.jpg";
+import blogQuotesImage from "@/assets/blog-love-quotes.jpg";
+import blogProposalImage from "@/assets/blog-proposal-ideas.jpg";
+import blogApologizeImage from "@/assets/blog-apologize-relationship.jpg";
 
 const blogPosts = [
+  {
+    id: "first-date-tips",
+    title: "25 First Date Tips That Actually Work: Expert Advice",
+    excerpt: "Nervous about your first date? These proven tips will help you make a great impression and build genuine connection.",
+    image: blogFirstDateImage,
+    date: "March 6, 2026",
+    readTime: "12 min read",
+    category: "Dating Tips"
+  },
+  {
+    id: "healthy-communication-relationships",
+    title: "Healthy Communication in Relationships: 20 Expert Tips",
+    excerpt: "Master active listening, conflict resolution, and emotional intelligence to strengthen your love.",
+    image: blogCommunicationImage,
+    date: "March 7, 2026",
+    readTime: "12 min read",
+    category: "Communication"
+  },
+  {
+    id: "beautiful-love-quotes",
+    title: "100 Most Beautiful Love Quotes of All Time",
+    excerpt: "A curated collection of the world's most romantic, inspiring, and timeless love quotes.",
+    image: blogQuotesImage,
+    date: "March 7, 2026",
+    readTime: "15 min read",
+    category: "Love Quotes"
+  },
+  {
+    id: "marriage-proposal-ideas",
+    title: "20 Unforgettable Marriage Proposal Ideas",
+    excerpt: "Creative, romantic, and deeply personal proposal ideas for every couple and every budget.",
+    image: blogProposalImage,
+    date: "March 7, 2026",
+    readTime: "13 min read",
+    category: "Proposals"
+  },
+  {
+    id: "how-to-apologize-relationship",
+    title: "How to Apologize in a Relationship: The Art of Saying Sorry",
+    excerpt: "Learn how to give a sincere, meaningful apology that heals your relationship and rebuilds trust.",
+    image: blogApologizeImage,
+    date: "March 7, 2026",
+    readTime: "11 min read",
+    category: "Relationships"
+  },
   {
     id: "signs-partner-truly-loves-you",
     title: "15 Unmistakable Signs Your Partner Truly Loves You",
