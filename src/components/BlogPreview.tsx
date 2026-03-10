@@ -104,7 +104,7 @@ const BlogPreview = () => {
             to="/blog"
             className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-full font-medium hover:opacity-90 transition-opacity"
           >
-            View All 17 Articles <ArrowRight className="w-4 h-4" />
+            View All 22 Articles <ArrowRight className="w-4 h-4" />
           </Link>
         </div>
       </div>

@@ -22,8 +22,58 @@ import blogCommunicationImage from "@/assets/blog-healthy-communication.jpg";
 import blogQuotesImage from "@/assets/blog-love-quotes.jpg";
 import blogProposalImage from "@/assets/blog-proposal-ideas.jpg";
 import blogApologizeImage from "@/assets/blog-apologize-relationship.jpg";
+import blogTrustImage from "@/assets/blog-trust-building.jpg";
+import blogEQImage from "@/assets/blog-emotional-intelligence.jpg";
+import blogSelfLoveImage from "@/assets/blog-self-love.jpg";
+import blogAnniversaryImage from "@/assets/blog-anniversary-ideas.jpg";
+import blogCulturesImage from "@/assets/blog-love-cultures.jpg";
 
 const blogPosts = [
+  {
+    id: "trust-building-relationships",
+    title: "How to Build Trust in a Relationship: 15 Expert Strategies",
+    excerpt: "Learn proven strategies to build, rebuild, and maintain trust for a secure, lasting bond with your partner.",
+    image: blogTrustImage,
+    date: "March 9, 2026",
+    readTime: "14 min read",
+    category: "Trust & Bonding"
+  },
+  {
+    id: "emotional-intelligence-love",
+    title: "Emotional Intelligence in Love: How EQ Makes Better Relationships",
+    excerpt: "Discover how emotional intelligence transforms your love life with deeper connection and better communication.",
+    image: blogEQImage,
+    date: "March 9, 2026",
+    readTime: "13 min read",
+    category: "Emotional Intelligence"
+  },
+  {
+    id: "self-love-guide",
+    title: "The Power of Self-Love: Why Loving Yourself First Changes Everything",
+    excerpt: "Discover why self-love is the foundation of healthy relationships and learn practical strategies for self-worth.",
+    image: blogSelfLoveImage,
+    date: "March 10, 2026",
+    readTime: "12 min read",
+    category: "Self-Love"
+  },
+  {
+    id: "anniversary-celebration-ideas",
+    title: "50 Romantic Anniversary Ideas: Celebrate Your Love in Style",
+    excerpt: "From budget-friendly to luxurious, discover 50 creative anniversary celebration ideas for every couple.",
+    image: blogAnniversaryImage,
+    date: "March 10, 2026",
+    readTime: "14 min read",
+    category: "Anniversaries"
+  },
+  {
+    id: "love-different-cultures",
+    title: "Love Around the World: How Different Cultures Express Romance",
+    excerpt: "Explore fascinating love traditions, dating customs, and romantic expressions from cultures around the globe.",
+    image: blogCulturesImage,
+    date: "March 10, 2026",
+    readTime: "15 min read",
+    category: "Culture & Love"
+  },
   {
     id: "first-date-tips",
     title: "25 First Date Tips That Actually Work: Expert Advice",

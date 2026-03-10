@@ -85,6 +85,11 @@ const App = () => (
           <Route path="/blog/beautiful-love-quotes" element={<BlogPost15 />} />
           <Route path="/blog/marriage-proposal-ideas" element={<BlogPost16 />} />
           <Route path="/blog/how-to-apologize-relationship" element={<BlogPost17 />} />
+          <Route path="/blog/trust-building-relationships" element={<BlogPost18 />} />
+          <Route path="/blog/emotional-intelligence-love" element={<BlogPost19 />} />
+          <Route path="/blog/self-love-guide" element={<BlogPost20 />} />
+          <Route path="/blog/anniversary-celebration-ideas" element={<BlogPost21 />} />
+          <Route path="/blog/love-different-cultures" element={<BlogPost22 />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/terms-of-service" element={<TermsOfService />} />
           <Route path="/disclaimer" element={<Disclaimer />} />
