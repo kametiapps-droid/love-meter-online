@@ -4,8 +4,28 @@ import blogSignsImage from "@/assets/blog-signs-true-love.jpg";
 import blogSparkImage from "@/assets/blog-keep-spark-alive.jpg";
 import blogScienceImage from "@/assets/blog-science-attraction.jpg";
 import blogGoalsImage from "@/assets/blog-relationship-goals.jpg";
+import blogTrustImage from "@/assets/blog-trust-building.jpg";
+import blogSelfLoveImage from "@/assets/blog-self-love.jpg";
 
 const blogPosts = [
+  {
+    id: "trust-building-relationships",
+    title: "How to Build Trust in a Relationship: 15 Expert Strategies",
+    excerpt: "Learn proven strategies to build, rebuild, and maintain trust in your relationship.",
+    image: blogTrustImage,
+    date: "March 9, 2026",
+    readTime: "14 min read",
+    category: "Trust & Bonding"
+  },
+  {
+    id: "self-love-guide",
+    title: "The Power of Self-Love: Why Loving Yourself First Changes Everything",
+    excerpt: "Discover why self-love is the foundation of healthy relationships.",
+    image: blogSelfLoveImage,
+    date: "March 10, 2026",
+    readTime: "12 min read",
+    category: "Self-Love"
+  },
   {
     id: "signs-partner-truly-loves-you",
     title: "15 Unmistakable Signs Your Partner Truly Loves You",
@@ -16,15 +36,6 @@ const blogPosts = [
     category: "Love & Relationships"
   },
   {
-    id: "keep-spark-alive-relationship",
-    title: "How to Keep the Spark Alive in Your Relationship",
-    excerpt: "Proven strategies to maintain passion, excitement, and deep emotional connection.",
-    image: blogSparkImage,
-    date: "March 2, 2026",
-    readTime: "10 min read",
-    category: "Relationships"
-  },
-  {
     id: "science-of-attraction",
     title: "The Science of Attraction: Why We Fall in Love",
     excerpt: "Discover the fascinating psychology, biology, and chemistry behind attraction.",
@@ -32,15 +43,6 @@ const blogPosts = [
     date: "March 3, 2026",
     readTime: "11 min read",
     category: "Psychology"
-  },
-  {
-    id: "relationship-goals-couples",
-    title: "30 Relationship Goals Every Couple Should Set",
-    excerpt: "Beyond Instagram-perfect moments, real goals that build lasting love.",
-    image: blogGoalsImage,
-    date: "March 4, 2026",
-    readTime: "10 min read",
-    category: "Couple Goals"
   }
 ];
 
@@ -102,7 +104,7 @@ const BlogPreview = () => {
             to="/blog"
             className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-full font-medium hover:opacity-90 transition-opacity"
           >
-            View All 17 Articles <ArrowRight className="w-4 h-4" />
+            View All 22 Articles <ArrowRight className="w-4 h-4" />
           </Link>
         </div>
       </div>
