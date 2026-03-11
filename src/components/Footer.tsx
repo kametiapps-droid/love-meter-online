@@ -1,101 +1,130 @@
 import { Link } from "react-router-dom";
 import logo from "@/assets/logo.png";
+import { Heart, Stars, ClipboardList, Sun, Sparkles, Baby, Gamepad2, BookOpen, Send, Calendar, Feather } from "lucide-react";
+
+const toolLinks = [
+  { to: "/love-calculator", label: "Love Calculator", icon: Heart },
+  { to: "/zodiac-compatibility", label: "Zodiac Compatibility", icon: Stars },
+  { to: "/love-quiz", label: "Love Quiz", icon: ClipboardList },
+  { to: "/daily-horoscope", label: "Daily Horoscope", icon: Sun },
+  { to: "/love-fortune-ball", label: "Fortune Ball", icon: Sparkles },
+  { to: "/couple-name-generator", label: "Couple Names", icon: Heart },
+  { to: "/kids-name-generator", label: "Kids Names", icon: Baby },
+  { to: "/love-game", label: "Love Game", icon: Gamepad2 },
+  { to: "/love-letter-generator", label: "Love Letters", icon: Send },
+  { to: "/relationship-timeline", label: "Timeline", icon: Calendar },
+  { to: "/love-poetry", label: "Poetry", icon: Feather },
+];
+
+const blogLinks = [
+  { to: "/blog/trust-building-relationships", label: "Trust Building" },
+  { to: "/blog/emotional-intelligence-love", label: "Emotional Intelligence" },
+  { to: "/blog/self-love-guide", label: "Self-Love Guide" },
+  { to: "/blog/first-date-tips", label: "First Date Tips" },
+  { to: "/blog/healthy-communication-relationships", label: "Communication Tips" },
+  { to: "/blog/beautiful-love-quotes", label: "Love Quotes" },
+  { to: "/blog/signs-partner-truly-loves-you", label: "Signs of True Love" },
+  { to: "/blog/science-of-attraction", label: "Science of Attraction" },
+  { to: "/blog/five-love-languages", label: "Love Languages" },
+  { to: "/blog/romantic-date-ideas", label: "Date Ideas" },
+  { to: "/blog/zodiac-compatibility-guide", label: "Zodiac Guide" },
+  { to: "/blog/keep-spark-alive-relationship", label: "Keep the Spark" },
+];
+
+const companyLinks = [
+  { to: "/about", label: "About Us" },
+  { to: "/contact", label: "Contact" },
+  { to: "/blog", label: "Blog" },
+];
+
+const legalLinks = [
+  { to: "/privacy-policy", label: "Privacy Policy" },
+  { to: "/terms-of-service", label: "Terms of Service" },
+  { to: "/disclaimer", label: "Disclaimer" },
+];
 
 const Footer = () => {
   return (
-    <footer className="w-full py-8 px-4 mt-auto">
+    <footer className="w-full py-10 px-4 mt-auto">
       <div className="max-w-6xl mx-auto">
-        <div className="border-t border-border pt-8">
-          {/* Tools Links */}
-          <div className="mb-8">
-            <h3 className="font-display text-lg font-semibold text-foreground mb-4 text-center">
-              Our Love Tools
-            </h3>
-            <div className="flex flex-wrap justify-center gap-3 text-sm">
-              <Link to="/love-calculator" className="text-muted-foreground hover:text-primary transition-colors">
-                Love Calculator
+        <div className="border-t border-border pt-10">
+          {/* Main Footer Grid */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-10">
+            {/* Brand Column */}
+            <div className="col-span-2 md:col-span-1">
+              <Link to="/" className="flex items-center gap-2 mb-4">
+                <img src={logo} alt="Love Calculator Logo" className="w-10 h-10 object-contain" />
+                <span className="font-display text-lg font-bold text-foreground">Love Calculator</span>
               </Link>
-              <span className="text-border">•</span>
-              <Link to="/zodiac-compatibility" className="text-muted-foreground hover:text-primary transition-colors">
-                Zodiac Compatibility
-              </Link>
-              <span className="text-border">•</span>
-              <Link to="/love-quiz" className="text-muted-foreground hover:text-primary transition-colors">
-                Love Quiz
-              </Link>
-              <span className="text-border">•</span>
-              <Link to="/daily-horoscope" className="text-muted-foreground hover:text-primary transition-colors">
-                Daily Horoscope
-              </Link>
-              <span className="text-border">•</span>
-              <Link to="/love-fortune-ball" className="text-muted-foreground hover:text-primary transition-colors">
-                Fortune Ball
-              </Link>
-              <span className="text-border">•</span>
-              <Link to="/couple-name-generator" className="text-muted-foreground hover:text-primary transition-colors">
-                Couple Names
-              </Link>
-              <span className="text-border">•</span>
-              <Link to="/kids-name-generator" className="text-muted-foreground hover:text-primary transition-colors">
-                Kids Names
-              </Link>
-              <span className="text-border">•</span>
-              <Link to="/love-game" className="text-muted-foreground hover:text-primary transition-colors">
-                Love Game
-              </Link>
-              <span className="text-border">•</span>
-              <Link to="/love-letter-generator" className="text-muted-foreground hover:text-primary transition-colors">
-                Love Letters
-              </Link>
-              <span className="text-border">•</span>
-              <Link to="/relationship-timeline" className="text-muted-foreground hover:text-primary transition-colors">
-                Timeline
-              </Link>
-              <span className="text-border">•</span>
-              <Link to="/love-poetry" className="text-muted-foreground hover:text-primary transition-colors">
-                Poetry
-              </Link>
-              <span className="text-border">•</span>
-              <Link to="/blog" className="text-muted-foreground hover:text-primary transition-colors">
-                Blog
-              </Link>
+              <p className="text-sm text-muted-foreground leading-relaxed mb-4">
+                Your #1 destination for love compatibility tools, zodiac insights, relationship advice, and romantic inspiration. 💕
+              </p>
+            </div>
+
+            {/* Love Tools Column */}
+            <div>
+              <h3 className="font-display text-sm font-bold text-foreground mb-4 uppercase tracking-wider">Love Tools</h3>
+              <ul className="space-y-2">
+                {toolLinks.map((link) => (
+                  <li key={link.to}>
+                    <Link to={link.to} className="text-sm text-muted-foreground hover:text-primary transition-colors flex items-center gap-1.5">
+                      <link.icon className="w-3 h-3" />
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Blog Column */}
+            <div>
+              <h3 className="font-display text-sm font-bold text-foreground mb-4 uppercase tracking-wider">Popular Articles</h3>
+              <ul className="space-y-2">
+                {blogLinks.map((link) => (
+                  <li key={link.to}>
+                    <Link to={link.to} className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Company & Legal Column */}
+            <div>
+              <h3 className="font-display text-sm font-bold text-foreground mb-4 uppercase tracking-wider">Company</h3>
+              <ul className="space-y-2 mb-6">
+                {companyLinks.map((link) => (
+                  <li key={link.to}>
+                    <Link to={link.to} className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+
+              <h3 className="font-display text-sm font-bold text-foreground mb-4 uppercase tracking-wider">Legal</h3>
+              <ul className="space-y-2">
+                {legalLinks.map((link) => (
+                  <li key={link.to}>
+                    <Link to={link.to} className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
 
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-            <div className="flex items-center gap-3">
-              <img 
-                src={logo} 
-                alt="Love Calculator Logo" 
-                className="w-10 h-10 object-contain"
-              />
-              <span className="text-sm text-muted-foreground">
-                © {new Date().getFullYear()} Love Calculator. All rights reserved.
-              </span>
-            </div>
-            
-            <div className="flex items-center gap-6 text-sm text-muted-foreground">
-              <Link to="/privacy-policy" className="hover:text-primary transition-colors">
-                Privacy Policy
-              </Link>
-              <Link to="/terms-of-service" className="hover:text-primary transition-colors">
-                Terms of Service
-              </Link>
-              <Link to="/disclaimer" className="hover:text-primary transition-colors">
-                Disclaimer
-              </Link>
-              <Link to="/contact" className="hover:text-primary transition-colors">
-                Contact
-              </Link>
-              <Link to="/about" className="hover:text-primary transition-colors">
-                About Us
-              </Link>
-            </div>
+          {/* Bottom Bar */}
+          <div className="border-t border-border pt-6 flex flex-col md:flex-row items-center justify-between gap-4">
+            <span className="text-sm text-muted-foreground">
+              © {new Date().getFullYear()} Love Calculator. All rights reserved.
+            </span>
+            <p className="text-xs text-muted-foreground/60 text-center md:text-right max-w-md">
+              This love calculator is for entertainment purposes only. Results are generated randomly and should not be taken seriously.
+            </p>
           </div>
-          
-          <p className="text-xs text-muted-foreground/60 text-center mt-6">
-            This love calculator is for entertainment purposes only. Results are generated randomly and should not be taken seriously.
-          </p>
         </div>
       </div>
     </footer>
