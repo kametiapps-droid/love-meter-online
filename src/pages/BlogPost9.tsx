@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingHearts from "@/components/FloatingHearts";
 import InternalLinks from "@/components/InternalLinks";
+import BlogRelatedPosts from "@/components/BlogRelatedPosts";
 import SEO from "@/components/SEO";
 import { Calendar, Clock, Heart, Flame, MessageCircle, Gift, Sparkles } from "lucide-react";
 import blogImage from "@/assets/blog-keep-spark-alive.jpg";
@@ -151,6 +152,7 @@ const BlogPost9 = () => {
             </div>
           </div>
         </article>
+        <BlogRelatedPosts currentPostId="keep-spark-alive-relationship" />
         <InternalLinks currentPage="/blog/keep-spark-alive-relationship" />
       </main>
       

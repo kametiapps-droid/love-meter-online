@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingHearts from "@/components/FloatingHearts";
 import InternalLinks from "@/components/InternalLinks";
+import BlogRelatedPosts from "@/components/BlogRelatedPosts";
 import SEO from "@/components/SEO";
 import { Calendar, Clock, Heart, Diamond, Sparkles, MapPin, Camera } from "lucide-react";
 import blogImage from "@/assets/blog-proposal-ideas.jpg";
@@ -178,6 +179,7 @@ const BlogPost16 = () => {
             </div>
           </div>
         </article>
+        <BlogRelatedPosts currentPostId="marriage-proposal-ideas" />
         <InternalLinks currentPage="/blog/marriage-proposal-ideas" />
       </main>
       

@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingHearts from "@/components/FloatingHearts";
 import InternalLinks from "@/components/InternalLinks";
+import BlogRelatedPosts from "@/components/BlogRelatedPosts";
 import SEO from "@/components/SEO";
 import { Calendar, Clock, Heart, HandHeart, MessageCircle, Shield, RefreshCw } from "lucide-react";
 import blogImage from "@/assets/blog-apologize-relationship.jpg";
@@ -152,6 +153,7 @@ const BlogPost17 = () => {
             </div>
           </div>
         </article>
+        <BlogRelatedPosts currentPostId="how-to-apologize-relationship" />
         <InternalLinks currentPage="/blog/how-to-apologize-relationship" />
       </main>
       

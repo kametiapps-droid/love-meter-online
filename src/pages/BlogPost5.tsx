@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingHearts from "@/components/FloatingHearts";
 import InternalLinks from "@/components/InternalLinks";
+import BlogRelatedPosts from "@/components/BlogRelatedPosts";
 import SEO from "@/components/SEO";
 import { Calendar, Clock, Heart, MessageCircle, Gift, HandHeart, Timer } from "lucide-react";
 import blogImage from "@/assets/blog-love-languages.jpg";
@@ -118,6 +119,7 @@ const BlogPost5 = () => {
             </div>
           </div>
         </article>
+        <BlogRelatedPosts currentPostId="five-love-languages" />
         <InternalLinks currentPage="/blog/five-love-languages" />
       </main>
       

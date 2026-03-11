@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingHearts from "@/components/FloatingHearts";
 import InternalLinks from "@/components/InternalLinks";
+import BlogRelatedPosts from "@/components/BlogRelatedPosts";
 import SEO from "@/components/SEO";
 import { Calendar, Clock, Heart, Star, Sparkles, TrendingUp, Globe } from "lucide-react";
 import blogImage from "@/assets/blog-love-facts.jpg";
@@ -130,6 +131,7 @@ const BlogPost4 = () => {
             </div>
           </div>
         </article>
+        <BlogRelatedPosts currentPostId="love-facts-trivia" />
         <InternalLinks currentPage="/blog/love-facts-trivia" />
       </main>
       

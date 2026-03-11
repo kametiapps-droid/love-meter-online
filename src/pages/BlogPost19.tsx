@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingHearts from "@/components/FloatingHearts";
 import InternalLinks from "@/components/InternalLinks";
+import BlogRelatedPosts from "@/components/BlogRelatedPosts";
 import SEO from "@/components/SEO";
 import { Link } from "react-router-dom";
 import { Calendar, Clock, ArrowLeft, User } from "lucide-react";
@@ -120,6 +121,7 @@ const BlogPost19 = () => {
             </div>
           </div>
         </article>
+        <BlogRelatedPosts currentPostId="emotional-intelligence-love" />
         <InternalLinks currentPage="/blog/emotional-intelligence-love" />
       </main>
       <Footer />

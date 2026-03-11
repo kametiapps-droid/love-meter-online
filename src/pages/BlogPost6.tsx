@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingHearts from "@/components/FloatingHearts";
 import InternalLinks from "@/components/InternalLinks";
+import BlogRelatedPosts from "@/components/BlogRelatedPosts";
 import SEO from "@/components/SEO";
 import { Calendar, Clock, Heart, MapPin, Phone, Video, MessageSquare, Star } from "lucide-react";
 import blogImage from "@/assets/blog-long-distance.jpg";
@@ -124,6 +125,7 @@ const BlogPost6 = () => {
             </div>
           </div>
         </article>
+        <BlogRelatedPosts currentPostId="long-distance-relationships" />
         <InternalLinks currentPage="/blog/long-distance-relationships" />
       </main>
       

@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingHearts from "@/components/FloatingHearts";
 import InternalLinks from "@/components/InternalLinks";
+import BlogRelatedPosts from "@/components/BlogRelatedPosts";
 import SEO from "@/components/SEO";
 import { Calendar, Clock, Heart, MessageSquare, Shield, Lightbulb, Users } from "lucide-react";
 import blogImage from "@/assets/blog-healthy-communication.jpg";
@@ -178,6 +179,7 @@ const BlogPost14 = () => {
             </div>
           </div>
         </article>
+        <BlogRelatedPosts currentPostId="healthy-communication-relationships" />
         <InternalLinks currentPage="/blog/healthy-communication-relationships" />
       </main>
       

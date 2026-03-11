@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingHearts from "@/components/FloatingHearts";
 import InternalLinks from "@/components/InternalLinks";
+import BlogRelatedPosts from "@/components/BlogRelatedPosts";
 import SEO from "@/components/SEO";
 import { Calendar, Clock, Heart, Eye, Shield, MessageCircle, Star } from "lucide-react";
 import blogImage from "@/assets/blog-signs-true-love.jpg";
@@ -163,6 +164,7 @@ const BlogPost8 = () => {
             </div>
           </div>
         </article>
+        <BlogRelatedPosts currentPostId="signs-partner-truly-loves-you" />
         <InternalLinks currentPage="/blog/signs-partner-truly-loves-you" />
       </main>
       

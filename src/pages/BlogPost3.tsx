@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingHearts from "@/components/FloatingHearts";
 import InternalLinks from "@/components/InternalLinks";
+import BlogRelatedPosts from "@/components/BlogRelatedPosts";
 import SEO from "@/components/SEO";
 import { Calendar, Clock, User, BookOpen, Heart, Star, Sparkles } from "lucide-react";
 import blogImage from "@/assets/blog-name-meanings.jpg";
@@ -143,6 +144,7 @@ const BlogPost3 = () => {
             </div>
           </div>
         </article>
+        <BlogRelatedPosts currentPostId="name-meanings-origins" />
         <InternalLinks currentPage="/blog/name-meanings-origins" />
       </main>
       

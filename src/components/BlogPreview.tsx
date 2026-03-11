@@ -1,49 +1,58 @@
 import { Link } from "react-router-dom";
 import { Calendar, Clock, ArrowRight, BookOpen } from "lucide-react";
+import blogLoveImage from "@/assets/blog-love-relationships.jpg";
+import blogZodiacImage from "@/assets/blog-zodiac-astrology.jpg";
+import blogNameImage from "@/assets/blog-name-meanings.jpg";
+import blogFactsImage from "@/assets/blog-love-facts.jpg";
+import blogLanguagesImage from "@/assets/blog-love-languages.jpg";
+import blogDistanceImage from "@/assets/blog-long-distance.jpg";
+import blogDateImage from "@/assets/blog-date-ideas.jpg";
 import blogSignsImage from "@/assets/blog-signs-true-love.jpg";
 import blogSparkImage from "@/assets/blog-keep-spark-alive.jpg";
 import blogScienceImage from "@/assets/blog-science-attraction.jpg";
 import blogGoalsImage from "@/assets/blog-relationship-goals.jpg";
+import blogLetterImage from "@/assets/blog-write-love-letter.jpg";
+import blogFirstDateImage from "@/assets/blog-first-date-tips.jpg";
+import blogCommunicationImage from "@/assets/blog-healthy-communication.jpg";
+import blogQuotesImage from "@/assets/blog-love-quotes.jpg";
+import blogProposalImage from "@/assets/blog-proposal-ideas.jpg";
+import blogApologizeImage from "@/assets/blog-apologize-relationship.jpg";
 import blogTrustImage from "@/assets/blog-trust-building.jpg";
+import blogEQImage from "@/assets/blog-emotional-intelligence.jpg";
 import blogSelfLoveImage from "@/assets/blog-self-love.jpg";
+import blogAnniversaryImage from "@/assets/blog-anniversary-ideas.jpg";
+import blogCulturesImage from "@/assets/blog-love-cultures.jpg";
 
-const blogPosts = [
-  {
-    id: "trust-building-relationships",
-    title: "How to Build Trust in a Relationship: 15 Expert Strategies",
-    excerpt: "Learn proven strategies to build, rebuild, and maintain trust in your relationship.",
-    image: blogTrustImage,
-    date: "March 9, 2026",
-    readTime: "14 min read",
-    category: "Trust & Bonding"
-  },
-  {
-    id: "self-love-guide",
-    title: "The Power of Self-Love: Why Loving Yourself First Changes Everything",
-    excerpt: "Discover why self-love is the foundation of healthy relationships.",
-    image: blogSelfLoveImage,
-    date: "March 10, 2026",
-    readTime: "12 min read",
-    category: "Self-Love"
-  },
-  {
-    id: "signs-partner-truly-loves-you",
-    title: "15 Unmistakable Signs Your Partner Truly Loves You",
-    excerpt: "Learn to recognize the genuine signs of true love beyond words — through actions and emotional connection.",
-    image: blogSignsImage,
-    date: "March 1, 2026",
-    readTime: "10 min read",
-    category: "Love & Relationships"
-  },
-  {
-    id: "science-of-attraction",
-    title: "The Science of Attraction: Why We Fall in Love",
-    excerpt: "Discover the fascinating psychology, biology, and chemistry behind attraction.",
-    image: blogScienceImage,
-    date: "March 3, 2026",
-    readTime: "11 min read",
-    category: "Psychology"
-  }
+const featuredPosts = [
+  { id: "trust-building-relationships", title: "How to Build Trust in a Relationship: 15 Expert Strategies", image: blogTrustImage, readTime: "14 min", category: "Trust & Bonding" },
+  { id: "self-love-guide", title: "The Power of Self-Love: Why Loving Yourself First Changes Everything", image: blogSelfLoveImage, readTime: "12 min", category: "Self-Love" },
+  { id: "signs-partner-truly-loves-you", title: "15 Unmistakable Signs Your Partner Truly Loves You", image: blogSignsImage, readTime: "10 min", category: "Love & Relationships" },
+  { id: "science-of-attraction", title: "The Science of Attraction: Why We Fall in Love", image: blogScienceImage, readTime: "11 min", category: "Psychology" },
+];
+
+const allBlogLinks = [
+  { id: "trust-building-relationships", title: "How to Build Trust in a Relationship" },
+  { id: "emotional-intelligence-love", title: "Emotional Intelligence in Love" },
+  { id: "self-love-guide", title: "The Power of Self-Love" },
+  { id: "anniversary-celebration-ideas", title: "50 Romantic Anniversary Ideas" },
+  { id: "love-different-cultures", title: "Love Around the World" },
+  { id: "first-date-tips", title: "25 First Date Tips That Work" },
+  { id: "healthy-communication-relationships", title: "Healthy Communication Tips" },
+  { id: "beautiful-love-quotes", title: "100 Most Beautiful Love Quotes" },
+  { id: "marriage-proposal-ideas", title: "20 Unforgettable Proposal Ideas" },
+  { id: "how-to-apologize-relationship", title: "The Art of Saying Sorry" },
+  { id: "signs-partner-truly-loves-you", title: "15 Signs Your Partner Truly Loves You" },
+  { id: "keep-spark-alive-relationship", title: "How to Keep the Spark Alive" },
+  { id: "science-of-attraction", title: "The Science of Attraction" },
+  { id: "relationship-goals-couples", title: "30 Meaningful Relationship Goals" },
+  { id: "how-to-write-love-letter", title: "How to Write the Perfect Love Letter" },
+  { id: "love-relationships-guide", title: "Complete Guide to Lasting Relationships" },
+  { id: "zodiac-compatibility-guide", title: "Zodiac Compatibility Guide" },
+  { id: "name-meanings-origins", title: "The World of Name Meanings" },
+  { id: "love-facts-trivia", title: "50 Fascinating Love Facts" },
+  { id: "five-love-languages", title: "The 5 Love Languages" },
+  { id: "long-distance-relationships", title: "Long Distance Relationships Guide" },
+  { id: "romantic-date-ideas", title: "75 Romantic Date Ideas" },
 ];
 
 const BlogPreview = () => {
@@ -63,8 +72,9 @@ const BlogPreview = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {blogPosts.map((post) => (
+        {/* Featured Posts Grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
+          {featuredPosts.map((post) => (
             <Link
               key={post.id}
               to={`/blog/${post.id}`}
@@ -99,12 +109,31 @@ const BlogPreview = () => {
           ))}
         </div>
 
+        {/* All Blog Links */}
+        <div className="card-romantic rounded-2xl p-6 md:p-8">
+          <h3 className="font-display text-xl font-bold text-foreground mb-6 text-center">
+            Browse All {allBlogLinks.length} Articles
+          </h3>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+            {allBlogLinks.map((post) => (
+              <Link
+                key={post.id}
+                to={`/blog/${post.id}`}
+                className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors py-1.5 group"
+              >
+                <ArrowRight className="w-3 h-3 flex-shrink-0 opacity-0 group-hover:opacity-100 transition-opacity" />
+                <span className="line-clamp-1">{post.title}</span>
+              </Link>
+            ))}
+          </div>
+        </div>
+
         <div className="text-center mt-8">
           <Link
             to="/blog"
             className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-full font-medium hover:opacity-90 transition-opacity"
           >
-            View All 22 Articles <ArrowRight className="w-4 h-4" />
+            View All Articles <ArrowRight className="w-4 h-4" />
           </Link>
         </div>
       </div>
