@@ -143,6 +143,7 @@ const BlogPost3 = () => {
             </div>
           </div>
         </article>
+        <BlogRelatedPosts currentPostId="name-meanings-origins" />
         <InternalLinks currentPage="/blog/name-meanings-origins" />
       </main>
       

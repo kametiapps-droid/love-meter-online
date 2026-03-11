@@ -178,6 +178,7 @@ const BlogPost16 = () => {
             </div>
           </div>
         </article>
+        <BlogRelatedPosts currentPostId="marriage-proposal-ideas" />
         <InternalLinks currentPage="/blog/marriage-proposal-ideas" />
       </main>
       

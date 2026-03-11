@@ -146,6 +146,7 @@ const BlogPost21 = () => {
             </div>
           </div>
         </article>
+        <BlogRelatedPosts currentPostId="anniversary-celebration-ideas" />
         <InternalLinks currentPage="/blog/anniversary-celebration-ideas" />
       </main>
       <Footer />

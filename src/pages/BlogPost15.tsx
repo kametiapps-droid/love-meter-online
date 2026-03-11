@@ -220,6 +220,7 @@ const BlogPost15 = () => {
             </div>
           </div>
         </article>
+        <BlogRelatedPosts currentPostId="beautiful-love-quotes" />
         <InternalLinks currentPage="/blog/beautiful-love-quotes" />
       </main>
       

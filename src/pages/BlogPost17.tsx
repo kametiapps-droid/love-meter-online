@@ -152,6 +152,7 @@ const BlogPost17 = () => {
             </div>
           </div>
         </article>
+        <BlogRelatedPosts currentPostId="how-to-apologize-relationship" />
         <InternalLinks currentPage="/blog/how-to-apologize-relationship" />
       </main>
       

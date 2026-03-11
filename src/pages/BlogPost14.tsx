@@ -178,6 +178,7 @@ const BlogPost14 = () => {
             </div>
           </div>
         </article>
+        <BlogRelatedPosts currentPostId="healthy-communication-relationships" />
         <InternalLinks currentPage="/blog/healthy-communication-relationships" />
       </main>
       

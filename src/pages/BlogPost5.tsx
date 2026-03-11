@@ -118,6 +118,7 @@ const BlogPost5 = () => {
             </div>
           </div>
         </article>
+        <BlogRelatedPosts currentPostId="five-love-languages" />
         <InternalLinks currentPage="/blog/five-love-languages" />
       </main>
       

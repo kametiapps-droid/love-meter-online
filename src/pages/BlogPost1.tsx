@@ -203,7 +203,8 @@ import BlogRelatedPosts from "@/components/BlogRelatedPosts";
            </div>
          </article>
 
-         <InternalLinks currentPage="/blog" />
+         <BlogRelatedPosts currentPostId="love-relationships-guide" />
+         <InternalLinks currentPage="/blog/love-relationships-guide" />
        </main>
        
        <Footer />

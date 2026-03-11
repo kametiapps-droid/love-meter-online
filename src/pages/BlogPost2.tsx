@@ -207,7 +207,8 @@ import BlogRelatedPosts from "@/components/BlogRelatedPosts";
            </div>
          </article>
 
-         <InternalLinks currentPage="/blog" />
+         <BlogRelatedPosts currentPostId="zodiac-compatibility-guide" />
+         <InternalLinks currentPage="/blog/zodiac-compatibility-guide" />
        </main>
        
        <Footer />

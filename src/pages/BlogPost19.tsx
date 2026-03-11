@@ -120,6 +120,7 @@ const BlogPost19 = () => {
             </div>
           </div>
         </article>
+        <BlogRelatedPosts currentPostId="emotional-intelligence-love" />
         <InternalLinks currentPage="/blog/emotional-intelligence-love" />
       </main>
       <Footer />

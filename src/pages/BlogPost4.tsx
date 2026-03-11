@@ -130,6 +130,7 @@ const BlogPost4 = () => {
             </div>
           </div>
         </article>
+        <BlogRelatedPosts currentPostId="love-facts-trivia" />
         <InternalLinks currentPage="/blog/love-facts-trivia" />
       </main>
       
