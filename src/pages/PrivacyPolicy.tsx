@@ -81,7 +81,7 @@ const PrivacyPolicy = () => {
                 <ul className="list-disc pl-6 space-y-1">
                   <li><strong>Essential Cookies:</strong> Required for basic website functionality</li>
                   <li><strong>Analytics Cookies:</strong> Help us understand how visitors interact with our website (Google Analytics)</li>
-                  <li><strong>Advertising Cookies:</strong> Used by Google AdSense to display personalized advertisements</li>
+                  <li><strong>Advertising Cookies:</strong> Used by third-party advertising partners to display relevant advertisements</li>
                 </ul>
                 <p className="mt-3">
                   You can control cookies through your browser settings. However, disabling cookies may affect website functionality.
@@ -89,12 +89,12 @@ const PrivacyPolicy = () => {
               </section>
 
               <section>
-                <h2 className="text-xl font-semibold text-foreground mb-3">4. Google AdSense</h2>
+                <h2 className="text-xl font-semibold text-foreground mb-3">4. Third-Party Advertising</h2>
                 <p>
-                  We use Google AdSense to display advertisements on our website. Google AdSense uses cookies to serve ads based on your prior visits to our website and other websites. Google's use of advertising cookies enables it and its partners to serve ads based on your visit to our site and/or other sites on the Internet.
+                  We use third-party advertising partners to display advertisements on our website. These partners may use cookies to serve ads based on your prior visits to our website and other websites.
                 </p>
                 <p className="mt-3">
-                  You may opt out of personalized advertising by visiting{" "}
+                  You may opt out of personalized advertising by visiting your browser's privacy settings or using{" "}
                   <a href="https://www.google.com/settings/ads" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
                     Google Ads Settings
                   </a>
