@@ -102,7 +102,7 @@ const TermsOfService = () => {
               <section>
                 <h2 className="text-xl font-semibold text-foreground mb-3">6. Third-Party Advertisements</h2>
                 <p>
-                  Our website displays advertisements provided by third-party advertising networks, including Google AdSense. These advertisements may use cookies and tracking technologies. We are not responsible for the content or practices of these advertisers.
+                  Our website displays advertisements provided by third-party advertising networks. These advertisements may use cookies and tracking technologies. We are not responsible for the content or practices of these advertisers.
                 </p>
               </section>
 

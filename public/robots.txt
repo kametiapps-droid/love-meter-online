@@ -1,13 +1,3 @@
-# Google AdSense Crawlers - Full Access
-User-agent: Mediapartners-Google
-Allow: /
-
-User-agent: AdsBot-Google
-Allow: /
-
-User-agent: AdsBot-Google-Mobile
-Allow: /
-
 # Google Search Crawler
 User-agent: Googlebot
 Allow: /
