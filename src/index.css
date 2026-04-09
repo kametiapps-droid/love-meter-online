@@ -239,3 +239,16 @@
 .delay-1000 { animation-delay: 1s; }
 .delay-1500 { animation-delay: 1.5s; }
 .delay-2000 { animation-delay: 2s; }
+
+/* Safe area for mobile app */
+.safe-area-top {
+  padding-top: env(safe-area-inset-top, 0px);
+}
+.safe-area-bottom {
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+/* Bottom nav spacing */
+main, .main-content {
+  padding-bottom: 4.5rem;
+}

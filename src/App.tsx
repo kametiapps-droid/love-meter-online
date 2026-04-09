@@ -45,6 +45,7 @@ import LoveLetterPage from "./pages/LoveLetterPage";
 import RelationshipTimelinePage from "./pages/RelationshipTimelinePage";
 import AboutUs from "./pages/AboutUs";
 import CookieConsent from "./components/CookieConsent";
+import BottomNavBar from "./components/BottomNavBar";
 
 const queryClient = new QueryClient();
 
@@ -99,6 +100,7 @@ const App = () => (
           <Route path="*" element={<NotFound />} />
         </Routes>
         <CookieConsent />
+        <BottomNavBar />
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
