@@ -14,6 +14,14 @@ const LoveCalculatorPage = () => {
         title="Love Calculator - Test Your Love Compatibility Online Free"
         description="Use our free Love Calculator to find out your love compatibility. Enter two names and get your love percentage instantly. Fun and easy love test!"
         path="/love-calculator"
+        keywords="love calculator, love test online, name compatibility calculator, love percentage, romantic compatibility test"
+        dateModified="2026-04-09"
+        faqSchema={[
+          { question: "How does the Love Calculator work?", answer: "Our love calculator analyzes the names you enter using a fun algorithm to generate a compatibility percentage. Simply type in your name and your partner's name for instant results!" },
+          { question: "Is the Love Calculator accurate?", answer: "The love calculator is for entertainment purposes only. Real relationships depend on many factors beyond names." },
+          { question: "Can I try different name combinations?", answer: "Yes! Try full names, nicknames, or different spellings to see various fun results." },
+          { question: "Can I share my love calculator results?", answer: "Absolutely! Use the share button to send your results to friends or your special someone." },
+        ]}
       />
       <FloatingHearts />
       <Header />
