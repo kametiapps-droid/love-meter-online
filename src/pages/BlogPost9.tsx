@@ -15,6 +15,8 @@ const BlogPost9 = () => {
         description="Discover proven strategies to keep the romance alive in your long-term relationship. Expert tips on maintaining passion, excitement, and deep connection."
         path="/blog/keep-spark-alive-relationship"
         type="article"
+        articleSchema={true}
+        dateModified="2026-04-09"
       />
       <FloatingHearts />
       <Header />

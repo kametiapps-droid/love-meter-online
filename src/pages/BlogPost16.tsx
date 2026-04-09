@@ -15,6 +15,8 @@ const BlogPost16 = () => {
         description="Planning the perfect proposal? Discover 20 creative, romantic, and unforgettable marriage proposal ideas for every budget, personality, and setting."
         path="/blog/marriage-proposal-ideas"
         type="article"
+        articleSchema={true}
+        dateModified="2026-04-09"
       />
       <FloatingHearts />
       <Header />

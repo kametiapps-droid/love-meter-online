@@ -15,6 +15,8 @@ const BlogPost7 = () => {
         description="Never run out of date ideas! Discover 75 creative, romantic, and unforgettable date ideas for every budget, from free adventures to luxury experiences."
         path="/blog/romantic-date-ideas"
         type="article"
+        articleSchema={true}
+        dateModified="2026-04-09"
       />
       <FloatingHearts />
       <Header />

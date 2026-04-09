@@ -15,6 +15,8 @@ const BlogPost3 = () => {
         description="Explore the fascinating meanings and origins behind popular names. Discover the history and significance of your name."
         path="/blog/name-meanings-origins"
         type="article"
+        articleSchema={true}
+        dateModified="2026-04-09"
       />
       <FloatingHearts />
       <Header />

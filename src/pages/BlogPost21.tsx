@@ -16,6 +16,8 @@ const BlogPost21 = () => {
         description="From budget-friendly to luxurious, discover 50 creative anniversary celebration ideas that will make your milestone truly unforgettable."
         path="/blog/anniversary-celebration-ideas"
         type="article"
+        articleSchema={true}
+        dateModified="2026-04-09"
       />
       <FloatingHearts />
       <Header />

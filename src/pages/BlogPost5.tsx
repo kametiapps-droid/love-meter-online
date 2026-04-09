@@ -15,6 +15,8 @@ const BlogPost5 = () => {
         description="Learn about the 5 love languages and discover how you and your partner express love. Improve your relationship with this guide."
         path="/blog/five-love-languages"
         type="article"
+        articleSchema={true}
+        dateModified="2026-04-09"
       />
       <FloatingHearts />
       <Header />

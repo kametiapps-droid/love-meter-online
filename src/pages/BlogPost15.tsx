@@ -15,6 +15,8 @@ const BlogPost15 = () => {
         description="Discover 100 of the most beautiful, romantic, and inspiring love quotes from famous authors, poets, and thinkers. Perfect for cards, letters, and social media."
         path="/blog/beautiful-love-quotes"
         type="article"
+        articleSchema={true}
+        dateModified="2026-04-09"
       />
       <FloatingHearts />
       <Header />

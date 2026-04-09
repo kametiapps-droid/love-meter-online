@@ -15,6 +15,8 @@ const BlogPost12 = () => {
         description="Learn how to write a beautiful, heartfelt love letter that will make your partner's heart melt. Step-by-step guide with tips, examples, and inspiration."
         path="/blog/how-to-write-love-letter"
         type="article"
+        articleSchema={true}
+        dateModified="2026-04-09"
       />
       <FloatingHearts />
       <Header />

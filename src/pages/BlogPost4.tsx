@@ -15,6 +15,8 @@ const BlogPost4 = () => {
         description="Discover fascinating love facts and trivia about romance, relationships, and the science of love. Fun facts that will surprise you!"
         path="/blog/love-facts-trivia"
         type="article"
+        articleSchema={true}
+        dateModified="2026-04-09"
       />
       <FloatingHearts />
       <Header />

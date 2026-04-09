@@ -16,6 +16,8 @@ const BlogPost19 = () => {
         description="Discover how emotional intelligence transforms your love life. Learn to recognize, understand, and manage emotions for deeper, more fulfilling relationships."
         path="/blog/emotional-intelligence-love"
         type="article"
+        articleSchema={true}
+        dateModified="2026-04-09"
       />
       <FloatingHearts />
       <Header />

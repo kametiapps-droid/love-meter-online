@@ -15,6 +15,8 @@ const BlogPost11 = () => {
         description="Discover meaningful relationship goals that will strengthen your bond. From communication to adventure, these couple goals will transform your relationship."
         path="/blog/relationship-goals-couples"
         type="article"
+        articleSchema={true}
+        dateModified="2026-04-09"
       />
       <FloatingHearts />
       <Header />

@@ -15,6 +15,8 @@ const BlogPost8 = () => {
         description="Discover the genuine signs that your partner truly loves you. Learn to recognize real love through actions, behaviors, and emotional connection."
         path="/blog/signs-partner-truly-loves-you"
         type="article"
+        articleSchema={true}
+        dateModified="2026-04-09"
       />
       <FloatingHearts />
       <Header />

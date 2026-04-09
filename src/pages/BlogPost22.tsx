@@ -16,6 +16,8 @@ const BlogPost22 = () => {
         description="Explore fascinating love traditions, dating customs, and romantic expressions from cultures around the globe. From arranged marriages to love locks, discover how the world loves."
         path="/blog/love-different-cultures"
         type="article"
+        articleSchema={true}
+        dateModified="2026-04-09"
       />
       <FloatingHearts />
       <Header />
