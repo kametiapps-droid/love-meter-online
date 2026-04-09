@@ -45,6 +45,7 @@ import LoveLetterPage from "./pages/LoveLetterPage";
 import RelationshipTimelinePage from "./pages/RelationshipTimelinePage";
 import AboutUs from "./pages/AboutUs";
 import CookieConsent from "./components/CookieConsent";
+import BottomNavBar from "./components/BottomNavBar";
 
 const queryClient = new QueryClient();
 
