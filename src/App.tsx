@@ -100,6 +100,7 @@ const App = () => (
           <Route path="*" element={<NotFound />} />
         </Routes>
         <CookieConsent />
+        <BottomNavBar />
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
