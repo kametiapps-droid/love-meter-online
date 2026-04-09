@@ -16,6 +16,8 @@ const BlogPost18 = () => {
         description="Learn proven strategies to build, rebuild, and maintain trust in your relationship. Expert advice on creating a secure, lasting bond with your partner."
         path="/blog/trust-building-relationships"
         type="article"
+        articleSchema={true}
+        dateModified="2026-04-09"
       />
       <FloatingHearts />
       <Header />

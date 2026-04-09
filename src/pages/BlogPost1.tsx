@@ -16,6 +16,8 @@ import BlogRelatedPosts from "@/components/BlogRelatedPosts";
         description="Discover expert insights on building stronger relationships, understanding love languages, and creating lasting romantic connections."
         path="/blog/love-relationships-guide"
         type="article"
+        articleSchema={true}
+        dateModified="2026-04-09"
       />
        <FloatingHearts />
        <Header />

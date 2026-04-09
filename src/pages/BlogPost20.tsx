@@ -16,6 +16,8 @@ const BlogPost20 = () => {
         description="Discover why self-love is the foundation of healthy relationships. Learn practical strategies for building self-worth, confidence, and inner peace."
         path="/blog/self-love-guide"
         type="article"
+        articleSchema={true}
+        dateModified="2026-04-09"
       />
       <FloatingHearts />
       <Header />

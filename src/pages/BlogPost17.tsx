@@ -15,6 +15,8 @@ const BlogPost17 = () => {
         description="Learn how to give a sincere, meaningful apology that heals your relationship. Expert tips on taking responsibility, rebuilding trust, and growing stronger together."
         path="/blog/how-to-apologize-relationship"
         type="article"
+        articleSchema={true}
+        dateModified="2026-04-09"
       />
       <FloatingHearts />
       <Header />

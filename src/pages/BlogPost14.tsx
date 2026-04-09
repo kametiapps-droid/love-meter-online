@@ -15,6 +15,8 @@ const BlogPost14 = () => {
         description="Master the art of healthy communication in your relationship. Learn active listening, conflict resolution, and emotional intelligence skills that strengthen love."
         path="/blog/healthy-communication-relationships"
         type="article"
+        articleSchema={true}
+        dateModified="2026-04-09"
       />
       <FloatingHearts />
       <Header />

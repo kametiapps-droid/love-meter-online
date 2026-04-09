@@ -15,6 +15,8 @@ const BlogPost10 = () => {
         description="Explore the fascinating science behind attraction and love. Learn about the psychology, biology, and chemistry that drive human connection and romantic feelings."
         path="/blog/science-of-attraction"
         type="article"
+        articleSchema={true}
+        dateModified="2026-04-09"
       />
       <FloatingHearts />
       <Header />

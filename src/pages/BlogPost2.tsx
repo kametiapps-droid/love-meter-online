@@ -16,6 +16,8 @@ import BlogRelatedPosts from "@/components/BlogRelatedPosts";
          description="Explore zodiac compatibility and find your perfect star sign match. Learn which signs are most compatible in love and relationships."
          path="/blog/zodiac-compatibility-guide"
          type="article"
+        articleSchema={true}
+        dateModified="2026-04-09"
        />
        <FloatingHearts />
        <Header />

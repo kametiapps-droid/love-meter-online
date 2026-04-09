@@ -15,6 +15,8 @@ const BlogPost6 = () => {
         description="Expert tips for making long distance relationships work. Communication strategies, date ideas, and advice for staying connected across the miles."
         path="/blog/long-distance-relationships"
         type="article"
+        articleSchema={true}
+        dateModified="2026-04-09"
       />
       <FloatingHearts />
       <Header />
