@@ -14,6 +14,8 @@ const ZodiacCompatibilityPage = () => {
         title="Zodiac Compatibility - Check Your Star Sign Love Match"
         description="Discover your zodiac love compatibility. Find out which star signs are your best match and explore astrological relationship insights for free."
         path="/zodiac-compatibility"
+        keywords="zodiac compatibility, star sign compatibility, astrology love match, zodiac love, horoscope compatibility"
+        dateModified="2026-04-09"
       />
       <FloatingHearts />
       <Header />
