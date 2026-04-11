@@ -30,7 +30,7 @@ const SEO = ({
   articleSchema = false,
   faqSchema,
 }: SEOProps) => {
-  const baseUrl = "https://lovecalculator.space";
+  const baseUrl = "https://www.lovecalculator.space";
   const url = `${baseUrl}${path}`;
   const image = `${baseUrl}/og-image.png`;
   const siteName = "Love Calculator";
