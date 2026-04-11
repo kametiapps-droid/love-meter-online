@@ -11,7 +11,7 @@ const BlogPost13 = () => {
   return (
     <div className="min-h-screen flex flex-col romantic-gradient-bg relative overflow-hidden">
       <SEO
-        title="25 First Date Tips That Actually Work - Expert Advice"
+        title="25 First Date Tips That Actually Work"
         description="Nervous about your first date? These 25 proven tips will help you make a great impression, build genuine connection, and set the stage for lasting romance."
         path="/blog/first-date-tips"
         type="article"

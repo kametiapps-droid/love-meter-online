@@ -12,7 +12,7 @@ const BlogPost19 = () => {
   return (
     <div className="min-h-screen flex flex-col romantic-gradient-bg relative overflow-hidden">
       <SEO
-        title="Emotional Intelligence in Love: How EQ Makes Better Relationships"
+        title="Emotional Intelligence in Love - Better Relations"
         description="Discover how emotional intelligence transforms your love life. Learn to recognize, understand, and manage emotions for deeper, more fulfilling relationships."
         path="/blog/emotional-intelligence-love"
         type="article"
@@ -43,7 +43,7 @@ const BlogPost19 = () => {
                 </div>
 
                 <h1 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 leading-tight">
-                  Emotional Intelligence in Love: How EQ Makes Better Relationships
+                  Emotional Intelligence in Love - Better Relations
                 </h1>
 
                 <div className="prose prose-lg max-w-none text-muted-foreground space-y-6">

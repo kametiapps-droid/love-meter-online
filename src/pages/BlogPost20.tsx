@@ -12,7 +12,7 @@ const BlogPost20 = () => {
   return (
     <div className="min-h-screen flex flex-col romantic-gradient-bg relative overflow-hidden">
       <SEO
-        title="The Power of Self-Love: Why Loving Yourself First Changes Everything"
+        title="The Power of Self-Love: Why It Changes Everything"
         description="Discover why self-love is the foundation of healthy relationships. Learn practical strategies for building self-worth, confidence, and inner peace."
         path="/blog/self-love-guide"
         type="article"
@@ -43,7 +43,7 @@ const BlogPost20 = () => {
                 </div>
 
                 <h1 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 leading-tight">
-                  The Power of Self-Love: Why Loving Yourself First Changes Everything
+                  The Power of Self-Love: Why It Changes Everything
                 </h1>
 
                 <div className="prose prose-lg max-w-none text-muted-foreground space-y-6">
