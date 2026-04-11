@@ -83,4 +83,4 @@ User-agent: *
 Allow: /
 
 # Sitemap Location
-Sitemap: https://lovecalculator.space/sitemap.xml
+Sitemap: https://www.lovecalculator.space/sitemap.xml
