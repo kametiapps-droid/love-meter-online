@@ -11,7 +11,7 @@ const BlogPost12 = () => {
   return (
     <div className="min-h-screen flex flex-col romantic-gradient-bg relative overflow-hidden">
       <SEO
-        title="How to Write the Perfect Love Letter - Tips & Examples"
+        title="How to Write the Perfect Love Letter - Tips"
         description="Learn how to write a beautiful, heartfelt love letter that will make your partner's heart melt. Step-by-step guide with tips, examples, and inspiration."
         path="/blog/how-to-write-love-letter"
         type="article"

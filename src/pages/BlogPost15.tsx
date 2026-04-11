@@ -11,7 +11,7 @@ const BlogPost15 = () => {
   return (
     <div className="min-h-screen flex flex-col romantic-gradient-bg relative overflow-hidden">
       <SEO
-        title="100 Most Beautiful Love Quotes of All Time - Romantic Collection"
+        title="100 Most Beautiful Love Quotes of All Time"
         description="Discover 100 of the most beautiful, romantic, and inspiring love quotes from famous authors, poets, and thinkers. Perfect for cards, letters, and social media."
         path="/blog/beautiful-love-quotes"
         type="article"

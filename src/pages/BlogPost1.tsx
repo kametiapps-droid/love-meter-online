@@ -12,7 +12,7 @@ import BlogRelatedPosts from "@/components/BlogRelatedPosts";
    return (
       <div className="min-h-screen flex flex-col romantic-gradient-bg relative overflow-hidden">
       <SEO
-        title="The Ultimate Guide to Love & Relationships | Love Calculator Blog"
+        title="Ultimate Guide to Love & Relationships"
         description="Discover expert insights on building stronger relationships, understanding love languages, and creating lasting romantic connections."
         path="/blog/love-relationships-guide"
         type="article"

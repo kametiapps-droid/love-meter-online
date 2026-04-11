@@ -11,7 +11,7 @@ const BlogPost16 = () => {
   return (
     <div className="min-h-screen flex flex-col romantic-gradient-bg relative overflow-hidden">
       <SEO
-        title="20 Unforgettable Marriage Proposal Ideas - Creative & Romantic"
+        title="20 Unforgettable Marriage Proposal Ideas"
         description="Planning the perfect proposal? Discover 20 creative, romantic, and unforgettable marriage proposal ideas for every budget, personality, and setting."
         path="/blog/marriage-proposal-ideas"
         type="article"

@@ -12,7 +12,7 @@ const BlogPost22 = () => {
   return (
     <div className="min-h-screen flex flex-col romantic-gradient-bg relative overflow-hidden">
       <SEO
-        title="Love Around the World: How Different Cultures Express Romance"
+        title="Love Around the World - How Cultures Express Love"
         description="Explore fascinating love traditions, dating customs, and romantic expressions from cultures around the globe. From arranged marriages to love locks, discover how the world loves."
         path="/blog/love-different-cultures"
         type="article"
@@ -43,7 +43,7 @@ const BlogPost22 = () => {
                 </div>
 
                 <h1 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 leading-tight">
-                  Love Around the World: How Different Cultures Express Romance
+                  Love Around the World - How Cultures Express Love
                 </h1>
 
                 <div className="prose prose-lg max-w-none text-muted-foreground space-y-6">
