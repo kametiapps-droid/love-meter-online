@@ -100,7 +100,7 @@ const CoupleNameGenerator = () => {
                 type="text"
                 placeholder="Enter first name"
                 value={name1}
-                onChange={(e) => setName1(e.target.value)}
+                onChange={(e) => setName1(e.target.value.replace(/[^a-zA-Z\s]/g, ''))}
                 className="bg-background/50 border-border focus:border-primary"
                 maxLength={20}
               />
@@ -111,7 +111,7 @@ const CoupleNameGenerator = () => {
                 type="text"
                 placeholder="Enter second name"
                 value={name2}
-                onChange={(e) => setName2(e.target.value)}
+                onChange={(e) => setName2(e.target.value.replace(/[^a-zA-Z\s]/g, ''))}
                 className="bg-background/50 border-border focus:border-primary"
                 maxLength={20}
               />
