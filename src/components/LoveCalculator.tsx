@@ -95,6 +95,7 @@ const LoveCalculator = () => {
             <Input
               type="text"
               placeholder="Your Name"
+              aria-label="Your Name"
               value={name1}
               onChange={(e) => setName1(e.target.value.replace(/[^a-zA-Z\s]/g, ''))}
               className="h-14 px-5 text-lg rounded-xl border-2 border-border focus:border-primary bg-background/50 placeholder:text-muted-foreground/60"
@@ -113,6 +114,7 @@ const LoveCalculator = () => {
             <Input
               type="text"
               placeholder="Partner's Name"
+              aria-label="Partner's Name"
               value={name2}
               onChange={(e) => setName2(e.target.value.replace(/[^a-zA-Z\s]/g, ''))}
               className="h-14 px-5 text-lg rounded-xl border-2 border-border focus:border-primary bg-background/50 placeholder:text-muted-foreground/60"

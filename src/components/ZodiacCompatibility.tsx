@@ -250,7 +250,7 @@ const ZodiacCompatibility = () => {
               <div className="space-y-2">
                 <label className="text-sm font-medium text-foreground">Your Sign</label>
                 <Select value={sign1} onValueChange={setSign1}>
-                  <SelectTrigger className="h-14 rounded-xl border-2 border-border focus:border-primary bg-background/50">
+                  <SelectTrigger className="h-14 rounded-xl border-2 border-border focus:border-primary bg-background/50" aria-label="Select your zodiac sign">
                     <SelectValue placeholder="Select your sign" />
                   </SelectTrigger>
                   <SelectContent>
@@ -270,7 +270,7 @@ const ZodiacCompatibility = () => {
               <div className="space-y-2">
                 <label className="text-sm font-medium text-foreground">Partner's Sign</label>
                 <Select value={sign2} onValueChange={setSign2}>
-                  <SelectTrigger className="h-14 rounded-xl border-2 border-border focus:border-primary bg-background/50">
+                  <SelectTrigger className="h-14 rounded-xl border-2 border-border focus:border-primary bg-background/50" aria-label="Select partner's zodiac sign">
                     <SelectValue placeholder="Select their sign" />
                   </SelectTrigger>
                   <SelectContent>

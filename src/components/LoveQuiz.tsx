@@ -239,7 +239,7 @@ const LoveQuiz = () => {
                   <span>Question {currentQuestion + 1} of {questions.length}</span>
                   <span>{Math.round(progress)}% complete</span>
                 </div>
-                <Progress value={progress} className="h-2" />
+                <Progress value={progress} className="h-2" aria-label={`Quiz progress: ${Math.round(progress)}% complete`} />
               </div>
 
               {/* Question */}
