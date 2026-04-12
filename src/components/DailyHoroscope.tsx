@@ -127,6 +127,7 @@ const DailyHoroscope = () => {
             <button
               key={sign.name}
               onClick={() => handleSelectSign(sign.name)}
+              aria-label={`${sign.name} - ${sign.dates}`}
               className={`p-3 md:p-4 rounded-xl transition-all duration-300 hover:scale-105 ${
                 selectedSign === sign.name
                   ? "bg-primary/20 border-2 border-primary shadow-lg"
