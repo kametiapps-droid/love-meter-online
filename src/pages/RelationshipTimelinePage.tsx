@@ -36,39 +36,53 @@ const RelationshipTimelinePage = () => {
         <RelationshipTimeline />
 
         <section className="py-12 px-4">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground text-center mb-8">
-              About the Relationship Timeline
-            </h2>
-            <div className="space-y-4">
-              <div className="card-romantic rounded-xl p-6">
-                <h3 className="font-semibold text-foreground mb-2">What is the Relationship Timeline Creator?</h3>
-                <p className="text-muted-foreground text-sm">
-                  Our Relationship Timeline Creator lets you build a beautiful visual timeline of your love story. Add important milestones — your first date, first kiss, engagement, wedding, or any moment that matters. Each milestone displays the date, a custom title, emoji, and how many days of love you've shared. It's a wonderful way to celebrate your journey together.
+          <div className="max-w-4xl mx-auto">
+            <div className="card-romantic rounded-2xl p-6 md:p-10 space-y-8">
+              <div>
+                <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-4">
+                  What Is the Relationship Timeline Creator? 📅
+                </h2>
+                <p className="text-muted-foreground leading-relaxed">
+                  The <strong>Relationship Timeline Creator</strong> is a beautiful visual tool that lets you document your love story from the very beginning. Add milestones — your first date, first kiss, moving in together, engagement, wedding, or any moment that holds special meaning — and watch your relationship unfold as a stunning chronological timeline. Each milestone displays the date, a custom title, an emoji, and how many days of love you've shared.
+                </p>
+                <p className="text-muted-foreground leading-relaxed mt-3">
+                  Every love story is unique, and ours is the tool to capture yours. Unlike generic journaling apps, our <strong>relationship timeline</strong> is designed specifically for couples. It celebrates the progression of your partnership — from nervous first encounters to comfortable, deep-rooted love. Looking back at your timeline reminds you of how far you've come together and how many beautiful moments you've created.
                 </p>
               </div>
-              <div className="card-romantic rounded-xl p-6">
-                <h3 className="font-semibold text-foreground mb-2">Why Document Your Relationship?</h3>
-                <p className="text-muted-foreground text-sm">
-                  Documenting relationship milestones strengthens emotional bonds by helping couples reflect on shared memories. Research shows that couples who actively recall positive shared experiences report higher relationship satisfaction. A visual timeline serves as a love diary — a tangible reminder of how far you've come and all the beautiful moments you've created together.
+
+              <div>
+                <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-4">
+                  Why Document Your Love Story? 💕
+                </h2>
+                <p className="text-muted-foreground leading-relaxed">
+                  Relationship psychologists have found that couples who regularly reflect on shared positive memories report higher satisfaction and stronger emotional bonds. Creating a <strong>relationship timeline</strong> isn't just sentimental — it's actually good for your partnership. When you take time to acknowledge what you've built together, you reinforce the foundation of your connection.
+                </p>
+                <p className="text-muted-foreground leading-relaxed mt-3">
+                  A timeline also serves as a beautiful gift for anniversaries, weddings, or Valentine's Day. Imagine presenting your partner with a visual map of every important moment in your relationship — from the day you met to today. It's personal, thoughtful, and far more meaningful than anything you could buy in a store. Your love story, told through the milestones that made it extraordinary.
                 </p>
               </div>
-              <div className="card-romantic rounded-xl p-6">
-                <h3 className="font-semibold text-foreground mb-2">How to Create Your Timeline</h3>
-                <p className="text-muted-foreground text-sm">
-                  Enter both partners' names, then add milestones one by one. For each milestone, choose a date, write a title (like "Our First Kiss" or "Moved In Together"), and pick an emoji that captures the moment. The timeline automatically calculates the days between each event, creating a beautiful chronological story of your relationship.
+
+              <div>
+                <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-4">
+                  How to Create Your Timeline ✨
+                </h2>
+                <p className="text-muted-foreground leading-relaxed">
+                  Getting started is simple. Enter both partners' names, then begin adding milestones one by one. For each milestone, select a date, write a title that captures the moment (like "Our First Road Trip" or "The Day You Said Yes"), and choose an emoji that brings it to life. The timeline automatically calculates the time between each event, creating a chronological story of your relationship.
+                </p>
+                <p className="text-muted-foreground leading-relaxed mt-3">
+                  Don't limit yourself to "big" moments. Some of the most meaningful milestones are the quiet ones — the first time you cooked dinner together, your first inside joke, the day you realized you were in love, or the night you stayed up talking until sunrise. These small moments are the threads that weave the fabric of your relationship.
                 </p>
               </div>
-              <div className="card-romantic rounded-xl p-6">
-                <h3 className="font-semibold text-foreground mb-2">Creative Ideas for Milestones</h3>
-                <p className="text-muted-foreground text-sm">
-                  Beyond the obvious dates, consider adding fun milestones like: your first road trip, meeting each other's parents, adopting a pet together, your first holiday, surviving your first argument, or cooking a meal together for the first time. Every memory counts! Generate a <Link to="/love-letter-generator" className="text-primary hover:underline">Love Letter</Link> to accompany your timeline.
+
+              <div>
+                <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-4">
+                  Creative Milestone Ideas 🎨
+                </h2>
+                <p className="text-muted-foreground leading-relaxed">
+                  Beyond the obvious dates like anniversaries and proposals, consider adding milestones like: meeting each other's families for the first time, your first vacation together, adopting a pet, surviving your first disagreement (and coming out stronger!), starting a new tradition, moving to a new city, or the moment you knew they were "the one."
                 </p>
-              </div>
-              <div className="card-romantic rounded-xl p-6">
-                <h3 className="font-semibold text-foreground mb-2">More Ways to Celebrate Your Love</h3>
-                <p className="text-muted-foreground text-sm">
-                  After creating your timeline, explore more of our love tools! Check your <Link to="/love-calculator" className="text-primary hover:underline">Love Compatibility</Link>, create a <Link to="/couple-name-generator" className="text-primary hover:underline">Couple Name</Link>, discover your <Link to="/zodiac-compatibility" className="text-primary hover:underline">Zodiac Compatibility</Link>, or browse our <Link to="/love-poetry" className="text-primary hover:underline">Love Poetry</Link> collection for beautiful verses to share.
+                <p className="text-muted-foreground leading-relaxed mt-3">
+                  Every milestone tells a piece of your story, and together they create a narrative that's uniquely yours. After building your timeline, enhance your love celebration with our other tools — write a <Link to="/love-letter-generator" className="text-primary hover:underline">Love Letter</Link> to accompany it, browse our <Link to="/love-poetry" className="text-primary hover:underline">Love Poetry</Link> collection for verses to include, or check your <Link to="/zodiac-compatibility" className="text-primary hover:underline">Zodiac Compatibility</Link> to add cosmic context to your love story!
                 </p>
               </div>
             </div>

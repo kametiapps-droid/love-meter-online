@@ -41,39 +41,53 @@ const KidsNameGeneratorPage = () => {
         <KidsNameGenerator />
 
         <section className="py-12 px-4">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground text-center mb-8">
-              About Kids Name Generator
-            </h2>
-            <div className="space-y-4">
-              <div className="card-romantic rounded-xl p-6">
-                <h3 className="font-semibold text-foreground mb-2">How Does the Kids Name Generator Work?</h3>
-                <p className="text-muted-foreground text-sm">
-                  Our Kids Name Generator creates unique baby name suggestions by blending elements from both parents' names and considering zodiac influences. Enter both parents' names and birth dates to get personalized baby name ideas. It's a fun and creative way to explore naming options for your future family!
+          <div className="max-w-4xl mx-auto">
+            <div className="card-romantic rounded-2xl p-6 md:p-10 space-y-8">
+              <div>
+                <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-4">
+                  What Is the Kids Name Generator? 👶
+                </h2>
+                <p className="text-muted-foreground leading-relaxed">
+                  Our <strong>Kids Name Generator</strong> is a creative tool that suggests unique baby names inspired by both parents' names and zodiac influences. Whether you're expecting a baby, planning for the future, or just dreaming about what your kids might be named, this generator combines elements from both parents to create beautiful, meaningful name suggestions that honor both sides of the family.
+                </p>
+                <p className="text-muted-foreground leading-relaxed mt-3">
+                  Choosing a <strong>baby name</strong> is one of the most important and exciting decisions parents face. It's a name your child will carry for a lifetime — their first identity, their introduction to the world. Our generator helps spark inspiration by blending the sounds, letters, and energy of both parents' names into fresh combinations you might never have considered on your own.
                 </p>
               </div>
-              <div className="card-romantic rounded-xl p-6">
-                <h3 className="font-semibold text-foreground mb-2">Choosing the Perfect Baby Name</h3>
-                <p className="text-muted-foreground text-sm">
-                  Choosing a baby name is one of the most exciting parts of expecting a child. Our generator gives you creative starting points by combining elements of both parents' names. While our suggestions are for fun, they might spark inspiration! For more couple fun, try creating a <Link to="/couple-name-generator" className="text-primary hover:underline">Couple Name</Link> first.
+
+              <div>
+                <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-4">
+                  How Does the Generator Work? ✨
+                </h2>
+                <p className="text-muted-foreground leading-relaxed">
+                  Enter both parents' names and birth dates, and our algorithm goes to work. It analyzes the phonetic qualities of both names, identifies harmonious letter combinations, and considers the zodiac signs associated with the birth dates. The result is a curated list of <strong>baby name suggestions</strong> — both for boys and girls — that feel connected to the parents while standing beautifully on their own.
+                </p>
+                <p className="text-muted-foreground leading-relaxed mt-3">
+                  The zodiac component adds an extra layer of meaning. Many cultures believe that a name aligned with a child's astrological energy can bring good fortune and a balanced temperament. While this is purely traditional and not scientific, it makes the naming process more fun and thoughtful. You might discover a name that perfectly captures the qualities you hope for in your child.
                 </p>
               </div>
-              <div className="card-romantic rounded-xl p-6">
-                <h3 className="font-semibold text-foreground mb-2">Names and Astrology</h3>
-                <p className="text-muted-foreground text-sm">
-                  Many cultures believe that a child's name can influence their personality and destiny. Our generator considers zodiac elements when suggesting names, adding an astrological twist to the naming process. Check your <Link to="/zodiac-compatibility" className="text-primary hover:underline">Zodiac Compatibility</Link> to see how the stars align for your family, or read your <Link to="/daily-horoscope" className="text-primary hover:underline">Daily Horoscope</Link>.
+
+              <div>
+                <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-4">
+                  Tips for Choosing the Perfect Baby Name 💡
+                </h2>
+                <p className="text-muted-foreground leading-relaxed">
+                  A great <strong>baby name</strong> sounds good when spoken aloud, pairs well with your last name, and carries a meaning that resonates with your family values. Consider how the name will sound in different contexts — at a graduation ceremony, in a job interview, and whispered as a lullaby. The best names are versatile, timeless, and filled with love.
+                </p>
+                <p className="text-muted-foreground leading-relaxed mt-3">
+                  Don't rush the decision! Many parents create a shortlist and sit with the names for weeks before choosing. Say the name out loud repeatedly, write it down, imagine calling it across a playground. Our generator provides starting points — the final choice should come from your heart. And remember, there's no wrong answer when a name is chosen with love.
                 </p>
               </div>
-              <div className="card-romantic rounded-xl p-6">
-                <h3 className="font-semibold text-foreground mb-2">Popular Baby Name Trends</h3>
-                <p className="text-muted-foreground text-sm">
-                  Baby name trends change every year. Some parents prefer classic, timeless names while others love unique, modern options. Our generator creates both types! Whether you're seriously planning or just dreaming about the future, it's always fun to explore possibilities. Test your love compatibility first with our <Link to="/love-calculator" className="text-primary hover:underline">Love Calculator</Link>.
+
+              <div>
+                <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-4">
+                  Baby Naming Traditions Around the World 🌍
+                </h2>
+                <p className="text-muted-foreground leading-relaxed">
+                  Every culture has its own beautiful naming traditions. In many Asian cultures, names are chosen based on the meaning of characters and how they relate to the child's birth date. In African traditions, names often reflect the circumstances of birth or the qualities parents wish for their child. In Western cultures, family names are frequently passed down through generations as a way of honoring ancestors.
                 </p>
-              </div>
-              <div className="card-romantic rounded-xl p-6">
-                <h3 className="font-semibold text-foreground mb-2">More Love & Relationship Tools</h3>
-                <p className="text-muted-foreground text-sm">
-                  Explore our complete collection of love tools! Discover your romantic personality with the <Link to="/love-quiz" className="text-primary hover:underline">Love Style Quiz</Link>, ask the <Link to="/love-fortune-ball" className="text-primary hover:underline">Fortune Ball</Link> about your future, play our <Link to="/love-game" className="text-primary hover:underline">Love Hearts Game</Link>, or read our <Link to="/blog" className="text-primary hover:underline">Love Blog</Link> for expert relationship advice.
+                <p className="text-muted-foreground leading-relaxed mt-3">
+                  Our generator respects this diversity by offering a wide range of name styles. Whether you prefer classic, modern, or culturally inspired names, you'll find inspiration here. After choosing a name, celebrate your partnership with our <Link to="/couple-name-generator" className="text-primary hover:underline">Couple Name Generator</Link>, check your family's <Link to="/zodiac-compatibility" className="text-primary hover:underline">Zodiac Compatibility</Link>, or create a <Link to="/relationship-timeline" className="text-primary hover:underline">Relationship Timeline</Link> to document this beautiful chapter of your love story!
                 </p>
               </div>
             </div>

@@ -41,39 +41,53 @@ const LoveFortuneBallPage = () => {
         <LoveFortuneBall />
 
         <section className="py-12 px-4">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground text-center mb-8">
-              About Love Fortune Ball
-            </h2>
-            <div className="space-y-4">
-              <div className="card-romantic rounded-xl p-6">
-                <h3 className="font-semibold text-foreground mb-2">How Does the Love Fortune Ball Work?</h3>
-                <p className="text-muted-foreground text-sm">
-                  The Love Fortune Ball is like a mystical Magic 8 Ball designed specifically for love questions! Simply type any yes or no question about your love life, and the fortune ball will reveal your destiny with a magical, animated answer. It's the perfect tool when you need a quick, fun answer to your burning romantic questions.
+          <div className="max-w-4xl mx-auto">
+            <div className="card-romantic rounded-2xl p-6 md:p-10 space-y-8">
+              <div>
+                <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-4">
+                  What Is the Love Fortune Ball? 🔮
+                </h2>
+                <p className="text-muted-foreground leading-relaxed">
+                  The <strong>Love Fortune Ball</strong> is a mystical, digital version of the classic Magic 8 Ball — designed exclusively for questions about love and romance. Type any yes-or-no question about your love life, and the fortune ball will deliver a magical answer with beautiful animations. It's the perfect tool when you need a quick, playful answer to those burning romantic questions that keep you up at night.
+                </p>
+                <p className="text-muted-foreground leading-relaxed mt-3">
+                  The concept of seeking answers from mystical orbs dates back centuries. From crystal ball gazers at medieval fairs to the fortune tellers of ancient Greece, humans have always been fascinated by the idea that unseen forces might know the answers to our deepest questions. Our <strong>Love Fortune Ball</strong> brings this timeless tradition into the digital age with a romantic twist — because the questions we care about most are always about love.
                 </p>
               </div>
-              <div className="card-romantic rounded-xl p-6">
-                <h3 className="font-semibold text-foreground mb-2">What Questions Can I Ask?</h3>
-                <p className="text-muted-foreground text-sm">
-                  You can ask any yes or no question about love! Popular questions include: "Does my crush like me?", "Will I find love this year?", "Is my partner my soulmate?", "Should I make the first move?" The fortune ball provides mystical answers to guide your love journey. For a more detailed love analysis, try our <Link to="/love-calculator" className="text-primary hover:underline">Love Calculator</Link>.
+
+              <div>
+                <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-4">
+                  How Does the Fortune Ball Work? ✨
+                </h2>
+                <p className="text-muted-foreground leading-relaxed">
+                  Simply type your love question into the input field and click "Ask the Fortune Ball." The ball will animate dramatically — shaking, glowing, and building suspense — before revealing its mystical answer. Answers range from enthusiastically positive ("Absolutely, love is in the air!") to mysteriously uncertain ("The stars need more time to align"). Each response adds a touch of magic and drama to your question.
+                </p>
+                <p className="text-muted-foreground leading-relaxed mt-3">
+                  The fortune ball is designed purely for entertainment and fun. It doesn't predict the future or provide real relationship advice — but it does provide laughter, excitement, and sometimes that little push of encouragement you didn't know you needed. Many users tell us that a positive fortune ball answer gave them the confidence to send that text or plan that date. Even magic can be a catalyst for real action!
                 </p>
               </div>
-              <div className="card-romantic rounded-xl p-6">
-                <h3 className="font-semibold text-foreground mb-2">The Magic Behind Fortune Telling</h3>
-                <p className="text-muted-foreground text-sm">
-                  Fortune telling has fascinated people for centuries. From crystal balls to tarot cards, humans have always sought guidance about love and the future. Our Love Fortune Ball brings this ancient tradition into the digital age with a fun, modern twist. For astrological guidance, check your <Link to="/daily-horoscope" className="text-primary hover:underline">Daily Love Horoscope</Link>.
+
+              <div>
+                <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-4">
+                  Best Questions to Ask the Fortune Ball 💬
+                </h2>
+                <p className="text-muted-foreground leading-relaxed">
+                  The best questions are simple yes-or-no format. Popular favorites include: "Does my crush think about me?", "Will I find love this year?", "Is my partner my soulmate?", "Should I make the first move?", "Will our relationship last forever?", and "Is he/she the one?" The more specific your question, the more personal the experience feels.
+                </p>
+                <p className="text-muted-foreground leading-relaxed mt-3">
+                  For extra fun, try asking silly questions like "Should we get matching tattoos?" or "Will our first date be perfect?" The fortune ball takes every question seriously, delivering its mystical wisdom with equal gravitas whether you're asking about true love or pizza toppings for date night. That's part of the charm!
                 </p>
               </div>
-              <div className="card-romantic rounded-xl p-6">
-                <h3 className="font-semibold text-foreground mb-2">Fun Ways to Use the Fortune Ball</h3>
-                <p className="text-muted-foreground text-sm">
-                  Use the fortune ball at parties, sleepovers, or date nights for endless entertainment! Ask questions together with friends and compare your fortunes. It's also great for making fun decisions — "Should we go on a spontaneous date?" Pair it with our <Link to="/zodiac-compatibility" className="text-primary hover:underline">Zodiac Compatibility</Link> checker for a complete love reading experience.
+
+              <div>
+                <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-4">
+                  Fun Ways to Use the Love Fortune Ball 🎉
+                </h2>
+                <p className="text-muted-foreground leading-relaxed">
+                  The <strong>Love Fortune Ball</strong> is perfect for parties, sleepovers, date nights, and social gatherings. Take turns asking questions with friends and compare your fortunes. Use it as an icebreaker on a first date — nothing breaks the tension like asking a magical ball whether your date is your soulmate! Couples love using it to make fun decisions together: "Should we try that new restaurant?" "Fortune Ball says... YES!"
                 </p>
-              </div>
-              <div className="card-romantic rounded-xl p-6">
-                <h3 className="font-semibold text-foreground mb-2">More Love Tools to Explore</h3>
-                <p className="text-muted-foreground text-sm">
-                  Love the Fortune Ball? We have plenty more love tools! Discover your romantic personality with our <Link to="/love-quiz" className="text-primary hover:underline">Love Style Quiz</Link>, create a cute <Link to="/couple-name-generator" className="text-primary hover:underline">Couple Name</Link>, or find future <Link to="/kids-name-generator" className="text-primary hover:underline">Baby Names</Link>. For fun, try our <Link to="/love-game" className="text-primary hover:underline">Love Hearts Catch Game</Link> too!
+                <p className="text-muted-foreground leading-relaxed mt-3">
+                  After consulting the fortune ball, keep the love journey going! Test your name compatibility with our <Link to="/love-calculator" className="text-primary hover:underline">Love Calculator</Link>, check your <Link to="/zodiac-compatibility" className="text-primary hover:underline">Zodiac Compatibility</Link>, or read your <Link to="/daily-horoscope" className="text-primary hover:underline">Daily Love Horoscope</Link> for a full cosmic love reading. The universe has plenty of answers waiting for you!
                 </p>
               </div>
             </div>

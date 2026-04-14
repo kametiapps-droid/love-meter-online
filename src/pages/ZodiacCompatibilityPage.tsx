@@ -43,39 +43,65 @@ const ZodiacCompatibilityPage = () => {
         <ZodiacCompatibility />
 
         <section className="py-12 px-4">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground text-center mb-8">
-              About Zodiac Compatibility
-            </h2>
-            <div className="space-y-4">
-              <div className="card-romantic rounded-xl p-6">
-                <h3 className="font-semibold text-foreground mb-2">How Does Zodiac Compatibility Work?</h3>
-                <p className="text-muted-foreground text-sm">
-                  Zodiac compatibility is based on traditional astrology that considers the elements (Fire, Earth, Air, Water) and qualities of each sign. Our tool analyzes your zodiac sign alongside your partner's to reveal your astrological compatibility. While fun and insightful, remember that real relationships depend on many factors beyond star signs!
+          <div className="max-w-4xl mx-auto">
+            <div className="card-romantic rounded-2xl p-6 md:p-10 space-y-8">
+              <div>
+                <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-4">
+                  What Is Zodiac Compatibility? ⭐
+                </h2>
+                <p className="text-muted-foreground leading-relaxed">
+                  <strong>Zodiac compatibility</strong> is the ancient art of determining how well two people connect based on their astrological signs. Each of the 12 zodiac signs belongs to one of four elements — Fire, Earth, Air, and Water — and these elements play a crucial role in determining relationship dynamics. Our free <strong>zodiac compatibility checker</strong> analyzes both signs and reveals how the stars align for your love life.
+                </p>
+                <p className="text-muted-foreground leading-relaxed mt-3">
+                  For thousands of years, civilizations across the world have looked to the stars for guidance in matters of the heart. From the ancient Babylonians who first mapped the zodiac to modern astrologers who study planetary transits, the belief that celestial bodies influence human relationships has persisted across cultures and centuries. Whether you're a firm believer or simply curious, exploring your <strong>star sign compatibility</strong> offers a fascinating lens through which to view your relationships.
                 </p>
               </div>
-              <div className="card-romantic rounded-xl p-6">
-                <h3 className="font-semibold text-foreground mb-2">Which Zodiac Signs Are Most Compatible?</h3>
-                <p className="text-muted-foreground text-sm">
-                  Generally, signs of the same element pair well: Fire signs (Aries, Leo, Sagittarius), Earth signs (Taurus, Virgo, Capricorn), Air signs (Gemini, Libra, Aquarius), and Water signs (Cancer, Scorpio, Pisces). However, opposite signs often have strong attraction too! Read our <Link to="/blog/zodiac-compatibility-guide" className="text-primary hover:underline">Complete Zodiac Compatibility Guide</Link> for in-depth insights.
+
+              <div>
+                <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-4">
+                  How Does Zodiac Compatibility Work? 🔮
+                </h2>
+                <p className="text-muted-foreground leading-relaxed">
+                  Our <strong>zodiac compatibility</strong> tool evaluates the natural affinity between two signs based on their elemental qualities. Fire signs (Aries, Leo, Sagittarius) are passionate and energetic. Earth signs (Taurus, Virgo, Capricorn) are practical and grounded. Air signs (Gemini, Libra, Aquarius) are intellectual and communicative. Water signs (Cancer, Scorpio, Pisces) are emotional and intuitive.
+                </p>
+                <p className="text-muted-foreground leading-relaxed mt-3">
+                  Signs sharing the same element typically understand each other deeply, while complementary elements (Fire-Air, Earth-Water) often create dynamic and exciting partnerships. Even seemingly "incompatible" signs can build beautiful relationships — astrology simply highlights potential strengths and challenges. The key is always communication, respect, and genuine effort from both partners.
                 </p>
               </div>
-              <div className="card-romantic rounded-xl p-6">
-                <h3 className="font-semibold text-foreground mb-2">Understanding Your Zodiac Element</h3>
-                <p className="text-muted-foreground text-sm">
-                  Each zodiac sign belongs to one of four elements: Fire (passionate and energetic), Earth (practical and grounded), Air (intellectual and communicative), and Water (emotional and intuitive). Understanding your element helps predict relationship dynamics. For daily romantic predictions based on your sign, check your <Link to="/daily-horoscope" className="text-primary hover:underline">Daily Love Horoscope</Link>.
+
+              <div>
+                <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-4">
+                  Which Zodiac Signs Are Most Compatible? 💑
+                </h2>
+                <p className="text-muted-foreground leading-relaxed">
+                  While every combination has unique strengths, some pairings are naturally harmonious. <strong>Aries and Leo</strong> share a fiery passion that keeps things exciting. <strong>Taurus and Cancer</strong> create a nurturing, stable home together. <strong>Gemini and Libra</strong> never run out of things to talk about. <strong>Scorpio and Pisces</strong> share an emotional depth that creates an almost psychic connection.
+                </p>
+                <p className="text-muted-foreground leading-relaxed mt-3">
+                  Opposite signs on the zodiac wheel often experience powerful attraction too — think <strong>Aries and Libra</strong>, or <strong>Taurus and Scorpio</strong>. These pairings bring balance, with each partner offering qualities the other lacks. It's the cosmic principle of "opposites attract," and when it works, the results can be magical. Try our checker with your partner's sign and discover what the stars say about your unique connection!
                 </p>
               </div>
-              <div className="card-romantic rounded-xl p-6">
-                <h3 className="font-semibold text-foreground mb-2">Beyond Sun Signs</h3>
-                <p className="text-muted-foreground text-sm">
-                  While sun signs are the most popular, your moon sign reveals your emotional nature and your Venus sign shows how you express love. For a fun name-based compatibility test, try our <Link to="/love-calculator" className="text-primary hover:underline">Love Calculator</Link>. You can also discover your love personality type with our <Link to="/love-quiz" className="text-primary hover:underline">Love Style Quiz</Link>!
+
+              <div>
+                <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-4">
+                  Beyond Sun Signs: The Full Picture 🌙
+                </h2>
+                <p className="text-muted-foreground leading-relaxed">
+                  Your sun sign is just the beginning of your astrological profile. Your <strong>Moon sign</strong> reveals your emotional nature — how you process feelings and what you need to feel secure in a relationship. Your <strong>Venus sign</strong> shows how you express love and what you find attractive. And your <strong>Rising sign</strong> influences the first impression you make on potential partners.
+                </p>
+                <p className="text-muted-foreground leading-relaxed mt-3">
+                  A complete <strong>compatibility analysis</strong> would consider all these factors, but even sun sign compatibility provides valuable insights. Many couples find that understanding their astrological differences helps them communicate better and appreciate each other's unique qualities. It's not about predicting the future — it's about understanding yourself and your partner on a deeper level.
                 </p>
               </div>
-              <div className="card-romantic rounded-xl p-6">
-                <h3 className="font-semibold text-foreground mb-2">Astrology and Modern Relationships</h3>
-                <p className="text-muted-foreground text-sm">
-                  Astrology has been used for thousands of years to understand relationships. Today, millions of people check their horoscopes daily for love guidance. Whether you're a firm believer or just curious, our zodiac compatibility tool offers entertaining insights. For relationship building tips, read our <Link to="/blog/love-relationships-guide" className="text-primary hover:underline">Guide to Building Strong Relationships</Link>.
+
+              <div>
+                <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-4">
+                  Astrology and Modern Love ✨
+                </h2>
+                <p className="text-muted-foreground leading-relaxed">
+                  In today's world, astrology is more popular than ever. Dating apps now include zodiac signs in profiles, and millions check their horoscopes daily for romantic guidance. While science doesn't support astrological predictions, the self-reflection that astrology encourages is genuinely valuable. Thinking about your emotional patterns, communication style, and relationship needs — that's always worthwhile, stars or no stars.
+                </p>
+                <p className="text-muted-foreground leading-relaxed mt-3">
+                  After checking your <strong>zodiac compatibility</strong>, explore more of our love tools! Read your <Link to="/daily-horoscope" className="text-primary hover:underline">Daily Love Horoscope</Link> for today's predictions, test your names with the <Link to="/love-calculator" className="text-primary hover:underline">Love Calculator</Link>, or discover your romantic personality with the <Link to="/love-quiz" className="text-primary hover:underline">Love Style Quiz</Link>. Each tool offers a different perspective on your love life — and they're all completely free!
                 </p>
               </div>
             </div>
