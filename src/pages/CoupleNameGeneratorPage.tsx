@@ -41,39 +41,53 @@ const CoupleNameGeneratorPage = () => {
         <CoupleNameGenerator />
 
         <section className="py-12 px-4">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground text-center mb-8">
-              About Couple Name Generator
-            </h2>
-            <div className="space-y-4">
-              <div className="card-romantic rounded-xl p-6">
-                <h3 className="font-semibold text-foreground mb-2">How Does the Couple Name Generator Work?</h3>
-                <p className="text-muted-foreground text-sm">
-                  Our generator combines parts of both names to create unique, celebrity-style couple names — just like "Brangelina" (Brad + Angelina) or "Bennifer" (Ben + Jennifer)! Simply enter both names and get multiple creative mashup suggestions instantly. It's a fun way to celebrate your relationship!
+          <div className="max-w-4xl mx-auto">
+            <div className="card-romantic rounded-2xl p-6 md:p-10 space-y-8">
+              <div>
+                <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-4">
+                  What Is a Couple Name Generator? 💑
+                </h2>
+                <p className="text-muted-foreground leading-relaxed">
+                  A <strong>couple name generator</strong> creates fun, celebrity-style mashup names by blending two partners' names into one catchy word. Think "Brangelina" (Brad + Angelina), "Bennifer" (Ben + Jennifer), or "TomKat" (Tom + Katie). Our free tool takes both names you enter and produces multiple creative combinations — giving you the perfect relationship nickname that's uniquely yours.
+                </p>
+                <p className="text-muted-foreground leading-relaxed mt-3">
+                  <strong>Couple names</strong> started as a pop culture phenomenon in the early 2000s when entertainment media began combining celebrity couples' names for catchy headlines. What started as tabloid shorthand quickly became a worldwide trend. Today, millions of couples create their own mashup names for social media bios, wedding hashtags, matching usernames, and just plain fun. It's a small thing that makes a relationship feel extra special.
                 </p>
               </div>
-              <div className="card-romantic rounded-xl p-6">
-                <h3 className="font-semibold text-foreground mb-2">Why Create a Couple Name?</h3>
-                <p className="text-muted-foreground text-sm">
-                  Couple names have become a huge trend, from celebrity culture to social media. Having a unique couple name makes your relationship feel special and gives you a fun identity as a pair. Use it as your social media handle, inside joke, or even for wedding hashtags! First, test your compatibility with our <Link to="/love-calculator" className="text-primary hover:underline">Love Calculator</Link>.
+
+              <div>
+                <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-4">
+                  How Does Our Generator Work? ⚡
+                </h2>
+                <p className="text-muted-foreground leading-relaxed">
+                  Our algorithm analyzes both names and tries multiple splitting strategies to find the most natural-sounding combinations. It takes the beginning of one name and blends it with the ending of the other, then reverses the process for additional options. The result is a list of unique <strong>couple names</strong> that sound fun, pronounceable, and sometimes surprisingly perfect.
+                </p>
+                <p className="text-muted-foreground leading-relaxed mt-3">
+                  For the best results, try using your first names. But don't stop there — experiment with nicknames, middle names, or even last names for different combinations. Some couples discover that their nicknames create better mashups than their real names. That's the beauty of it — there are endless possibilities, and you'll know the right one when you see it!
                 </p>
               </div>
-              <div className="card-romantic rounded-xl p-6">
-                <h3 className="font-semibold text-foreground mb-2">Famous Celebrity Couple Names</h3>
-                <p className="text-muted-foreground text-sm">
-                  The trend started with Hollywood — "TomKat" (Tom Cruise + Katie Holmes), "Kimye" (Kim + Kanye), and many more. Now everyone wants their own mashup name! Our generator creates multiple options so you can pick your favorite. For more couple fun, check out our <Link to="/kids-name-generator" className="text-primary hover:underline">Kids Name Generator</Link> for future baby name ideas.
+
+              <div>
+                <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-4">
+                  Creative Ways to Use Your Couple Name 🎨
+                </h2>
+                <p className="text-muted-foreground leading-relaxed">
+                  Your <strong>couple name</strong> can become a meaningful part of your relationship identity. Use it as your joint social media handle, your Wi-Fi network name, a personalized hashtag for your wedding photos, or an inside joke that makes you both smile. Some couples even engrave their mashup name on jewelry, phone cases, or matching t-shirts — it's a modern love tradition.
+                </p>
+                <p className="text-muted-foreground leading-relaxed mt-3">
+                  Wedding planners love <strong>couple names</strong> because they make perfect hashtags (#JohnBecca, #Mikela) that help guests share and find photos. Even for non-married couples, having a unique name creates a sense of "us" that strengthens your bond. It's a playful declaration that says: "We're a team, and we have a name to prove it."
                 </p>
               </div>
-              <div className="card-romantic rounded-xl p-6">
-                <h3 className="font-semibold text-foreground mb-2">Share Your Couple Name</h3>
-                <p className="text-muted-foreground text-sm">
-                  Found the perfect couple name? Share it with your partner and friends! It makes a great social media bio, profile name, or even a personalized gift idea. Pair your couple name with your <Link to="/zodiac-compatibility" className="text-primary hover:underline">Zodiac Compatibility</Link> results for the ultimate relationship profile.
+
+              <div>
+                <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-4">
+                  Famous Couple Names Through History 🌟
+                </h2>
+                <p className="text-muted-foreground leading-relaxed">
+                  The hall of fame for <strong>celebrity couple names</strong> is long and entertaining. "Brangelina" arguably started it all, becoming so iconic that it appeared in dictionaries. "Kimye" (Kim and Kanye) dominated social media for years. "Hiddleswift" (Tom Hiddleston and Taylor Swift) trended globally despite their brief romance. And "Megxit" showed that couple name culture even extends to royalty!
                 </p>
-              </div>
-              <div className="card-romantic rounded-xl p-6">
-                <h3 className="font-semibold text-foreground mb-2">More Romantic Tools</h3>
-                <p className="text-muted-foreground text-sm">
-                  Explore our full suite of love tools! Take the <Link to="/love-quiz" className="text-primary hover:underline">Love Style Quiz</Link>, read your <Link to="/daily-horoscope" className="text-primary hover:underline">Daily Horoscope</Link>, ask the <Link to="/love-fortune-ball" className="text-primary hover:underline">Fortune Ball</Link> a question, or read our <Link to="/blog" className="text-primary hover:underline">Love Blog</Link> for relationship tips and zodiac guides.
+                <p className="text-muted-foreground leading-relaxed mt-3">
+                  Now it's your turn to join the tradition! Generate your unique <strong>couple name</strong>, share it with friends, and see if it catches on. After creating your name, check how compatible you really are with our <Link to="/love-calculator" className="text-primary hover:underline">Love Calculator</Link>, explore your <Link to="/zodiac-compatibility" className="text-primary hover:underline">Zodiac Compatibility</Link>, or start planning your future with the <Link to="/kids-name-generator" className="text-primary hover:underline">Kids Name Generator</Link>!
                 </p>
               </div>
             </div>

@@ -36,39 +36,53 @@ const LoveLetterPage = () => {
         <LoveLetterGenerator />
 
         <section className="py-12 px-4">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground text-center mb-8">
-              About the Love Letter Generator
-            </h2>
-            <div className="space-y-4">
-              <div className="card-romantic rounded-xl p-6">
-                <h3 className="font-semibold text-foreground mb-2">What is the Love Letter Generator?</h3>
-                <p className="text-muted-foreground text-sm">
-                  Our Love Letter Generator creates beautiful, personalized love letters in five different styles: Romantic, Funny, Poetic, Passionate, and Sweet. Simply enter your name and your partner's name, choose a style, and instantly receive a heartfelt letter you can copy and share. It's the perfect tool when words fail you but your heart is full.
+          <div className="max-w-4xl mx-auto">
+            <div className="card-romantic rounded-2xl p-6 md:p-10 space-y-8">
+              <div>
+                <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-4">
+                  What Is the Love Letter Generator? 💌
+                </h2>
+                <p className="text-muted-foreground leading-relaxed">
+                  Our <strong>Love Letter Generator</strong> creates beautiful, personalized love letters instantly. Choose from five distinct writing styles — Romantic, Funny, Poetic, Passionate, and Sweet — enter your name and your partner's name, and receive a heartfelt letter ready to copy, customize, and share. It's the perfect tool when your heart is full but words are hard to find.
+                </p>
+                <p className="text-muted-foreground leading-relaxed mt-3">
+                  We built this tool because we believe everyone deserves to receive a <strong>love letter</strong>. Not everyone is a natural wordsmith, and that's okay. Sometimes the most loving thing you can do is seek help expressing what you feel. Our generator provides beautifully crafted starting points that you can personalize with your own memories, inside jokes, and specific details about your relationship.
                 </p>
               </div>
-              <div className="card-romantic rounded-xl p-6">
-                <h3 className="font-semibold text-foreground mb-2">Why Write Love Letters?</h3>
-                <p className="text-muted-foreground text-sm">
-                  In the digital age, a heartfelt love letter stands out more than ever. Love letters are timeless expressions of devotion that your partner can treasure forever. Studies show that written expressions of love strengthen emotional bonds and increase relationship satisfaction. Whether handwritten or digital, a love letter tells someone they are deeply cherished.
+
+              <div>
+                <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-4">
+                  Why Love Letters Still Matter ✍️
+                </h2>
+                <p className="text-muted-foreground leading-relaxed">
+                  In the age of texting, emojis, and voice notes, a <strong>love letter</strong> stands out as something truly special. There's a reason love letters have survived for thousands of years — they represent effort, thoughtfulness, and vulnerability. Receiving a letter (even a digital one) tells your partner: "You are worth my time, my words, and my deepest feelings."
+                </p>
+                <p className="text-muted-foreground leading-relaxed mt-3">
+                  Research in relationship psychology shows that written expressions of love significantly increase relationship satisfaction for both the writer and the recipient. The act of putting feelings into words forces you to reflect on what you love about your partner, while reading those words gives the recipient tangible proof of their partner's devotion. A <strong>love letter</strong> is an emotional gift that costs nothing but means everything.
                 </p>
               </div>
-              <div className="card-romantic rounded-xl p-6">
-                <h3 className="font-semibold text-foreground mb-2">How to Use Your Generated Letter</h3>
-                <p className="text-muted-foreground text-sm">
-                  Copy your generated letter and personalize it further with specific memories and details about your relationship. You can send it as a text, email, or print it on beautiful paper for a handwritten feel. Use it for Valentine's Day, anniversaries, birthdays, or any random day to surprise your partner. Pair it with a <Link to="/couple-name-generator" className="text-primary hover:underline">Couple Name</Link> for extra romance!
+
+              <div>
+                <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-4">
+                  The Five Letter Styles Explained 📜
+                </h2>
+                <p className="text-muted-foreground leading-relaxed">
+                  <strong>Romantic:</strong> Classic, heartfelt expressions of love and devotion — perfect for anniversaries and special occasions. <strong>Funny:</strong> Light-hearted, witty letters that celebrate your relationship with humor and joy — ideal for partners who love to laugh together. <strong>Poetic:</strong> Lyrical, metaphor-rich letters inspired by the great poets — beautiful for those who appreciate literary expression.
+                </p>
+                <p className="text-muted-foreground leading-relaxed mt-3">
+                  <strong>Passionate:</strong> Intense, emotionally charged letters that express deep desire and connection — perfect for long-distance couples or rekindling the spark. <strong>Sweet:</strong> Gentle, warm letters filled with tenderness and quiet affection — wonderful for everyday love notes and "just because" messages. Each style captures a different facet of love, and you can generate as many as you like until you find the one that feels perfect.
                 </p>
               </div>
-              <div className="card-romantic rounded-xl p-6">
-                <h3 className="font-semibold text-foreground mb-2">The History of Love Letters</h3>
-                <p className="text-muted-foreground text-sm">
-                  Love letters have been exchanged for centuries. Famous historical love letters include those between Napoleon and Josephine, Beethoven's "Immortal Beloved" letter, and Elizabeth Barrett Browning's correspondence with Robert Browning. These timeless documents remind us that the desire to express love through words is a fundamental part of human nature.
+
+              <div>
+                <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-4">
+                  Famous Love Letters in History 📖
+                </h2>
+                <p className="text-muted-foreground leading-relaxed">
+                  Throughout history, the greatest love stories have been told through letters. Napoleon wrote passionately to Josephine from the battlefield. Beethoven's mysterious "Immortal Beloved" letter remains one of music's greatest romantic mysteries. Frida Kahlo's letters to Diego Rivera reveal a love as intense and colorful as her paintings. Johnny Cash's birthday letter to June Carter ("You still fascinate and inspire me") is considered one of the greatest love letters ever written.
                 </p>
-              </div>
-              <div className="card-romantic rounded-xl p-6">
-                <h3 className="font-semibold text-foreground mb-2">Explore More Romantic Tools</h3>
-                <p className="text-muted-foreground text-sm">
-                  Love our Letter Generator? Explore our beautiful <Link to="/love-poetry" className="text-primary hover:underline">Love Poetry</Link> collection, create a <Link to="/relationship-timeline" className="text-primary hover:underline">Relationship Timeline</Link> of your love story, or check your <Link to="/love-calculator" className="text-primary hover:underline">Love Compatibility</Link>. Read your <Link to="/daily-horoscope" className="text-primary hover:underline">Daily Horoscope</Link> or take the <Link to="/love-quiz" className="text-primary hover:underline">Love Style Quiz</Link> for even more romantic fun!
+                <p className="text-muted-foreground leading-relaxed mt-3">
+                  You don't need to be a famous artist or historical figure to write a meaningful letter. Our generator gives you the foundation — all you need to add is your genuine feeling. After writing your letter, pair it with beautiful <Link to="/love-poetry" className="text-primary hover:underline">Love Poetry</Link>, create a <Link to="/relationship-timeline" className="text-primary hover:underline">Relationship Timeline</Link> to include with it, or check your <Link to="/love-calculator" className="text-primary hover:underline">Love Compatibility</Link> to add as a fun postscript!
                 </p>
               </div>
             </div>

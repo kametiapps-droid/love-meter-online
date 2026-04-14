@@ -41,39 +41,53 @@ const LoveGamePage = () => {
         <LoveHeartsCatchGame />
 
         <section className="py-12 px-4">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground text-center mb-8">
-              About Love Hearts Game
-            </h2>
-            <div className="space-y-4">
-              <div className="card-romantic rounded-xl p-6">
-                <h3 className="font-semibold text-foreground mb-2">How to Play the Love Hearts Game?</h3>
-                <p className="text-muted-foreground text-sm">
-                  Click or tap on the falling hearts to catch them before they disappear! The faster you catch them, the higher your score. Each heart you catch adds to your love points. Challenge yourself to beat your high score and become the ultimate love catcher! It's simple, addictive, and perfect for quick fun breaks.
+          <div className="max-w-4xl mx-auto">
+            <div className="card-romantic rounded-2xl p-6 md:p-10 space-y-8">
+              <div>
+                <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-4">
+                  What Is the Love Hearts Catch Game? 🎮
+                </h2>
+                <p className="text-muted-foreground leading-relaxed">
+                  The <strong>Love Hearts Catch Game</strong> is a fun, free online game where you catch falling hearts before they disappear. It's a love-themed arcade-style game designed for quick entertainment breaks — perfect for when you need a moment of joy. Tap or click on the hearts as they fall, rack up points, and try to beat your high score. Simple to learn, addictive to play, and guaranteed to put a smile on your face.
+                </p>
+                <p className="text-muted-foreground leading-relaxed mt-3">
+                  In a world full of complex, time-consuming games, sometimes you just want something light, fun, and romantic. Our <strong>hearts catch game</strong> fills that niche perfectly. It requires no downloads, no sign-ups, and no commitments — just pure, instant fun. Whether you're waiting for a date, taking a study break, or unwinding before bed, this game delivers the perfect amount of entertainment.
                 </p>
               </div>
-              <div className="card-romantic rounded-xl p-6">
-                <h3 className="font-semibold text-foreground mb-2">Tips for High Scores</h3>
-                <p className="text-muted-foreground text-sm">
-                  Focus on the center of the screen where hearts appear most frequently. Use quick taps and try to catch hearts as soon as they appear for bonus points. The game gets faster as your score increases, so stay sharp! Challenge your friends and partner to a love hearts competition.
+
+              <div>
+                <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-4">
+                  How to Play and Win 🏆
+                </h2>
+                <p className="text-muted-foreground leading-relaxed">
+                  The rules are simple: hearts fall from the top of the screen, and you need to tap (on mobile) or click (on desktop) each heart before it reaches the bottom. Every caught heart earns you points. As your score increases, the hearts fall faster — testing your reflexes and focus. The game ends when you miss too many hearts, so stay sharp and keep those fingers ready!
+                </p>
+                <p className="text-muted-foreground leading-relaxed mt-3">
+                  <strong>Pro tips for high scores:</strong> Focus on the center of the screen first, as hearts tend to cluster there. Don't chase hearts at the edges — let them come to you. Stay calm as the speed increases — panicking leads to missed clicks. And most importantly, have fun! It's not about perfection; it's about enjoying the playful, romantic atmosphere.
                 </p>
               </div>
-              <div className="card-romantic rounded-xl p-6">
-                <h3 className="font-semibold text-foreground mb-2">Why Play Love Games?</h3>
-                <p className="text-muted-foreground text-sm">
-                  Love-themed games are a fun way to relax and enjoy some romantic vibes. Whether you're waiting for a date, taking a break at work, or just want some light entertainment, our Love Hearts Game brings joy. After playing, check your <Link to="/love-calculator" className="text-primary hover:underline">Love Calculator</Link> score or take the <Link to="/love-quiz" className="text-primary hover:underline">Love Style Quiz</Link>!
+
+              <div>
+                <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-4">
+                  Why Play Love-Themed Games? 💕
+                </h2>
+                <p className="text-muted-foreground leading-relaxed">
+                  Games have always been a part of human bonding. From childhood games of tag to sophisticated board games on date nights, playing together strengthens connections and creates shared memories. Love-themed games add a romantic twist to this universal activity. Playing our <strong>hearts catch game</strong> with your partner turns a simple game into a bonding experience — compete for the highest score and enjoy the playful rivalry!
+                </p>
+                <p className="text-muted-foreground leading-relaxed mt-3">
+                  Studies show that couples who play together stay together — literally. Shared activities that involve laughter, mild competition, and teamwork increase relationship satisfaction. Even a quick game like catching hearts can become a meaningful ritual in your relationship. "Want to play the hearts game?" might just become your favorite phrase.
                 </p>
               </div>
-              <div className="card-romantic rounded-xl p-6">
-                <h3 className="font-semibold text-foreground mb-2">Play Together</h3>
-                <p className="text-muted-foreground text-sm">
-                  The Love Hearts Game is perfect for couples! Take turns and see who catches more hearts. The winner gets to choose the next date activity! For more couple fun, create a <Link to="/couple-name-generator" className="text-primary hover:underline">Couple Name</Link> together or check your <Link to="/zodiac-compatibility" className="text-primary hover:underline">Zodiac Compatibility</Link>.
+
+              <div>
+                <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-4">
+                  Challenge Your Friends and Partner 🎯
+                </h2>
+                <p className="text-muted-foreground leading-relaxed">
+                  The <strong>Love Hearts Game</strong> is perfect for friendly competitions. Take turns with your partner and see who catches more hearts — the loser has to plan the next date! Or challenge your friends to a hearts-catching tournament at a sleepover or party. Screenshot your scores and share them on social media to show off your reflexes (and your romantic side!).
                 </p>
-              </div>
-              <div className="card-romantic rounded-xl p-6">
-                <h3 className="font-semibold text-foreground mb-2">Discover More Love Tools</h3>
-                <p className="text-muted-foreground text-sm">
-                  We have a full collection of love and romance tools! Read your <Link to="/daily-horoscope" className="text-primary hover:underline">Daily Love Horoscope</Link>, ask the <Link to="/love-fortune-ball" className="text-primary hover:underline">Fortune Ball</Link> about your love life, find <Link to="/kids-name-generator" className="text-primary hover:underline">Baby Name</Link> inspiration, or read our <Link to="/blog" className="text-primary hover:underline">Love & Relationship Blog</Link> for expert advice.
+                <p className="text-muted-foreground leading-relaxed mt-3">
+                  After gaming, continue the fun with our other love tools! Check your <Link to="/love-calculator" className="text-primary hover:underline">Love Calculator</Link> score, ask the <Link to="/love-fortune-ball" className="text-primary hover:underline">Love Fortune Ball</Link> if you'll beat your high score next time, or take the <Link to="/love-quiz" className="text-primary hover:underline">Love Style Quiz</Link> to discover your romantic personality. Love and games — the perfect combination!
                 </p>
               </div>
             </div>
