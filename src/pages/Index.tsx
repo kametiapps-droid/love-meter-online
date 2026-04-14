@@ -2,16 +2,8 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import LoveCalculator from "@/components/LoveCalculator";
 import FloatingHearts from "@/components/FloatingHearts";
-import AboutSection from "@/components/AboutSection";
-import ZodiacCompatibility from "@/components/ZodiacCompatibility";
-import LoveQuiz from "@/components/LoveQuiz";
-import DailyHoroscope from "@/components/DailyHoroscope";
-import LoveFortuneBall from "@/components/LoveFortuneBall";
-import CoupleNameGenerator from "@/components/CoupleNameGenerator";
-import KidsNameGenerator from "@/components/KidsNameGenerator";
-import LoveHeartsCatchGame from "@/components/LoveHeartsCatchGame";
-import LoveLetterGenerator from "@/components/LoveLetterGenerator";
-import RelationshipTimeline from "@/components/RelationshipTimeline";
+import HomeSEOContent from "@/components/HomeSEOContent";
+import ToolCards from "@/components/ToolCards";
 import BlogPreview from "@/components/BlogPreview";
 import SEO from "@/components/SEO";
 import { Heart } from "lucide-react";
@@ -23,16 +15,16 @@ const Index = () => {
         title="Love Calculator - True Love Compatibility Test"
         description="Calculate your love compatibility with our free online Love Calculator. Enter two names and discover your love percentage instantly. Plus zodiac compatibility, love quiz, daily horoscope & more!"
         path="/"
-        keywords="love calculator, love compatibility test, love percentage calculator, name love test, true love calculator, free love calculator online, zodiac love compatibility, relationship quiz"
-        dateModified="2026-04-09"
+        keywords="love calculator, love percentage, compatibility test, love compatibility test, name love test, true love calculator, free love calculator online, zodiac love compatibility, relationship quiz"
+        dateModified="2026-04-14"
         faqSchema={[
           { question: "How does the Love Calculator work?", answer: "Our love calculator uses a fun algorithm that analyzes the names you enter to generate a compatibility percentage. It's designed purely for entertainment and fun!" },
           { question: "Is the Love Calculator accurate?", answer: "The love calculator is meant for entertainment purposes only. Real love and relationships are complex and can't be measured by any algorithm. Use it to have fun with friends and loved ones!" },
+          { question: "Is the love percentage real?", answer: "The love percentage is generated for entertainment only. Real love compatibility depends on communication, trust, shared values, and mutual respect — not a number." },
           { question: "How does zodiac compatibility work?", answer: "Zodiac compatibility is based on traditional astrology that considers the elements (Fire, Earth, Air, Water) and qualities of each sign." },
           { question: "Which zodiac signs are most compatible?", answer: "Generally, signs of the same element pair well: Fire signs (Aries, Leo, Sagittarius), Earth signs (Taurus, Virgo, Capricorn), Air signs (Gemini, Libra, Aquarius), and Water signs (Cancer, Scorpio, Pisces)." },
           { question: "What is the Love Style Quiz?", answer: "Our Love Style Quiz helps you discover your unique approach to love and relationships through fun personality questions." },
           { question: "What is the Daily Love Horoscope?", answer: "Our daily love horoscope provides personalized romantic predictions based on your zodiac sign. Check back each day for new insights about your love life!" },
-          { question: "How does the Love Fortune Ball work?", answer: "The Love Fortune Ball is like a mystical Magic 8 Ball for love! Ask any yes or no question about your love life, and the fortune ball will reveal your destiny." },
           { question: "Can I share my results?", answer: "Yes! After calculating your love percentage, you can easily share the results with friends, family, or your special someone using the share button." },
         ]}
       />
@@ -66,25 +58,11 @@ const Index = () => {
           <LoveCalculator />
         </section>
 
-        <AboutSection />
+        {/* SEO Content Section */}
+        <HomeSEOContent />
 
-        <ZodiacCompatibility />
-
-        <LoveQuiz />
-
-        <DailyHoroscope />
-
-        <LoveFortuneBall />
-
-        <CoupleNameGenerator />
-
-        <KidsNameGenerator />
-
-        <LoveHeartsCatchGame />
-
-        <LoveLetterGenerator />
-
-        <RelationshipTimeline />
+        {/* Tool Cards Section */}
+        <ToolCards />
 
         {/* Blog Preview Section */}
         <BlogPreview />
@@ -112,9 +90,9 @@ const Index = () => {
               </div>
               
               <div className="card-romantic rounded-xl p-6">
-                <h3 className="font-semibold text-foreground mb-2">How does zodiac compatibility work?</h3>
+                <h3 className="font-semibold text-foreground mb-2">Is the love percentage real?</h3>
                 <p className="text-muted-foreground text-sm">
-                  Zodiac compatibility is based on traditional astrology that considers the elements (Fire, Earth, Air, Water) and qualities of each sign. While fun and insightful, remember that real relationships depend on many factors beyond star signs!
+                  The love percentage is generated for fun and entertainment only. Real love compatibility depends on communication, trust, shared values, and genuine mutual respect — not a number from an algorithm.
                 </p>
               </div>
 
@@ -122,27 +100,6 @@ const Index = () => {
                 <h3 className="font-semibold text-foreground mb-2">Which zodiac signs are most compatible?</h3>
                 <p className="text-muted-foreground text-sm">
                   Generally, signs of the same element pair well: Fire signs (Aries, Leo, Sagittarius), Earth signs (Taurus, Virgo, Capricorn), Air signs (Gemini, Libra, Aquarius), and Water signs (Cancer, Scorpio, Pisces). However, opposite signs often have strong attraction too!
-                </p>
-              </div>
-              
-              <div className="card-romantic rounded-xl p-6">
-                <h3 className="font-semibold text-foreground mb-2">What is the Love Style Quiz?</h3>
-                <p className="text-muted-foreground text-sm">
-                  Our Love Style Quiz helps you discover your unique approach to love and relationships through fun personality questions. Find out if you're a Hopeless Romantic, Thrill Seeker, Caring Soul, Deep Thinker, or Intense Lover!
-                </p>
-              </div>
-              
-              <div className="card-romantic rounded-xl p-6">
-                <h3 className="font-semibold text-foreground mb-2">What is the Daily Love Horoscope?</h3>
-                <p className="text-muted-foreground text-sm">
-                  Our daily love horoscope provides personalized romantic predictions based on your zodiac sign. Check back each day for new insights about your love life, lucky numbers, and best matches!
-                </p>
-              </div>
-              
-              <div className="card-romantic rounded-xl p-6">
-                <h3 className="font-semibold text-foreground mb-2">How does the Love Fortune Ball work?</h3>
-                <p className="text-muted-foreground text-sm">
-                  The Love Fortune Ball is like a mystical Magic 8 Ball for love! Ask any yes or no question about your love life, and the fortune ball will reveal your destiny with a magical answer.
                 </p>
               </div>
               
