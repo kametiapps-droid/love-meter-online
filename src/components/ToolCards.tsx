@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import { Heart, Stars, ClipboardList, Sun, Sparkles, Baby, Gamepad2, BookOpen, Send, Calendar } from "lucide-react";
 
 const tools = [
-  { path: "/love-calculator", label: "Love Calculator", icon: Heart, description: "Test your love compatibility with names", color: "from-pink-500 to-rose-500" },
   { path: "/zodiac-compatibility", label: "Zodiac Compatibility", icon: Stars, description: "Check your star sign love match", color: "from-purple-500 to-indigo-500" },
   { path: "/love-quiz", label: "Love Style Quiz", icon: ClipboardList, description: "Discover your love personality type", color: "from-rose-500 to-pink-500" },
   { path: "/daily-horoscope", label: "Daily Horoscope", icon: Sun, description: "Today's love prediction for your sign", color: "from-amber-500 to-orange-500" },
