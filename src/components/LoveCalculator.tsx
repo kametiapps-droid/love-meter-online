@@ -173,7 +173,7 @@ const LoveCalculator = () => {
 
         {result !== null && showResult && (
           <div className="mt-8 animate-fade-in-up">
-            <div className="text-center p-6 rounded-xl bg-gradient-to-br from-secondary to-muted">
+            <div ref={resultRef} className="text-center p-6 rounded-xl bg-gradient-to-br from-secondary to-muted">
               {/* Rank Badge */}
               <div className="mb-3">
                 <span className="inline-block px-4 py-1.5 rounded-full bg-primary/15 text-primary font-semibold text-sm">
@@ -200,28 +200,39 @@ const LoveCalculator = () => {
                 </p>
               </div>
 
-              <div className="flex gap-3 mt-6 justify-center">
-                <Button
-                  onClick={shareResult}
-                  className="rounded-xl bg-primary hover:bg-primary/90 text-primary-foreground font-semibold"
-                >
-                  <Share2 className="w-4 h-4 mr-2" />
-                  Share Love Bond
-                </Button>
-                <Button
-                  onClick={reset}
-                  variant="outline"
-                  className="rounded-xl border-2 border-muted-foreground/30 hover:bg-muted text-foreground"
-                >
-                  <RotateCcw className="w-4 h-4 mr-2" />
-                  Try Again
-                </Button>
-              </div>
-
-              <p className="text-xs text-muted-foreground/70 mt-4">
-                Share your love bond rank and challenge your friends! 🔥
+              <p className="text-xs text-muted-foreground/50 mt-3">
+                lovecalculator.space
               </p>
             </div>
+
+            <div className="flex flex-wrap gap-3 mt-4 justify-center">
+              <Button
+                onClick={shareResult}
+                className="rounded-xl bg-primary hover:bg-primary/90 text-primary-foreground font-semibold"
+              >
+                <Share2 className="w-4 h-4 mr-2" />
+                Share with Screenshot
+              </Button>
+              <Button
+                onClick={shareOnFacebook}
+                className="rounded-xl bg-[#1877F2] hover:bg-[#1877F2]/90 text-white font-semibold"
+              >
+                <Facebook className="w-4 h-4 mr-2" />
+                Facebook
+              </Button>
+              <Button
+                onClick={reset}
+                variant="outline"
+                className="rounded-xl border-2 border-muted-foreground/30 hover:bg-muted text-foreground"
+              >
+                <RotateCcw className="w-4 h-4 mr-2" />
+                Try Again
+              </Button>
+            </div>
+
+            <p className="text-xs text-muted-foreground/70 mt-4 text-center">
+              Share your love bond rank and challenge your friends! 🔥
+            </p>
           </div>
         )}
       </div>
