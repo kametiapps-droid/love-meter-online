@@ -1,8 +1,9 @@
-import { useState } from "react";
-import { Heart, Sparkles, Share2, RotateCcw } from "lucide-react";
+import { useState, useRef } from "react";
+import { Heart, Sparkles, Share2, RotateCcw, Facebook, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { toast } from "sonner";
+import html2canvas from "html2canvas";
 
 const LoveCalculator = () => {
   const [name1, setName1] = useState("");
@@ -45,26 +46,55 @@ const LoveCalculator = () => {
     return { emoji: "💝", message: "Potential Sparks! Give it time and nurture your connection!", rank: "✨ Spark Love Bond" };
   };
 
-  const shareResult = async () => {
-    if (!result) return;
-    const { rank } = getCompatibilityMessage(result);
-    
-    const text = `${rank}\n\n💕 Love Calculator Result 💕\n${name1} ❤️ ${name2}\nCompatibility: ${result}%\n\n${getCompatibilityMessage(result).message}\n\n🔥 Check YOUR love bond too!\n👉 https://www.lovecalculator.space/love-calculator`;
-    
-    if (navigator.share) {
-      try {
-        await navigator.share({ title: "My Love Bond Result 💕", text });
-      } catch (err) {
-        copyToClipboard(text);
-      }
-    } else {
-      copyToClipboard(text);
+  const resultRef = useRef<HTMLDivElement>(null);
+
+  const captureScreenshot = async (): Promise<Blob | null> => {
+    if (!resultRef.current) return null;
+    try {
+      const canvas = await html2canvas(resultRef.current, {
+        backgroundColor: "#1a1a2e",
+        scale: 2,
+        useCORS: true,
+      });
+      return new Promise((resolve) => canvas.toBlob((blob) => resolve(blob), "image/png"));
+    } catch {
+      return null;
     }
   };
 
-  const copyToClipboard = (text: string) => {
+  const shareResult = async () => {
+    if (!result) return;
+    const { rank } = getCompatibilityMessage(result);
+    const text = `${rank}\n\n💕 Love Calculator Result 💕\n${name1} ❤️ ${name2}\nCompatibility: ${result}%\n\n${getCompatibilityMessage(result).message}\n\n🔥 Check YOUR love bond too!\n👉 https://www.lovecalculator.space/love-calculator`;
+
+    toast.loading("Preparing screenshot...");
+    const blob = await captureScreenshot();
+    toast.dismiss();
+
+    if (blob && navigator.share && navigator.canShare?.({ files: [new File([blob], "love-bond.png", { type: "image/png" })] })) {
+      const file = new File([blob], "love-bond.png", { type: "image/png" });
+      try {
+        await navigator.share({ title: "My Love Bond Result 💕", text, files: [file] });
+        return;
+      } catch { /* user cancelled */ }
+    }
+    
+    // Fallback: download image + copy text
+    if (blob) {
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = "love-bond-result.png";
+      a.click();
+      URL.revokeObjectURL(url);
+    }
     navigator.clipboard.writeText(text);
-    toast.success("Result copied! Share your love bond with friends! 💕");
+    toast.success("Screenshot downloaded & text copied! Share on social media! 💕");
+  };
+
+  const shareOnFacebook = () => {
+    const url = encodeURIComponent("https://www.lovecalculator.space/love-calculator");
+    window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}`, "_blank", "width=600,height=400");
   };
 
   const reset = () => {
@@ -143,7 +173,7 @@ const LoveCalculator = () => {
 
         {result !== null && showResult && (
           <div className="mt-8 animate-fade-in-up">
-            <div className="text-center p-6 rounded-xl bg-gradient-to-br from-secondary to-muted">
+            <div ref={resultRef} className="text-center p-6 rounded-xl bg-gradient-to-br from-secondary to-muted">
               {/* Rank Badge */}
               <div className="mb-3">
                 <span className="inline-block px-4 py-1.5 rounded-full bg-primary/15 text-primary font-semibold text-sm">
@@ -170,28 +200,39 @@ const LoveCalculator = () => {
                 </p>
               </div>
 
-              <div className="flex gap-3 mt-6 justify-center">
-                <Button
-                  onClick={shareResult}
-                  className="rounded-xl bg-primary hover:bg-primary/90 text-primary-foreground font-semibold"
-                >
-                  <Share2 className="w-4 h-4 mr-2" />
-                  Share Love Bond
-                </Button>
-                <Button
-                  onClick={reset}
-                  variant="outline"
-                  className="rounded-xl border-2 border-muted-foreground/30 hover:bg-muted text-foreground"
-                >
-                  <RotateCcw className="w-4 h-4 mr-2" />
-                  Try Again
-                </Button>
-              </div>
-
-              <p className="text-xs text-muted-foreground/70 mt-4">
-                Share your love bond rank and challenge your friends! 🔥
+              <p className="text-xs text-muted-foreground/50 mt-3">
+                lovecalculator.space
               </p>
             </div>
+
+            <div className="flex flex-wrap gap-3 mt-4 justify-center">
+              <Button
+                onClick={shareResult}
+                className="rounded-xl bg-primary hover:bg-primary/90 text-primary-foreground font-semibold"
+              >
+                <Share2 className="w-4 h-4 mr-2" />
+                Share with Screenshot
+              </Button>
+              <Button
+                onClick={shareOnFacebook}
+                className="rounded-xl bg-[#1877F2] hover:bg-[#1877F2]/90 text-white font-semibold"
+              >
+                <Facebook className="w-4 h-4 mr-2" />
+                Facebook
+              </Button>
+              <Button
+                onClick={reset}
+                variant="outline"
+                className="rounded-xl border-2 border-muted-foreground/30 hover:bg-muted text-foreground"
+              >
+                <RotateCcw className="w-4 h-4 mr-2" />
+                Try Again
+              </Button>
+            </div>
+
+            <p className="text-xs text-muted-foreground/70 mt-4 text-center">
+              Share your love bond rank and challenge your friends! 🔥
+            </p>
           </div>
         )}
       </div>
