@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Heart, Sparkles, Share2, RotateCcw } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -20,7 +20,6 @@ const LoveCalculator = () => {
     setIsCalculating(true);
     setShowResult(false);
 
-    // Fun algorithm based on names
     const combined = (name1 + name2).toLowerCase().replace(/\s/g, "");
     let hash = 0;
     for (let i = 0; i < combined.length; i++) {
@@ -29,7 +28,6 @@ const LoveCalculator = () => {
       hash = hash & hash;
     }
     
-    // Generate percentage between 50-100 for more fun results
     const percentage = Math.abs(hash % 51) + 50;
 
     setTimeout(() => {
@@ -40,19 +38,22 @@ const LoveCalculator = () => {
   };
 
   const getCompatibilityMessage = (percentage: number) => {
-    if (percentage >= 90) return { emoji: "💕", message: "Perfect Match! You're soulmates destined to be together!" };
-    if (percentage >= 80) return { emoji: "💖", message: "Amazing Connection! Your love story is truly special!" };
-    if (percentage >= 70) return { emoji: "💗", message: "Great Chemistry! You have a beautiful bond!" };
-    if (percentage >= 60) return { emoji: "💓", message: "Sweet Connection! Love is definitely in the air!" };
-    return { emoji: "💝", message: "Potential Sparks! Give it time and nurture your connection!" };
+    if (percentage >= 90) return { emoji: "💕", message: "Perfect Match! You're soulmates destined to be together!", rank: "💎 Diamond Love Bond" };
+    if (percentage >= 80) return { emoji: "💖", message: "Amazing Connection! Your love story is truly special!", rank: "🥇 Gold Love Bond" };
+    if (percentage >= 70) return { emoji: "💗", message: "Great Chemistry! You have a beautiful bond!", rank: "🥈 Silver Love Bond" };
+    if (percentage >= 60) return { emoji: "💓", message: "Sweet Connection! Love is definitely in the air!", rank: "🥉 Bronze Love Bond" };
+    return { emoji: "💝", message: "Potential Sparks! Give it time and nurture your connection!", rank: "✨ Spark Love Bond" };
   };
 
   const shareResult = async () => {
-    const text = `💕 Love Calculator Result 💕\n${name1} ❤️ ${name2}\nCompatibility: ${result}%\n\nCalculate your love at lovecalculator.space`;
+    if (!result) return;
+    const { rank } = getCompatibilityMessage(result);
+    
+    const text = `${rank}\n\n💕 Love Calculator Result 💕\n${name1} ❤️ ${name2}\nCompatibility: ${result}%\n\n${getCompatibilityMessage(result).message}\n\n🔥 Check YOUR love bond too!\n👉 https://www.lovecalculator.space/love-calculator`;
     
     if (navigator.share) {
       try {
-        await navigator.share({ title: "Love Calculator Result", text });
+        await navigator.share({ title: "My Love Bond Result 💕", text });
       } catch (err) {
         copyToClipboard(text);
       }
@@ -63,7 +64,7 @@ const LoveCalculator = () => {
 
   const copyToClipboard = (text: string) => {
     navigator.clipboard.writeText(text);
-    toast.success("Result copied to clipboard! Share the love! 💕");
+    toast.success("Result copied! Share your love bond with friends! 💕");
   };
 
   const reset = () => {
@@ -76,7 +77,6 @@ const LoveCalculator = () => {
   return (
     <div className="w-full max-w-lg mx-auto">
       <div className="card-romantic rounded-2xl p-8 md:p-10 backdrop-blur-sm">
-        {/* Header */}
         <div className="text-center mb-8">
           <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 mb-4">
             <Heart className="w-8 h-8 text-primary fill-primary animate-pulse-heart" />
@@ -89,7 +89,6 @@ const LoveCalculator = () => {
           </p>
         </div>
 
-        {/* Input Fields */}
         <div className="space-y-4 mb-6">
           <div className="relative">
             <Input
@@ -124,7 +123,6 @@ const LoveCalculator = () => {
           </div>
         </div>
 
-        {/* Calculate Button */}
         <Button
           onClick={calculateLove}
           disabled={isCalculating}
@@ -143,10 +141,16 @@ const LoveCalculator = () => {
           )}
         </Button>
 
-        {/* Result Display */}
         {result !== null && showResult && (
           <div className="mt-8 animate-fade-in-up">
             <div className="text-center p-6 rounded-xl bg-gradient-to-br from-secondary to-muted">
+              {/* Rank Badge */}
+              <div className="mb-3">
+                <span className="inline-block px-4 py-1.5 rounded-full bg-primary/15 text-primary font-semibold text-sm">
+                  {getCompatibilityMessage(result).rank}
+                </span>
+              </div>
+
               <div className="mb-4">
                 <span className="text-6xl md:text-7xl font-display font-bold text-gradient animate-count-up inline-block">
                   {result}%
@@ -166,15 +170,13 @@ const LoveCalculator = () => {
                 </p>
               </div>
 
-              {/* Action Buttons */}
               <div className="flex gap-3 mt-6 justify-center">
                 <Button
                   onClick={shareResult}
-                  variant="outline"
-                  className="rounded-xl border-2 border-primary/30 hover:bg-primary/10 text-foreground"
+                  className="rounded-xl bg-primary hover:bg-primary/90 text-primary-foreground font-semibold"
                 >
                   <Share2 className="w-4 h-4 mr-2" />
-                  Share
+                  Share Love Bond
                 </Button>
                 <Button
                   onClick={reset}
@@ -185,6 +187,10 @@ const LoveCalculator = () => {
                   Try Again
                 </Button>
               </div>
+
+              <p className="text-xs text-muted-foreground/70 mt-4">
+                Share your love bond rank and challenge your friends! 🔥
+              </p>
             </div>
           </div>
         )}
