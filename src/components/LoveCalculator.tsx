@@ -1,15 +1,11 @@
-import { useState, useRef } from "react";
-import { Heart, Sparkles, Share2, RotateCcw, Facebook } from "lucide-react";
+import { useState } from "react";
+import { Heart, Sparkles, Share2, RotateCcw } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { toast } from "sonner";
-import html2canvas from "html2canvas";
 import {
   buildLoveCalculatorShareText,
-  canShareFile,
   copyTextSafely,
-  downloadBlob,
-  LOVE_CALCULATOR_URL,
 } from "@/lib/loveCalculatorShare";
 
 const LoveCalculator = () => {
