@@ -1,15 +1,11 @@
-import { useState, useRef } from "react";
-import { Heart, Sparkles, Share2, RotateCcw, Facebook } from "lucide-react";
+import { useState } from "react";
+import { Heart, Sparkles, Share2, RotateCcw } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { toast } from "sonner";
-import html2canvas from "html2canvas";
 import {
   buildLoveCalculatorShareText,
-  canShareFile,
   copyTextSafely,
-  downloadBlob,
-  LOVE_CALCULATOR_URL,
 } from "@/lib/loveCalculatorShare";
 
 const LoveCalculator = () => {
@@ -54,166 +50,29 @@ const LoveCalculator = () => {
     return { emoji: "💝", message: "Potential Sparks! Give it time and nurture your connection!", rank: "✨ Spark Love Bond" };
   };
 
-  const resultRef = useRef<HTMLDivElement>(null);
-
-  const getSharePayload = () => {
-    if (result === null) return null;
-    const { message, rank } = getCompatibilityMessage(result);
-
-    return {
-      fileName: `love-bond-${name1 || "you"}-${name2 || "partner"}.png`
-        .toLowerCase()
-        .replace(/[^a-z0-9-]+/g, "-"),
-      message,
-      rank,
-      shareText: buildLoveCalculatorShareText({
-        message,
-        name1,
-        name2,
-        rank,
-        result,
-      }),
-    };
-  };
-
-  const captureScreenshot = async (): Promise<Blob | null> => {
-    if (!resultRef.current) return null;
-    try {
-      const canvas = await html2canvas(resultRef.current, {
-        backgroundColor: "#1a1a2e",
-        scale: 2,
-        useCORS: true,
-      });
-      return new Promise((resolve) => canvas.toBlob((blob) => resolve(blob), "image/png"));
-    } catch {
-      return null;
-    }
-  };
-
   const shareResult = async () => {
-    const sharePayload = getSharePayload();
-    if (!sharePayload) return;
+    if (result === null) return;
+    const { message, rank } = getCompatibilityMessage(result);
+    const shareText = buildLoveCalculatorShareText({ message, name1, name2, rank, result });
 
     setIsSharing(true);
-    toast.loading("Preparing share image...", { id: "love-share" });
-
     try {
-      const blob = await captureScreenshot();
-
-      if (!blob) {
-        toast.error("Couldn't create the share image right now.", { id: "love-share" });
-        return;
-      }
-
-      const file = new File([blob], sharePayload.fileName, { type: "image/png" });
-      const copied = await copyTextSafely(sharePayload.shareText);
-
-      if (canShareFile(file)) {
-        await navigator.share({
-          title: "My Love Bond Result 💕",
-          files: [file],
-        });
-
-        toast.success(
-          copied
-            ? "Image shared! Caption with link copied."
-            : "Image shared successfully!",
-          { id: "love-share" },
-        );
-        return;
-      }
-
       if (navigator.share) {
         await navigator.share({
           title: "My Love Bond Result 💕",
-          text: sharePayload.shareText,
+          text: shareText,
         });
-
-        toast.success("Result shared successfully!", { id: "love-share" });
+        toast.success("Result shared successfully!");
         return;
       }
 
-      downloadBlob(blob, sharePayload.fileName);
-      toast.success(
-        copied
-          ? "Screenshot downloaded and caption copied."
-          : "Screenshot downloaded successfully.",
-        { id: "love-share" },
-      );
+      const copied = await copyTextSafely(shareText);
+      toast.success(copied ? "Result copied to clipboard!" : "Sharing not supported on this device.");
     } catch (error) {
-      if (error instanceof DOMException && error.name === "AbortError") {
-        toast.dismiss("love-share");
-        return;
-      }
-
-      const blob = await captureScreenshot();
-      const copied = await copyTextSafely(sharePayload.shareText);
-
-      if (blob) {
-        downloadBlob(blob, sharePayload.fileName);
-      }
-
-      toast.success(
-        copied
-          ? "Screenshot downloaded and caption copied."
-          : "Screenshot downloaded successfully.",
-        { id: "love-share" },
-      );
-    } finally {
-      setIsSharing(false);
-    }
-  };
-
-  const shareOnFacebook = async () => {
-    const sharePayload = getSharePayload();
-    if (!sharePayload) return;
-
-    setIsSharing(true);
-    toast.loading("Preparing Facebook share...", { id: "love-facebook-share" });
-
-    try {
-      const blob = await captureScreenshot();
-      const copied = await copyTextSafely(sharePayload.shareText);
-
-      if (blob) {
-        const file = new File([blob], sharePayload.fileName, { type: "image/png" });
-
-        if (canShareFile(file)) {
-          await navigator.share({
-            title: "My Love Bond Result 💕",
-            files: [file],
-          });
-
-          toast.success(
-            copied
-              ? "Select Facebook in the share sheet. Caption with link copied."
-              : "Select Facebook in the share sheet to post the image.",
-            { id: "love-facebook-share" },
-          );
-          return;
-        }
-
-        downloadBlob(blob, sharePayload.fileName);
-      }
-
-      const url = encodeURIComponent(LOVE_CALCULATOR_URL);
-      window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}`, "_blank", "noopener,noreferrer,width=600,height=400");
-
-      toast.success(
-        copied
-          ? "Facebook link share opened. Screenshot downloaded and caption copied for manual posting."
-          : "Facebook link share opened and screenshot downloaded.",
-        { id: "love-facebook-share" },
-      );
-    } catch (error) {
-      if (error instanceof DOMException && error.name === "AbortError") {
-        toast.dismiss("love-facebook-share");
-        return;
-      }
-
-      toast.error("Facebook sharing failed. Please try the Share button.", {
-        id: "love-facebook-share",
-      });
+      if (error instanceof DOMException && error.name === "AbortError") return;
+      const copied = await copyTextSafely(shareText);
+      if (copied) toast.success("Result copied to clipboard!");
+      else toast.error("Couldn't share right now.");
     } finally {
       setIsSharing(false);
     }
@@ -295,8 +154,7 @@ const LoveCalculator = () => {
 
         {result !== null && showResult && (
           <div className="mt-8 animate-fade-in-up">
-            <div ref={resultRef} className="text-center p-6 rounded-xl bg-gradient-to-br from-secondary to-muted">
-              {/* Rank Badge */}
+            <div className="text-center p-6 rounded-xl bg-gradient-to-br from-secondary to-muted">
               <div className="mb-3">
                 <span className="inline-block px-4 py-1.5 rounded-full bg-primary/15 text-primary font-semibold text-sm">
                   {getCompatibilityMessage(result).rank}
@@ -308,7 +166,7 @@ const LoveCalculator = () => {
                   {result}%
                 </span>
               </div>
-              
+
               <div className="flex items-center justify-center gap-2 mb-3">
                 <span className="text-lg font-medium text-foreground">{name1}</span>
                 <Heart className="w-5 h-5 text-heart-red fill-heart-red animate-pulse-heart" />
@@ -321,15 +179,6 @@ const LoveCalculator = () => {
                   {getCompatibilityMessage(result).message}
                 </p>
               </div>
-
-              <div className="mt-4 space-y-1">
-                <p className="text-sm font-medium text-foreground/80">
-                  It&apos;s my {getCompatibilityMessage(result).rank} — check your love bond too!
-                </p>
-                <p className="text-xs text-muted-foreground/60">
-                  lovecalculator.space/love-calculator
-                </p>
-              </div>
             </div>
 
             <div className="flex flex-wrap gap-3 mt-4 justify-center">
@@ -339,15 +188,7 @@ const LoveCalculator = () => {
                 className="rounded-xl bg-primary hover:bg-primary/90 text-primary-foreground font-semibold"
               >
                 <Share2 className="w-4 h-4 mr-2" />
-                Share with Screenshot
-              </Button>
-              <Button
-                onClick={shareOnFacebook}
-                disabled={isSharing}
-                className="rounded-xl bg-[#1877F2] hover:bg-[#1877F2]/90 text-white font-semibold"
-              >
-                <Facebook className="w-4 h-4 mr-2" />
-                Facebook
+                Share Result
               </Button>
               <Button
                 onClick={reset}
@@ -361,7 +202,7 @@ const LoveCalculator = () => {
             </div>
 
             <p className="text-xs text-muted-foreground/70 mt-4 text-center">
-              Share your love bond rank and challenge your friends! 🔥
+              Share your love bond rank with friends! 🔥
             </p>
           </div>
         )}
