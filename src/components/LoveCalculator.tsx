@@ -50,166 +50,29 @@ const LoveCalculator = () => {
     return { emoji: "💝", message: "Potential Sparks! Give it time and nurture your connection!", rank: "✨ Spark Love Bond" };
   };
 
-  const resultRef = useRef<HTMLDivElement>(null);
-
-  const getSharePayload = () => {
-    if (result === null) return null;
-    const { message, rank } = getCompatibilityMessage(result);
-
-    return {
-      fileName: `love-bond-${name1 || "you"}-${name2 || "partner"}.png`
-        .toLowerCase()
-        .replace(/[^a-z0-9-]+/g, "-"),
-      message,
-      rank,
-      shareText: buildLoveCalculatorShareText({
-        message,
-        name1,
-        name2,
-        rank,
-        result,
-      }),
-    };
-  };
-
-  const captureScreenshot = async (): Promise<Blob | null> => {
-    if (!resultRef.current) return null;
-    try {
-      const canvas = await html2canvas(resultRef.current, {
-        backgroundColor: "#1a1a2e",
-        scale: 2,
-        useCORS: true,
-      });
-      return new Promise((resolve) => canvas.toBlob((blob) => resolve(blob), "image/png"));
-    } catch {
-      return null;
-    }
-  };
-
   const shareResult = async () => {
-    const sharePayload = getSharePayload();
-    if (!sharePayload) return;
+    if (result === null) return;
+    const { message, rank } = getCompatibilityMessage(result);
+    const shareText = buildLoveCalculatorShareText({ message, name1, name2, rank, result });
 
     setIsSharing(true);
-    toast.loading("Preparing share image...", { id: "love-share" });
-
     try {
-      const blob = await captureScreenshot();
-
-      if (!blob) {
-        toast.error("Couldn't create the share image right now.", { id: "love-share" });
-        return;
-      }
-
-      const file = new File([blob], sharePayload.fileName, { type: "image/png" });
-      const copied = await copyTextSafely(sharePayload.shareText);
-
-      if (canShareFile(file)) {
-        await navigator.share({
-          title: "My Love Bond Result 💕",
-          files: [file],
-        });
-
-        toast.success(
-          copied
-            ? "Image shared! Caption with link copied."
-            : "Image shared successfully!",
-          { id: "love-share" },
-        );
-        return;
-      }
-
       if (navigator.share) {
         await navigator.share({
           title: "My Love Bond Result 💕",
-          text: sharePayload.shareText,
+          text: shareText,
         });
-
-        toast.success("Result shared successfully!", { id: "love-share" });
+        toast.success("Result shared successfully!");
         return;
       }
 
-      downloadBlob(blob, sharePayload.fileName);
-      toast.success(
-        copied
-          ? "Screenshot downloaded and caption copied."
-          : "Screenshot downloaded successfully.",
-        { id: "love-share" },
-      );
+      const copied = await copyTextSafely(shareText);
+      toast.success(copied ? "Result copied to clipboard!" : "Sharing not supported on this device.");
     } catch (error) {
-      if (error instanceof DOMException && error.name === "AbortError") {
-        toast.dismiss("love-share");
-        return;
-      }
-
-      const blob = await captureScreenshot();
-      const copied = await copyTextSafely(sharePayload.shareText);
-
-      if (blob) {
-        downloadBlob(blob, sharePayload.fileName);
-      }
-
-      toast.success(
-        copied
-          ? "Screenshot downloaded and caption copied."
-          : "Screenshot downloaded successfully.",
-        { id: "love-share" },
-      );
-    } finally {
-      setIsSharing(false);
-    }
-  };
-
-  const shareOnFacebook = async () => {
-    const sharePayload = getSharePayload();
-    if (!sharePayload) return;
-
-    setIsSharing(true);
-    toast.loading("Preparing Facebook share...", { id: "love-facebook-share" });
-
-    try {
-      const blob = await captureScreenshot();
-      const copied = await copyTextSafely(sharePayload.shareText);
-
-      if (blob) {
-        const file = new File([blob], sharePayload.fileName, { type: "image/png" });
-
-        if (canShareFile(file)) {
-          await navigator.share({
-            title: "My Love Bond Result 💕",
-            files: [file],
-          });
-
-          toast.success(
-            copied
-              ? "Select Facebook in the share sheet. Caption with link copied."
-              : "Select Facebook in the share sheet to post the image.",
-            { id: "love-facebook-share" },
-          );
-          return;
-        }
-
-        downloadBlob(blob, sharePayload.fileName);
-      }
-
-      const url = encodeURIComponent(LOVE_CALCULATOR_URL);
-      window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}`, "_blank", "noopener,noreferrer,width=600,height=400");
-
-      toast.success(
-        copied
-          ? "Facebook link share opened. Screenshot downloaded and caption copied for manual posting."
-          : "Facebook link share opened and screenshot downloaded.",
-        { id: "love-facebook-share" },
-      );
-    } catch (error) {
-      if (error instanceof DOMException && error.name === "AbortError") {
-        toast.dismiss("love-facebook-share");
-        return;
-      }
-
-      toast.error("Facebook sharing failed. Please try the Share button.", {
-        id: "love-facebook-share",
-      });
+      if (error instanceof DOMException && error.name === "AbortError") return;
+      const copied = await copyTextSafely(shareText);
+      if (copied) toast.success("Result copied to clipboard!");
+      else toast.error("Couldn't share right now.");
     } finally {
       setIsSharing(false);
     }
