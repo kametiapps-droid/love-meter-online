@@ -154,8 +154,7 @@ const LoveCalculator = () => {
 
         {result !== null && showResult && (
           <div className="mt-8 animate-fade-in-up">
-            <div ref={resultRef} className="text-center p-6 rounded-xl bg-gradient-to-br from-secondary to-muted">
-              {/* Rank Badge */}
+            <div className="text-center p-6 rounded-xl bg-gradient-to-br from-secondary to-muted">
               <div className="mb-3">
                 <span className="inline-block px-4 py-1.5 rounded-full bg-primary/15 text-primary font-semibold text-sm">
                   {getCompatibilityMessage(result).rank}
@@ -167,7 +166,7 @@ const LoveCalculator = () => {
                   {result}%
                 </span>
               </div>
-              
+
               <div className="flex items-center justify-center gap-2 mb-3">
                 <span className="text-lg font-medium text-foreground">{name1}</span>
                 <Heart className="w-5 h-5 text-heart-red fill-heart-red animate-pulse-heart" />
@@ -180,15 +179,6 @@ const LoveCalculator = () => {
                   {getCompatibilityMessage(result).message}
                 </p>
               </div>
-
-              <div className="mt-4 space-y-1">
-                <p className="text-sm font-medium text-foreground/80">
-                  It&apos;s my {getCompatibilityMessage(result).rank} — check your love bond too!
-                </p>
-                <p className="text-xs text-muted-foreground/60">
-                  lovecalculator.space/love-calculator
-                </p>
-              </div>
             </div>
 
             <div className="flex flex-wrap gap-3 mt-4 justify-center">
@@ -198,15 +188,7 @@ const LoveCalculator = () => {
                 className="rounded-xl bg-primary hover:bg-primary/90 text-primary-foreground font-semibold"
               >
                 <Share2 className="w-4 h-4 mr-2" />
-                Share with Screenshot
-              </Button>
-              <Button
-                onClick={shareOnFacebook}
-                disabled={isSharing}
-                className="rounded-xl bg-[#1877F2] hover:bg-[#1877F2]/90 text-white font-semibold"
-              >
-                <Facebook className="w-4 h-4 mr-2" />
-                Facebook
+                Share Result
               </Button>
               <Button
                 onClick={reset}
@@ -220,7 +202,7 @@ const LoveCalculator = () => {
             </div>
 
             <p className="text-xs text-muted-foreground/70 mt-4 text-center">
-              Share your love bond rank and challenge your friends! 🔥
+              Share your love bond rank with friends! 🔥
             </p>
           </div>
         )}
