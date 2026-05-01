@@ -112,7 +112,7 @@ const BlogPreview = () => {
         {/* All Blog Links */}
         <div className="card-romantic rounded-2xl p-6 md:p-8">
           <h3 className="font-display text-xl font-bold text-foreground mb-6 text-center">
-            Browse All {allBlogLinks.length} Articles
+            Love Articles & Relationship Guides 💕
           </h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
             {allBlogLinks.map((post) => (
