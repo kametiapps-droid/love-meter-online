@@ -3,7 +3,7 @@ import Footer from "@/components/Footer";
 import FloatingHearts from "@/components/FloatingHearts";
 import InternalLinks from "@/components/InternalLinks";
 import SEO from "@/components/SEO";
-import { Heart, Users, Target, Shield, Award, Globe, Sparkles, BookOpen, Gamepad2, PenTool } from "lucide-react";
+import { Heart, Users, Target, Shield, Award, Globe, Sparkles, BookOpen, PenTool } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const AboutUs = () => {

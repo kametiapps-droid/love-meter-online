@@ -21,7 +21,7 @@ const DailyHoroscopePage = lazy(() => import("./pages/DailyHoroscopePage"));
 const LoveFortuneBallPage = lazy(() => import("./pages/LoveFortuneBallPage"));
 const CoupleNameGeneratorPage = lazy(() => import("./pages/CoupleNameGeneratorPage"));
 const KidsNameGeneratorPage = lazy(() => import("./pages/KidsNameGeneratorPage"));
-const LoveGamePage = lazy(() => import("./pages/LoveGamePage"));
+
 const Blog = lazy(() => import("./pages/Blog"));
 const BlogPost1 = lazy(() => import("./pages/BlogPost1"));
 const BlogPost2 = lazy(() => import("./pages/BlogPost2"));
@@ -76,7 +76,7 @@ const App = () => (
             <Route path="/love-fortune-ball" element={<LoveFortuneBallPage />} />
             <Route path="/couple-name-generator" element={<CoupleNameGeneratorPage />} />
             <Route path="/kids-name-generator" element={<KidsNameGeneratorPage />} />
-            <Route path="/love-game" element={<LoveGamePage />} />
+            
             <Route path="/love-letter-generator" element={<LoveLetterPage />} />
             <Route path="/relationship-timeline" element={<RelationshipTimelinePage />} />
             <Route path="/blog" element={<Blog />} />
