@@ -3,7 +3,9 @@ import Footer from "@/components/Footer";
 import InternalLinks from "@/components/InternalLinks";
 import SEO from "@/components/SEO";
 import heroImage from "@/assets/poetry-hero.jpg";
-import { Heart, Feather, Sparkles, BookHeart } from "lucide-react";
+import { Heart, Feather, Sparkles, BookHeart, Copy, Check } from "lucide-react";
+import { useState } from "react";
+import { toast } from "sonner";
 
 
 const poems = [
@@ -90,6 +92,19 @@ const poems = [
 const categoryIcons = [Heart, Feather, Sparkles, BookHeart, Heart, Feather];
 
 const LovePoetryPage = () => {
+  const [copiedId, setCopiedId] = useState<string | null>(null);
+
+  const handleCopy = async (text: string, id: string) => {
+    try {
+      await navigator.clipboard.writeText(text);
+      setCopiedId(id);
+      toast.success("Poem copied! 💕");
+      setTimeout(() => setCopiedId(null), 2000);
+    } catch {
+      toast.error("Could not copy");
+    }
+  };
+
   return (
     <>
       <SEO
@@ -137,20 +152,32 @@ const LovePoetryPage = () => {
                   </div>
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    {section.verses.map((poem, idx) => (
-                      <div
-                        key={idx}
-                        className="card-romantic rounded-xl p-6 hover:scale-[1.02] transition-all duration-300 border-l-4 border-primary/40"
-                      >
-                        <p className="text-foreground italic leading-relaxed mb-2">"{poem.line1}</p>
-                        <p className="text-foreground italic leading-relaxed">{poem.line2}"</p>
-                        <div className="mt-3 flex items-center gap-1">
-                          <Heart className="w-3 h-3 text-primary fill-primary" />
-                          <Heart className="w-3 h-3 text-primary/60 fill-primary/60" />
-                          <Heart className="w-3 h-3 text-primary/30 fill-primary/30" />
+                    {section.verses.map((poem, idx) => {
+                      const id = `${sectionIdx}-${idx}`;
+                      const fullText = `${poem.line1}\n${poem.line2}`;
+                      const isCopied = copiedId === id;
+                      return (
+                        <div
+                          key={idx}
+                          className="card-romantic rounded-xl p-6 hover:scale-[1.02] transition-all duration-300 border-l-4 border-primary/40 relative"
+                        >
+                          <button
+                            onClick={() => handleCopy(fullText, id)}
+                            aria-label="Copy poem"
+                            className="absolute top-3 right-3 w-8 h-8 rounded-full bg-primary/10 hover:bg-primary/20 flex items-center justify-center text-primary transition-colors"
+                          >
+                            {isCopied ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
+                          </button>
+                          <p className="text-foreground italic leading-relaxed mb-2 pr-8">"{poem.line1}</p>
+                          <p className="text-foreground italic leading-relaxed">{poem.line2}"</p>
+                          <div className="mt-3 flex items-center gap-1">
+                            <Heart className="w-3 h-3 text-primary fill-primary" />
+                            <Heart className="w-3 h-3 text-primary/60 fill-primary/60" />
+                            <Heart className="w-3 h-3 text-primary/30 fill-primary/30" />
+                          </div>
                         </div>
-                      </div>
-                    ))}
+                      );
+                    })}
                   </div>
                 </div>
               </section>
