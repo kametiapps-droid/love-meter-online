@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import BlogInlineLinks from "@/components/BlogInlineLinks";
 import FloatingHearts from "@/components/FloatingHearts";
 import InternalLinks from "@/components/InternalLinks";
 import BlogRelatedPosts from "@/components/BlogRelatedPosts";
@@ -129,6 +130,7 @@ const BlogPost18 = () => {
               </div>
             </div>
           </div>
+          <BlogInlineLinks />
         </article>
         <BlogRelatedPosts currentPostId="trust-building-relationships" />
         <InternalLinks currentPage="/blog/trust-building-relationships" />

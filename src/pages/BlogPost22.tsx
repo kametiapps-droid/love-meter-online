@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import BlogInlineLinks from "@/components/BlogInlineLinks";
 import FloatingHearts from "@/components/FloatingHearts";
 import InternalLinks from "@/components/InternalLinks";
 import BlogRelatedPosts from "@/components/BlogRelatedPosts";
@@ -112,6 +113,7 @@ const BlogPost22 = () => {
               </div>
             </div>
           </div>
+          <BlogInlineLinks />
         </article>
         <BlogRelatedPosts currentPostId="love-different-cultures" />
         <InternalLinks currentPage="/blog/love-different-cultures" />

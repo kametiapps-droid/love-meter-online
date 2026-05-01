@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import BlogInlineLinks from "@/components/BlogInlineLinks";
 import FloatingHearts from "@/components/FloatingHearts";
 import InternalLinks from "@/components/InternalLinks";
 import BlogRelatedPosts from "@/components/BlogRelatedPosts";
@@ -137,6 +138,7 @@ const BlogPost10 = () => {
               </section>
             </div>
           </div>
+          <BlogInlineLinks />
         </article>
         <BlogRelatedPosts currentPostId="science-of-attraction" />
         <InternalLinks currentPage="/blog/science-of-attraction" />
