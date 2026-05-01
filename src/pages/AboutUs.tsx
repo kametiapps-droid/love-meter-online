@@ -155,10 +155,10 @@ const AboutUs = () => {
               </div>
               <div className="card-romantic rounded-xl p-6">
                 <h3 className="font-semibold text-foreground mb-2 flex items-center gap-2">
-                  <Gamepad2 className="w-5 h-5 text-primary" /> Fun & Games
+                  <Sparkles className="w-5 h-5 text-primary" /> Fun & Insights
                 </h3>
                 <p className="text-muted-foreground text-sm">
-                  Take the <Link to="/love-quiz" className="text-primary hover:underline">Love Style Quiz</Link> to discover your romantic personality type, play the <Link to="/love-game" className="text-primary hover:underline">Love Hearts Catch Game</Link> for quick interactive fun, or read your <Link to="/daily-horoscope" className="text-primary hover:underline">Daily Love Horoscope</Link> for personalized romantic insights based on your zodiac sign.
+                  Take the <Link to="/love-quiz" className="text-primary hover:underline">Love Style Quiz</Link> to discover your romantic personality type, ask the <Link to="/love-fortune-ball" className="text-primary hover:underline">Love Fortune Ball</Link> for playful predictions, or read your <Link to="/daily-horoscope" className="text-primary hover:underline">Daily Love Horoscope</Link> for personalized romantic insights based on your zodiac sign.
                 </p>
               </div>
             </div>
