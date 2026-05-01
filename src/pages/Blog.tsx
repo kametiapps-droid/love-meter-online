@@ -233,9 +233,10 @@ const Blog = () => {
   return (
     <div className="min-h-screen flex flex-col romantic-gradient-bg relative overflow-hidden">
       <SEO
-        title="Love Blog - Relationship Advice, Tips & Guides"
-        description="Read our love blog for relationship advice, zodiac compatibility guides, romantic date ideas, and expert tips on building stronger relationships."
+        title="Love Blog - Shadi, Rishta & Relationship Tips for Couples"
+        description="Padhiye love, shadi, rishta aur relationship advice — dating tips, zodiac compatibility, love languages, romantic shayari ideas aur couple goals for Indian, Pakistani & Asian readers."
         path="/blog"
+        keywords="love blog, shadi tips, rishta advice, relationship advice in english, indian love stories, pakistani couple tips, asian dating advice, romantic shayari, love marriage, arranged marriage tips, zodiac compatibility, long distance relationship"
       />
       <FloatingHearts />
       <Header />
@@ -249,11 +250,11 @@ const Blog = () => {
             </div>
             
             <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-4 leading-tight">
-              Explore Our <span className="text-gradient">Love Blog</span>
+              Love <span className="text-gradient">Articles & Stories</span>
             </h1>
             
             <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
-              Discover {blogPosts.length} articles about love, relationships, zodiac compatibility, and more! 💕
+              Heartfelt love articles, shadi & rishta tips, dating advice, zodiac guides and romantic inspiration for couples everywhere. 💕
             </p>
           </div>
 

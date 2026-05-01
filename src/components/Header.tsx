@@ -15,7 +15,6 @@ const moreLinks = [
   { to: "/love-fortune-ball", label: "Fortune Ball" },
   { to: "/couple-name-generator", label: "Couple Names" },
   { to: "/kids-name-generator", label: "Kids Names" },
-  { to: "/love-game", label: "Game" },
   { to: "/love-letter-generator", label: "Letters" },
   { to: "/relationship-timeline", label: "Timeline" },
   { to: "/love-poetry", label: "Poetry" },
