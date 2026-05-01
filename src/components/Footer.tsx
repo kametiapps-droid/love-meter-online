@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import logo from "@/assets/logo.png";
-import { Heart, Stars, ClipboardList, Sun, Sparkles, Baby, Gamepad2, BookOpen, Send, Calendar, Feather } from "lucide-react";
+import { Heart, Stars, ClipboardList, Sun, Sparkles, Baby, Send, Calendar, Feather } from "lucide-react";
+import SocialShareBar from "./SocialShareBar";
 
 const toolLinks = [
   { to: "/love-calculator", label: "Love Calculator", icon: Heart },
@@ -10,7 +11,6 @@ const toolLinks = [
   { to: "/love-fortune-ball", label: "Fortune Ball", icon: Sparkles },
   { to: "/couple-name-generator", label: "Couple Names", icon: Heart },
   { to: "/kids-name-generator", label: "Kids Names", icon: Baby },
-  { to: "/love-game", label: "Love Game", icon: Gamepad2 },
   { to: "/love-letter-generator", label: "Love Letters", icon: Send },
   { to: "/relationship-timeline", label: "Timeline", icon: Calendar },
   { to: "/love-poetry", label: "Poetry", icon: Feather },
@@ -45,8 +45,9 @@ const legalLinks = [
 
 const Footer = () => {
   return (
-    <footer className="w-full py-10 px-4 mt-auto">
-      <div className="max-w-6xl mx-auto">
+    <footer className="w-full mt-auto">
+      <SocialShareBar />
+      <div className="max-w-6xl mx-auto py-10 px-4">
         <div className="border-t border-border pt-10">
           {/* Main Footer Grid */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-10">

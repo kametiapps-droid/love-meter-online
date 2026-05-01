@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Heart, Stars, ClipboardList, Sun, Sparkles, Baby, Gamepad2, BookOpen, Send, Calendar } from "lucide-react";
+import { Heart, Stars, ClipboardList, Sun, Sparkles, Baby, BookOpen, Send, Calendar } from "lucide-react";
 
 const tools = [
   { path: "/zodiac-compatibility", label: "Zodiac Compatibility", icon: Stars, description: "Check your star sign love match", color: "from-purple-500 to-indigo-500" },
@@ -8,7 +8,6 @@ const tools = [
   { path: "/love-fortune-ball", label: "Love Fortune Ball", icon: Sparkles, description: "Ask the magic ball about your love", color: "from-violet-500 to-purple-500" },
   { path: "/couple-name-generator", label: "Couple Name Generator", icon: Heart, description: "Create your unique couple name", color: "from-pink-400 to-rose-400" },
   { path: "/kids-name-generator", label: "Kids Name Generator", icon: Baby, description: "Find perfect baby names for your family", color: "from-teal-500 to-cyan-500" },
-  { path: "/love-game", label: "Love Hearts Game", icon: Gamepad2, description: "Play the fun hearts catch game", color: "from-red-500 to-rose-500" },
   { path: "/love-letter-generator", label: "Love Letter Generator", icon: Send, description: "Write beautiful romantic letters", color: "from-pink-500 to-fuchsia-500" },
   { path: "/relationship-timeline", label: "Relationship Timeline", icon: Calendar, description: "Create your love story timeline", color: "from-blue-500 to-indigo-500" },
   { path: "/love-poetry", label: "Love Poetry", icon: BookOpen, description: "Read beautiful romantic poems", color: "from-rose-400 to-pink-500" },

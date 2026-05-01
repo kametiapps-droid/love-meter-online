@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Heart, Stars, ClipboardList, Sun, Sparkles, Baby, Gamepad2, BookOpen, Send, Calendar } from "lucide-react";
+import { Heart, Stars, ClipboardList, Sun, Sparkles, Baby, BookOpen, Send, Calendar } from "lucide-react";
 
 interface InternalLinksProps {
   currentPage?: string;
@@ -13,7 +13,6 @@ const allTools = [
   { path: "/love-fortune-ball", label: "Love Fortune Ball", icon: Sparkles, description: "Ask the magic fortune ball" },
   { path: "/couple-name-generator", label: "Couple Name Generator", icon: Heart, description: "Create your couple name" },
   { path: "/kids-name-generator", label: "Kids Name Generator", icon: Baby, description: "Find perfect baby names" },
-  { path: "/love-game", label: "Love Hearts Game", icon: Gamepad2, description: "Play the hearts catch game" },
   { path: "/love-letter-generator", label: "Love Letter Generator", icon: Send, description: "Write beautiful love letters" },
   { path: "/relationship-timeline", label: "Relationship Timeline", icon: Calendar, description: "Create your love story timeline" },
   { path: "/love-poetry", label: "Love Poetry", icon: BookOpen, description: "Beautiful romantic love poems" },
