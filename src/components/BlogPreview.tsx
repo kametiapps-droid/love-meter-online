@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Calendar, Clock, ArrowRight, BookOpen } from "lucide-react";
+import ResponsiveImage from "@/components/ResponsiveImage";
 import blogLoveImage from "@/assets/blog-love-relationships.jpg";
 import blogZodiacImage from "@/assets/blog-zodiac-astrology.jpg";
 import blogNameImage from "@/assets/blog-name-meanings.jpg";
