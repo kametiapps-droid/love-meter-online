@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import FloatingHearts from "@/components/FloatingHearts";
 import InternalLinks from "@/components/InternalLinks";
 import SEO from "@/components/SEO";
+import ResponsiveImage from "@/components/ResponsiveImage";
 import { Link } from "react-router-dom";
 import { BookOpen, Calendar, Clock, ArrowRight } from "lucide-react";
 import blogLoveImage from "@/assets/blog-love-relationships.jpg";
