@@ -8,6 +8,7 @@ import SEO from "@/components/SEO";
 import { Link } from "react-router-dom";
 import { Calendar, Clock, ArrowLeft, User, BookOpen } from "lucide-react";
 import blogImage from "@/assets/blog-trust-building.jpg";
+import ResponsiveImage from "@/components/ResponsiveImage";
 
 const BlogPost18 = () => {
   return (
@@ -33,7 +34,13 @@ const BlogPost18 = () => {
 
             <div className="card-romantic rounded-2xl overflow-hidden">
               <div className="aspect-video overflow-hidden">
-                <img src={blogImage} alt="Building trust in relationships" className="w-full h-full object-cover" />
+                <ResponsiveImage
+                  src={blogImage}
+                  alt="Building trust in relationships"
+                  sizes="(max-width: 1024px) 100vw, 800px"
+                  className="w-full h-full object-cover"
+                  eager
+                />
               </div>
               
               <div className="p-6 md:p-10">

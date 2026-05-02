@@ -7,6 +7,7 @@ import BlogRelatedPosts from "@/components/BlogRelatedPosts";
 import SEO from "@/components/SEO";
 import { Calendar, Clock, Heart, MessageCircle, Gift, HandHeart, Timer } from "lucide-react";
 import blogImage from "@/assets/blog-love-languages.jpg";
+import ResponsiveImage from "@/components/ResponsiveImage";
 
 const BlogPost5 = () => {
   return (
@@ -38,7 +39,13 @@ const BlogPost5 = () => {
             </div>
 
             <div className="rounded-2xl overflow-hidden mb-10">
-              <img src={blogImage} alt="Five love languages hearts illustration" className="w-full h-64 md:h-96 object-cover" loading="lazy" />
+              <ResponsiveImage
+                  src={blogImage}
+                  alt="Five love languages hearts illustration"
+                  sizes="(max-width: 1024px) 100vw, 800px"
+                  className="w-full h-64 md:h-96 object-cover"
+                  eager
+                />
             </div>
 
             <div className="prose prose-lg max-w-none card-romantic rounded-2xl p-6 md:p-10">

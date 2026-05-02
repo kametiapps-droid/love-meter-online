@@ -7,6 +7,7 @@ import BlogRelatedPosts from "@/components/BlogRelatedPosts";
 import SEO from "@/components/SEO";
 import { Calendar, Clock, Heart, Sunset, Music, Utensils, Mountain, Palette } from "lucide-react";
 import blogImage from "@/assets/blog-date-ideas.jpg";
+import ResponsiveImage from "@/components/ResponsiveImage";
 
 const BlogPost7 = () => {
   return (
@@ -38,7 +39,13 @@ const BlogPost7 = () => {
             </div>
 
             <div className="rounded-2xl overflow-hidden mb-10">
-              <img src={blogImage} alt="Romantic dinner date under moonlight" className="w-full h-64 md:h-96 object-cover" loading="lazy" />
+              <ResponsiveImage
+                  src={blogImage}
+                  alt="Romantic dinner date under moonlight"
+                  sizes="(max-width: 1024px) 100vw, 800px"
+                  className="w-full h-64 md:h-96 object-cover"
+                  eager
+                />
             </div>
 
             <div className="prose prose-lg max-w-none card-romantic rounded-2xl p-6 md:p-10">
