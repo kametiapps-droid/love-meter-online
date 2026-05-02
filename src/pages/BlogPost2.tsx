@@ -8,6 +8,7 @@ import BlogRelatedPosts from "@/components/BlogRelatedPosts";
  import { Link } from "react-router-dom";
  import { Calendar, Clock, ArrowLeft, Star, Moon, Sun, Flame } from "lucide-react";
  import blogImage from "@/assets/blog-zodiac-astrology.jpg";
+import ResponsiveImage from "@/components/ResponsiveImage";
  
  const BlogPost2 = () => {
    return (
@@ -59,11 +60,13 @@ import BlogRelatedPosts from "@/components/BlogRelatedPosts";
              </header>
  
              <div className="rounded-2xl overflow-hidden mb-10">
-               <img 
-                 src={blogImage} 
-                 alt="Zodiac wheel with all 12 signs"
-                 className="w-full h-auto object-cover"
-               />
+               <ResponsiveImage
+                  src={blogImage}
+                  alt="Zodiac wheel with all 12 signs"
+                  sizes="(max-width: 1024px) 100vw, 800px"
+                  className="w-full h-auto object-cover"
+                  eager
+                />
              </div>
  
              <div className="prose prose-lg max-w-none">

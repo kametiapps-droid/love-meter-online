@@ -7,6 +7,7 @@ import BlogRelatedPosts from "@/components/BlogRelatedPosts";
 import SEO from "@/components/SEO";
 import { Calendar, Clock, Heart, PenTool, BookOpen, Sparkles, Mail } from "lucide-react";
 import blogImage from "@/assets/blog-write-love-letter.jpg";
+import ResponsiveImage from "@/components/ResponsiveImage";
 
 const BlogPost12 = () => {
   return (
@@ -38,7 +39,13 @@ const BlogPost12 = () => {
             </div>
 
             <div className="rounded-2xl overflow-hidden mb-10">
-              <img src={blogImage} alt="Handwritten love letter with fountain pen and rose petals" className="w-full h-64 md:h-96 object-cover" loading="lazy" />
+              <ResponsiveImage
+                  src={blogImage}
+                  alt="Handwritten love letter with fountain pen and rose petals"
+                  sizes="(max-width: 1024px) 100vw, 800px"
+                  className="w-full h-64 md:h-96 object-cover"
+                  eager
+                />
             </div>
 
             <div className="prose prose-lg max-w-none card-romantic rounded-2xl p-6 md:p-10">

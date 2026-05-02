@@ -7,6 +7,7 @@ import BlogRelatedPosts from "@/components/BlogRelatedPosts";
 import SEO from "@/components/SEO";
 import { Calendar, Clock, Heart, Star, Sparkles, TrendingUp, Globe } from "lucide-react";
 import blogImage from "@/assets/blog-love-facts.jpg";
+import ResponsiveImage from "@/components/ResponsiveImage";
 
 const BlogPost4 = () => {
   return (
@@ -38,7 +39,13 @@ const BlogPost4 = () => {
             </div>
 
             <div className="rounded-2xl overflow-hidden mb-10">
-              <img src={blogImage} alt="Fun love facts and trivia infographic" className="w-full h-64 md:h-96 object-cover" loading="lazy" />
+              <ResponsiveImage
+                  src={blogImage}
+                  alt="Fun love facts and trivia infographic"
+                  sizes="(max-width: 1024px) 100vw, 800px"
+                  className="w-full h-64 md:h-96 object-cover"
+                  eager
+                />
             </div>
 
             <div className="prose prose-lg max-w-none card-romantic rounded-2xl p-6 md:p-10">

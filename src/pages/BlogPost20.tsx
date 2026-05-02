@@ -8,6 +8,7 @@ import SEO from "@/components/SEO";
 import { Link } from "react-router-dom";
 import { Calendar, Clock, ArrowLeft, User } from "lucide-react";
 import blogImage from "@/assets/blog-self-love.jpg";
+import ResponsiveImage from "@/components/ResponsiveImage";
 
 const BlogPost20 = () => {
   return (
@@ -32,7 +33,13 @@ const BlogPost20 = () => {
 
             <div className="card-romantic rounded-2xl overflow-hidden">
               <div className="aspect-video overflow-hidden">
-                <img src={blogImage} alt="Self-love and personal growth" className="w-full h-full object-cover" />
+                <ResponsiveImage
+                  src={blogImage}
+                  alt="Self-love and personal growth"
+                  sizes="(max-width: 1024px) 100vw, 800px"
+                  className="w-full h-full object-cover"
+                  eager
+                />
               </div>
               
               <div className="p-6 md:p-10">
