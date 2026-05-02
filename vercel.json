@@ -7,7 +7,7 @@
     { "source": "/love-fortune-ball", "destination": "/love-fortune-ball.html" },
     { "source": "/couple-name-generator", "destination": "/couple-name-generator.html" },
     { "source": "/kids-name-generator", "destination": "/kids-name-generator.html" },
-    { "source": "/love-game", "destination": "/love-game.html" },
+    
     { "source": "/love-letter-generator", "destination": "/love-letter-generator.html" },
     { "source": "/relationship-timeline", "destination": "/relationship-timeline.html" },
     { "source": "/love-poetry", "destination": "/love-poetry.html" },
