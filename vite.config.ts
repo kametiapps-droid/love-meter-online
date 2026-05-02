@@ -30,7 +30,7 @@ export default defineConfig(({ mode }) => ({
         "love-fortune-ball": path.resolve(__dirname, "love-fortune-ball.html"),
         "couple-name-generator": path.resolve(__dirname, "couple-name-generator.html"),
         "kids-name-generator": path.resolve(__dirname, "kids-name-generator.html"),
-        "love-game": path.resolve(__dirname, "love-game.html"),
+        
         "love-letter-generator": path.resolve(__dirname, "love-letter-generator.html"),
         "relationship-timeline": path.resolve(__dirname, "relationship-timeline.html"),
         "love-poetry": path.resolve(__dirname, "love-poetry.html"),
