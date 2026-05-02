@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Calendar, Clock, ArrowRight, BookOpen } from "lucide-react";
+import ResponsiveImage from "@/components/ResponsiveImage";
 import blogLoveImage from "@/assets/blog-love-relationships.jpg";
 import blogZodiacImage from "@/assets/blog-zodiac-astrology.jpg";
 import blogNameImage from "@/assets/blog-name-meanings.jpg";
@@ -81,11 +82,11 @@ const BlogPreview = () => {
               className="group card-romantic rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300"
             >
               <div className="aspect-video overflow-hidden">
-                <img
+                <ResponsiveImage
                   src={post.image}
                   alt={post.title}
+                  sizes="(max-width: 640px) 90vw, (max-width: 1024px) 45vw, 25vw"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  loading="lazy"
                 />
               </div>
               <div className="p-4">

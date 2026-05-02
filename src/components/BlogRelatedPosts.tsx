@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, Clock } from "lucide-react";
+import ResponsiveImage from "@/components/ResponsiveImage";
 import blogLoveImage from "@/assets/blog-love-relationships.jpg";
 import blogZodiacImage from "@/assets/blog-zodiac-astrology.jpg";
 import blogNameImage from "@/assets/blog-name-meanings.jpg";
@@ -73,11 +74,11 @@ const BlogRelatedPosts = ({ currentPostId }: BlogRelatedPostsProps) => {
               className="group card-romantic rounded-xl overflow-hidden flex gap-3 hover:shadow-lg transition-all duration-300"
             >
               <div className="w-24 h-24 flex-shrink-0 overflow-hidden">
-                <img
+                <ResponsiveImage
                   src={post.image}
                   alt={post.title}
+                  sizes="96px"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  loading="lazy"
                 />
               </div>
               <div className="py-3 pr-3 flex flex-col justify-center">
