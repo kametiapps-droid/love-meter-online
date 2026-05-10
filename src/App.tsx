@@ -45,6 +45,8 @@ const BlogPost19 = lazy(() => import("./pages/BlogPost19"));
 const BlogPost20 = lazy(() => import("./pages/BlogPost20"));
 const BlogPost21 = lazy(() => import("./pages/BlogPost21"));
 const BlogPost22 = lazy(() => import("./pages/BlogPost22"));
+const BlogPost23 = lazy(() => import("./pages/BlogPost23"));
+const BlogPost24 = lazy(() => import("./pages/BlogPost24"));
 const LovePoetryPage = lazy(() => import("./pages/LovePoetryPage"));
 const LoveLetterPage = lazy(() => import("./pages/LoveLetterPage"));
 const RelationshipTimelinePage = lazy(() => import("./pages/RelationshipTimelinePage"));
@@ -102,6 +104,8 @@ const App = () => (
             <Route path="/blog/self-love-guide" element={<BlogPost20 />} />
             <Route path="/blog/anniversary-celebration-ideas" element={<BlogPost21 />} />
             <Route path="/blog/love-different-cultures" element={<BlogPost22 />} />
+            <Route path="/blog/love-compatibility-name-date-birth" element={<BlogPost23 />} />
+            <Route path="/blog/true-love-test-signs" element={<BlogPost24 />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="/terms-of-service" element={<TermsOfService />} />
             <Route path="/disclaimer" element={<Disclaimer />} />

@@ -31,6 +31,24 @@ import blogCulturesImage from "@/assets/blog-love-cultures.jpg";
 
 const blogPosts = [
   {
+    id: "love-compatibility-name-date-birth",
+    title: "Love Compatibility by Name and Date of Birth: Complete Guide",
+    excerpt: "Learn how name + birthdate compatibility works using numerology, FLAMES, and zodiac matching to find your true love percentage.",
+    image: blogLoveImage,
+    date: "May 10, 2026",
+    readTime: "9 min read",
+    category: "Love Calculator"
+  },
+  {
+    id: "true-love-test-signs",
+    title: "True Love Test: 12 Signs You've Found The One",
+    excerpt: "Discover 12 powerful, psychology-backed signs that prove you've found The One — the ultimate true love test for couples.",
+    image: blogSignsImage,
+    date: "May 10, 2026",
+    readTime: "10 min read",
+    category: "True Love"
+  },
+  {
     id: "trust-building-relationships",
     title: "How to Build Trust in a Relationship: 15 Expert Strategies",
     excerpt: "Learn proven strategies to build, rebuild, and maintain trust for a secure, lasting bond with your partner.",
