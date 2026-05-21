@@ -19,7 +19,16 @@ const BlogPost24 = () => {
         path="/blog/true-love-test-signs"
         type="article"
         articleSchema={true}
-        dateModified="2026-05-10"
+        dateModified="2026-05-21"
+        datePublished="2026-05-10"
+        faqSchema={[
+          { question: "What is a true love test?", answer: "A true love test is a set of psychological and behavioral signs that indicate whether your relationship has the depth, trust, and emotional safety associated with lasting love. It looks at communication, support, conflict, and shared values rather than just feelings." },
+          { question: "How do I know if I've found The One?", answer: "Common signs include feeling deeply safe with them, being able to be your full self, healthy conflict resolution, shared long-term goals, mutual respect, and a quiet certainty that this person is yours. Recognizing most of the 12 signs in this guide is a strong indicator." },
+          { question: "Can a love calculator confirm true love?", answer: "A love calculator is a fun snapshot, not a verdict. Pair its result with the real-world signs in this guide for a more meaningful understanding of your relationship." },
+          { question: "Is true love the same as soulmate love?", answer: "Soulmate love is one form of true love characterized by deep familiarity and connection. True love can also grow slowly through shared experiences, trust, and commitment without instant 'soulmate' chemistry." },
+          { question: "What if my partner shows only some of the signs?", answer: "Healthy love grows. If your partner shows several signs and you both invest in communication and trust, the remaining signs often develop with time." },
+          { question: "How long does it take to know it's true love?", answer: "There is no fixed timeline. Some couples feel certainty within months, others within years. What matters is consistent behavior over time — not the speed at which feelings arrive." },
+        ]}
       />
       <FloatingHearts />
       <Header />
