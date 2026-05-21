@@ -143,6 +143,36 @@ const BlogPost23 = () => {
                     <h3 className="font-display text-xl font-bold text-foreground mb-3">Try It Now</h3>
                     <p>Ready to find out your real love percentage? Use the <Link to="/love-calculator" className="text-primary hover:underline">Love Calculator</Link>, check your <Link to="/zodiac-compatibility" className="text-primary hover:underline">Zodiac Match</Link>, or read more in our <Link to="/blog/true-love-test-signs" className="text-primary hover:underline">True Love Test guide</Link>.</p>
                   </div>
+
+                  <section className="mt-12" aria-labelledby="faq-heading">
+                    <h2 id="faq-heading" className="font-display text-2xl md:text-3xl font-bold text-foreground mb-6">Frequently Asked Questions</h2>
+                    <div className="space-y-5">
+                      <div className="card-romantic rounded-xl p-5">
+                        <h3 className="font-bold text-foreground mb-2">How is love compatibility calculated using name and date of birth?</h3>
+                        <p>It combines name-based methods like FLAMES and numerology letter values with birthdate numerology (Life Path Number) and zodiac sign matching to produce a compatibility percentage and personality match.</p>
+                      </div>
+                      <div className="card-romantic rounded-xl p-5">
+                        <h3 className="font-bold text-foreground mb-2">Is the Love Calculator accurate?</h3>
+                        <p>Love calculators are designed for fun and self-reflection, not scientific prediction. The same input always returns the same result, making them great conversation starters for couples.</p>
+                      </div>
+                      <div className="card-romantic rounded-xl p-5">
+                        <h3 className="font-bold text-foreground mb-2">What is a Life Path Number?</h3>
+                        <p>A single digit between 1 and 9 calculated by adding all digits of your birth date and reducing them. It represents your core personality and life direction in numerology.</p>
+                      </div>
+                      <div className="card-romantic rounded-xl p-5">
+                        <h3 className="font-bold text-foreground mb-2">Which zodiac signs are most compatible?</h3>
+                        <p>Fire signs pair well with Air signs; Earth signs match Water signs. Same-element pairs share natural understanding.</p>
+                      </div>
+                      <div className="card-romantic rounded-xl p-5">
+                        <h3 className="font-bold text-foreground mb-2">Does a low love percentage mean we won't last?</h3>
+                        <p>No. Many strong couples have low compatibility scores but thrive through communication, shared values, and effort. Treat the score as a guide, not a forecast.</p>
+                      </div>
+                      <div className="card-romantic rounded-xl p-5">
+                        <h3 className="font-bold text-foreground mb-2">Can I check compatibility without a date of birth?</h3>
+                        <p>Yes. Our free <Link to="/love-calculator" className="text-primary hover:underline">Love Calculator</Link> works with just two names. Add a date of birth for Life Path and zodiac insights.</p>
+                      </div>
+                    </div>
+                  </section>
                 </div>
               </div>
             </div>
