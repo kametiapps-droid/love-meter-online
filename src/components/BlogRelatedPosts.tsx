@@ -25,6 +25,8 @@ import blogAnniversaryImage from "@/assets/blog-anniversary-ideas.jpg";
 import blogCulturesImage from "@/assets/blog-love-cultures.jpg";
 
 const allBlogPosts = [
+  { id: "love-compatibility-name-date-birth", title: "Love Compatibility by Name and Date of Birth", image: blogLoveImage, readTime: "9 min", category: "Love Calculator" },
+  { id: "true-love-test-signs", title: "True Love Test: 12 Signs You've Found The One", image: blogSignsImage, readTime: "10 min", category: "True Love" },
   { id: "trust-building-relationships", title: "How to Build Trust in a Relationship", image: blogTrustImage, readTime: "14 min", category: "Trust & Bonding" },
   { id: "emotional-intelligence-love", title: "Emotional Intelligence in Love", image: blogEQImage, readTime: "13 min", category: "Emotional Intelligence" },
   { id: "self-love-guide", title: "The Power of Self-Love", image: blogSelfLoveImage, readTime: "12 min", category: "Self-Love" },
