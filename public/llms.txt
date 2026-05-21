@@ -1,0 +1,40 @@
+# Love Calculator
+
+> Free love compatibility tools — calculate love percentage by name, check zodiac compatibility, play love quizzes, and read romantic content.
+
+Love Calculator Space offers playful, entertainment-focused tools for couples: name-based love percentage, zodiac matching, daily love horoscope, couple name generator, love letter generator, love poetry, and a relationship timeline tracker. Content is in English with romantic themes aimed at a global audience including Indian, Pakistani and other Asian readers.
+
+## Tools
+
+- [Love Calculator](https://www.lovecalculator.space/love-calculator): Enter two names and get a love compatibility percentage.
+- [Zodiac Compatibility](https://www.lovecalculator.space/zodiac-compatibility): Check astrological compatibility between two signs.
+- [Love Quiz](https://www.lovecalculator.space/love-quiz): Fun quiz about your love life and relationship style.
+- [Daily Horoscope](https://www.lovecalculator.space/daily-horoscope): Daily love horoscope for every zodiac sign.
+- [Love Fortune Ball](https://www.lovecalculator.space/love-fortune-ball): Magic 8-ball for yes/no love questions.
+- [Couple Name Generator](https://www.lovecalculator.space/couple-name-generator): Combine two names into a couple nickname.
+- [Kids Name Generator](https://www.lovecalculator.space/kids-name-generator): Generate baby name ideas from two parent names.
+- [Love Letter Generator](https://www.lovecalculator.space/love-letter-generator): Create personalized romantic love letters.
+- [Love Poetry](https://www.lovecalculator.space/love-poetry): Collection of romantic poems and shayari.
+- [Relationship Timeline](https://www.lovecalculator.space/relationship-timeline): Track milestones in your love story.
+
+## Pages
+
+- [Home](https://www.lovecalculator.space/): Overview of all love tools.
+- [Blog](https://www.lovecalculator.space/blog): Articles on love, dating, relationships and compatibility.
+- [About](https://www.lovecalculator.space/about): About Love Calculator Space.
+- [Contact](https://www.lovecalculator.space/contact): Get in touch.
+
+## Blog
+
+- [Love Compatibility by Name and Date of Birth](https://www.lovecalculator.space/blog/love-compatibility-name-date-birth): Numerology, FLAMES and zodiac guide.
+- [True Love Test: 12 Signs You've Found The One](https://www.lovecalculator.space/blog/true-love-test-signs): How to recognize real love.
+- [The 5 Love Languages](https://www.lovecalculator.space/blog/five-love-languages): Understanding how partners give and receive love.
+- [Zodiac Compatibility Guide](https://www.lovecalculator.space/blog/zodiac-compatibility-guide): How signs match in love.
+- [First Date Tips](https://www.lovecalculator.space/blog/first-date-tips): Make a great first impression.
+- [Long Distance Relationships](https://www.lovecalculator.space/blog/long-distance-relationships): How to make distance work.
+
+## Optional
+
+- [Privacy Policy](https://www.lovecalculator.space/privacy-policy)
+- [Terms of Service](https://www.lovecalculator.space/terms-of-service)
+- [Disclaimer](https://www.lovecalculator.space/disclaimer)
