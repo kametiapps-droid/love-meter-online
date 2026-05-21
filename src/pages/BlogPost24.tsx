@@ -149,6 +149,36 @@ const BlogPost24 = () => {
                     <h3 className="font-display text-xl font-bold text-foreground mb-3">Keep Reading</h3>
                     <p>Discover more love insights with <Link to="/blog/signs-partner-truly-loves-you" className="text-primary hover:underline">15 Signs Your Partner Truly Loves You</Link>, <Link to="/blog/five-love-languages" className="text-primary hover:underline">The 5 Love Languages</Link>, or write something beautiful with our <Link to="/love-letter-generator" className="text-primary hover:underline">Love Letter Generator</Link>.</p>
                   </div>
+
+                  <section className="mt-12" aria-labelledby="faq-heading">
+                    <h2 id="faq-heading" className="font-display text-2xl md:text-3xl font-bold text-foreground mb-6">Frequently Asked Questions</h2>
+                    <div className="space-y-5">
+                      <div className="card-romantic rounded-xl p-5">
+                        <h3 className="font-bold text-foreground mb-2">What is a true love test?</h3>
+                        <p>A set of psychological and behavioral signs that indicate whether your relationship has the depth, trust, and emotional safety associated with lasting love.</p>
+                      </div>
+                      <div className="card-romantic rounded-xl p-5">
+                        <h3 className="font-bold text-foreground mb-2">How do I know if I've found The One?</h3>
+                        <p>Look for safety, authenticity, healthy conflict, shared long-term goals, mutual respect, and a quiet certainty. Recognizing most of the 12 signs is a strong indicator.</p>
+                      </div>
+                      <div className="card-romantic rounded-xl p-5">
+                        <h3 className="font-bold text-foreground mb-2">Can a love calculator confirm true love?</h3>
+                        <p>A <Link to="/love-calculator" className="text-primary hover:underline">love calculator</Link> is a fun snapshot, not a verdict. Pair its result with these real-world signs for a meaningful read on your relationship.</p>
+                      </div>
+                      <div className="card-romantic rounded-xl p-5">
+                        <h3 className="font-bold text-foreground mb-2">Is true love the same as soulmate love?</h3>
+                        <p>Soulmate love is one form of true love. True love can also grow slowly through shared experiences, trust, and commitment.</p>
+                      </div>
+                      <div className="card-romantic rounded-xl p-5">
+                        <h3 className="font-bold text-foreground mb-2">What if my partner shows only some of the signs?</h3>
+                        <p>Healthy love grows. If both partners invest in communication and trust, the remaining signs often develop with time.</p>
+                      </div>
+                      <div className="card-romantic rounded-xl p-5">
+                        <h3 className="font-bold text-foreground mb-2">How long does it take to know it's true love?</h3>
+                        <p>There is no fixed timeline. What matters is consistent behavior over time — not the speed at which feelings arrive.</p>
+                      </div>
+                    </div>
+                  </section>
                 </div>
               </div>
             </div>
