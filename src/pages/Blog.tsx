@@ -253,7 +253,7 @@ const Blog = () => {
     <div className="min-h-screen flex flex-col romantic-gradient-bg relative overflow-hidden">
       <SEO
         title="Love Blog - Shadi, Rishta & Relationship Tips for Couples"
-        description="Padhiye love, shadi, rishta aur relationship advice — dating tips, zodiac compatibility, love languages, romantic shayari ideas aur couple goals for Indian, Pakistani & Asian readers."
+        description="Love, shadi & relationship advice — dating tips, zodiac compatibility, love languages & romantic shayari for Indian & Asian readers."
         path="/blog"
         keywords="love blog, shadi tips, rishta advice, relationship advice in english, indian love stories, pakistani couple tips, asian dating advice, romantic shayari, love marriage, arranged marriage tips, zodiac compatibility, long distance relationship"
       />
