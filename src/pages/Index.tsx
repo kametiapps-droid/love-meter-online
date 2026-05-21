@@ -13,7 +13,7 @@ const Index = () => {
     <div className="min-h-screen flex flex-col romantic-gradient-bg relative overflow-hidden">
       <SEO
         title="Love Calculator - True Love Compatibility Test"
-        description="Calculate your love compatibility with our free online Love Calculator. Enter two names and discover your love percentage instantly. Plus zodiac compatibility, love quiz, daily horoscope & more!"
+        description="Free Love Calculator — enter two names to get your love percentage instantly. Plus zodiac compatibility, love quiz & daily horoscope."
         path="/"
         keywords="love calculator, love percentage, compatibility test, love compatibility test, name love test, true love calculator, free love calculator online, zodiac love compatibility, relationship quiz"
         dateModified="2026-04-14"
