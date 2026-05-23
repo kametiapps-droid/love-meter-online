@@ -6,7 +6,7 @@ Love Calculator Space offers playful, entertainment-focused tools for couples: n
 
 ## Tools
 
-- [Love Calculator](https://www.lovecalculator.space/love-calculator): Enter two names and get a love compatibility percentage.
+- [Love Calculator](https://www.lovecalculator.space/): Enter two names and get a love compatibility percentage.
 - [Zodiac Compatibility](https://www.lovecalculator.space/zodiac-compatibility): Check astrological compatibility between two signs.
 - [Love Quiz](https://www.lovecalculator.space/love-quiz): Fun quiz about your love life and relationship style.
 - [Daily Horoscope](https://www.lovecalculator.space/daily-horoscope): Daily love horoscope for every zodiac sign.
