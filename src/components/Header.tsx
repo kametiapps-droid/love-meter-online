@@ -4,7 +4,7 @@ import { useState } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
 
 const mainNavLinks = [
-  { to: "/love-calculator", label: "Calculator" },
+  { to: "/", label: "Calculator" },
   { to: "/zodiac-compatibility", label: "Zodiac" },
   { to: "/love-quiz", label: "Quiz" },
   { to: "/daily-horoscope", label: "Horoscope" },

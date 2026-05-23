@@ -87,7 +87,7 @@ const LoveFortuneBallPage = () => {
                   The <strong>Love Fortune Ball</strong> is perfect for parties, sleepovers, date nights, and social gatherings. Take turns asking questions with friends and compare your fortunes. Use it as an icebreaker on a first date — nothing breaks the tension like asking a magical ball whether your date is your soulmate! Couples love using it to make fun decisions together: "Should we try that new restaurant?" "Fortune Ball says... YES!"
                 </p>
                 <p className="text-muted-foreground leading-relaxed mt-3">
-                  After consulting the fortune ball, keep the love journey going! Test your name compatibility with our <Link to="/love-calculator" className="text-primary hover:underline">Love Calculator</Link>, check your <Link to="/zodiac-compatibility" className="text-primary hover:underline">Zodiac Compatibility</Link>, or read your <Link to="/daily-horoscope" className="text-primary hover:underline">Daily Love Horoscope</Link> for a full cosmic love reading. The universe has plenty of answers waiting for you!
+                  After consulting the fortune ball, keep the love journey going! Test your name compatibility with our <Link to="/" className="text-primary hover:underline">Love Calculator</Link>, check your <Link to="/zodiac-compatibility" className="text-primary hover:underline">Zodiac Compatibility</Link>, or read your <Link to="/daily-horoscope" className="text-primary hover:underline">Daily Love Horoscope</Link> for a full cosmic love reading. The universe has plenty of answers waiting for you!
                 </p>
               </div>
             </div>

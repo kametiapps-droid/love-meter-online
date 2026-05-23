@@ -70,7 +70,7 @@ const BlogPost23 = () => {
 
                   <h2 className="font-display text-2xl font-bold text-foreground mt-10 mb-4">Why People Test Love Compatibility</h2>
                   <p>
-                    Love is mysterious, but humans love patterns. Testing compatibility gives a fun, structured way to think about a relationship. It can spark conversation, reveal expectations, and help two people understand each other better. While no calculator can replace real communication, tools like the <Link to="/love-calculator" className="text-primary hover:underline">Love Calculator</Link> and <Link to="/zodiac-compatibility" className="text-primary hover:underline">Zodiac Compatibility</Link> checker are excellent conversation starters for new couples, long-term partners, and anyone curious about their connection.
+                    Love is mysterious, but humans love patterns. Testing compatibility gives a fun, structured way to think about a relationship. It can spark conversation, reveal expectations, and help two people understand each other better. While no calculator can replace real communication, tools like the <Link to="/" className="text-primary hover:underline">Love Calculator</Link> and <Link to="/zodiac-compatibility" className="text-primary hover:underline">Zodiac Compatibility</Link> checker are excellent conversation starters for new couples, long-term partners, and anyone curious about their connection.
                   </p>
 
                   <h2 className="font-display text-2xl font-bold text-foreground mt-10 mb-4">1. How Name-Based Love Compatibility Works</h2>
@@ -78,7 +78,7 @@ const BlogPost23 = () => {
                     Name-based love tests are the most well-known. The classic <strong>FLAMES</strong> method (Friends, Love, Affection, Marriage, Enemies, Siblings) counts the unique letters left after removing matching letters from both names. The remaining letter count is then mapped onto the word "FLAMES" to predict the relationship type. It's playful, quick, and surprisingly addictive.
                   </p>
                   <p>
-                    Modern <strong>love percentage calculators</strong> go further by combining letter values, vibrations, and statistical scoring to produce a percentage between 0% and 100%. Our <Link to="/love-calculator" className="text-primary hover:underline">free Love Calculator</Link> uses a balanced algorithm that takes both names into account — including spelling, length, and shared letters — to give a fun, repeatable score every time.
+                    Modern <strong>love percentage calculators</strong> go further by combining letter values, vibrations, and statistical scoring to produce a percentage between 0% and 100%. Our <Link to="/" className="text-primary hover:underline">free Love Calculator</Link> uses a balanced algorithm that takes both names into account — including spelling, length, and shared letters — to give a fun, repeatable score every time.
                   </p>
 
                   <h2 className="font-display text-2xl font-bold text-foreground mt-10 mb-4">2. Love Compatibility by Date of Birth</h2>
@@ -110,7 +110,7 @@ const BlogPost23 = () => {
 
                   <h2 className="font-display text-2xl font-bold text-foreground mt-10 mb-4">5. Step-by-Step: Check Your Compatibility in 60 Seconds</h2>
                   <ol className="list-decimal pl-6 space-y-2">
-                    <li>Open the <Link to="/love-calculator" className="text-primary hover:underline">Love Calculator</Link> and enter both full names.</li>
+                    <li>Open the <Link to="/" className="text-primary hover:underline">Love Calculator</Link> and enter both full names.</li>
                     <li>Note your love percentage and read the personalized message.</li>
                     <li>Calculate both Life Path Numbers from each date of birth.</li>
                     <li>Check the zodiac element pairing using <Link to="/zodiac-compatibility" className="text-primary hover:underline">Zodiac Compatibility</Link>.</li>
@@ -141,7 +141,7 @@ const BlogPost23 = () => {
 
                   <div className="mt-8 p-6 bg-primary/5 rounded-xl">
                     <h3 className="font-display text-xl font-bold text-foreground mb-3">Try It Now</h3>
-                    <p>Ready to find out your real love percentage? Use the <Link to="/love-calculator" className="text-primary hover:underline">Love Calculator</Link>, check your <Link to="/zodiac-compatibility" className="text-primary hover:underline">Zodiac Match</Link>, or read more in our <Link to="/blog/true-love-test-signs" className="text-primary hover:underline">True Love Test guide</Link>.</p>
+                    <p>Ready to find out your real love percentage? Use the <Link to="/" className="text-primary hover:underline">Love Calculator</Link>, check your <Link to="/zodiac-compatibility" className="text-primary hover:underline">Zodiac Match</Link>, or read more in our <Link to="/blog/true-love-test-signs" className="text-primary hover:underline">True Love Test guide</Link>.</p>
                   </div>
 
                   <section className="mt-12" aria-labelledby="faq-heading">
@@ -169,7 +169,7 @@ const BlogPost23 = () => {
                       </div>
                       <div className="card-romantic rounded-xl p-5">
                         <h3 className="font-bold text-foreground mb-2">Can I check compatibility without a date of birth?</h3>
-                        <p>Yes. Our free <Link to="/love-calculator" className="text-primary hover:underline">Love Calculator</Link> works with just two names. Add a date of birth for Life Path and zodiac insights.</p>
+                        <p>Yes. Our free <Link to="/" className="text-primary hover:underline">Love Calculator</Link> works with just two names. Add a date of birth for Life Path and zodiac insights.</p>
                       </div>
                     </div>
                   </section>

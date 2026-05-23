@@ -132,7 +132,7 @@ const BlogPost7 = () => {
                   Play a relationship game together. Beyond traditional board games, there are many card games and apps designed specifically for couples that encourage deep conversation, vulnerability, and laughter. These games often include questions like "What is your favorite memory of us?" or "What is something you have always wanted to try together?" — prompts that spark meaningful dialogue you might not have otherwise.
                 </p>
                 <p className="text-muted-foreground leading-relaxed">
-                  Looking for more ways to connect with your partner? Try our <a href="/love-fortune-ball" className="text-primary hover:underline">Love Fortune Ball</a> for fun predictions, create adorable <a href="/couple-name-generator" className="text-primary hover:underline">Couple Names</a> together, test your compatibility with our <a href="/love-calculator" className="text-primary hover:underline">Love Calculator</a>, or write a heartfelt note with the <a href="/love-letter-generator" className="text-primary hover:underline">Love Letter Generator</a>!
+                  Looking for more ways to connect with your partner? Try our <a href="/love-fortune-ball" className="text-primary hover:underline">Love Fortune Ball</a> for fun predictions, create adorable <a href="/couple-name-generator" className="text-primary hover:underline">Couple Names</a> together, test your compatibility with our <a href="/" className="text-primary hover:underline">Love Calculator</a>, or write a heartfelt note with the <a href="/love-letter-generator" className="text-primary hover:underline">Love Letter Generator</a>!
                 </p>
               </section>
 

@@ -87,7 +87,7 @@ const CoupleNameGeneratorPage = () => {
                   The hall of fame for <strong>celebrity couple names</strong> is long and entertaining. "Brangelina" arguably started it all, becoming so iconic that it appeared in dictionaries. "Kimye" (Kim and Kanye) dominated social media for years. "Hiddleswift" (Tom Hiddleston and Taylor Swift) trended globally despite their brief romance. And "Megxit" showed that couple name culture even extends to royalty!
                 </p>
                 <p className="text-muted-foreground leading-relaxed mt-3">
-                  Now it's your turn to join the tradition! Generate your unique <strong>couple name</strong>, share it with friends, and see if it catches on. After creating your name, check how compatible you really are with our <Link to="/love-calculator" className="text-primary hover:underline">Love Calculator</Link>, explore your <Link to="/zodiac-compatibility" className="text-primary hover:underline">Zodiac Compatibility</Link>, or start planning your future with the <Link to="/kids-name-generator" className="text-primary hover:underline">Kids Name Generator</Link>!
+                  Now it's your turn to join the tradition! Generate your unique <strong>couple name</strong>, share it with friends, and see if it catches on. After creating your name, check how compatible you really are with our <Link to="/" className="text-primary hover:underline">Love Calculator</Link>, explore your <Link to="/zodiac-compatibility" className="text-primary hover:underline">Zodiac Compatibility</Link>, or start planning your future with the <Link to="/kids-name-generator" className="text-primary hover:underline">Kids Name Generator</Link>!
                 </p>
               </div>
             </div>

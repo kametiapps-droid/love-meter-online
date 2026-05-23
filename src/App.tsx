@@ -2,7 +2,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { lazy, Suspense } from "react";
 import ScrollToTop from "./components/ScrollToTop";
 import Index from "./pages/Index";
@@ -14,7 +14,7 @@ const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
 const TermsOfService = lazy(() => import("./pages/TermsOfService"));
 const Disclaimer = lazy(() => import("./pages/Disclaimer"));
 const Contact = lazy(() => import("./pages/Contact"));
-const LoveCalculatorPage = lazy(() => import("./pages/LoveCalculatorPage"));
+
 const ZodiacCompatibilityPage = lazy(() => import("./pages/ZodiacCompatibilityPage"));
 const LoveQuizPage = lazy(() => import("./pages/LoveQuizPage"));
 const DailyHoroscopePage = lazy(() => import("./pages/DailyHoroscopePage"));
@@ -70,7 +70,7 @@ const App = () => (
         <Suspense fallback={<PageLoader />}>
           <Routes>
             <Route path="/" element={<Index />} />
-            <Route path="/love-calculator" element={<LoveCalculatorPage />} />
+            <Route path="/love-calculator" element={<Navigate to="/" replace />} />
             <Route path="/love-poetry" element={<LovePoetryPage />} />
             <Route path="/zodiac-compatibility" element={<ZodiacCompatibilityPage />} />
             <Route path="/love-quiz" element={<LoveQuizPage />} />

@@ -6,7 +6,7 @@ interface InternalLinksProps {
 }
 
 const allTools = [
-  { path: "/love-calculator", label: "Love Calculator", icon: Heart, description: "Test your love compatibility" },
+  { path: "/", label: "Love Calculator", icon: Heart, description: "Test your love compatibility" },
   { path: "/zodiac-compatibility", label: "Zodiac Compatibility", icon: Stars, description: "Check your star sign match" },
   { path: "/love-quiz", label: "Love Style Quiz", icon: ClipboardList, description: "Discover your love personality" },
   { path: "/daily-horoscope", label: "Daily Horoscope", icon: Sun, description: "Read today's love prediction" },

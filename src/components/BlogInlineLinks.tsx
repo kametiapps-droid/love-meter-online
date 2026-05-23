@@ -8,7 +8,7 @@ interface BlogInlineLinksProps {
 const defaultLinks = [
   { to: "/blog/love-compatibility-name-date-birth", label: "Love Compatibility by Name and Date of Birth — Complete Guide" },
   { to: "/blog/true-love-test-signs", label: "True Love Test: 12 Signs You've Found The One" },
-  { to: "/love-calculator", label: "Try the Free Love Calculator" },
+  { to: "/", label: "Try the Free Love Calculator" },
   { to: "/zodiac-compatibility", label: "Check Zodiac Compatibility by Birthdate" },
   { to: "/love-quiz", label: "Take the Love Style Quiz" },
   { to: "/daily-horoscope", label: "Read Your Daily Love Horoscope" },

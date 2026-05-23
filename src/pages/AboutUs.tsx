@@ -134,7 +134,7 @@ const AboutUs = () => {
                   <span className="text-xl">🧮</span> Interactive Love Tools
                 </h3>
                 <p className="text-muted-foreground text-sm">
-                  From our flagship <Link to="/love-calculator" className="text-primary hover:underline">Love Calculator</Link> to the <Link to="/zodiac-compatibility" className="text-primary hover:underline">Zodiac Compatibility</Link> checker, <Link to="/couple-name-generator" className="text-primary hover:underline">Couple Name Generator</Link>, <Link to="/love-fortune-ball" className="text-primary hover:underline">Love Fortune Ball</Link>, <Link to="/kids-name-generator" className="text-primary hover:underline">Kids Name Generator</Link>, and more — we offer over 12 unique interactive tools, all completely free to use with no registration required.
+                  From our flagship <Link to="/" className="text-primary hover:underline">Love Calculator</Link> to the <Link to="/zodiac-compatibility" className="text-primary hover:underline">Zodiac Compatibility</Link> checker, <Link to="/couple-name-generator" className="text-primary hover:underline">Couple Name Generator</Link>, <Link to="/love-fortune-ball" className="text-primary hover:underline">Love Fortune Ball</Link>, <Link to="/kids-name-generator" className="text-primary hover:underline">Kids Name Generator</Link>, and more — we offer over 12 unique interactive tools, all completely free to use with no registration required.
                 </p>
               </div>
               <div className="card-romantic rounded-xl p-6">

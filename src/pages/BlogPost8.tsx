@@ -168,7 +168,7 @@ const BlogPost8 = () => {
                   Remember that no relationship is perfect, and even the most loving partners won't exhibit all 15 signs 100% of the time. What matters is the overall pattern of behavior and the genuine effort both of you put into nurturing your connection. True love is a journey, not a destination — and the most beautiful part is growing together along the way.
                 </p>
                 <p className="text-muted-foreground leading-relaxed">
-                  If you're curious about your romantic compatibility, try our <a href="/love-calculator" className="text-primary hover:underline">Love Calculator</a> for a fun compatibility check, or explore your <a href="/zodiac-compatibility" className="text-primary hover:underline">Zodiac Compatibility</a> to see how the stars align for your relationship! 💕
+                  If you're curious about your romantic compatibility, try our <a href="/" className="text-primary hover:underline">Love Calculator</a> for a fun compatibility check, or explore your <a href="/zodiac-compatibility" className="text-primary hover:underline">Zodiac Compatibility</a> to see how the stars align for your relationship! 💕
                 </p>
               </section>
             </div>

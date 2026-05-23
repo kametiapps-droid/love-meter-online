@@ -137,7 +137,7 @@ const BlogPost24 = () => {
 
                   <h2 className="font-display text-2xl font-bold text-foreground mt-10 mb-4">Test Your Love Right Now</h2>
                   <p>
-                    Want a fun, instant snapshot of your connection? Run a quick test with our <Link to="/love-calculator" className="text-primary hover:underline">Love Calculator</Link>, check your <Link to="/zodiac-compatibility" className="text-primary hover:underline">Zodiac Compatibility</Link>, or read our complete guide on <Link to="/blog/love-compatibility-name-date-birth" className="text-primary hover:underline">love compatibility by name and date of birth</Link>. Pair the results with the 12 signs above and you'll have a powerful real-world understanding of your relationship.
+                    Want a fun, instant snapshot of your connection? Run a quick test with our <Link to="/" className="text-primary hover:underline">Love Calculator</Link>, check your <Link to="/zodiac-compatibility" className="text-primary hover:underline">Zodiac Compatibility</Link>, or read our complete guide on <Link to="/blog/love-compatibility-name-date-birth" className="text-primary hover:underline">love compatibility by name and date of birth</Link>. Pair the results with the 12 signs above and you'll have a powerful real-world understanding of your relationship.
                   </p>
 
                   <div className="bg-secondary/30 rounded-xl p-6 mt-8">
@@ -163,7 +163,7 @@ const BlogPost24 = () => {
                       </div>
                       <div className="card-romantic rounded-xl p-5">
                         <h3 className="font-bold text-foreground mb-2">Can a love calculator confirm true love?</h3>
-                        <p>A <Link to="/love-calculator" className="text-primary hover:underline">love calculator</Link> is a fun snapshot, not a verdict. Pair its result with these real-world signs for a meaningful read on your relationship.</p>
+                        <p>A <Link to="/" className="text-primary hover:underline">love calculator</Link> is a fun snapshot, not a verdict. Pair its result with these real-world signs for a meaningful read on your relationship.</p>
                       </div>
                       <div className="card-romantic rounded-xl p-5">
                         <h3 className="font-bold text-foreground mb-2">Is true love the same as soulmate love?</h3>

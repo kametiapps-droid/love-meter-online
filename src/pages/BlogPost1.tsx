@@ -192,7 +192,7 @@ import ResponsiveImage from "@/components/ResponsiveImage";
                  </p>
                  <div className="flex flex-wrap gap-4">
                    <Link 
-                     to="/love-calculator" 
+                     to="/" 
                      className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-full font-medium hover:opacity-90 transition-opacity"
                    >
                      Try Love Calculator <Heart className="w-4 h-4" />

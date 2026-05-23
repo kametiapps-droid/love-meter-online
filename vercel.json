@@ -1,6 +1,9 @@
 {
+  "redirects": [
+    { "source": "/love-calculator", "destination": "/", "permanent": true },
+    { "source": "/love-calculator.html", "destination": "/", "permanent": true }
+  ],
   "rewrites": [
-    { "source": "/love-calculator", "destination": "/love-calculator.html" },
     { "source": "/zodiac-compatibility", "destination": "/zodiac-compatibility.html" },
     { "source": "/love-quiz", "destination": "/love-quiz.html" },
     { "source": "/daily-horoscope", "destination": "/daily-horoscope.html" },
