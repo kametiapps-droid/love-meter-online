@@ -70,7 +70,7 @@ const App = () => (
         <Suspense fallback={<PageLoader />}>
           <Routes>
             <Route path="/" element={<Index />} />
-            <Route path="/" element={<LoveCalculatorPage />} />
+            <Route path="/love-calculator" element={<Navigate to="/" replace />} />
             <Route path="/love-poetry" element={<LovePoetryPage />} />
             <Route path="/zodiac-compatibility" element={<ZodiacCompatibilityPage />} />
             <Route path="/love-quiz" element={<LoveQuizPage />} />
