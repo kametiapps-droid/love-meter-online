@@ -8,6 +8,20 @@ import {
   copyTextSafely,
 } from "@/lib/loveCalculatorShare";
 
+const cleanName = (value: string) => value.replace(/[^a-zA-Z\s]/g, "").replace(/\s+/g, " ").trim();
+
+const getNameError = (value: string, label: string) => {
+  const cleaned = cleanName(value);
+  const lettersOnly = cleaned.replace(/\s/g, "");
+
+  if (!cleaned) return `Please enter ${label}.`;
+  if (lettersOnly.length < 2) return `${label} must be a real name, not a single letter.`;
+  if (!/[aeiouy]/i.test(lettersOnly)) return `${label} must look like a real English name.`;
+  if (/(.)\1{2,}/i.test(lettersOnly)) return `${label} must look like a real name.`;
+
+  return "";
+};
+
 const LoveCalculator = () => {
   const [name1, setName1] = useState("");
   const [name2, setName2] = useState("");
@@ -17,15 +31,23 @@ const LoveCalculator = () => {
   const [isSharing, setIsSharing] = useState(false);
 
   const calculateLove = () => {
-    if (!name1.trim() || !name2.trim()) {
-      toast.error("Please enter both names to calculate your love!");
+    const firstNameError = getNameError(name1, "your name");
+    const partnerNameError = getNameError(name2, "partner's name");
+
+    if (firstNameError || partnerNameError) {
+      toast.error(firstNameError || partnerNameError);
       return;
     }
+
+    const cleanFirstName = cleanName(name1);
+    const cleanPartnerName = cleanName(name2);
+    setName1(cleanFirstName);
+    setName2(cleanPartnerName);
 
     setIsCalculating(true);
     setShowResult(false);
 
-    const combined = (name1 + name2).toLowerCase().replace(/\s/g, "");
+    const combined = (cleanFirstName + cleanPartnerName).toLowerCase().replace(/\s/g, "");
     let hash = 0;
     for (let i = 0; i < combined.length; i++) {
       const char = combined.charCodeAt(i);
