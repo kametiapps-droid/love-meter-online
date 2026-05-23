@@ -14,7 +14,7 @@ const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
 const TermsOfService = lazy(() => import("./pages/TermsOfService"));
 const Disclaimer = lazy(() => import("./pages/Disclaimer"));
 const Contact = lazy(() => import("./pages/Contact"));
-const LoveCalculatorPage = lazy(() => import("./pages/LoveCalculatorPage"));
+
 const ZodiacCompatibilityPage = lazy(() => import("./pages/ZodiacCompatibilityPage"));
 const LoveQuizPage = lazy(() => import("./pages/LoveQuizPage"));
 const DailyHoroscopePage = lazy(() => import("./pages/DailyHoroscopePage"));
