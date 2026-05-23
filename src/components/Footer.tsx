@@ -4,7 +4,7 @@ import { Heart, Stars, ClipboardList, Sun, Sparkles, Baby, Send, Calendar, Feath
 import SocialShareBar from "./SocialShareBar";
 
 const toolLinks = [
-  { to: "/love-calculator", label: "Love Calculator", icon: Heart },
+  { to: "/", label: "Love Calculator", icon: Heart },
   { to: "/zodiac-compatibility", label: "Zodiac Compatibility", icon: Stars },
   { to: "/love-quiz", label: "Love Quiz", icon: ClipboardList },
   { to: "/daily-horoscope", label: "Daily Horoscope", icon: Sun },

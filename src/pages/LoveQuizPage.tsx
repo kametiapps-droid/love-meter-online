@@ -99,7 +99,7 @@ const LoveQuizPage = () => {
                   The <strong>Love Style Quiz</strong> is even more fun when taken as a couple! Sit down together, answer the questions separately, then reveal your results at the same time. You'll laugh, learn, and probably discover things about each other you never expected. It's the perfect date-night activity — no reservations required.
                 </p>
                 <p className="text-muted-foreground leading-relaxed mt-3">
-                  After discovering your love style, continue exploring with our other tools. Check your <Link to="/zodiac-compatibility" className="text-primary hover:underline">Zodiac Compatibility</Link> to see how the stars view your match, test your names in the <Link to="/love-calculator" className="text-primary hover:underline">Love Calculator</Link>, or generate a cute <Link to="/couple-name-generator" className="text-primary hover:underline">Couple Name</Link> together. Love is an adventure — enjoy every moment of it!
+                  After discovering your love style, continue exploring with our other tools. Check your <Link to="/zodiac-compatibility" className="text-primary hover:underline">Zodiac Compatibility</Link> to see how the stars view your match, test your names in the <Link to="/" className="text-primary hover:underline">Love Calculator</Link>, or generate a cute <Link to="/couple-name-generator" className="text-primary hover:underline">Couple Name</Link> together. Love is an adventure — enjoy every moment of it!
                 </p>
               </div>
             </div>

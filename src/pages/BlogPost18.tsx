@@ -131,7 +131,7 @@ const BlogPost18 = () => {
 
                   <div className="mt-8 p-6 bg-primary/5 rounded-xl">
                     <h3 className="font-display text-xl font-bold text-foreground mb-3">Explore More Love Tools</h3>
-                    <p>Take our <Link to="/love-quiz" className="text-primary hover:underline">Love Style Quiz</Link> to understand your relationship patterns, or use our <Link to="/love-calculator" className="text-primary hover:underline">Love Calculator</Link> for a fun compatibility check. For daily romantic insights, check your <Link to="/daily-horoscope" className="text-primary hover:underline">Daily Love Horoscope</Link>.</p>
+                    <p>Take our <Link to="/love-quiz" className="text-primary hover:underline">Love Style Quiz</Link> to understand your relationship patterns, or use our <Link to="/" className="text-primary hover:underline">Love Calculator</Link> for a fun compatibility check. For daily romantic insights, check your <Link to="/daily-horoscope" className="text-primary hover:underline">Daily Love Horoscope</Link>.</p>
                   </div>
                 </div>
               </div>

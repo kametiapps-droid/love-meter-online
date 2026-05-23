@@ -123,7 +123,7 @@ const BlogPost5 = () => {
                   Physical Touch is perhaps the most instinctive love language. From the moment we are born, physical contact is essential for our emotional development and well-being. For adults whose primary love language is Physical Touch, nothing communicates love more clearly than a warm hug, a gentle hand on the shoulder, or sitting close together on the couch.
                 </p>
                 <p className="text-muted-foreground leading-relaxed">
-                  Understanding your own love language and your partner's can transform your relationship. Take our <a href="/love-quiz" className="text-primary hover:underline">Love Quiz</a> to discover more about your relationship style, check your <a href="/zodiac-compatibility" className="text-primary hover:underline">Zodiac Compatibility</a> for cosmic relationship insights, or use our <a href="/love-calculator" className="text-primary hover:underline">Love Calculator</a> for a fun compatibility check with your special someone.
+                  Understanding your own love language and your partner's can transform your relationship. Take our <a href="/love-quiz" className="text-primary hover:underline">Love Quiz</a> to discover more about your relationship style, check your <a href="/zodiac-compatibility" className="text-primary hover:underline">Zodiac Compatibility</a> for cosmic relationship insights, or use our <a href="/" className="text-primary hover:underline">Love Calculator</a> for a fun compatibility check with your special someone.
                 </p>
               </section>
             </div>

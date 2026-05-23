@@ -127,7 +127,7 @@ const BlogPost3 = () => {
                   In our modern world, couples often choose baby names that represent their love story. Some parents combine parts of their own names to create unique names for their children, while others choose names that reflect the place where they met or fell in love. This practice of creating meaningful name connections continues the ancient tradition of embedding stories and significance into the names we give our children.
                 </p>
                 <p className="text-muted-foreground leading-relaxed">
-                  If you are curious about how your name pairs with your partner's, try our <a href="/couple-name-generator" className="text-primary hover:underline">Couple Name Generator</a> to create a fun combined name, or use our <a href="/love-calculator" className="text-primary hover:underline">Love Calculator</a> to see your compatibility score. For parents-to-be, our <a href="/kids-name-generator" className="text-primary hover:underline">Kids Name Generator</a> can help you find the perfect name based on your zodiac signs and preferences.
+                  If you are curious about how your name pairs with your partner's, try our <a href="/couple-name-generator" className="text-primary hover:underline">Couple Name Generator</a> to create a fun combined name, or use our <a href="/" className="text-primary hover:underline">Love Calculator</a> to see your compatibility score. For parents-to-be, our <a href="/kids-name-generator" className="text-primary hover:underline">Kids Name Generator</a> can help you find the perfect name based on your zodiac signs and preferences.
                 </p>
               </section>
 

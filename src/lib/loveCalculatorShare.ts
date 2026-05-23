@@ -1,4 +1,4 @@
-export const LOVE_CALCULATOR_URL = "https://www.lovecalculator.space/love-calculator";
+export const LOVE_CALCULATOR_URL = "https://www.lovecalculator.space/";
 
 interface LoveCalculatorSharePayload {
   message: string;

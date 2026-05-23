@@ -199,7 +199,7 @@ const BlogPost13 = () => {
                   Whether the date was magical or mediocre, your value as a person remains unchanged. Not every date leads to love, and that's perfectly okay. Each experience brings you closer to finding the right person — someone who appreciates exactly who you are.
                 </p>
                 <p className="text-muted-foreground leading-relaxed">
-                  Ready to check your romantic compatibility? Try our <a href="/love-calculator" className="text-primary hover:underline">Love Calculator</a> or discover your <a href="/zodiac-compatibility" className="text-primary hover:underline">Zodiac Compatibility</a>! 💕
+                  Ready to check your romantic compatibility? Try our <a href="/" className="text-primary hover:underline">Love Calculator</a> or discover your <a href="/zodiac-compatibility" className="text-primary hover:underline">Zodiac Compatibility</a>! 💕
                 </p>
               </section>
             </div>

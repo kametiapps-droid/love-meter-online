@@ -183,7 +183,7 @@ const BlogPost16 = () => {
                   Sometimes the most powerful proposals are the simplest. During a quiet moment together — cooking dinner, watching the sunset from your porch, or lying in bed — simply turn to your partner, look into their eyes, and speak from your heart about why you want to spend forever with them. No elaborate setup needed — just pure, honest love.
                 </p>
                 <p className="text-muted-foreground leading-relaxed">
-                  Planning your perfect proposal? Check your romantic compatibility first with our <a href="/love-calculator" className="text-primary hover:underline">Love Calculator</a>, or create a beautiful love letter to include with our <a href="/love-letter-generator" className="text-primary hover:underline">Love Letter Generator</a>! 💍💕
+                  Planning your perfect proposal? Check your romantic compatibility first with our <a href="/" className="text-primary hover:underline">Love Calculator</a>, or create a beautiful love letter to include with our <a href="/love-letter-generator" className="text-primary hover:underline">Love Letter Generator</a>! 💍💕
                 </p>
               </section>
             </div>

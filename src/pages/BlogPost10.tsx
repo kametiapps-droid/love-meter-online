@@ -140,7 +140,7 @@ const BlogPost10 = () => {
                   Perhaps that's the most beautiful thing about love: it exists at the intersection of biology and poetry, of evolution and emotion, of science and soul. Understanding the mechanisms behind attraction doesn't diminish its magic — if anything, it deepens our appreciation for this extraordinary human experience.
                 </p>
                 <p className="text-muted-foreground leading-relaxed">
-                  Curious about your romantic chemistry? Test your compatibility with our <a href="/love-calculator" className="text-primary hover:underline">Love Calculator</a> or discover what the stars say about your match with our <a href="/zodiac-compatibility" className="text-primary hover:underline">Zodiac Compatibility</a> tool! 💕
+                  Curious about your romantic chemistry? Test your compatibility with our <a href="/" className="text-primary hover:underline">Love Calculator</a> or discover what the stars say about your match with our <a href="/zodiac-compatibility" className="text-primary hover:underline">Zodiac Compatibility</a> tool! 💕
                 </p>
               </section>
             </div>

@@ -13,7 +13,7 @@ const LoveCalculatorPage = () => {
       <SEO
         title="Love Calculator - Test Your Love Compatibility Online Free"
         description="Use our free Love Calculator to find out your love compatibility. Enter two names and get your love percentage instantly. Fun and easy love test!"
-        path="/love-calculator"
+        path="/"
         keywords="love calculator, love test online, name compatibility calculator, love percentage, romantic compatibility test"
         dateModified="2026-04-09"
         faqSchema={[
@@ -120,7 +120,7 @@ const LoveCalculatorPage = () => {
           </div>
         </section>
 
-        <InternalLinks currentPage="/love-calculator" />
+        <InternalLinks currentPage="/" />
       </main>
       
       <Footer />
