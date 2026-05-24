@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import CoupleNameGenerator from "@/components/CoupleNameGenerator";
 import FloatingHearts from "@/components/FloatingHearts";
 import InternalLinks from "@/components/InternalLinks";
+import BlogPreview from "@/components/BlogPreview";
 import SEO from "@/components/SEO";
 import { Heart } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -93,6 +94,38 @@ const CoupleNameGeneratorPage = () => {
             </div>
           </div>
         </section>
+
+        <section className="py-12 px-4 bg-secondary/30">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground text-center mb-8">
+              Frequently Asked Questions
+            </h2>
+            <div className="space-y-4">
+              <div className="card-romantic rounded-xl p-6">
+                <h3 className="font-semibold text-foreground mb-2">How does the couple name generator work?</h3>
+                <p className="text-muted-foreground text-sm">Enter both partners' names and the generator blends them together to create unique couple names — also known as ship names. It combines syllables, sounds, and letters from both names to produce creative and fun results.</p>
+              </div>
+              <div className="card-romantic rounded-xl p-6">
+                <h3 className="font-semibold text-foreground mb-2">What is a ship name?</h3>
+                <p className="text-muted-foreground text-sm">A ship name (or couple name) is a portmanteau of two people's names merged into one — popularised by celebrity couples like "Brangelina" (Brad + Angelina). It's a fun way for couples to have their own unique shared identity.</p>
+              </div>
+              <div className="card-romantic rounded-xl p-6">
+                <h3 className="font-semibold text-foreground mb-2">Can I generate multiple couple names?</h3>
+                <p className="text-muted-foreground text-sm">Yes! The generator produces several name options from different blending styles. Pick your favourite or try different name combinations to find the one that feels most like "you" as a couple.</p>
+              </div>
+              <div className="card-romantic rounded-xl p-6">
+                <h3 className="font-semibold text-foreground mb-2">Are the names unique every time?</h3>
+                <p className="text-muted-foreground text-sm">The generated names are based on the specific combination of the two names you enter. The same names will always produce the same results, so you can always come back to find your couple name.</p>
+              </div>
+              <div className="card-romantic rounded-xl p-6">
+                <h3 className="font-semibold text-foreground mb-2">Is the couple name generator free?</h3>
+                <p className="text-muted-foreground text-sm">100% free with no sign-up needed. Generate as many couple names as you like!</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <BlogPreview />
 
         <InternalLinks currentPage="/couple-name-generator" />
       </main>

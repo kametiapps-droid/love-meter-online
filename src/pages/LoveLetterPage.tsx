@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import FloatingHearts from "@/components/FloatingHearts";
 import LoveLetterGenerator from "@/components/LoveLetterGenerator";
 import InternalLinks from "@/components/InternalLinks";
+import BlogPreview from "@/components/BlogPreview";
 import SEO from "@/components/SEO";
 import { Send } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -88,6 +89,38 @@ const LoveLetterPage = () => {
             </div>
           </div>
         </section>
+
+        <section className="py-12 px-4 bg-secondary/30">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground text-center mb-8">
+              Frequently Asked Questions
+            </h2>
+            <div className="space-y-4">
+              <div className="card-romantic rounded-xl p-6">
+                <h3 className="font-semibold text-foreground mb-2">How do I generate a love letter?</h3>
+                <p className="text-muted-foreground text-sm">Select your preferred tone (romantic, sweet, poetic, or passionate), enter the names, and click Generate. The tool creates a unique, heartfelt love letter for you instantly — ready to copy, share, or personalise further.</p>
+              </div>
+              <div className="card-romantic rounded-xl p-6">
+                <h3 className="font-semibold text-foreground mb-2">Is the love letter generator free?</h3>
+                <p className="text-muted-foreground text-sm">Yes, completely free! Generate as many letters as you like with no account or payment required. Each one is uniquely crafted based on your selected settings.</p>
+              </div>
+              <div className="card-romantic rounded-xl p-6">
+                <h3 className="font-semibold text-foreground mb-2">Can I edit or personalise the letter?</h3>
+                <p className="text-muted-foreground text-sm">Absolutely. The generated letter is a starting point — copy it and add your own personal memories, inside jokes, and specific details to make it truly one-of-a-kind. Adding your own touch always makes it more meaningful.</p>
+              </div>
+              <div className="card-romantic rounded-xl p-6">
+                <h3 className="font-semibold text-foreground mb-2">Can I save or print my love letter?</h3>
+                <p className="text-muted-foreground text-sm">Yes! Use the copy button to save your letter to clipboard, then paste it into any app, email, or document. You can also print it directly from your browser for a handwritten-feel keepsake.</p>
+              </div>
+              <div className="card-romantic rounded-xl p-6">
+                <h3 className="font-semibold text-foreground mb-2">What occasions can I use the love letter for?</h3>
+                <p className="text-muted-foreground text-sm">The generator works for any romantic occasion — Valentine's Day, anniversaries, birthdays, "just because" moments, long-distance relationship notes, proposals, or simply to tell someone how you feel.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <BlogPreview />
 
         <InternalLinks currentPage="/love-letter-generator" />
       </main>

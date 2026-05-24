@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import ZodiacCompatibility from "@/components/ZodiacCompatibility";
 import FloatingHearts from "@/components/FloatingHearts";
 import InternalLinks from "@/components/InternalLinks";
+import BlogPreview from "@/components/BlogPreview";
 import SEO from "@/components/SEO";
 import { Stars } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -107,6 +108,38 @@ const ZodiacCompatibilityPage = () => {
             </div>
           </div>
         </section>
+
+        <section className="py-12 px-4 bg-secondary/30">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground text-center mb-8">
+              Frequently Asked Questions
+            </h2>
+            <div className="space-y-4">
+              <div className="card-romantic rounded-xl p-6">
+                <h3 className="font-semibold text-foreground mb-2">Which zodiac signs are most compatible?</h3>
+                <p className="text-muted-foreground text-sm">Signs of the same element pair well: Fire (Aries, Leo, Sagittarius), Earth (Taurus, Virgo, Capricorn), Air (Gemini, Libra, Aquarius), and Water (Cancer, Scorpio, Pisces). Classic high-compatibility pairings include Aries & Leo, Taurus & Virgo, Gemini & Libra, and Scorpio & Pisces.</p>
+              </div>
+              <div className="card-romantic rounded-xl p-6">
+                <h3 className="font-semibold text-foreground mb-2">Is zodiac compatibility accurate?</h3>
+                <p className="text-muted-foreground text-sm">Zodiac compatibility is based on traditional astrology and is intended for entertainment and self-reflection. Real relationship compatibility depends on communication, shared values, and mutual respect. Use it as a fun and insightful starting point!</p>
+              </div>
+              <div className="card-romantic rounded-xl p-6">
+                <h3 className="font-semibold text-foreground mb-2">What are the 4 elements in astrology?</h3>
+                <p className="text-muted-foreground text-sm">The four elements are Fire (bold & passionate), Earth (stable & practical), Air (intellectual & communicative), and Water (emotional & intuitive). Each element governs three zodiac signs and shapes how they approach love and relationships.</p>
+              </div>
+              <div className="card-romantic rounded-xl p-6">
+                <h3 className="font-semibold text-foreground mb-2">Can "incompatible" signs have a great relationship?</h3>
+                <p className="text-muted-foreground text-sm">Absolutely. Astrology highlights tendencies, not destinies. Many couples with "challenging" sign combinations thrive because of strong communication, mutual respect, and genuine effort. Opposite signs often create powerful, balancing partnerships.</p>
+              </div>
+              <div className="card-romantic rounded-xl p-6">
+                <h3 className="font-semibold text-foreground mb-2">Is this zodiac checker free to use?</h3>
+                <p className="text-muted-foreground text-sm">Yes, completely free! Simply select your zodiac sign and your partner's sign, and you'll instantly see your compatibility score and a detailed description. No sign-up, no payment required.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <BlogPreview />
 
         <InternalLinks currentPage="/zodiac-compatibility" />
       </main>

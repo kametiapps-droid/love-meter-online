@@ -1,5 +1,5 @@
 import logo from "@/assets/logo.png";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { useState } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
 
@@ -26,6 +26,7 @@ const allLinks = [...mainNavLinks, ...moreLinks];
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [moreOpen, setMoreOpen] = useState(false);
+  const location = useLocation();
 
   return (
     <header className="w-full sticky top-0 z-50 bg-primary shadow-md safe-area-top">
@@ -47,18 +48,26 @@ const Header = () => {
         </div>
 
         {/* Desktop Nav */}
-        <nav className="hidden md:flex items-center gap-4 text-sm">
+        <nav className="hidden md:flex items-center gap-5 lg:gap-7 text-sm">
           {mainNavLinks.map((link) => (
             <Link
               key={link.to}
               to={link.to}
-              className="text-primary-foreground/80 hover:text-primary-foreground transition-colors font-medium"
+              className={`whitespace-nowrap font-medium transition-colors pb-0.5 ${
+                location.pathname === link.to
+                  ? "text-primary-foreground border-b-2 border-primary-foreground"
+                  : "text-primary-foreground/80 hover:text-primary-foreground"
+              }`}
             >
               {link.label}
             </Link>
           ))}
           <div className="relative" onMouseEnter={() => setMoreOpen(true)} onMouseLeave={() => setMoreOpen(false)}>
-            <button className="flex items-center gap-1 text-primary-foreground/80 hover:text-primary-foreground transition-colors font-medium">
+            <button className={`flex items-center gap-1 whitespace-nowrap font-medium transition-colors ${
+              moreLinks.some(l => l.to === location.pathname)
+                ? "text-primary-foreground border-b-2 border-primary-foreground pb-0.5"
+                : "text-primary-foreground/80 hover:text-primary-foreground"
+            }`}>
               More <ChevronDown size={14} />
             </button>
             {moreOpen && (

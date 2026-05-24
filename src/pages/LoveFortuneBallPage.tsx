@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import LoveFortuneBall from "@/components/LoveFortuneBall";
 import FloatingHearts from "@/components/FloatingHearts";
 import InternalLinks from "@/components/InternalLinks";
+import BlogPreview from "@/components/BlogPreview";
 import SEO from "@/components/SEO";
 import { Sparkles } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -93,6 +94,38 @@ const LoveFortuneBallPage = () => {
             </div>
           </div>
         </section>
+
+        <section className="py-12 px-4 bg-secondary/30">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground text-center mb-8">
+              Frequently Asked Questions
+            </h2>
+            <div className="space-y-4">
+              <div className="card-romantic rounded-xl p-6">
+                <h3 className="font-semibold text-foreground mb-2">How does the Love Fortune Ball work?</h3>
+                <p className="text-muted-foreground text-sm">Think of your love question, then shake or click the fortune ball. It randomly selects from a set of mystical responses — yes, no, maybe, and everything in between. It's a modern take on the classic Magic 8-Ball, designed just for love questions!</p>
+              </div>
+              <div className="card-romantic rounded-xl p-6">
+                <h3 className="font-semibold text-foreground mb-2">What kind of questions should I ask?</h3>
+                <p className="text-muted-foreground text-sm">Ask yes/no style love questions for best results — like "Does he like me?", "Should I text her first?", or "Are we meant to be together?" The ball responds best to specific, closed questions about your romantic life.</p>
+              </div>
+              <div className="card-romantic rounded-xl p-6">
+                <h3 className="font-semibold text-foreground mb-2">Is the fortune ball prediction accurate?</h3>
+                <p className="text-muted-foreground text-sm">The Love Fortune Ball is purely for entertainment! Responses are randomly selected and shouldn't be taken as actual advice. Use it for fun, laughs, and a little playful love magic — real decisions should come from your heart.</p>
+              </div>
+              <div className="card-romantic rounded-xl p-6">
+                <h3 className="font-semibold text-foreground mb-2">Can I ask the same question multiple times?</h3>
+                <p className="text-muted-foreground text-sm">Yes! Shake the ball as many times as you like. If you get different answers, it's all part of the fun — the cosmos are keeping you in suspense! Ask until you feel satisfied (or amused).</p>
+              </div>
+              <div className="card-romantic rounded-xl p-6">
+                <h3 className="font-semibold text-foreground mb-2">Is the Love Fortune Ball free?</h3>
+                <p className="text-muted-foreground text-sm">Completely free — shake it as many times as you want with no sign-up or payment required.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <BlogPreview />
 
         <InternalLinks currentPage="/love-fortune-ball" />
       </main>

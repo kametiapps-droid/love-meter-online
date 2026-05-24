@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import LoveQuiz from "@/components/LoveQuiz";
 import FloatingHearts from "@/components/FloatingHearts";
 import InternalLinks from "@/components/InternalLinks";
+import BlogPreview from "@/components/BlogPreview";
 import SEO from "@/components/SEO";
 import { ClipboardList } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -105,6 +106,38 @@ const LoveQuizPage = () => {
             </div>
           </div>
         </section>
+
+        <section className="py-12 px-4 bg-secondary/30">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground text-center mb-8">
+              Frequently Asked Questions
+            </h2>
+            <div className="space-y-4">
+              <div className="card-romantic rounded-xl p-6">
+                <h3 className="font-semibold text-foreground mb-2">What is the Love Style Quiz?</h3>
+                <p className="text-muted-foreground text-sm">The Love Style Quiz is a fun personality test that helps you discover how you express and experience love in relationships. Based on your answers, it reveals your unique romantic style and what you need to feel loved and secure.</p>
+              </div>
+              <div className="card-romantic rounded-xl p-6">
+                <h3 className="font-semibold text-foreground mb-2">How many questions are in the quiz?</h3>
+                <p className="text-muted-foreground text-sm">The quiz is short and fun — designed to be completed in just a few minutes. Each question is carefully crafted to reveal genuine insights about your approach to love without taking up too much of your time.</p>
+              </div>
+              <div className="card-romantic rounded-xl p-6">
+                <h3 className="font-semibold text-foreground mb-2">What are the different love styles?</h3>
+                <p className="text-muted-foreground text-sm">The quiz identifies several romantic personalities — from passionate romantics and steady loyalists to independent adventurers and deep emotional connectors. Each style comes with strengths, needs, and tips for better relationships.</p>
+              </div>
+              <div className="card-romantic rounded-xl p-6">
+                <h3 className="font-semibold text-foreground mb-2">Can my partner and I take the quiz together?</h3>
+                <p className="text-muted-foreground text-sm">Absolutely! Taking the quiz separately and then comparing your love styles can be a great conversation starter. Understanding each other's romantic needs leads to better communication and a stronger bond.</p>
+              </div>
+              <div className="card-romantic rounded-xl p-6">
+                <h3 className="font-semibold text-foreground mb-2">Is the Love Quiz free?</h3>
+                <p className="text-muted-foreground text-sm">Yes, 100% free. Take it as many times as you like — no sign-up, no payment, no hidden fees.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <BlogPreview />
 
         <InternalLinks currentPage="/love-quiz" />
       </main>

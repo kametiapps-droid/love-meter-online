@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import DailyHoroscope from "@/components/DailyHoroscope";
 import FloatingHearts from "@/components/FloatingHearts";
 import InternalLinks from "@/components/InternalLinks";
+import BlogPreview from "@/components/BlogPreview";
 import SEO from "@/components/SEO";
 import { Sun } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -102,6 +103,38 @@ const DailyHoroscopePage = () => {
             </div>
           </div>
         </section>
+
+        <section className="py-12 px-4 bg-secondary/30">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground text-center mb-8">
+              Frequently Asked Questions
+            </h2>
+            <div className="space-y-4">
+              <div className="card-romantic rounded-xl p-6">
+                <h3 className="font-semibold text-foreground mb-2">Is the daily love horoscope updated every day?</h3>
+                <p className="text-muted-foreground text-sm">Yes! Each reading is generated fresh daily for all 12 zodiac signs. Check back every morning for a new prediction about your love energy, lucky number, and best romantic match of the day.</p>
+              </div>
+              <div className="card-romantic rounded-xl p-6">
+                <h3 className="font-semibold text-foreground mb-2">How do I find my horoscope?</h3>
+                <p className="text-muted-foreground text-sm">Simply select your zodiac sign from the list and your personalized daily love horoscope will appear instantly. Your reading includes a love forecast, lucky number, best match sign, and actionable romantic advice.</p>
+              </div>
+              <div className="card-romantic rounded-xl p-6">
+                <h3 className="font-semibold text-foreground mb-2">Is the horoscope accurate?</h3>
+                <p className="text-muted-foreground text-sm">Our horoscopes are inspired by traditional astrology principles and are designed for entertainment and reflection. While not scientifically proven, many people find the themes resonate and encourage them to be more intentional in their relationships.</p>
+              </div>
+              <div className="card-romantic rounded-xl p-6">
+                <h3 className="font-semibold text-foreground mb-2">What is a love lucky number?</h3>
+                <p className="text-muted-foreground text-sm">Your daily lucky number is a fun astrological detail meant to add a little extra magic to your day. Some people watch for it in dates, times, or addresses as a positive sign for their love life.</p>
+              </div>
+              <div className="card-romantic rounded-xl p-6">
+                <h3 className="font-semibold text-foreground mb-2">Is the daily horoscope free?</h3>
+                <p className="text-muted-foreground text-sm">Yes, completely free! Read your daily love horoscope for any of the 12 zodiac signs anytime, with no registration or payment needed.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <BlogPreview />
 
         <InternalLinks currentPage="/daily-horoscope" />
       </main>

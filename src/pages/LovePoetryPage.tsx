@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import InternalLinks from "@/components/InternalLinks";
+import BlogPreview from "@/components/BlogPreview";
 import SEO from "@/components/SEO";
 import heroImage from "@/assets/poetry-hero.jpg";
 import { Heart, Feather, Sparkles, BookHeart, Copy, Check } from "lucide-react";
@@ -250,6 +251,8 @@ const LovePoetryPage = () => {
               </div>
             </div>
           </section>
+
+          <BlogPreview />
 
           <InternalLinks currentPage="/love-poetry" />
         </main>

@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import KidsNameGenerator from "@/components/KidsNameGenerator";
 import FloatingHearts from "@/components/FloatingHearts";
 import InternalLinks from "@/components/InternalLinks";
+import BlogPreview from "@/components/BlogPreview";
 import SEO from "@/components/SEO";
 import { Baby } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -93,6 +94,38 @@ const KidsNameGeneratorPage = () => {
             </div>
           </div>
         </section>
+
+        <section className="py-12 px-4 bg-secondary/30">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground text-center mb-8">
+              Frequently Asked Questions
+            </h2>
+            <div className="space-y-4">
+              <div className="card-romantic rounded-xl p-6">
+                <h3 className="font-semibold text-foreground mb-2">How does the baby name generator work?</h3>
+                <p className="text-muted-foreground text-sm">Enter the parents' names and optionally select a zodiac sign or birth month preference. The generator suggests baby names that blend the parents' names and align with the chosen zodiac sign's traits and traditional meanings.</p>
+              </div>
+              <div className="card-romantic rounded-xl p-6">
+                <h3 className="font-semibold text-foreground mb-2">Are the names based on real astrology?</h3>
+                <p className="text-muted-foreground text-sm">The suggestions are inspired by zodiac sign traits and traditional name meanings that align with each sign's characteristics. For example, Aries names tend to reflect boldness and leadership, while Pisces names evoke creativity and sensitivity.</p>
+              </div>
+              <div className="card-romantic rounded-xl p-6">
+                <h3 className="font-semibold text-foreground mb-2">How many baby names does it suggest?</h3>
+                <p className="text-muted-foreground text-sm">The generator provides multiple name suggestions across different styles — traditional, modern, unique, and culturally diverse. Each suggestion includes the name's meaning for extra inspiration.</p>
+              </div>
+              <div className="card-romantic rounded-xl p-6">
+                <h3 className="font-semibold text-foreground mb-2">Can I use these names for my child?</h3>
+                <p className="text-muted-foreground text-sm">Absolutely! All suggestions are real names suitable for use. They're presented as inspiration — the final choice is always yours. Consider the meaning, how it sounds with your surname, and whether it feels right for your family.</p>
+              </div>
+              <div className="card-romantic rounded-xl p-6">
+                <h3 className="font-semibold text-foreground mb-2">Is the kids name generator free?</h3>
+                <p className="text-muted-foreground text-sm">Yes, completely free! Explore as many zodiac sign and name combinations as you like with no sign-up required.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <BlogPreview />
 
         <InternalLinks currentPage="/kids-name-generator" />
       </main>

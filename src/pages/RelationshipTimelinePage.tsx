@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import FloatingHearts from "@/components/FloatingHearts";
 import RelationshipTimeline from "@/components/RelationshipTimeline";
 import InternalLinks from "@/components/InternalLinks";
+import BlogPreview from "@/components/BlogPreview";
 import SEO from "@/components/SEO";
 import { Calendar } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -88,6 +89,38 @@ const RelationshipTimelinePage = () => {
             </div>
           </div>
         </section>
+
+        <section className="py-12 px-4 bg-secondary/30">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground text-center mb-8">
+              Frequently Asked Questions
+            </h2>
+            <div className="space-y-4">
+              <div className="card-romantic rounded-xl p-6">
+                <h3 className="font-semibold text-foreground mb-2">What is a relationship timeline?</h3>
+                <p className="text-muted-foreground text-sm">A relationship timeline is a visual record of the key milestones in your love story — from your first date and first kiss to your anniversary, moving in together, and beyond. It's a beautiful way to celebrate how far you've come as a couple.</p>
+              </div>
+              <div className="card-romantic rounded-xl p-6">
+                <h3 className="font-semibold text-foreground mb-2">How do I create my relationship timeline?</h3>
+                <p className="text-muted-foreground text-sm">Enter your relationship start date and the tool will automatically calculate your milestones. You can add custom events to personalise the timeline with your own special moments and memories.</p>
+              </div>
+              <div className="card-romantic rounded-xl p-6">
+                <h3 className="font-semibold text-foreground mb-2">Can I share my relationship timeline?</h3>
+                <p className="text-muted-foreground text-sm">Yes! Once generated, you can share your timeline with your partner or on social media to celebrate your love story with friends and family.</p>
+              </div>
+              <div className="card-romantic rounded-xl p-6">
+                <h3 className="font-semibold text-foreground mb-2">Is the relationship timeline free?</h3>
+                <p className="text-muted-foreground text-sm">Completely free. Create and explore as many timelines as you like with no sign-up required.</p>
+              </div>
+              <div className="card-romantic rounded-xl p-6">
+                <h3 className="font-semibold text-foreground mb-2">What milestones does the timeline include?</h3>
+                <p className="text-muted-foreground text-sm">The timeline includes common milestones like your first date, first month, 100 days, six months, one year, and beyond. You can also mark personal milestones that are unique to your relationship.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <BlogPreview />
 
         <InternalLinks currentPage="/relationship-timeline" />
       </main>
