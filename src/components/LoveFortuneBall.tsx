@@ -90,7 +90,7 @@ const LoveFortuneBall = () => {
     setShowResult(false);
   };
 
-  const useSampleQuestion = (q: string) => {
+  const handleSampleQuestion = (q: string) => {
     setQuestion(q);
     setFortune(null);
     setShowResult(false);
@@ -240,7 +240,7 @@ const LoveFortuneBall = () => {
             {sampleQuestions.slice(0, 6).map((q, index) => (
               <button
                 key={index}
-                onClick={() => useSampleQuestion(q)}
+                onClick={() => handleSampleQuestion(q)}
                 className="px-3 py-2 rounded-full bg-card/50 hover:bg-card text-xs text-foreground transition-colors hover:scale-105"
               >
                 {q}

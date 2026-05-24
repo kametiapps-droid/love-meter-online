@@ -44,7 +44,7 @@ const SocialShareBar = () => {
     if (navigator.share) {
       try {
         await navigator.share({ title: "Love Calculator", text: SHARE_TEXT, url: SITE_URL });
-      } catch {}
+      } catch (_e) { /* user cancelled share */ }
     } else {
       navigator.clipboard?.writeText(`${SHARE_TEXT} ${SITE_URL}`);
     }
