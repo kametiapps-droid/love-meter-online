@@ -17,16 +17,16 @@ const toolLinks = [
 ];
 
 const blogLinks = [
-  { to: "/blog/trust-building-relationships", label: "Trust Building" },
-  { to: "/blog/emotional-intelligence-love", label: "Emotional Intelligence" },
-  { to: "/blog/self-love-guide", label: "Self-Love Guide" },
-  { to: "/blog/first-date-tips", label: "First Date Tips" },
-  { to: "/blog/healthy-communication-relationships", label: "Communication Tips" },
-  { to: "/blog/beautiful-love-quotes", label: "Love Quotes" },
-  { to: "/blog/signs-partner-truly-loves-you", label: "Signs of True Love" },
-  { to: "/blog/science-of-attraction", label: "Science of Attraction" },
+  { to: "/blog/love-compatibility-name-date-birth", label: "Love Compatibility Guide" },
+  { to: "/blog/true-love-test-signs", label: "True Love Test" },
   { to: "/blog/five-love-languages", label: "Love Languages" },
+  { to: "/blog/science-of-attraction", label: "Science of Attraction" },
+  { to: "/blog/signs-partner-truly-loves-you", label: "Signs of True Love" },
   { to: "/blog/romantic-date-ideas", label: "Date Ideas" },
+  { to: "/blog/trust-building-relationships", label: "Trust Building" },
+  { to: "/blog/healthy-communication-relationships", label: "Communication Tips" },
+  { to: "/blog/first-date-tips", label: "First Date Tips" },
+  { to: "/blog/beautiful-love-quotes", label: "Love Quotes" },
   { to: "/blog/zodiac-compatibility-guide", label: "Zodiac Guide" },
   { to: "/blog/keep-spark-alive-relationship", label: "Keep the Spark" },
 ];

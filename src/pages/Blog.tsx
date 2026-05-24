@@ -5,7 +5,7 @@ import InternalLinks from "@/components/InternalLinks";
 import SEO from "@/components/SEO";
 import ResponsiveImage from "@/components/ResponsiveImage";
 import { Link } from "react-router-dom";
-import { BookOpen, Calendar, Clock, ArrowRight } from "lucide-react";
+import { BookOpen, Calendar, Clock, ArrowRight, Flame, TrendingUp } from "lucide-react";
 import blogLoveImage from "@/assets/blog-love-relationships.jpg";
 import blogZodiacImage from "@/assets/blog-zodiac-astrology.jpg";
 import blogNameImage from "@/assets/blog-name-meanings.jpg";
@@ -250,6 +250,63 @@ const blogPosts = [
   }
 ];
 
+const popularPosts = [
+  {
+    id: "love-compatibility-name-date-birth",
+    title: "Love Compatibility by Name and Date of Birth: Complete Guide",
+    excerpt: "Learn how name + birthdate compatibility works using numerology, FLAMES, and zodiac matching to find your true love percentage.",
+    image: blogCompatibilityImage,
+    date: "May 19, 2026",
+    readTime: "9 min read",
+    category: "Love Calculator",
+  },
+  {
+    id: "true-love-test-signs",
+    title: "True Love Test: 12 Signs You've Found The One",
+    excerpt: "Discover 12 powerful, psychology-backed signs that prove you've found The One — the ultimate true love test for couples.",
+    image: blogTrueLoveImage,
+    date: "May 12, 2026",
+    readTime: "10 min read",
+    category: "True Love",
+  },
+  {
+    id: "five-love-languages",
+    title: "The 5 Love Languages: Understanding How You Give and Receive Love",
+    excerpt: "Master the art of expressing love in the way your partner truly understands and appreciates it.",
+    image: blogLanguagesImage,
+    date: "December 23, 2025",
+    readTime: "10 min read",
+    category: "Relationships",
+  },
+  {
+    id: "science-of-attraction",
+    title: "The Science of Attraction: Why We Fall in Love",
+    excerpt: "Discover the fascinating psychology, biology, and chemistry behind why we're drawn to certain people.",
+    image: blogScienceImage,
+    date: "February 10, 2026",
+    readTime: "11 min read",
+    category: "Psychology",
+  },
+  {
+    id: "signs-partner-truly-loves-you",
+    title: "15 Unmistakable Signs Your Partner Truly Loves You",
+    excerpt: "Learn to recognize the genuine signs of true love beyond words — through actions, consistency, and deep emotional connection.",
+    image: blogSignsImage,
+    date: "February 24, 2026",
+    readTime: "10 min read",
+    category: "Love & Relationships",
+  },
+  {
+    id: "romantic-date-ideas",
+    title: "75 Romantic Date Ideas for Every Budget",
+    excerpt: "Never run out of date ideas again! Creative, romantic, and unforgettable ways to spend time together.",
+    image: blogDateImage,
+    date: "December 9, 2025",
+    readTime: "10 min read",
+    category: "Date Ideas",
+  },
+];
+
 const Blog = () => {
   return (
     <div className="min-h-screen flex flex-col romantic-gradient-bg relative overflow-hidden">
@@ -277,6 +334,95 @@ const Blog = () => {
             <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
               Heartfelt love articles, shadi & rishta tips, dating advice, zodiac guides and romantic inspiration for couples everywhere. 💕
             </p>
+          </div>
+
+          {/* Most Popular Posts */}
+          <div className="max-w-6xl mx-auto mb-16">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20">
+                <Flame className="w-4 h-4 text-primary" />
+                <span className="text-sm font-bold text-primary uppercase tracking-wider">Most Popular</span>
+              </div>
+              <div className="flex-1 h-px bg-border" />
+              <div className="flex items-center gap-1 text-xs text-muted-foreground">
+                <TrendingUp className="w-3 h-3" />
+                <span>Top reads</span>
+              </div>
+            </div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+              {/* Featured large card — first post */}
+              <Link
+                to={`/blog/${popularPosts[0].id}`}
+                className="group card-romantic rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300 md:col-span-2 lg:col-span-1 lg:row-span-2 flex flex-col"
+              >
+                <div className="relative overflow-hidden lg:flex-1 aspect-video lg:aspect-auto lg:min-h-[240px]">
+                  <ResponsiveImage
+                    src={popularPosts[0].image}
+                    alt={popularPosts[0].title}
+                    sizes="(max-width: 768px) 90vw, (max-width: 1024px) 45vw, 33vw"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+                  <span className="absolute top-3 left-3 px-2.5 py-1 bg-primary text-white rounded-full text-xs font-bold flex items-center gap-1">
+                    <Flame className="w-3 h-3" /> #1 Most Read
+                  </span>
+                </div>
+                <div className="p-5 flex flex-col flex-1">
+                  <div className="flex items-center gap-2 text-xs text-muted-foreground mb-2 flex-wrap">
+                    <span className="px-2.5 py-0.5 bg-primary/10 text-primary rounded-full font-medium">{popularPosts[0].category}</span>
+                    <span className="flex items-center gap-1"><Calendar className="w-3 h-3" />{popularPosts[0].date}</span>
+                    <span className="flex items-center gap-1"><Clock className="w-3 h-3" />{popularPosts[0].readTime}</span>
+                  </div>
+                  <h2 className="font-display text-xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors line-clamp-2 flex-1">
+                    {popularPosts[0].title}
+                  </h2>
+                  <p className="text-muted-foreground text-sm mb-3 line-clamp-2">{popularPosts[0].excerpt}</p>
+                  <span className="inline-flex items-center gap-2 text-primary font-medium text-sm group-hover:gap-3 transition-all">
+                    Read Article <ArrowRight className="w-4 h-4" />
+                  </span>
+                </div>
+              </Link>
+
+              {/* Smaller cards — posts 2–6 */}
+              {popularPosts.slice(1).map((post, i) => (
+                <Link
+                  key={post.id}
+                  to={`/blog/${post.id}`}
+                  className="group card-romantic rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300 flex flex-row gap-0"
+                >
+                  <div className="w-28 shrink-0 overflow-hidden">
+                    <ResponsiveImage
+                      src={post.image}
+                      alt={post.title}
+                      sizes="112px"
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                  </div>
+                  <div className="p-4 flex flex-col justify-center min-w-0">
+                    <div className="flex items-center gap-1.5 mb-1.5">
+                      <span className="px-2 py-0.5 bg-primary/10 text-primary rounded-full text-xs font-medium truncate">{post.category}</span>
+                      <span className="text-xs text-muted-foreground shrink-0 flex items-center gap-0.5">
+                        <Flame className="w-2.5 h-2.5 text-primary/60" />#{i + 2}
+                      </span>
+                    </div>
+                    <h3 className="font-display text-sm font-bold text-foreground group-hover:text-primary transition-colors line-clamp-2 mb-1">
+                      {post.title}
+                    </h3>
+                    <span className="text-xs text-muted-foreground flex items-center gap-1">
+                      <Clock className="w-3 h-3" />{post.readTime}
+                    </span>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          {/* Divider before all posts */}
+          <div className="max-w-6xl mx-auto mb-8 flex items-center gap-3">
+            <div className="flex-1 h-px bg-border" />
+            <span className="text-sm font-semibold text-muted-foreground uppercase tracking-wider">All Articles</span>
+            <div className="flex-1 h-px bg-border" />
           </div>
 
           <div className="max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-8">
