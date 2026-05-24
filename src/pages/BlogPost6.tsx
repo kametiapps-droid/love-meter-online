@@ -19,8 +19,8 @@ const BlogPost6 = () => {
         path="/blog/long-distance-relationships"
         type="article"
         articleSchema={true}
-        dateModified="2026-04-09"
-        datePublished="2026-03-12"
+        dateModified="2026-05-24"
+        datePublished="2025-12-16"
       />
       <FloatingHearts />
       <Header />
@@ -46,7 +46,7 @@ const BlogPost6 = () => {
               <div className="p-6 md:p-10">
                 <div className="flex items-center gap-4 text-sm text-muted-foreground mb-6 flex-wrap">
                   <span className="px-3 py-1 bg-primary/10 text-primary rounded-full font-medium">Relationships</span>
-                  <span className="flex items-center gap-1"><Calendar className="w-4 h-4" /> March 12, 2026</span>
+                  <span className="flex items-center gap-1"><Calendar className="w-4 h-4" /> December 16, 2025</span>
                   <span className="flex items-center gap-1"><Clock className="w-4 h-4" /> 10 min read</span>
                   <span className="flex items-center gap-1"><User className="w-4 h-4" /> Love Calculator Team</span>
                 </div>
@@ -143,7 +143,7 @@ const BlogPost6 = () => {
               </div>
             </div>
           </div>
-          <BlogInlineLinks />
+          <BlogInlineLinks postId="long-distance-relationships" />
         </article>
         <BlogRelatedPosts currentPostId="long-distance-relationships" />
         <InternalLinks currentPage="/blog/long-distance-relationships" />

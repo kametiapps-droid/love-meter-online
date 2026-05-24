@@ -19,8 +19,8 @@ const BlogPost17 = () => {
         path="/blog/how-to-apologize-relationship"
         type="article"
         articleSchema={true}
-        dateModified="2026-04-09"
-        datePublished="2026-05-28"
+        dateModified="2026-05-24"
+        datePublished="2026-03-03"
       />
       <FloatingHearts />
       <Header />
@@ -46,7 +46,7 @@ const BlogPost17 = () => {
               <div className="p-6 md:p-10">
                 <div className="flex items-center gap-4 text-sm text-muted-foreground mb-6 flex-wrap">
                   <span className="px-3 py-1 bg-primary/10 text-primary rounded-full font-medium">Relationships</span>
-                  <span className="flex items-center gap-1"><Calendar className="w-4 h-4" /> May 28, 2026</span>
+                  <span className="flex items-center gap-1"><Calendar className="w-4 h-4" /> March 3, 2026</span>
                   <span className="flex items-center gap-1"><Clock className="w-4 h-4" /> 11 min read</span>
                   <span className="flex items-center gap-1"><User className="w-4 h-4" /> Love Calculator Team</span>
                 </div>
@@ -171,7 +171,7 @@ const BlogPost17 = () => {
               </div>
             </div>
           </div>
-          <BlogInlineLinks />
+          <BlogInlineLinks postId="how-to-apologize-relationship" />
         </article>
         <BlogRelatedPosts currentPostId="how-to-apologize-relationship" />
         <InternalLinks currentPage="/blog/how-to-apologize-relationship" />

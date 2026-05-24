@@ -19,8 +19,8 @@ const BlogPost10 = () => {
         path="/blog/science-of-attraction"
         type="article"
         articleSchema={true}
-        dateModified="2026-04-09"
-        datePublished="2026-04-09"
+        dateModified="2026-05-24"
+        datePublished="2026-02-10"
       />
       <FloatingHearts />
       <Header />
@@ -46,7 +46,7 @@ const BlogPost10 = () => {
               <div className="p-6 md:p-10">
                 <div className="flex items-center gap-4 text-sm text-muted-foreground mb-6 flex-wrap">
                   <span className="px-3 py-1 bg-primary/10 text-primary rounded-full font-medium">Psychology</span>
-                  <span className="flex items-center gap-1"><Calendar className="w-4 h-4" /> April 9, 2026</span>
+                  <span className="flex items-center gap-1"><Calendar className="w-4 h-4" /> February 10, 2026</span>
                   <span className="flex items-center gap-1"><Clock className="w-4 h-4" /> 11 min read</span>
                   <span className="flex items-center gap-1"><User className="w-4 h-4" /> Love Calculator Team</span>
                 </div>
@@ -154,7 +154,7 @@ const BlogPost10 = () => {
               </div>
             </div>
           </div>
-          <BlogInlineLinks />
+          <BlogInlineLinks postId="science-of-attraction" />
         </article>
         <BlogRelatedPosts currentPostId="science-of-attraction" />
         <InternalLinks currentPage="/blog/science-of-attraction" />

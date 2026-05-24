@@ -23,25 +23,10 @@ import blogEQImage from "@/assets/blog-emotional-intelligence.jpg";
 import blogSelfLoveImage from "@/assets/blog-self-love.jpg";
 import blogAnniversaryImage from "@/assets/blog-anniversary-ideas.jpg";
 import blogCulturesImage from "@/assets/blog-love-cultures.jpg";
+import blogCompatibilityImage from "@/assets/blog-love-compatibility.webp";
+import blogScienceImage2 from "@/assets/blog-science-attraction.jpg";
 
 const allBlogPosts = [
-  { id: "love-compatibility-name-date-birth", title: "Love Compatibility by Name and Date of Birth", image: blogLoveImage, readTime: "9 min", category: "Love Calculator" },
-  { id: "true-love-test-signs", title: "True Love Test: 12 Signs You've Found The One", image: blogSignsImage, readTime: "10 min", category: "True Love" },
-  { id: "trust-building-relationships", title: "How to Build Trust in a Relationship", image: blogTrustImage, readTime: "14 min", category: "Trust & Bonding" },
-  { id: "emotional-intelligence-love", title: "Emotional Intelligence in Love", image: blogEQImage, readTime: "13 min", category: "Emotional Intelligence" },
-  { id: "self-love-guide", title: "The Power of Self-Love", image: blogSelfLoveImage, readTime: "12 min", category: "Self-Love" },
-  { id: "anniversary-celebration-ideas", title: "50 Romantic Anniversary Ideas", image: blogAnniversaryImage, readTime: "14 min", category: "Anniversaries" },
-  { id: "love-different-cultures", title: "Love Around the World", image: blogCulturesImage, readTime: "15 min", category: "Culture & Love" },
-  { id: "first-date-tips", title: "25 First Date Tips That Work", image: blogFirstDateImage, readTime: "12 min", category: "Dating Tips" },
-  { id: "healthy-communication-relationships", title: "Healthy Communication in Relationships", image: blogCommunicationImage, readTime: "12 min", category: "Communication" },
-  { id: "beautiful-love-quotes", title: "100 Most Beautiful Love Quotes", image: blogQuotesImage, readTime: "15 min", category: "Love Quotes" },
-  { id: "marriage-proposal-ideas", title: "20 Unforgettable Proposal Ideas", image: blogProposalImage, readTime: "13 min", category: "Proposals" },
-  { id: "how-to-apologize-relationship", title: "The Art of Saying Sorry", image: blogApologizeImage, readTime: "11 min", category: "Relationships" },
-  { id: "signs-partner-truly-loves-you", title: "15 Signs Your Partner Truly Loves You", image: blogSignsImage, readTime: "10 min", category: "Love & Relationships" },
-  { id: "keep-spark-alive-relationship", title: "How to Keep the Spark Alive", image: blogSparkImage, readTime: "10 min", category: "Relationships" },
-  { id: "science-of-attraction", title: "The Science of Attraction", image: blogScienceImage, readTime: "11 min", category: "Psychology" },
-  { id: "relationship-goals-couples", title: "30 Meaningful Relationship Goals", image: blogGoalsImage, readTime: "10 min", category: "Couple Goals" },
-  { id: "how-to-write-love-letter", title: "How to Write the Perfect Love Letter", image: blogLetterImage, readTime: "10 min", category: "Romance" },
   { id: "love-relationships-guide", title: "Complete Guide to Lasting Relationships", image: blogLoveImage, readTime: "8 min", category: "Love & Relationships" },
   { id: "zodiac-compatibility-guide", title: "Zodiac Compatibility Guide", image: blogZodiacImage, readTime: "9 min", category: "Zodiac & Astrology" },
   { id: "name-meanings-origins", title: "The World of Name Meanings", image: blogNameImage, readTime: "10 min", category: "Name Meanings" },
@@ -49,18 +34,44 @@ const allBlogPosts = [
   { id: "five-love-languages", title: "The 5 Love Languages", image: blogLanguagesImage, readTime: "10 min", category: "Relationships" },
   { id: "long-distance-relationships", title: "Long Distance Relationships Guide", image: blogDistanceImage, readTime: "10 min", category: "Relationships" },
   { id: "romantic-date-ideas", title: "75 Romantic Date Ideas", image: blogDateImage, readTime: "10 min", category: "Date Ideas" },
+  { id: "signs-partner-truly-loves-you", title: "15 Signs Your Partner Truly Loves You", image: blogSignsImage, readTime: "10 min", category: "Love & Relationships" },
+  { id: "keep-spark-alive-relationship", title: "How to Keep the Spark Alive", image: blogSparkImage, readTime: "10 min", category: "Relationships" },
+  { id: "science-of-attraction", title: "The Science of Attraction", image: blogScienceImage, readTime: "11 min", category: "Psychology" },
+  { id: "relationship-goals-couples", title: "30 Meaningful Relationship Goals", image: blogGoalsImage, readTime: "10 min", category: "Couple Goals" },
+  { id: "how-to-write-love-letter", title: "How to Write the Perfect Love Letter", image: blogLetterImage, readTime: "10 min", category: "Romance" },
+  { id: "first-date-tips", title: "25 First Date Tips That Work", image: blogFirstDateImage, readTime: "12 min", category: "Dating Tips" },
+  { id: "healthy-communication-relationships", title: "Healthy Communication in Relationships", image: blogCommunicationImage, readTime: "12 min", category: "Communication" },
+  { id: "beautiful-love-quotes", title: "100 Most Beautiful Love Quotes", image: blogQuotesImage, readTime: "15 min", category: "Love Quotes" },
+  { id: "marriage-proposal-ideas", title: "20 Unforgettable Proposal Ideas", image: blogProposalImage, readTime: "13 min", category: "Proposals" },
+  { id: "how-to-apologize-relationship", title: "The Art of Saying Sorry", image: blogApologizeImage, readTime: "11 min", category: "Relationships" },
+  { id: "trust-building-relationships", title: "How to Build Trust in a Relationship", image: blogTrustImage, readTime: "14 min", category: "Trust & Bonding" },
+  { id: "emotional-intelligence-love", title: "Emotional Intelligence in Love", image: blogEQImage, readTime: "13 min", category: "Emotional Intelligence" },
+  { id: "self-love-guide", title: "The Power of Self-Love", image: blogSelfLoveImage, readTime: "12 min", category: "Self-Love" },
+  { id: "anniversary-celebration-ideas", title: "50 Romantic Anniversary Ideas", image: blogAnniversaryImage, readTime: "14 min", category: "Anniversaries" },
+  { id: "love-different-cultures", title: "Love Around the World", image: blogCulturesImage, readTime: "15 min", category: "Culture & Love" },
+  { id: "love-compatibility-name-date-birth", title: "Love Compatibility by Name and Date of Birth", image: blogCompatibilityImage, readTime: "9 min", category: "Love Calculator" },
+  { id: "true-love-test-signs", title: "True Love Test: 12 Signs You've Found The One", image: blogScienceImage2, readTime: "10 min", category: "True Love" },
 ];
+
+function hashPostId(id: string): number {
+  let h = 0;
+  for (let i = 0; i < id.length; i++) {
+    h = (h * 31 + id.charCodeAt(i)) >>> 0;
+  }
+  return h;
+}
 
 interface BlogRelatedPostsProps {
   currentPostId: string;
 }
 
 const BlogRelatedPosts = ({ currentPostId }: BlogRelatedPostsProps) => {
-  // Get 4 related posts, excluding current
-  const related = allBlogPosts
-    .filter((p) => p.id !== currentPostId)
-    .sort(() => 0.5 - Math.random())
-    .slice(0, 4);
+  const others = allBlogPosts.filter((p) => p.id !== currentPostId);
+  const start = hashPostId(currentPostId) % others.length;
+  const related = [
+    ...others.slice(start),
+    ...others.slice(0, start),
+  ].slice(0, 4);
 
   return (
     <section className="py-12 px-4">

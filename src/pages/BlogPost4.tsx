@@ -19,8 +19,8 @@ const BlogPost4 = () => {
         path="/blog/love-facts-trivia"
         type="article"
         articleSchema={true}
-        dateModified="2026-04-09"
-        datePublished="2026-02-26"
+        dateModified="2026-05-24"
+        datePublished="2025-12-30"
       />
       <FloatingHearts />
       <Header />
@@ -46,7 +46,7 @@ const BlogPost4 = () => {
               <div className="p-6 md:p-10">
                 <div className="flex items-center gap-4 text-sm text-muted-foreground mb-6 flex-wrap">
                   <span className="px-3 py-1 bg-primary/10 text-primary rounded-full font-medium">Fun Facts</span>
-                  <span className="flex items-center gap-1"><Calendar className="w-4 h-4" /> February 26, 2026</span>
+                  <span className="flex items-center gap-1"><Calendar className="w-4 h-4" /> December 30, 2025</span>
                   <span className="flex items-center gap-1"><Clock className="w-4 h-4" /> 9 min read</span>
                   <span className="flex items-center gap-1"><User className="w-4 h-4" /> Love Calculator Team</span>
                 </div>
@@ -149,7 +149,7 @@ const BlogPost4 = () => {
               </div>
             </div>
           </div>
-          <BlogInlineLinks />
+          <BlogInlineLinks postId="love-facts-trivia" />
         </article>
         <BlogRelatedPosts currentPostId="love-facts-trivia" />
         <InternalLinks currentPage="/blog/love-facts-trivia" />

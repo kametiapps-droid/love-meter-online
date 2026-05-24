@@ -19,8 +19,8 @@ const BlogPost1 = () => {
         path="/blog/love-relationships-guide"
         type="article"
         articleSchema={true}
-        dateModified="2026-04-09"
-        datePublished="2026-02-05"
+        dateModified="2026-05-24"
+        datePublished="2026-01-20"
       />
       <FloatingHearts />
       <Header />
@@ -46,7 +46,7 @@ const BlogPost1 = () => {
               <div className="p-6 md:p-10">
                 <div className="flex items-center gap-4 text-sm text-muted-foreground mb-6 flex-wrap">
                   <span className="px-3 py-1 bg-primary/10 text-primary rounded-full font-medium">Love & Relationships</span>
-                  <span className="flex items-center gap-1"><Calendar className="w-4 h-4" /> February 5, 2026</span>
+                  <span className="flex items-center gap-1"><Calendar className="w-4 h-4" /> January 20, 2026</span>
                   <span className="flex items-center gap-1"><Clock className="w-4 h-4" /> 8 min read</span>
                   <span className="flex items-center gap-1"><User className="w-4 h-4" /> Love Calculator Team</span>
                 </div>
@@ -190,7 +190,7 @@ const BlogPost1 = () => {
               </div>
             </div>
           </div>
-          <BlogInlineLinks />
+          <BlogInlineLinks postId="love-relationships-guide" />
         </article>
         <BlogRelatedPosts currentPostId="love-relationships-guide" />
         <InternalLinks currentPage="/blog/love-relationships-guide" />

@@ -19,8 +19,8 @@ const BlogPost23 = () => {
         path="/blog/love-compatibility-name-date-birth"
         type="article"
         articleSchema={true}
-        dateModified="2026-05-21"
-        datePublished="2026-07-09"
+        dateModified="2026-05-24"
+        datePublished="2026-05-19"
         faqSchema={[
           { question: "How is love compatibility calculated using name and date of birth?", answer: "Love compatibility by name and date of birth combines name-based methods like FLAMES and numerology letter values with birthdate numerology (Life Path Number) and zodiac sign matching. Together they produce a compatibility percentage and personality match." },
           { question: "Is the Love Calculator accurate?", answer: "Love calculators are designed for fun and self-reflection, not scientific prediction. They use consistent algorithms based on names and birth dates so the same input always returns the same result, making them great conversation starters for couples." },
@@ -54,7 +54,7 @@ const BlogPost23 = () => {
               <div className="p-6 md:p-10">
                 <div className="flex items-center gap-4 text-sm text-muted-foreground mb-6 flex-wrap">
                   <span className="px-3 py-1 bg-primary/10 text-primary rounded-full font-medium">Love Calculator</span>
-                  <span className="flex items-center gap-1"><Calendar className="w-4 h-4" /> July 9, 2026</span>
+                  <span className="flex items-center gap-1"><Calendar className="w-4 h-4" /> May 19, 2026</span>
                   <span className="flex items-center gap-1"><Clock className="w-4 h-4" /> 9 min read</span>
                   <span className="flex items-center gap-1"><User className="w-4 h-4" /> Love Calculator Team</span>
                 </div>
@@ -106,7 +106,7 @@ const BlogPost23 = () => {
                     The most accurate love compatibility analysis combines <strong>name vibrations</strong> with <strong>birthdate numerology</strong>. Names tell us how a person expresses themselves; birth dates reveal how they were "wired" at birth. When you combine both, you get a much richer picture: the head <em>and</em> the heart. This is why our love calculator uses both names — and why pairing it with your <Link to="/daily-horoscope" className="text-primary hover:underline">Daily Horoscope</Link> can give you even more context.
                   </p>
 
-                  <BlogInlineLinks />
+                  <BlogInlineLinks postId="love-compatibility-name-date-birth" />
 
                   <h2 className="font-display text-2xl font-bold text-foreground mt-10 mb-4">5. Step-by-Step: Check Your Compatibility in 60 Seconds</h2>
                   <ol className="list-decimal pl-6 space-y-2">

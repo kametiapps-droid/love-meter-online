@@ -19,8 +19,8 @@ const BlogPost24 = () => {
         path="/blog/true-love-test-signs"
         type="article"
         articleSchema={true}
-        dateModified="2026-05-21"
-        datePublished="2026-07-16"
+        dateModified="2026-05-24"
+        datePublished="2026-05-12"
         faqSchema={[
           { question: "What is a true love test?", answer: "A true love test is a set of psychological and behavioral signs that indicate whether your relationship has the depth, trust, and emotional safety associated with lasting love. It looks at communication, support, conflict, and shared values rather than just feelings." },
           { question: "How do I know if I've found The One?", answer: "Common signs include feeling deeply safe with them, being able to be your full self, healthy conflict resolution, shared long-term goals, mutual respect, and a quiet certainty that this person is yours. Recognizing most of the 12 signs in this guide is a strong indicator." },
@@ -54,7 +54,7 @@ const BlogPost24 = () => {
               <div className="p-6 md:p-10">
                 <div className="flex items-center gap-4 text-sm text-muted-foreground mb-6 flex-wrap">
                   <span className="px-3 py-1 bg-primary/10 text-primary rounded-full font-medium">True Love</span>
-                  <span className="flex items-center gap-1"><Calendar className="w-4 h-4" /> July 16, 2026</span>
+                  <span className="flex items-center gap-1"><Calendar className="w-4 h-4" /> May 12, 2026</span>
                   <span className="flex items-center gap-1"><Clock className="w-4 h-4" /> 10 min read</span>
                   <span className="flex items-center gap-1"><User className="w-4 h-4" /> Love Calculator Team</span>
                 </div>
@@ -103,7 +103,7 @@ const BlogPost24 = () => {
                     Every couple fights. The difference with The One is that you fight <strong>against the problem</strong>, not against each other. You use phrases like "we" and "us" even in disagreements. You apologize when wrong and forgive without scorekeeping.
                   </p>
 
-                  <BlogInlineLinks />
+                  <BlogInlineLinks postId="true-love-test-signs" />
 
                   <h2 className="font-display text-2xl font-bold text-foreground mt-10 mb-4">Sign 7: Your Values Are Aligned</h2>
                   <p>
