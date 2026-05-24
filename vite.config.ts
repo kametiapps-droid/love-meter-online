@@ -74,6 +74,8 @@ export default defineConfig(() => ({
         "blog-self-love": path.resolve(__dirname, "blog/self-love-guide.html"),
         "blog-anniversary-ideas": path.resolve(__dirname, "blog/anniversary-celebration-ideas.html"),
         "blog-love-cultures": path.resolve(__dirname, "blog/love-different-cultures.html"),
+        "blog-love-compatibility-name": path.resolve(__dirname, "blog/love-compatibility-name-date-birth.html"),
+        "blog-true-love-test": path.resolve(__dirname, "blog/true-love-test-signs.html"),
         "privacy-policy": path.resolve(__dirname, "privacy-policy.html"),
         "terms-of-service": path.resolve(__dirname, "terms-of-service.html"),
         disclaimer: path.resolve(__dirname, "disclaimer.html"),
