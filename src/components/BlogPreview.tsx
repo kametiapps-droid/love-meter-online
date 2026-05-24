@@ -1,28 +1,10 @@
 import { Link } from "react-router-dom";
-import { Calendar, Clock, ArrowRight, BookOpen } from "lucide-react";
+import { Clock, ArrowRight, BookOpen } from "lucide-react";
 import ResponsiveImage from "@/components/ResponsiveImage";
-import blogLoveImage from "@/assets/blog-love-relationships.jpg";
-import blogZodiacImage from "@/assets/blog-zodiac-astrology.jpg";
-import blogNameImage from "@/assets/blog-name-meanings.jpg";
-import blogFactsImage from "@/assets/blog-love-facts.jpg";
-import blogLanguagesImage from "@/assets/blog-love-languages.jpg";
-import blogDistanceImage from "@/assets/blog-long-distance.jpg";
-import blogDateImage from "@/assets/blog-date-ideas.jpg";
 import blogSignsImage from "@/assets/blog-signs-true-love.jpg";
-import blogSparkImage from "@/assets/blog-keep-spark-alive.jpg";
 import blogScienceImage from "@/assets/blog-science-attraction.jpg";
-import blogGoalsImage from "@/assets/blog-relationship-goals.jpg";
-import blogLetterImage from "@/assets/blog-write-love-letter.jpg";
-import blogFirstDateImage from "@/assets/blog-first-date-tips.jpg";
-import blogCommunicationImage from "@/assets/blog-healthy-communication.jpg";
-import blogQuotesImage from "@/assets/blog-love-quotes.jpg";
-import blogProposalImage from "@/assets/blog-proposal-ideas.jpg";
-import blogApologizeImage from "@/assets/blog-apologize-relationship.jpg";
 import blogTrustImage from "@/assets/blog-trust-building.jpg";
-import blogEQImage from "@/assets/blog-emotional-intelligence.jpg";
 import blogSelfLoveImage from "@/assets/blog-self-love.jpg";
-import blogAnniversaryImage from "@/assets/blog-anniversary-ideas.jpg";
-import blogCulturesImage from "@/assets/blog-love-cultures.jpg";
 
 const featuredPosts = [
   { id: "trust-building-relationships", title: "How to Build Trust in a Relationship: 15 Expert Strategies", image: blogTrustImage, readTime: "14 min", category: "Trust & Bonding" },

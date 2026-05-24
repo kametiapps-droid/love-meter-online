@@ -6,7 +6,7 @@ import InternalLinks from "@/components/InternalLinks";
 import BlogRelatedPosts from "@/components/BlogRelatedPosts";
 import SEO from "@/components/SEO";
 import { Link } from "react-router-dom";
-import { Calendar, Clock, User, ArrowLeft, Heart, MapPin, Phone, Video, MessageSquare, Star } from "lucide-react";
+import { Calendar, Clock, User, ArrowLeft, MapPin, Phone, Video, MessageSquare, Star } from "lucide-react";
 import blogImage from "@/assets/blog-long-distance.jpg";
 import ResponsiveImage from "@/components/ResponsiveImage";
 

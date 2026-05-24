@@ -6,7 +6,7 @@ import InternalLinks from "@/components/InternalLinks";
 import BlogRelatedPosts from "@/components/BlogRelatedPosts";
 import SEO from "@/components/SEO";
 import { Link } from "react-router-dom";
-import { Calendar, Clock, ArrowLeft, User, BookOpen } from "lucide-react";
+import { Calendar, Clock, ArrowLeft, User } from "lucide-react";
 import blogImage from "@/assets/blog-trust-building.jpg";
 import ResponsiveImage from "@/components/ResponsiveImage";
 

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Heart, Sparkles, ArrowRight, RotateCcw, Share2, CheckCircle2 } from "lucide-react";
+import { Heart, Sparkles, RotateCcw, Share2, CheckCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
 import { toast } from "sonner";

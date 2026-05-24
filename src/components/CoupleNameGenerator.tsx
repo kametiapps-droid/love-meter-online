@@ -39,7 +39,6 @@ const CoupleNameGenerator = () => {
     names.push(capitalize(start2 + end1));
 
     // Blend middle portions
-    const mid1 = name1Lower.slice(1, -1) || name1Lower;
     const mid2 = name2Lower.slice(1, -1) || name2Lower;
     names.push(capitalize(name1Lower[0] + mid2 + name1Lower.slice(-1)));
 
