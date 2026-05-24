@@ -20,7 +20,7 @@ const BlogPost23 = () => {
         type="article"
         articleSchema={true}
         dateModified="2026-05-21"
-        datePublished="2026-05-10"
+        datePublished="2026-07-09"
         faqSchema={[
           { question: "How is love compatibility calculated using name and date of birth?", answer: "Love compatibility by name and date of birth combines name-based methods like FLAMES and numerology letter values with birthdate numerology (Life Path Number) and zodiac sign matching. Together they produce a compatibility percentage and personality match." },
           { question: "Is the Love Calculator accurate?", answer: "Love calculators are designed for fun and self-reflection, not scientific prediction. They use consistent algorithms based on names and birth dates so the same input always returns the same result, making them great conversation starters for couples." },
@@ -54,7 +54,7 @@ const BlogPost23 = () => {
               <div className="p-6 md:p-10">
                 <div className="flex items-center gap-4 text-sm text-muted-foreground mb-6 flex-wrap">
                   <span className="px-3 py-1 bg-primary/10 text-primary rounded-full font-medium">Love Calculator</span>
-                  <span className="flex items-center gap-1"><Calendar className="w-4 h-4" /> May 10, 2026</span>
+                  <span className="flex items-center gap-1"><Calendar className="w-4 h-4" /> July 9, 2026</span>
                   <span className="flex items-center gap-1"><Clock className="w-4 h-4" /> 9 min read</span>
                   <span className="flex items-center gap-1"><User className="w-4 h-4" /> Love Calculator Team</span>
                 </div>
