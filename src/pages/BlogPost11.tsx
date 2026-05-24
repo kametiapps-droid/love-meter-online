@@ -15,7 +15,7 @@ const BlogPost11 = () => {
     <div className="min-h-screen flex flex-col romantic-gradient-bg relative overflow-hidden">
       <SEO
         title="30 Relationship Goals Every Couple Should Set"
-        description="Discover meaningful relationship goals that will strengthen your bond. From communication to adventure, these couple goals will transform your relationship."
+        description="Discover meaningful <Link to="/blog/relationship-goals-couples" className="text-primary hover:underline font-medium">relationship goals</Link> that will strengthen your bond. From communication to adventure, these couple goals will transform your relationship."
         path="/blog/relationship-goals-couples"
         type="article"
         articleSchema={true}
@@ -79,7 +79,7 @@ const BlogPost11 = () => {
                       <strong>1. Have a weekly check-in conversation.</strong> Set aside 30 minutes each week to discuss how you're both feeling about the relationship — what's working, what needs attention, and what you appreciate about each other.
                     </p>
                     <p className="text-muted-foreground leading-relaxed mb-4">
-                      <strong>2. Practice active listening.</strong> Commit to truly hearing each other without interrupting, planning your response, or checking your phone. Give your partner your complete, undivided attention.
+                      <strong>2. Practice <Link to="/blog/healthy-communication-relationships" className="text-primary hover:underline font-medium">active listening</Link>.</strong> Commit to truly hearing each other without interrupting, planning your response, or checking your phone. Give your partner your complete, undivided attention.
                     </p>
                     <p className="text-muted-foreground leading-relaxed mb-4">
                       <strong>3. Express gratitude daily.</strong> Tell your partner one specific thing you appreciate about them every day. "Thank you for making coffee" or "I love how you always make me laugh when I'm stressed."
@@ -97,13 +97,13 @@ const BlogPost11 = () => {
                       <Heart className="w-6 h-6 text-primary" /> Intimacy & Connection Goals
                     </h2>
                     <p className="text-muted-foreground leading-relaxed mb-4">
-                      <strong>6. Schedule regular date nights.</strong> Whether it's weekly or bi-weekly, make dedicated time for just the two of you. Put phones away and be fully present.
+                      <strong>6. Schedule regular <Link to="/blog/romantic-date-ideas" className="text-primary hover:underline font-medium">date nights</Link>.</strong> Whether it's weekly or bi-weekly, make dedicated time for just the two of you. Put phones away and be fully present.
                     </p>
                     <p className="text-muted-foreground leading-relaxed mb-4">
                       <strong>7. Maintain physical affection.</strong> Hold hands, hug for at least 20 seconds (that's the threshold for oxytocin release), and kiss each other goodbye every morning.
                     </p>
                     <p className="text-muted-foreground leading-relaxed mb-4">
-                      <strong>8. Keep the element of surprise alive.</strong> Plan unexpected romantic gestures — a handwritten note, a spontaneous weekend trip, or their favorite treat after a hard day.
+                      <strong>8. Keep the element of surprise alive.</strong> Plan unexpected romantic gestures — a <Link to="/love-letter-generator" className="text-primary hover:underline font-medium">handwritten note</Link>, a spontaneous weekend trip, or their favorite treat after a hard day.
                     </p>
                     <p className="text-muted-foreground leading-relaxed mb-4">
                       <strong>9. Create new traditions together.</strong> Whether it's Sunday morning pancakes, annual trips to a special place, or a monthly "try something new" challenge — shared traditions create lasting memories and deepen your bond.
@@ -167,7 +167,7 @@ const BlogPost11 = () => {
                       You don't need to tackle all 30 goals at once. Pick 3-5 that resonate most with where your relationship is right now and start there. The beauty of relationship goals is that they compound over time — small, consistent improvements lead to extraordinary results.
                     </p>
                     <p className="text-muted-foreground leading-relaxed">
-                      Ready to strengthen your connection? Create a beautiful <a href="/relationship-timeline" className="text-primary hover:underline">Relationship Timeline</a> to celebrate your journey together, or express your love with our <a href="/love-letter-generator" className="text-primary hover:underline">Love Letter Generator</a>! 💕
+                      Ready to strengthen your connection? Create a beautiful <a href="/relationship-timeline" className="text-primary hover:underline"><Link to="/relationship-timeline" className="text-primary hover:underline font-medium">Relationship Timeline</Link></a> to celebrate your journey together, or express your love with our <a href="/love-letter-generator" className="text-primary hover:underline">Love Letter Generator</a>! 💕
                     </p>
                   </section>
                 </div>

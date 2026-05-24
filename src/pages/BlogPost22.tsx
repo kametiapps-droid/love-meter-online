@@ -66,7 +66,7 @@ const BlogPost22 = () => {
 
                   <h2 className="font-display text-2xl font-bold text-foreground mt-10 mb-4">🇯🇵 Japan: Subtle Devotion</h2>
                   <p>In Japan, love is often expressed through actions rather than words. While Western cultures emphasize verbal declarations of love, Japanese culture values "amae" — a concept of gentle dependence and trust between partners. Saying "I love you" (愛してる / aishiteru) is reserved for deeply significant moments, making it carry immense weight when spoken.</p>
-                  <p>Japan has unique romantic traditions: "White Day" (March 14) is when men reciprocate Valentine's Day gifts — women give chocolates on February 14th, and men return the gesture a month later. "Christmas Eve" is considered the most romantic night of the year — couples dress up and enjoy a special evening together, similar to how Valentine's Day is celebrated in the West.</p>
+                  <p>Japan has unique romantic traditions: "White Day" (March 14) is when men reciprocate <Link to="/" className="text-primary hover:underline font-medium">Valentine</Link>'s Day gifts — women give chocolates on February 14th, and men return the gesture a month later. "Christmas Eve" is considered the most romantic night of the year — couples dress up and enjoy a special evening together, similar to how Valentine's Day is celebrated in the West.</p>
                   <p>Japanese love hotels (ラブホテル) are a culturally unique phenomenon, offering private spaces for couples in a society where extended family living is common. They're a practical and accepted part of romantic culture.</p>
 
                   <h2 className="font-display text-2xl font-bold text-foreground mt-10 mb-4">🇮🇳 India: Love in Tradition and Modernity</h2>
@@ -96,15 +96,15 @@ const BlogPost22 = () => {
 
                   <h2 className="font-display text-2xl font-bold text-foreground mt-10 mb-4">🇲🇽 Mexico: Serenades and Celebrations</h2>
                   <p>Mexican romance is rich with tradition. "Las Mañanitas" — being serenaded by a mariachi band — remains one of the most romantic gestures. The concept of courtship is taken seriously, with men traditionally asking a woman's father for permission to date (though modern couples often skip this formality).</p>
-                  <p>"El Día del Amor y la Amistad" (February 14) celebrates both romantic love and friendship. The tradition of "la pedida de mano" (asking for the hand) involves the groom's family formally requesting the bride's family's blessing, often accompanied by gifts and a celebration.</p>
+                  <p>"El Día del Amor y la Amistad" (February 14) celebrates both romantic <Link to="/blog/love-relationships-guide" className="text-primary hover:underline font-medium">love and friendship</Link>. The tradition of "la pedida de mano" (asking for the hand) involves the groom's family formally requesting the bride's family's blessing, often accompanied by gifts and a celebration.</p>
 
                   <h2 className="font-display text-2xl font-bold text-foreground mt-10 mb-4">Universal Truths About Love</h2>
                   <p>Despite the incredible diversity in how love is expressed across cultures, certain truths remain universal:</p>
                   <ul className="list-disc pl-6 space-y-2">
-                    <li>Every culture has love songs, love stories, and love rituals</li>
+                    <li>Every culture has <Link to="/love-poetry" className="text-primary hover:underline font-medium">love songs</Link>, love stories, and love rituals</li>
                     <li>The desire for emotional connection and companionship transcends all borders</li>
                     <li>Acts of kindness, sacrifice, and devotion are recognized as expressions of love everywhere</li>
-                    <li>Family involvement in romantic relationships is the norm globally, not the exception</li>
+                    <li>Family involvement in <Link to="/blog/love-relationships-guide" className="text-primary hover:underline font-medium">romantic relationship</Link>s is the norm globally, not the exception</li>
                     <li>Love continues to evolve with technology, globalization, and changing social norms</li>
                   </ul>
 

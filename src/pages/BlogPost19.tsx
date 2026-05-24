@@ -61,7 +61,7 @@ const BlogPost19 = () => {
                   </p>
 
                   <h2 className="font-display text-2xl font-bold text-foreground mt-10 mb-4">What Is Emotional Intelligence?</h2>
-                  <p>Emotional intelligence, first popularized by psychologist Daniel Goleman, refers to the ability to recognize, understand, manage, and effectively use emotions — both your own and others'. In relationships, EQ manifests as empathy, emotional regulation, self-awareness, and social skills. It's the difference between reacting impulsively during an argument and responding thoughtfully to your partner's needs.</p>
+                  <p>Emotional intelligence, first popularized by psychologist Daniel Goleman, refers to the ability to recognize, understand, manage, and effectively use emotions — both your own and others'. In relationships, EQ manifests as <Link to="/blog/emotional-intelligence-love" className="text-primary hover:underline font-medium">empathy</Link>, emotional regulation, <Link to="/blog/self-love-guide" className="text-primary hover:underline font-medium">self-awareness</Link>, and social skills. It's the difference between reacting impulsively during an argument and responding thoughtfully to your partner's needs.</p>
 
                   <h2 className="font-display text-2xl font-bold text-foreground mt-10 mb-4">The Five Pillars of Emotional Intelligence in Love</h2>
                   
@@ -99,7 +99,7 @@ const BlogPost19 = () => {
                     <li><strong>Name your emotions precisely:</strong> Instead of "I feel bad," try "I feel disappointed because my expectation wasn't met."</li>
                     <li><strong>Ask for feedback:</strong> Invite your partner to share how your behavior affects them.</li>
                     <li><strong>Read books on emotions:</strong> "Emotional Intelligence" by Daniel Goleman and "Hold Me Tight" by Dr. Sue Johnson are excellent starting points.</li>
-                    <li><strong>Practice active listening:</strong> Focus entirely on understanding, not responding.</li>
+                    <li><strong>Practice <Link to="/blog/healthy-communication-relationships" className="text-primary hover:underline font-medium">active listening</Link>:</strong> Focus entirely on understanding, not responding.</li>
                     <li><strong>Observe without judging:</strong> Notice your partner's behavior without immediately assigning meaning or motive.</li>
                     <li><strong>Take responsibility:</strong> Own your emotions rather than blaming your partner for how you feel.</li>
                     <li><strong>Develop a feelings vocabulary:</strong> The more precisely you can name emotions, the better you can manage them.</li>

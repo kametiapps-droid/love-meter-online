@@ -15,7 +15,7 @@ const BlogPost12 = () => {
     <div className="min-h-screen flex flex-col romantic-gradient-bg relative overflow-hidden">
       <SEO
         title="How to Write the Perfect Love Letter - Tips"
-        description="Learn how to write a beautiful, heartfelt love letter that will make your partner's heart melt. Step-by-step guide with tips, examples, and inspiration."
+        description="Learn how to write a beautiful, heartfelt <Link to="/love-letter-generator" className="text-primary hover:underline font-medium">love letter</Link> that will make your partner's heart melt. Step-by-step guide with tips, examples, and inspiration."
         path="/blog/how-to-write-love-letter"
         type="article"
         articleSchema={true}
@@ -82,7 +82,7 @@ const BlogPost12 = () => {
 
                     <h3 className="font-display text-xl font-bold text-foreground mb-3">Step 2: Start with Why You're Writing</h3>
                     <p className="text-muted-foreground leading-relaxed mb-4">
-                      Open your letter by telling your partner why you're writing. Maybe it's their birthday, your anniversary, or simply a random Tuesday when you couldn't stop thinking about how lucky you are. Some beautiful opening lines: "I'm writing this because some feelings are too big for a text message." "Today I caught myself smiling just thinking about you, and I wanted you to know why." "There are things I want to say that I struggle to express out loud."
+                      Open your letter by telling your partner why you're writing. Maybe it's their birthday, your <Link to="/blog/<Link to="/blog/anniversary-celebration-ideas" className="text-primary hover:underline font-medium">anniversary</Link>-celebration-ideas" className="text-primary hover:underline font-medium">anniversary</Link>, or simply a random Tuesday when you couldn't stop thinking about how lucky you are. Some beautiful opening lines: "I'm writing this because some feelings are too big for a text message." "Today I caught myself smiling just thinking about you, and I wanted you to know why." "There are things I want to say that I struggle to express out loud."
                     </p>
 
                     <h3 className="font-display text-xl font-bold text-foreground mb-3">Step 3: Be Specific — Details Are Everything</h3>

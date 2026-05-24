@@ -64,7 +64,7 @@ const BlogPost8 = () => {
                       Love is one of the most powerful emotions humans experience, yet it can sometimes be difficult to distinguish genuine love from infatuation, attachment, or even codependency. True love goes beyond butterflies in your stomach or passionate declarations — it's shown through consistent actions, mutual respect, and a deep commitment to each other's well-being.
                     </p>
                     <p className="text-muted-foreground leading-relaxed mb-4">
-                      Psychologists have spent decades studying what constitutes authentic love. According to Robert Sternberg's Triangular Theory of Love, consummate love — the most complete form — requires three components: intimacy (emotional closeness), passion (physical and emotional excitement), and commitment (the decision to maintain the relationship). When all three are present and sustained over time, you've found something truly special.
+                      Psychologists have spent decades studying what constitutes authentic love. According to Robert Sternberg's <Link to="/blog/science-of-attraction" className="text-primary hover:underline font-medium">Triangular Theory of Love</Link>, consummate love — the most complete form — requires three components: intimacy (emotional closeness), passion (physical and emotional excitement), and commitment (the decision to maintain the relationship). When all three are present and sustained over time, you've found something truly special.
                     </p>
                     <p className="text-muted-foreground leading-relaxed mb-4">
                       But how do you know if your partner's love is genuine? While every relationship is unique, there are universal signs that indicate deep, authentic love. Here are 15 unmistakable signs that your partner truly loves you.
@@ -77,7 +77,7 @@ const BlogPost8 = () => {
                     </h2>
                     <h3 className="font-display text-xl font-bold text-foreground mb-3">1. They Listen to You — Really Listen</h3>
                     <p className="text-muted-foreground leading-relaxed mb-4">
-                      A partner who truly loves you doesn't just hear your words — they actively listen. They remember the small details you mentioned weeks ago, ask follow-up questions about things that matter to you, and make you feel heard and understood. Active listening is one of the strongest indicators of emotional investment in a relationship.
+                      A partner who truly loves you doesn't just hear your words — <Link to="/blog/healthy-communication-relationships" className="text-primary hover:underline font-medium">they actively listen</Link>. They remember the small details you mentioned weeks ago, ask follow-up questions about things that matter to you, and make you feel heard and understood. Active listening is one of the strongest indicators of emotional investment in a relationship.
                     </p>
 
                     <h3 className="font-display text-xl font-bold text-foreground mb-3">2. They Respect Your Boundaries</h3>
@@ -127,7 +127,7 @@ const BlogPost8 = () => {
 
                     <h3 className="font-display text-xl font-bold text-foreground mb-3">10. They Apologize and Take Responsibility</h3>
                     <p className="text-muted-foreground leading-relaxed mb-4">
-                      Nobody is perfect, and conflicts are inevitable in any relationship. What matters is how your partner handles mistakes. A loving partner takes responsibility for their actions, offers sincere apologies, and actively works to avoid repeating the same mistakes. Their ego never outweighs their love for you.
+                      Nobody is perfect, and conflicts are inevitable in any relationship. What matters is how your partner handles mistakes. A loving partner takes responsibility for their actions, offers <Link to="/blog/how-to-apologize-relationship" className="text-primary hover:underline font-medium">sincere apologies</Link>, and actively works to avoid repeating the same mistakes. Their ego never outweighs their love for you.
                     </p>
                   </section>
 

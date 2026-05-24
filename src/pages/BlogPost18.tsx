@@ -78,10 +78,10 @@ const BlogPost18 = () => {
                   <p>Every person has personal boundaries — emotional, physical, and digital. Respecting these boundaries shows your partner that you value their autonomy and comfort. Never snoop through their phone, pressure them into sharing before they're ready, or dismiss their limits. Boundary respect is trust in action.</p>
 
                   <h2 className="font-display text-2xl font-bold text-foreground mt-10 mb-4">5. Communicate Openly and Regularly</h2>
-                  <p>Regular, open communication prevents misunderstandings from festering into trust issues. Schedule check-ins where you discuss your relationship, express concerns, and celebrate wins together. Use "I feel" statements instead of accusations, and practice active listening without planning your rebuttal.</p>
+                  <p>Regular, <Link to="/blog/healthy-communication-relationships" className="text-primary hover:underline font-medium">open communication</Link> prevents misunderstandings from festering into trust issues. Schedule check-ins where you discuss your relationship, express concerns, and celebrate wins together. Use "I feel" statements instead of accusations, and practice active listening without planning your rebuttal.</p>
 
                   <h2 className="font-display text-2xl font-bold text-foreground mt-10 mb-4">6. Be Accountable for Mistakes</h2>
-                  <p>Everyone makes mistakes. What matters is how you handle them. Take responsibility without making excuses, offer a genuine apology, and demonstrate through your actions that you've learned from the experience. Accountability shows maturity and builds respect, which strengthens trust.</p>
+                  <p>Everyone makes mistakes. What matters is how you handle them. Take responsibility without making excuses, offer a <Link to="/blog/how-to-apologize-relationship" className="text-primary hover:underline font-medium">genuine apology</Link>, and demonstrate through your actions that you've learned from the experience. Accountability shows maturity and builds respect, which strengthens trust.</p>
 
                   <h2 className="font-display text-2xl font-bold text-foreground mt-10 mb-4">7. Show Consistency in Your Behavior</h2>
                   <p>Trust is built through consistent behavior over time. Being kind one day and dismissive the next creates confusion and insecurity. Strive to be the same reliable, caring partner in all situations — whether you're stressed, tired, or going through a difficult time.</p>
@@ -93,7 +93,7 @@ const BlogPost18 = () => {
                   <p>Holding grudges poisons trust. While some betrayals require serious work to overcome, practicing forgiveness for everyday mistakes keeps the relationship healthy. Forgiveness doesn't mean forgetting or excusing harmful behavior — it means choosing to move forward rather than keeping score.</p>
 
                   <h2 className="font-display text-2xl font-bold text-foreground mt-10 mb-4">10. Be Emotionally Available</h2>
-                  <p>Emotional availability means being present, attentive, and responsive to your partner's emotional needs. Put down your phone during conversations, validate their feelings, and show empathy during difficult moments. When your partner feels emotionally supported, trust deepens naturally.</p>
+                  <p><Link to="/blog/emotional-intelligence-love" className="text-primary hover:underline font-medium">Emotional availability</Link> means being present, attentive, and responsive to your partner's emotional needs. Put down your phone during conversations, validate their feelings, and show empathy during difficult moments. When your partner feels emotionally supported, trust deepens naturally.</p>
 
                   <h2 className="font-display text-2xl font-bold text-foreground mt-10 mb-4">How to Rebuild Broken Trust</h2>
                   <p>Rebuilding trust after a betrayal is one of the most challenging things a couple can face. It requires patience, commitment, and often professional guidance. Here are key steps:</p>

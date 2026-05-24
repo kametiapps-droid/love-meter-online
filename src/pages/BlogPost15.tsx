@@ -64,7 +64,7 @@ const BlogPost15 = () => {
                       Throughout history, poets, writers, philosophers, and ordinary people have tried to capture the indescribable feeling of love in words. While no quote can fully express the depth of true love, the right words at the right moment can make a heart skip a beat, bring tears of joy, or remind us why love is the most powerful force in human existence.
                     </p>
                     <p className="text-muted-foreground leading-relaxed mb-4">
-                      Whether you're looking for the perfect words for a wedding speech, a love letter, an anniversary card, or simply want to express your feelings to someone special, this collection of 100 beautiful love quotes spans centuries and cultures, capturing every shade of romantic love.
+                      Whether you're looking for the perfect words for a wedding speech, a <Link to="/love-letter-generator" className="text-primary hover:underline font-medium">love letter</Link>, an <Link to="/blog/anniversary-celebration-ideas" className="text-primary hover:underline font-medium">anniversary card</Link>, or simply want to express your feelings to someone special, this collection of 100 beautiful love quotes spans centuries and cultures, capturing every shade of romantic love.
                     </p>
                   </section>
 
@@ -223,7 +223,7 @@ const BlogPost15 = () => {
                       <strong>In a love letter:</strong> Open or close your letter with a quote that captures your feelings, then explain why it resonates with your relationship specifically. This adds literary beauty while keeping the letter deeply personal.
                     </p>
                     <p className="text-muted-foreground leading-relaxed mb-4">
-                      <strong>As daily reminders:</strong> Leave sticky notes with love quotes around the house — on the bathroom mirror, in their lunch bag, on the car dashboard. These small surprises brighten ordinary days with romance.
+                      <strong>As daily reminders:</strong> Leave <Link to="/love-letter-generator" className="text-primary hover:underline font-medium">sticky notes</Link> with love quotes around the house — on the bathroom mirror, in their lunch bag, on the car dashboard. These small surprises brighten ordinary days with romance.
                     </p>
                     <p className="text-muted-foreground leading-relaxed mb-4">
                       <strong>For special occasions:</strong> Engrave a quote on a piece of jewelry, frame it as art for your home, or include it in wedding vows. The right quote adds timelessness and elegance to any celebration of love.

@@ -63,7 +63,7 @@ const BlogPost21 = () => {
                   <h2 className="font-display text-2xl font-bold text-foreground mt-10 mb-4">Traditional Anniversary Gifts by Year</h2>
                   <p>Each anniversary year has a traditional and modern gift theme:</p>
                   <ul className="list-disc pl-6 space-y-2">
-                    <li><strong>1st Anniversary:</strong> Paper (traditional) / Clocks (modern) — Write a heartfelt love letter or create a scrapbook of your first year.</li>
+                    <li><strong>1st Anniversary:</strong> Paper (traditional) / Clocks (modern) — Write a heartfelt <Link to="/love-letter-generator" className="text-primary hover:underline font-medium">love letter</Link> or create a scrapbook of your first year.</li>
                     <li><strong>5th Anniversary:</strong> Wood (traditional) / Silverware (modern) — Plant a tree together or gift a handcrafted wooden keepsake.</li>
                     <li><strong>10th Anniversary:</strong> Tin/Aluminum (traditional) / Diamonds (modern) — A tin time capsule filled with memories or diamond jewelry.</li>
                     <li><strong>25th Anniversary:</strong> Silver — Silver jewelry, a silver-themed dinner party, or renew your vows with silver accents.</li>
@@ -72,7 +72,7 @@ const BlogPost21 = () => {
 
                   <h2 className="font-display text-2xl font-bold text-foreground mt-10 mb-4">Budget-Friendly Anniversary Ideas (Under $50)</h2>
                   <ol className="list-decimal pl-6 space-y-3">
-                    <li><strong>Recreate your first date:</strong> Go back to where it all began. Revisit the restaurant, park, or movie theater from your first date.</li>
+                    <li><strong>Recreate your <Link to="/blog/first-date-tips" className="text-primary hover:underline font-medium">first date</Link>:</strong> Go back to where it all began. Revisit the restaurant, park, or movie theater from your first date.</li>
                     <li><strong>Sunrise or sunset picnic:</strong> Pack your favorite foods and watch nature's most romantic show together.</li>
                     <li><strong>Memory lane walk:</strong> Visit significant places in your relationship — where you met, where you first said "I love you," where you got engaged.</li>
                     <li><strong>Cook a special dinner together:</strong> Choose a cuisine from a country you'd love to visit and create an immersive experience at home.</li>
@@ -116,7 +116,7 @@ const BlogPost21 = () => {
                     <li><strong>Write your love story:</strong> Collaborate on writing the story of your relationship from both perspectives.</li>
                     <li><strong>Take a road trip:</strong> Hit the open road with no rigid plan — just music, conversation, and adventure.</li>
                     <li><strong>Watch your wedding video:</strong> If you're married, revisit the magic of your special day together.</li>
-                    <li><strong>Create a couples' bucket list:</strong> Dream together about all the things you want to experience in the coming years.</li>
+                    <li><strong>Create a couples' <Link to="/blog/relationship-goals-couples" className="text-primary hover:underline font-medium">bucket list</Link>:</strong> Dream together about all the things you want to experience in the coming years.</li>
                     <li><strong>Host a dinner party:</strong> Celebrate with your closest friends by hosting an intimate anniversary dinner.</li>
                     <li><strong>Adopt a pet:</strong> If you've been considering it, an anniversary can be a meaningful time to welcome a new family member.</li>
                   </ol>
@@ -146,7 +146,7 @@ const BlogPost21 = () => {
 
                   <div className="bg-secondary/30 rounded-xl p-6 mt-8">
                     <h3 className="font-display text-xl font-bold text-foreground mb-3">💡 Key Takeaway</h3>
-                    <p>The best anniversary celebration isn't about how much you spend — it's about the thoughtfulness and intention behind it. Whether you're recreating your first date or jetting off to Paris, what matters most is taking the time to pause, reflect on your journey together, and celebrate the love that continues to grow.</p>
+                    <p>The best anniversary celebration isn't about how much you spend — it's about the <Link to="/blog/relationship-goals-couples" className="text-primary hover:underline font-medium">thoughtfulness</Link> and intention behind it. Whether you're recreating your first date or jetting off to Paris, what matters most is taking the time to pause, reflect on your journey together, and celebrate the love that continues to grow.</p>
                   </div>
 
                   <div className="mt-8 p-6 bg-primary/5 rounded-xl">

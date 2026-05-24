@@ -65,7 +65,7 @@ const BlogPost20 = () => {
                   <p>Self-love encompasses: setting healthy boundaries, honoring your needs and emotions, taking care of your physical and mental health, forgiving yourself for mistakes, pursuing growth without perfectionism, and choosing relationships that uplift rather than diminish you.</p>
 
                   <h2 className="font-display text-2xl font-bold text-foreground mt-10 mb-4">Why Self-Love Matters for Romantic Relationships</h2>
-                  <p>Research consistently shows that people with healthy self-esteem form more satisfying relationships. Here's why:</p>
+                  <p>Research consistently shows that people with <Link to="/blog/emotional-intelligence-love" className="text-primary hover:underline font-medium">healthy self-esteem</Link> form more <Link to="/blog/love-relationships-guide" className="text-primary hover:underline font-medium">satisfying relationships</Link>. Here's why:</p>
                   <ul className="list-disc pl-6 space-y-2">
                     <li><strong>You attract healthier partners:</strong> When you value yourself, you naturally gravitate toward people who treat you well and away from those who don't.</li>
                     <li><strong>You set better boundaries:</strong> Self-love gives you the confidence to say no to behaviors that harm you.</li>
@@ -96,7 +96,7 @@ const BlogPost20 = () => {
 
                   <h3 className="font-display text-xl font-bold text-foreground mt-6 mb-3">Deeper Practices</h3>
                   <ol className="list-decimal pl-6 space-y-3" start={11}>
-                    <li><strong>Inner child work:</strong> Many self-love challenges stem from childhood wounds. Therapy or guided meditation can help you reconnect with and heal your inner child.</li>
+                    <li><strong>Inner child work:</strong> Many self-love challenges stem from childhood wounds. <Link to="/blog/emotional-intelligence-love" className="text-primary hover:underline font-medium">Therapy</Link> or guided meditation can help you reconnect with and heal your inner child.</li>
                     <li><strong>Forgive yourself:</strong> Let go of past mistakes and regrets. You made the best decisions you could with the information and resources you had at the time.</li>
                     <li><strong>Define your values:</strong> Know what matters most to you and align your life accordingly. Living in alignment with your values creates deep self-respect.</li>
                     <li><strong>Celebrate your wins:</strong> Don't wait for major accomplishments. Acknowledge daily victories, no matter how small.</li>

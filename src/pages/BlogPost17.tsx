@@ -64,7 +64,7 @@ const BlogPost17 = () => {
                       No relationship is perfect. Even the most loving, compatible couples will hurt each other — sometimes intentionally, often accidentally. What separates relationships that survive and thrive from those that slowly crumble isn't the absence of mistakes, but the ability to apologize genuinely and repair the damage.
                     </p>
                     <p className="text-muted-foreground leading-relaxed mb-4">
-                      Research from the University of Waterloo found that people who receive genuine apologies experience measurable reductions in anger, anxiety, and emotional distress. A sincere apology doesn't just fix a specific incident — it strengthens the overall trust foundation of your relationship. It tells your partner: "Your feelings matter to me more than my ego."
+                      Research from the University of Waterloo found that people who receive genuine apologies experience measurable reductions in anger, anxiety, and emotional distress. A sincere apology doesn't just fix a specific incident — it strengthens the overall <Link to="/blog/trust-building-relationships" className="text-primary hover:underline font-medium">trust foundation</Link> of your relationship. It tells your partner: "Your feelings matter to me more than my ego."
                     </p>
                     <p className="text-muted-foreground leading-relaxed mb-4">
                       Yet many of us never learned how to apologize effectively. We deflect, minimize, make excuses, or offer hollow "I'm sorry you feel that way" non-apologies that leave our partners feeling even worse. This guide will teach you the art of a real, healing apology.
@@ -140,7 +140,7 @@ const BlogPost17 = () => {
                       <Shield className="w-6 h-6 text-primary" /> How to Accept an Apology Gracefully
                     </h2>
                     <p className="text-muted-foreground leading-relaxed mb-4">
-                      Receiving an apology is also a skill. When your partner apologizes genuinely, acknowledge their effort: "Thank you for saying that. It means a lot that you recognize how I felt." You don't have to forgive immediately, but validating their vulnerability encourages future honest communication.
+                      Receiving an apology is also a skill. When your partner apologizes genuinely, acknowledge their effort: "Thank you for saying that. It means a lot that you recognize how I felt." You don't have to forgive immediately, but validating their vulnerability encourages future <Link to="/blog/healthy-communication-relationships" className="text-primary hover:underline font-medium">honest communication</Link>.
                     </p>
                     <p className="text-muted-foreground leading-relaxed mb-4">
                       If you need more time, it's okay to say: "I appreciate your apology, and I believe you're sincere. I just need a little more time to process my feelings before we move forward." This is honest, respectful, and constructive.
@@ -155,7 +155,7 @@ const BlogPost17 = () => {
                       <RefreshCw className="w-6 h-6 text-primary" /> Rebuilding After a Major Hurt
                     </h2>
                     <p className="text-muted-foreground leading-relaxed mb-4">
-                      For serious breaches of trust — betrayal, dishonesty, or deeply hurtful actions — a single apology isn't enough. Rebuilding requires sustained effort over time. Be patient, transparent, and consistently demonstrate through your actions that you've changed. Consider couples therapy to navigate the healing process with professional guidance.
+                      For serious breaches of trust — betrayal, dishonesty, or deeply hurtful actions — a single apology isn't enough. Rebuilding requires sustained effort over time. Be patient, transparent, and consistently demonstrate through your actions that you've changed. Consider <Link to="/blog/emotional-intelligence-love" className="text-primary hover:underline font-medium">couples therapy</Link> to navigate the healing process with professional guidance.
                     </p>
                     <p className="text-muted-foreground leading-relaxed mb-4">
                       Remember that rebuilding trust is not linear. Your partner may have good days and bad days. They may seem fine and then suddenly feel triggered. This isn't failure — it's the natural process of healing. Stay patient, stay committed, and keep showing up.

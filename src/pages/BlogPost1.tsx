@@ -67,7 +67,7 @@ const BlogPost1 = () => {
                       In this comprehensive guide, we will explore the fundamental principles that form the foundation of healthy relationships. Whether you're newly in love or have been together for decades, these insights will help you strengthen your bond and navigate the challenges that every couple faces.
                     </p>
                     <p className="text-muted-foreground leading-relaxed">
-                      Research shows that successful relationships share common characteristics: effective communication, mutual respect, shared values, and the ability to resolve conflicts constructively. Let's dive deep into each of these aspects and discover how you can apply them to your own relationship.
+                      Research shows that successful relationships share common characteristics: effective communication, mutual respect, shared values, and the ability to <Link to="/blog/how-to-apologize-relationship" className="text-primary hover:underline font-medium">resolve conflicts constructively</Link>. Let's dive deep into each of these aspects and discover how you can apply them to your own relationship.
                     </p>
                   </section>
 
@@ -79,7 +79,7 @@ const BlogPost1 = () => {
                       Communication is the lifeblood of any relationship. Without open, honest, and respectful dialogue, even the strongest bonds can weaken over time. Good communication involves not just speaking your mind, but also listening with empathy and understanding.
                     </p>
                     <p className="text-muted-foreground leading-relaxed mb-4">
-                      One of the most important aspects of communication is active listening. This means giving your partner your full attention when they speak, without interrupting or planning your response. It means trying to understand their perspective, even when you disagree. When your partner feels truly heard, they feel valued and respected.
+                      One of the most important aspects of communication is <Link to="/blog/healthy-communication-relationships" className="text-primary hover:underline font-medium">active listening</Link>. This means giving your partner your full attention when they speak, without interrupting or planning your response. It means trying to understand their perspective, even when you disagree. When your partner feels truly heard, they feel valued and respected.
                     </p>
                     <p className="text-muted-foreground leading-relaxed mb-4">
                       Another crucial element is expressing yourself clearly and honestly. Avoid making assumptions about what your partner knows or feels. Use "I" statements to express your emotions without blaming or criticizing. For example, instead of saying "You never listen to me," try "I feel unheard when I'm talking and you're on your phone."
@@ -145,7 +145,7 @@ const BlogPost1 = () => {
                       While the initial passion of a new relationship naturally evolves over time, romance doesn't have to fade. Keeping the spark alive requires intentional effort and creativity from both partners.
                     </p>
                     <p className="text-muted-foreground leading-relaxed mb-4">
-                      Make time for regular date nights, even if life gets busy. These dedicated moments together help you reconnect and remember why you fell in love. They don't have to be elaborate—a simple walk, a home-cooked meal, or watching a movie together can be just as meaningful as an expensive dinner.
+                      Make time for regular <Link to="/blog/romantic-date-ideas" className="text-primary hover:underline font-medium">date nights</Link>, even if life gets busy. These dedicated moments together help you reconnect and remember why you fell in love. They don't have to be elaborate—a simple walk, a home-cooked meal, or watching a movie together can be just as meaningful as an expensive dinner.
                     </p>
                     <p className="text-muted-foreground leading-relaxed mb-4">
                       Show appreciation and affection daily. Small gestures—a genuine compliment, a loving note, a spontaneous hug—can have a big impact. These expressions of love remind your partner that they are valued and desired.

@@ -92,7 +92,7 @@ const BlogPost14 = () => {
 
                     <h3 className="font-display text-xl font-bold text-foreground mb-3">4. Use Nonverbal Cues</h3>
                     <p className="text-muted-foreground leading-relaxed mb-4">
-                      Make eye contact, nod, lean in, and put down your phone. These nonverbal signals tell your partner "You have my full attention, and what you're saying matters to me." Research shows that feeling truly listened to releases oxytocin — the bonding hormone — in both partners.
+                      Make eye contact, nod, lean in, and put down your phone. These nonverbal signals tell your partner "You have my full attention, and what you're saying matters to me." Research shows that feeling truly listened to releases <Link to="/blog/science-of-attraction" className="text-primary hover:underline font-medium">oxytocin — the bonding hormone</Link> — in both partners.
                     </p>
                   </section>
 
@@ -147,7 +147,7 @@ const BlogPost14 = () => {
 
                     <h3 className="font-display text-xl font-bold text-foreground mb-3">13. Know When to Apologize</h3>
                     <p className="text-muted-foreground leading-relaxed mb-4">
-                      A sincere apology has three parts: acknowledging what you did wrong, expressing genuine remorse, and committing to change. "I'm sorry I raised my voice. I know that's hurtful, and I'm going to work on expressing frustration more calmly." A real apology heals; a hollow one creates resentment.
+                      A <Link to="/blog/how-to-apologize-relationship" className="text-primary hover:underline font-medium">sincere apology</Link> has three parts: acknowledging what you did wrong, expressing genuine remorse, and committing to change. "I'm sorry I raised my voice. I know that's hurtful, and I'm going to work on expressing frustration more calmly." A real apology heals; a hollow one creates resentment.
                     </p>
                   </section>
 
@@ -172,7 +172,7 @@ const BlogPost14 = () => {
 
                     <h3 className="font-display text-xl font-bold text-foreground mb-3">17. Communicate Through Love Languages</h3>
                     <p className="text-muted-foreground leading-relaxed mb-4">
-                      Learn your partner's love language and communicate affection in the way they best receive it. If their love language is Words of Affirmation, verbal expressions of love matter most. If it's Acts of Service, showing love through actions speaks louder than any words.
+                      Learn your partner's <Link to="/blog/five-love-languages" className="text-primary hover:underline font-medium">love language</Link> and communicate affection in the way they best receive it. If their love language is Words of Affirmation, verbal expressions of love matter most. If it's Acts of Service, showing love through actions speaks louder than any words.
                     </p>
 
                     <h3 className="font-display text-xl font-bold text-foreground mb-3">18. Don't Let Digital Communication Replace Real Conversation</h3>

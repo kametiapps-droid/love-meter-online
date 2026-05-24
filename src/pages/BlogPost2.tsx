@@ -15,7 +15,7 @@ const BlogPost2 = () => {
     <div className="min-h-screen flex flex-col romantic-gradient-bg relative overflow-hidden">
       <SEO
         title="Zodiac Compatibility Guide - Which Signs Match Best?"
-        description="Explore zodiac compatibility and find your perfect star sign match. Learn which signs are most compatible in love and relationships."
+        description="Explore zodiac <Link to="/zodiac-compatibility" className="text-primary hover:underline font-medium">compatibility</Link> and find your perfect star sign match. Learn which signs are most compatible in love and relationships."
         path="/blog/zodiac-compatibility-guide"
         type="article"
         articleSchema={true}
@@ -67,7 +67,7 @@ const BlogPost2 = () => {
                       While astrology should not be the sole basis for choosing a partner, understanding zodiac compatibility can help you appreciate your partner's strengths and challenges, improve communication, and navigate potential areas of conflict. It's a tool for self-awareness and mutual understanding.
                     </p>
                     <p className="text-muted-foreground leading-relaxed">
-                      In this comprehensive guide, we'll explore the twelve zodiac signs, their characteristics, and how they interact with each other in romantic relationships. Whether you're a passionate Aries or a sensitive Pisces, you'll discover valuable insights about your love life.
+                      In this comprehensive guide, we'll explore the twelve zodiac signs, their characteristics, and how they interact with each other in romantic relationships. Whether you're a passionate Aries or a sensitive Pisces, you'll discover valuable insights about <Link to="/" className="text-primary hover:underline font-medium">your love life</Link>.
                     </p>
                   </section>
 
@@ -154,7 +154,7 @@ const BlogPost2 = () => {
                       Your rising sign (ascendant) affects first impressions and how you present yourself to the world. Sometimes, people are more drawn to someone's rising sign characteristics than their sun sign. This explains why you might feel a strong initial attraction to someone whose sun sign isn't traditionally compatible with yours.
                     </p>
                     <p className="text-muted-foreground leading-relaxed mb-4">
-                      The position of other planets at the time of your birth also influences your personality and relationships. Mercury affects communication, Jupiter affects growth and expansion, and Saturn affects commitment and responsibility. A complete birth chart analysis provides a fuller understanding.
+                      The position of other planets at the time of your birth also influences your personality and relationships. Mercury affects communication, Jupiter affects growth and expansion, and Saturn affects commitment and responsibility. A complete <Link to="/zodiac-compatibility" className="text-primary hover:underline font-medium">birth chart</Link> analysis provides a fuller understanding.
                     </p>
                     <p className="text-muted-foreground leading-relaxed">
                       Remember that astrology is a guide, not a rulebook. People are more than their zodiac signs, and successful relationships depend on many factors beyond astrological compatibility. Use these insights as tools for understanding, not limitations on who you can love.

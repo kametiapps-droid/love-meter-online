@@ -97,7 +97,7 @@ const BlogPost9 = () => {
                     </h2>
                     <h3 className="font-display text-xl font-bold text-foreground mb-3">Try New Experiences Together</h3>
                     <p className="text-muted-foreground leading-relaxed mb-4">
-                      The single most effective way to reignite passion is to share new, exciting experiences together. Research by psychologist Arthur Aron shows that couples who engage in novel activities together experience increased relationship satisfaction and attraction. This happens because new experiences trigger dopamine release — the same brain chemical associated with early-stage romantic love.
+                      The single most effective way to reignite passion is to share new, exciting experiences together. Research by psychologist Arthur Aron shows that couples who engage in novel activities together experience increased relationship satisfaction and attraction. This happens because new experiences trigger <Link to="/blog/science-of-attraction" className="text-primary hover:underline font-medium">dopamine release</Link> — the same brain chemical associated with early-stage romantic love.
                     </p>
                     <p className="text-muted-foreground leading-relaxed mb-4">
                       Take a cooking class together, go hiking in a new location, try rock climbing, learn to dance, travel to a place neither of you has been, or simply explore a new neighborhood in your city. The key is stepping outside your comfort zone as a team.
@@ -105,7 +105,7 @@ const BlogPost9 = () => {
 
                     <h3 className="font-display text-xl font-bold text-foreground mb-3">Surprise Each Other</h3>
                     <p className="text-muted-foreground leading-relaxed mb-4">
-                      Predictability is the enemy of excitement. Break the routine with unexpected gestures — leave a love note in their bag, plan a surprise date, cook their favorite meal on a random Tuesday, or send them a heartfelt message in the middle of the day. Surprises don't need to be expensive; they just need to show thought and intentionality.
+                      Predictability is the enemy of excitement. Break the routine with unexpected gestures — leave a <Link to="/love-letter-generator" className="text-primary hover:underline font-medium">love note</Link> in their bag, plan a surprise date, cook their favorite meal on a random Tuesday, or send them a heartfelt message in the middle of the day. Surprises don't need to be expensive; they just need to show thought and intentionality.
                     </p>
 
                     <h3 className="font-display text-xl font-bold text-foreground mb-3">Maintain Individual Interests</h3>
@@ -125,7 +125,7 @@ const BlogPost9 = () => {
 
                     <h3 className="font-display text-xl font-bold text-foreground mb-3">Schedule Date Nights (Yes, Really)</h3>
                     <p className="text-muted-foreground leading-relaxed mb-4">
-                      While scheduling romance might sound unromantic, it's actually one of the most important things couples can do. Life gets busy with work, kids, and responsibilities, and quality time together often falls to the bottom of the priority list. By scheduling regular date nights — and treating them as non-negotiable — you ensure that your relationship gets the attention it deserves.
+                      While scheduling romance might sound unromantic, it's actually one of the most important things couples can do. Life gets busy with work, kids, and responsibilities, and quality time together often falls to the bottom of the priority list. By scheduling regular <Link to="/blog/romantic-date-ideas" className="text-primary hover:underline font-medium">date nights</Link> — and treating them as non-negotiable — you ensure that your relationship gets the attention it deserves.
                     </p>
 
                     <h3 className="font-display text-xl font-bold text-foreground mb-3">Flirt With Each Other</h3>

@@ -61,10 +61,10 @@ const BlogPost16 = () => {
                       <Heart className="w-6 h-6 text-primary" /> The Moment That Changes Everything
                     </h2>
                     <p className="text-muted-foreground leading-relaxed mb-4">
-                      A marriage proposal is one of the most significant moments in your love story — a moment that will be retold at family dinners, to grandchildren, and on every anniversary for years to come. The perfect proposal isn't about the size of the ring or the extravagance of the setting — it's about creating a moment that authentically reflects your unique love story.
+                      A marriage proposal is one of the most significant moments in your <Link to="/blog/love-relationships-guide" className="text-primary hover:underline font-medium">love story</Link> — a moment that will be retold at family dinners, to grandchildren, and on every anniversary for years to come. The perfect proposal isn't about the size of the ring or the extravagance of the setting — it's about creating a moment that authentically reflects your unique love story.
                     </p>
                     <p className="text-muted-foreground leading-relaxed mb-4">
-                      Whether your partner dreams of a grand public gesture or an intimate private moment, whether you have an unlimited budget or plan to spend very little, the key is personalization. The most unforgettable proposals are those that show your partner you truly know them — their dreams, their favorite places, their deepest values.
+                      Whether your partner dreams of a grand public gesture or an <Link to="/blog/romantic-date-ideas" className="text-primary hover:underline font-medium">intimate private moment</Link>, whether you have an unlimited budget or plan to spend very little, the key is personalization. The most unforgettable proposals are those that show your partner you truly know them — their dreams, their favorite places, their deepest values.
                     </p>
                     <p className="text-muted-foreground leading-relaxed mb-4">
                       Here are 20 proposal ideas spanning every style and budget, designed to inspire you to create YOUR perfect moment. Remember: the best proposal is the one that comes from your heart and speaks to theirs.
@@ -182,7 +182,7 @@ const BlogPost16 = () => {
 
                     <h3 className="font-display text-xl font-bold text-foreground mb-3">19. The Letter Collection Proposal</h3>
                     <p className="text-muted-foreground leading-relaxed mb-4">
-                      Write 12 love letters — one for each month you've been together (or each year, or each significant milestone). Present them in a beautiful box. The final letter contains your proposal and the ring. As your partner reads through your love story in your own words, the emotion builds naturally to the ultimate question.
+                      Write 12 <Link to="/love-letter-generator" className="text-primary hover:underline font-medium">love letters</Link> — one for each month you've been together (or each year, or each significant milestone). Present them in a beautiful box. The final letter contains your proposal and the ring. As your partner reads through your love story in your own words, the emotion builds naturally to the ultimate question.
                     </p>
 
                     <h3 className="font-display text-xl font-bold text-foreground mb-3">20. The Simple, From-the-Heart Proposal</h3>

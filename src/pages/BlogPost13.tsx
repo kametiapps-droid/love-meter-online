@@ -61,10 +61,10 @@ const BlogPost13 = () => {
                       <Heart className="w-6 h-6 text-primary" /> Why First Dates Matter More Than You Think
                     </h2>
                     <p className="text-muted-foreground leading-relaxed mb-4">
-                      First dates are the gateway to potential love stories. Research from the Journal of Social and Personal Relationships shows that first impressions formed within the first 30 seconds can predict whether a relationship will develop. But here's the good news: you don't need to be perfect — you just need to be genuinely yourself while putting your best foot forward.
+                      First dates are the gateway to potential love stories. Research from the Journal of Social and Personal Relationships shows that <Link to="/blog/science-of-attraction" className="text-primary hover:underline font-medium">first impression</Link>s formed within the first 30 seconds can predict whether a relationship will develop. But here's the good news: you don't need to be perfect — you just need to be genuinely yourself while putting your best foot forward.
                     </p>
                     <p className="text-muted-foreground leading-relaxed mb-4">
-                      Whether you're meeting someone from a dating app, going out with a friend's recommendation, or finally asking out your long-time crush, these 25 tips will help you navigate the exciting (and sometimes nerve-wracking) world of first dates with confidence and grace.
+                      Whether you're meeting someone from a <Link to="/" className="text-primary hover:underline font-medium">dating app</Link>, going out with a friend's recommendation, or finally asking out your long-time crush, these 25 tips will help you navigate the exciting (and sometimes nerve-wracking) world of first dates with confidence and grace.
                     </p>
                     <p className="text-muted-foreground leading-relaxed mb-4">
                       The secret to a great first date isn't about being the most interesting person in the room — it's about creating a space where two people can genuinely connect. Studies show that mutual vulnerability and authentic conversation create stronger bonds than any rehearsed charm or impressive resume.
@@ -188,7 +188,7 @@ const BlogPost13 = () => {
 
                     <h3 className="font-display text-xl font-bold text-foreground mb-3">22. Be Honest About Your Feelings</h3>
                     <p className="text-muted-foreground leading-relaxed mb-4">
-                      If you'd like a second date, say so! If you didn't feel a romantic connection, be kind but honest. Ghosting is never okay. A respectful message like "I enjoyed meeting you, but I didn't feel a romantic connection" is far kinder than silence.
+                      If you'd like a <Link to="/blog/romantic-date-ideas" className="text-primary hover:underline font-medium">second date</Link>, say so! If you didn't feel a <Link to="/blog/science-of-attraction" className="text-primary hover:underline font-medium">romantic connection</Link>, be kind but honest. Ghosting is never okay. A respectful message like "I enjoyed meeting you, but I didn't feel a romantic connection" is far kinder than silence.
                     </p>
 
                     <h3 className="font-display text-xl font-bold text-foreground mb-3">23. Don't Overthink It</h3>

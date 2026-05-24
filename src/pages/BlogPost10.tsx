@@ -61,7 +61,7 @@ const BlogPost10 = () => {
                       <Brain className="w-6 h-6 text-primary" /> Love Is a Brain Thing
                     </h2>
                     <p className="text-muted-foreground leading-relaxed mb-4">
-                      When we think about attraction, we often imagine it as something mysterious and magical — an inexplicable force that draws two people together. While love certainly feels magical, scientists have made remarkable progress in understanding the biological, psychological, and evolutionary mechanisms behind attraction. The truth is, falling in love is one of the most complex neurological events a human can experience.
+                      When we think about attraction, we often imagine it as something mysterious and magical — an inexplicable force that draws two people together. While love certainly feels magical, scientists have made remarkable progress in understanding the biological, psychological, and evolutionary mechanisms behind attraction. The truth is, <Link to="/blog/true-love-test-signs" className="text-primary hover:underline font-medium">falling in love</Link> is one of the most complex neurological events a human can experience.
                     </p>
                     <p className="text-muted-foreground leading-relaxed mb-4">
                       Brain imaging studies have revealed that falling in love activates the same neural pathways as addiction. When you see someone you're attracted to, your brain releases a flood of neurotransmitters — dopamine (pleasure), norepinephrine (excitement), and serotonin (obsessive thinking) — creating that euphoric, can't-eat-can't-sleep feeling we associate with new love. Neurologist Dr. Helen Fisher describes this as the brain's "reward system" going into overdrive.
@@ -107,7 +107,7 @@ const BlogPost10 = () => {
 
                     <h3 className="font-display text-xl font-bold text-foreground mb-3">Stage 3: Attachment (Oxytocin & Vasopressin)</h3>
                     <p className="text-muted-foreground leading-relaxed mb-4">
-                      As a relationship matures, the brain shifts from the intense chemistry of attraction to the calmer, deeper bond of attachment. Oxytocin (released during physical touch, cuddling, and intimacy) and vasopressin work together to create lasting feelings of security, trust, and deep connection. This is the chemistry that keeps couples together for decades.
+                      As a relationship matures, the brain shifts from the intense chemistry of attraction to the calmer, deeper bond of attachment. Oxytocin (released during physical touch, cuddling, and intimacy) and vasopressin work together to create <Link to="/blog/trust-building-relationships" className="text-primary hover:underline font-medium">lasting feelings of security</Link>, trust, and deep connection. This is the chemistry that keeps couples together for decades.
                     </p>
                   </section>
 
@@ -141,7 +141,7 @@ const BlogPost10 = () => {
                       <Heart className="w-6 h-6 text-primary" /> Love: Where Science Meets Magic
                     </h2>
                     <p className="text-muted-foreground leading-relaxed mb-4">
-                      Despite all the scientific research, love remains one of life's greatest mysteries. We can measure brain chemicals, map neural pathways, and identify psychological patterns, but the subjective experience of falling in love — that breathtaking, life-changing moment when someone becomes the center of your world — transcends any scientific explanation.
+                      Despite all the scientific research, <Link to="/blog/love-relationships-guide" className="text-primary hover:underline font-medium">love remains one of life</Link>'s greatest mysteries. We can measure brain chemicals, map neural pathways, and identify psychological patterns, but the subjective experience of falling in love — that breathtaking, life-changing moment when someone becomes the center of your world — transcends any scientific explanation.
                     </p>
                     <p className="text-muted-foreground leading-relaxed mb-4">
                       Perhaps that's the most beautiful thing about love: it exists at the intersection of biology and poetry, of evolution and emotion, of science and soul. Understanding the mechanisms behind attraction doesn't diminish its magic — if anything, it deepens our appreciation for this extraordinary human experience.
