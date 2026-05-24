@@ -15,7 +15,7 @@ const BlogPost11 = () => {
     <div className="min-h-screen flex flex-col romantic-gradient-bg relative overflow-hidden">
       <SEO
         title="30 Relationship Goals Every Couple Should Set"
-        description="Discover meaningful <Link to="/blog/relationship-goals-couples" className="text-primary hover:underline font-medium">relationship goals</Link> that will strengthen your bond. From communication to adventure, these couple goals will transform your relationship."
+        description="Discover meaningful relationship goals that will strengthen your bond. From communication to adventure, these couple goals will transform your relationship."
         path="/blog/relationship-goals-couples"
         type="article"
         articleSchema={true}

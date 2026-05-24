@@ -15,7 +15,7 @@ const BlogPost2 = () => {
     <div className="min-h-screen flex flex-col romantic-gradient-bg relative overflow-hidden">
       <SEO
         title="Zodiac Compatibility Guide - Which Signs Match Best?"
-        description="Explore zodiac <Link to="/zodiac-compatibility" className="text-primary hover:underline font-medium">compatibility</Link> and find your perfect star sign match. Learn which signs are most compatible in love and relationships."
+        description="Explore zodiac compatibility and find your perfect star sign match. Learn which signs are most compatible in love and relationships."
         path="/blog/zodiac-compatibility-guide"
         type="article"
         articleSchema={true}
