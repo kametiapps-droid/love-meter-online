@@ -28,14 +28,16 @@ import blogEQImage from "@/assets/blog-emotional-intelligence.jpg";
 import blogSelfLoveImage from "@/assets/blog-self-love.jpg";
 import blogAnniversaryImage from "@/assets/blog-anniversary-ideas.jpg";
 import blogCulturesImage from "@/assets/blog-love-cultures.jpg";
+import blogCompatibilityImage from "@/assets/blog-love-compatibility.webp";
+import blogTrueLoveImage from "@/assets/blog-science-attraction.jpg";
 
 const blogPosts = [
   {
     id: "love-compatibility-name-date-birth",
     title: "Love Compatibility by Name and Date of Birth: Complete Guide",
     excerpt: "Learn how name + birthdate compatibility works using numerology, FLAMES, and zodiac matching to find your true love percentage.",
-    image: blogLoveImage,
-    date: "May 10, 2026",
+    image: blogCompatibilityImage,
+    date: "May 19, 2026",
     readTime: "9 min read",
     category: "Love Calculator"
   },
@@ -43,8 +45,8 @@ const blogPosts = [
     id: "true-love-test-signs",
     title: "True Love Test: 12 Signs You've Found The One",
     excerpt: "Discover 12 powerful, psychology-backed signs that prove you've found The One — the ultimate true love test for couples.",
-    image: blogSignsImage,
-    date: "May 10, 2026",
+    image: blogTrueLoveImage,
+    date: "May 12, 2026",
     readTime: "10 min read",
     category: "True Love"
   },
@@ -53,7 +55,7 @@ const blogPosts = [
     title: "How to Build Trust in a Relationship: 15 Expert Strategies",
     excerpt: "Learn proven strategies to build, rebuild, and maintain trust for a secure, lasting bond with your partner.",
     image: blogTrustImage,
-    date: "March 9, 2026",
+    date: "May 5, 2026",
     readTime: "14 min read",
     category: "Trust & Bonding"
   },
@@ -62,7 +64,7 @@ const blogPosts = [
     title: "Emotional Intelligence in Love: How EQ Makes Better Relationships",
     excerpt: "Discover how emotional intelligence transforms your love life with deeper connection and better communication.",
     image: blogEQImage,
-    date: "March 9, 2026",
+    date: "April 28, 2026",
     readTime: "13 min read",
     category: "Emotional Intelligence"
   },
@@ -71,7 +73,7 @@ const blogPosts = [
     title: "The Power of Self-Love: Why Loving Yourself First Changes Everything",
     excerpt: "Discover why self-love is the foundation of healthy relationships and learn practical strategies for self-worth.",
     image: blogSelfLoveImage,
-    date: "March 10, 2026",
+    date: "April 21, 2026",
     readTime: "12 min read",
     category: "Self-Love"
   },
@@ -80,7 +82,7 @@ const blogPosts = [
     title: "50 Romantic Anniversary Ideas: Celebrate Your Love in Style",
     excerpt: "From budget-friendly to luxurious, discover 50 creative anniversary celebration ideas for every couple.",
     image: blogAnniversaryImage,
-    date: "March 10, 2026",
+    date: "April 14, 2026",
     readTime: "14 min read",
     category: "Anniversaries"
   },
@@ -89,7 +91,7 @@ const blogPosts = [
     title: "Love Around the World: How Different Cultures Express Romance",
     excerpt: "Explore fascinating love traditions, dating customs, and romantic expressions from cultures around the globe.",
     image: blogCulturesImage,
-    date: "March 10, 2026",
+    date: "April 7, 2026",
     readTime: "15 min read",
     category: "Culture & Love"
   },
@@ -98,7 +100,7 @@ const blogPosts = [
     title: "25 First Date Tips That Actually Work: Expert Advice",
     excerpt: "Nervous about your first date? These proven tips will help you make a great impression and build genuine connection.",
     image: blogFirstDateImage,
-    date: "March 6, 2026",
+    date: "March 31, 2026",
     readTime: "12 min read",
     category: "Dating Tips"
   },
@@ -107,7 +109,7 @@ const blogPosts = [
     title: "Healthy Communication in Relationships: 20 Expert Tips",
     excerpt: "Master active listening, conflict resolution, and emotional intelligence to strengthen your love.",
     image: blogCommunicationImage,
-    date: "March 7, 2026",
+    date: "March 24, 2026",
     readTime: "12 min read",
     category: "Communication"
   },
@@ -116,7 +118,7 @@ const blogPosts = [
     title: "100 Most Beautiful Love Quotes of All Time",
     excerpt: "A curated collection of the world's most romantic, inspiring, and timeless love quotes.",
     image: blogQuotesImage,
-    date: "March 7, 2026",
+    date: "March 17, 2026",
     readTime: "15 min read",
     category: "Love Quotes"
   },
@@ -125,7 +127,7 @@ const blogPosts = [
     title: "20 Unforgettable Marriage Proposal Ideas",
     excerpt: "Creative, romantic, and deeply personal proposal ideas for every couple and every budget.",
     image: blogProposalImage,
-    date: "March 7, 2026",
+    date: "March 10, 2026",
     readTime: "13 min read",
     category: "Proposals"
   },
@@ -134,7 +136,7 @@ const blogPosts = [
     title: "How to Apologize in a Relationship: The Art of Saying Sorry",
     excerpt: "Learn how to give a sincere, meaningful apology that heals your relationship and rebuilds trust.",
     image: blogApologizeImage,
-    date: "March 7, 2026",
+    date: "March 3, 2026",
     readTime: "11 min read",
     category: "Relationships"
   },
@@ -143,7 +145,7 @@ const blogPosts = [
     title: "15 Unmistakable Signs Your Partner Truly Loves You",
     excerpt: "Learn to recognize the genuine signs of true love beyond words — through actions, consistency, and deep emotional connection.",
     image: blogSignsImage,
-    date: "March 1, 2026",
+    date: "February 24, 2026",
     readTime: "10 min read",
     category: "Love & Relationships"
   },
@@ -152,7 +154,7 @@ const blogPosts = [
     title: "How to Keep the Spark Alive in Your Relationship: A Complete Guide",
     excerpt: "Proven strategies to maintain passion, excitement, and deep emotional connection in your long-term relationship.",
     image: blogSparkImage,
-    date: "March 2, 2026",
+    date: "February 17, 2026",
     readTime: "10 min read",
     category: "Relationships"
   },
@@ -161,7 +163,7 @@ const blogPosts = [
     title: "The Science of Attraction: Why We Fall in Love",
     excerpt: "Discover the fascinating psychology, biology, and chemistry behind why we're drawn to certain people.",
     image: blogScienceImage,
-    date: "March 3, 2026",
+    date: "February 10, 2026",
     readTime: "11 min read",
     category: "Psychology"
   },
@@ -170,7 +172,7 @@ const blogPosts = [
     title: "30 Meaningful Relationship Goals Every Couple Should Set",
     excerpt: "Beyond Instagram-perfect moments, these are the real relationship goals that build lasting love.",
     image: blogGoalsImage,
-    date: "March 4, 2026",
+    date: "February 3, 2026",
     readTime: "10 min read",
     category: "Couple Goals"
   },
@@ -179,7 +181,7 @@ const blogPosts = [
     title: "How to Write the Perfect Love Letter: Tips & Examples",
     excerpt: "Master the timeless art of writing love letters that capture your deepest feelings and make hearts sing.",
     image: blogLetterImage,
-    date: "March 5, 2026",
+    date: "January 27, 2026",
     readTime: "10 min read",
     category: "Romance"
   },
@@ -188,7 +190,7 @@ const blogPosts = [
     title: "The Complete Guide to Building Strong and Lasting Relationships",
     excerpt: "Discover the secrets to nurturing love, improving communication, and building a relationship that stands the test of time.",
     image: blogLoveImage,
-    date: "February 5, 2026",
+    date: "January 20, 2026",
     readTime: "8 min read",
     category: "Love & Relationships"
   },
@@ -197,7 +199,7 @@ const blogPosts = [
     title: "Understanding Zodiac Compatibility: A Complete Astrology Guide",
     excerpt: "Learn how zodiac signs influence relationships and discover which signs are most compatible with yours.",
     image: blogZodiacImage,
-    date: "February 4, 2026",
+    date: "January 13, 2026",
     readTime: "9 min read",
     category: "Zodiac & Astrology"
   },
@@ -206,7 +208,7 @@ const blogPosts = [
     title: "The Beautiful World of Name Meanings: Origins, History & Significance",
     excerpt: "Explore the fascinating stories behind popular names, their cultural origins, and how they shape our identity.",
     image: blogNameImage,
-    date: "February 14, 2026",
+    date: "January 6, 2026",
     readTime: "10 min read",
     category: "Name Meanings"
   },
@@ -215,7 +217,7 @@ const blogPosts = [
     title: "50 Fascinating Love Facts & Trivia That Will Blow Your Mind",
     excerpt: "Discover surprising statistics, scientific findings, and cultural traditions about love from around the world.",
     image: blogFactsImage,
-    date: "February 13, 2026",
+    date: "December 30, 2025",
     readTime: "9 min read",
     category: "Fun Facts"
   },
@@ -224,7 +226,7 @@ const blogPosts = [
     title: "The 5 Love Languages: Understanding How You Give and Receive Love",
     excerpt: "Master the art of expressing love in the way your partner truly understands and appreciates it.",
     image: blogLanguagesImage,
-    date: "February 12, 2026",
+    date: "December 23, 2025",
     readTime: "10 min read",
     category: "Relationships"
   },
@@ -233,7 +235,7 @@ const blogPosts = [
     title: "Long Distance Relationships: The Ultimate Guide to Making Love Work Across Miles",
     excerpt: "Proven strategies, communication tips, and creative ideas to keep your long-distance love strong.",
     image: blogDistanceImage,
-    date: "February 11, 2026",
+    date: "December 16, 2025",
     readTime: "10 min read",
     category: "Relationships"
   },
@@ -242,7 +244,7 @@ const blogPosts = [
     title: "75 Romantic Date Ideas for Every Budget: From Free Adventures to Luxury Experiences",
     excerpt: "Never run out of date ideas again! Creative, romantic, and unforgettable ways to spend time together.",
     image: blogDateImage,
-    date: "February 10, 2026",
+    date: "December 9, 2025",
     readTime: "10 min read",
     category: "Date Ideas"
   }

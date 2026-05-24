@@ -60,7 +60,7 @@ const ResponsiveImage = ({
       className={className}
       loading={eager ? "eager" : "lazy"}
       decoding="async"
-      {...(eager ? { fetchPriority: "high" as never } : {})}
+      {...(eager ? { fetchpriority: "high" } : {})}
       {...rest}
     />
   );
