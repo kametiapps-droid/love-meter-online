@@ -119,7 +119,7 @@ const LovePoetryPage = () => {
           {/* Hero */}
           <section className="relative py-16 md:py-24 px-4">
             <div className="absolute inset-0 z-0">
-              <img src={heroImage} alt="Love Poetry" className="w-full h-full object-cover opacity-30" />
+              <img src={heroImage} alt="Love Poetry" loading="lazy" className="w-full h-full object-cover opacity-30" />
               <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/60 to-background" />
             </div>
             <div className="max-w-4xl mx-auto text-center relative z-10">

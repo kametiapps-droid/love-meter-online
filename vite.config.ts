@@ -21,6 +21,23 @@ export default defineConfig(() => ({
   build: {
     sourcemap: true,
     rollupOptions: {
+      output: {
+        manualChunks: {
+          "vendor-react": ["react", "react-dom", "react-router-dom"],
+          "vendor-ui": [
+            "@radix-ui/react-dialog",
+            "@radix-ui/react-dropdown-menu",
+            "@radix-ui/react-select",
+            "@radix-ui/react-tabs",
+            "@radix-ui/react-tooltip",
+            "@radix-ui/react-accordion",
+            "@radix-ui/react-popover",
+            "@radix-ui/react-slider",
+          ],
+          "vendor-query": ["@tanstack/react-query"],
+          "vendor-form": ["react-hook-form", "@hookform/resolvers", "zod"],
+        },
+      },
       input: {
         main: path.resolve(__dirname, "index.html"),
         "love-calculator": path.resolve(__dirname, "love-calculator.html"),
