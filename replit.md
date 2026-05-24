@@ -1,45 +1,42 @@
-# [Project name]
+# Love Calculator
 
-_Replace the heading above with the project's name, and this line with one sentence describing what this app does for users._
+A multi-page React + Vite love compatibility app with tools including a love calculator, zodiac compatibility checker, love quiz, daily horoscope, name generators, and a blog.
 
 ## Run & Operate
 
-- `pnpm --filter @workspace/api-server run dev` — run the API server (port 5000)
-- `pnpm run typecheck` — full typecheck across all packages
-- `pnpm run build` — typecheck + build all packages
-- `pnpm --filter @workspace/api-spec run codegen` — regenerate API hooks and Zod schemas from the OpenAPI spec
-- `pnpm --filter @workspace/db run push` — push DB schema changes (dev only)
-- Required env: `DATABASE_URL` — Postgres connection string
+- `npm run dev` — start the dev server (port 5000)
+- `npm run build` — production build (outputs to `dist/`)
+- `npm run preview` — preview the production build locally
+- `npm run lint` — lint the codebase
+- `npm run test` — run tests with Vitest
 
 ## Stack
 
-- pnpm workspaces, Node.js 24, TypeScript 5.9
-- API: Express 5
-- DB: PostgreSQL + Drizzle ORM
-- Validation: Zod (`zod/v4`), `drizzle-zod`
-- API codegen: Orval (from OpenAPI spec)
-- Build: esbuild (CJS bundle)
+- React 18, TypeScript, Vite 5
+- Tailwind CSS 3 + shadcn/ui (Radix UI primitives)
+- React Router v6
+- TanStack Query v5
+- React Hook Form + Zod validation
+- Vitest + Testing Library
 
 ## Where things live
 
-_Populate as you build — short repo map plus pointers to the source-of-truth file for DB schema, API contracts, theme files, etc._
+- `src/` — all React source code and components
+- `public/` — static assets (images, icons, sitemap, robots.txt)
+- `blog/` — static HTML blog pages
+- `*.html` — individual multi-page entry points (love-calculator.html, zodiac-compatibility.html, etc.)
+- `vercel.json` — Vercel deployment config with rewrites, redirects, and cache headers
+- `vite.config.ts` — Vite config (port 5000, host 0.0.0.0 for Replit)
 
-## Architecture decisions
+## Deployment (Vercel)
 
-_Populate as you build — non-obvious choices a reader couldn't infer from the code (3-5 bullets)._
-
-## Product
-
-_Describe the high-level user-facing capabilities of this app once they exist._
+The project is configured for Vercel deployment out of the box:
+- `vercel.json` contains all rewrites, redirects, security headers, and cache rules
+- Build command: `npm run build`
+- Output directory: `dist`
+- No environment variables required for the frontend
 
 ## User preferences
 
-_Populate as you build — explicit user instructions worth remembering across sessions._
-
-## Gotchas
-
-_Populate as you build — sharp edges, "always run X before Y" rules._
-
-## Pointers
-
-- See the `pnpm-workspace` skill for workspace structure, TypeScript setup, and package details
+- Clean project structure — no monorepo scaffolding
+- Vercel as the deployment target
