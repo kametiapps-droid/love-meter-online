@@ -1,37 +1,36 @@
 import logo from "@/assets/logo.png";
 import { Link, useLocation } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import {
-  Menu, X, ChevronDown,
-  Heart, Stars, ClipboardList, Sun, BookOpen,
-  Sparkles, Baby, Send, Calendar, Feather, Info, LayoutGrid,
+  Menu, X, Heart, Stars, ClipboardList, Sun, BookOpen,
+  Sparkles, Baby, Send, Calendar, Feather, Info, ChevronLeft, ChevronRight,
 } from "lucide-react";
 
 const allTools = [
-  { to: "/", label: "Love Calculator", desc: "Test your name compatibility", icon: Heart, color: "bg-rose-100", iconColor: "text-rose-500" },
-  { to: "/zodiac-compatibility", label: "Zodiac Match", desc: "Check your star sign love", icon: Stars, color: "bg-violet-100", iconColor: "text-violet-500" },
-  { to: "/love-quiz", label: "Love Quiz", desc: "Discover your love style", icon: ClipboardList, color: "bg-pink-100", iconColor: "text-pink-500" },
-  { to: "/daily-horoscope", label: "Daily Horoscope", desc: "Today's love prediction", icon: Sun, color: "bg-amber-100", iconColor: "text-amber-500" },
-  { to: "/love-fortune-ball", label: "Fortune Ball", desc: "Ask the magic ball", icon: Sparkles, color: "bg-indigo-100", iconColor: "text-indigo-500" },
-  { to: "/couple-name-generator", label: "Couple Names", desc: "Create your ship name", icon: Heart, color: "bg-red-100", iconColor: "text-red-500" },
-  { to: "/kids-name-generator", label: "Baby Names", desc: "Zodiac-inspired names", icon: Baby, color: "bg-teal-100", iconColor: "text-teal-500" },
-  { to: "/love-letter-generator", label: "Love Letters", desc: "Write romantic letters", icon: Send, color: "bg-sky-100", iconColor: "text-sky-500" },
-  { to: "/relationship-timeline", label: "Timeline", desc: "Your love milestones", icon: Calendar, color: "bg-emerald-100", iconColor: "text-emerald-500" },
-  { to: "/love-poetry", label: "Love Poetry", desc: "Beautiful romantic poems", icon: Feather, color: "bg-fuchsia-100", iconColor: "text-fuchsia-500" },
+  { to: "/", label: "Love Calculator", icon: Heart, color: "bg-rose-100", iconColor: "text-rose-500" },
+  { to: "/zodiac-compatibility", label: "Zodiac Match", icon: Stars, color: "bg-violet-100", iconColor: "text-violet-500" },
+  { to: "/love-quiz", label: "Love Quiz", icon: ClipboardList, color: "bg-pink-100", iconColor: "text-pink-500" },
+  { to: "/daily-horoscope", label: "Daily Horoscope", icon: Sun, color: "bg-amber-100", iconColor: "text-amber-500" },
+  { to: "/love-fortune-ball", label: "Fortune Ball", icon: Sparkles, color: "bg-indigo-100", iconColor: "text-indigo-500" },
+  { to: "/couple-name-generator", label: "Couple Names", icon: Heart, color: "bg-red-100", iconColor: "text-red-500" },
+  { to: "/kids-name-generator", label: "Baby Names", icon: Baby, color: "bg-teal-100", iconColor: "text-teal-500" },
+  { to: "/love-letter-generator", label: "Love Letters", icon: Send, color: "bg-sky-100", iconColor: "text-sky-500" },
+  { to: "/relationship-timeline", label: "Timeline", icon: Calendar, color: "bg-emerald-100", iconColor: "text-emerald-500" },
+  { to: "/love-poetry", label: "Love Poetry", icon: Feather, color: "bg-fuchsia-100", iconColor: "text-fuchsia-500" },
 ];
 
 const mobileOnlyLinks = [
-  { to: "/blog", label: "Blog", desc: "Love & relationship articles", icon: BookOpen },
-  { to: "/about", label: "About Us", desc: "Learn about us", icon: Info },
+  { to: "/blog", label: "Blog", icon: BookOpen },
+  { to: "/about", label: "About Us", icon: Info },
 ];
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [toolsOpen, setToolsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [canScrollLeft, setCanScrollLeft] = useState(false);
+  const [canScrollRight, setCanScrollRight] = useState(true);
+  const scrollRef = useRef<HTMLDivElement>(null);
   const location = useLocation();
-
-  const isToolActive = allTools.some(t => t.to === location.pathname);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8);
@@ -39,167 +38,151 @@ const Header = () => {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  const checkScroll = () => {
+    const el = scrollRef.current;
+    if (!el) return;
+    setCanScrollLeft(el.scrollLeft > 8);
+    setCanScrollRight(el.scrollLeft < el.scrollWidth - el.clientWidth - 8);
+  };
+
+  useEffect(() => {
+    const el = scrollRef.current;
+    if (!el) return;
+    checkScroll();
+    el.addEventListener("scroll", checkScroll, { passive: true });
+    return () => el.removeEventListener("scroll", checkScroll);
+  }, []);
+
+  const scrollBy = (dir: "left" | "right") => {
+    scrollRef.current?.scrollBy({ left: dir === "left" ? -240 : 240, behavior: "smooth" });
+  };
+
   return (
     <header
       className={`w-full sticky top-0 z-50 bg-white transition-shadow duration-300 ${
-        scrolled ? "shadow-md" : "shadow-sm border-b border-rose-100"
+        scrolled ? "shadow-md" : "shadow-sm"
       }`}
     >
-      <div className="flex items-center justify-between h-16 px-4 lg:px-8 max-w-7xl mx-auto">
+      {/* ── Top bar ── */}
+      <div className="border-b border-gray-100">
+        <div className="flex items-center justify-between h-16 px-4 lg:px-8 max-w-7xl mx-auto">
 
-        {/* Hamburger (mobile) */}
-        <button
-          className="md:hidden p-2 text-rose-600 hover:bg-rose-50 rounded-lg transition-colors mr-1"
-          onClick={() => setIsOpen(!isOpen)}
-          aria-label={isOpen ? "Close menu" : "Open menu"}
-        >
-          {isOpen ? <X size={22} /> : <Menu size={22} />}
-        </button>
-
-        {/* Logo */}
-        <Link to="/" className="flex items-center gap-2.5" onClick={() => setIsOpen(false)}>
-          <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-rose-500 to-rose-700 flex items-center justify-center shadow-sm overflow-hidden">
-            <img src={logo} alt="Love Calculator Logo" className="w-7 h-7 object-contain" />
-          </div>
-          <div className="flex flex-col leading-none">
-            <span className="font-bold text-gray-900 text-[15px] tracking-tight">Love Calculator</span>
-            <span className="text-rose-500 text-[10px] font-semibold tracking-wider uppercase hidden sm:block">Free Love Tools</span>
-          </div>
-        </Link>
-
-        {/* Desktop Nav */}
-        <nav className="hidden md:flex items-center gap-1 ml-auto text-sm">
-
-          {/* All Tools mega-menu */}
-          <div
-            className="relative"
-            onMouseEnter={() => setToolsOpen(true)}
-            onMouseLeave={() => setToolsOpen(false)}
+          {/* Hamburger (mobile only) */}
+          <button
+            className="md:hidden p-2 text-rose-600 hover:bg-rose-50 rounded-lg transition-colors mr-1"
+            onClick={() => setIsOpen(!isOpen)}
+            aria-label={isOpen ? "Close menu" : "Open menu"}
           >
-            <button
-              className={`flex items-center gap-2 px-4 py-2 rounded-full font-semibold whitespace-nowrap transition-all duration-200 text-sm ${
-                isToolActive
-                  ? "bg-rose-600 text-white shadow-sm shadow-rose-200"
-                  : "text-gray-700 hover:bg-rose-50 hover:text-rose-600 border border-gray-200 hover:border-rose-200"
+            {isOpen ? <X size={22} /> : <Menu size={22} />}
+          </button>
+
+          {/* Logo */}
+          <Link to="/" className="flex items-center gap-2.5" onClick={() => setIsOpen(false)}>
+            <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-rose-500 to-rose-700 flex items-center justify-center shadow-sm overflow-hidden">
+              <img src={logo} alt="Love Calculator Logo" className="w-7 h-7 object-contain" />
+            </div>
+            <div className="flex flex-col leading-none">
+              <span className="font-bold text-gray-900 text-[15px] tracking-tight">Love Calculator</span>
+              <span className="text-rose-500 text-[10px] font-semibold tracking-wider uppercase hidden sm:block">Free Love Tools</span>
+            </div>
+          </Link>
+
+          {/* Desktop right nav */}
+          <nav className="hidden md:flex items-center gap-1 ml-auto text-sm">
+            <Link
+              to="/blog"
+              className={`flex items-center gap-1.5 px-3.5 py-2 rounded-full font-medium whitespace-nowrap transition-all duration-200 text-sm ${
+                location.pathname === "/blog" || location.pathname.startsWith("/blog/")
+                  ? "bg-rose-600 text-white shadow-sm"
+                  : "text-gray-700 hover:bg-rose-50 hover:text-rose-600"
               }`}
             >
-              <LayoutGrid size={14} />
-              All Tools
-              <ChevronDown
-                size={13}
-                className={`transition-transform duration-200 ${toolsOpen ? "rotate-180" : ""}`}
-              />
-            </button>
+              <BookOpen size={13} />
+              Blog
+            </Link>
 
-            {toolsOpen && (
-              <div className="absolute left-0 top-full pt-2 z-50">
-                <div className="w-[520px] bg-white rounded-2xl shadow-2xl border border-gray-100 overflow-hidden">
+            <Link
+              to="/about"
+              className={`flex items-center gap-1.5 px-3.5 py-2 rounded-full font-medium whitespace-nowrap transition-all duration-200 text-sm ${
+                location.pathname === "/about"
+                  ? "bg-rose-600 text-white shadow-sm"
+                  : "text-gray-700 hover:bg-rose-50 hover:text-rose-600"
+              }`}
+            >
+              <Info size={13} />
+              About
+            </Link>
 
-                  {/* Mega-menu header */}
-                  <div className="px-5 py-3.5 flex items-center justify-between bg-gradient-to-r from-rose-50 to-pink-50 border-b border-rose-100">
-                    <div>
-                      <p className="text-gray-900 font-bold text-sm">All Love Tools</p>
-                      <p className="text-gray-500 text-xs mt-0.5">10 free tools to explore your love life</p>
-                    </div>
-                    <div className="flex items-center gap-1">
-                      {["bg-rose-300", "bg-rose-400", "bg-rose-500"].map((c, i) => (
-                        <div key={i} className={`w-2 h-2 rounded-full ${c}`} />
-                      ))}
-                    </div>
-                  </div>
-
-                  {/* 2×5 tool grid */}
-                  <div className="grid grid-cols-2 gap-1.5 p-3">
-                    {allTools.map((tool) => {
-                      const active = location.pathname === tool.to;
-                      return (
-                        <Link
-                          key={tool.to}
-                          to={tool.to}
-                          className={`flex items-center gap-3 px-3.5 py-3 rounded-xl transition-all duration-150 group ${
-                            active ? "bg-rose-50 ring-1 ring-rose-200" : "hover:bg-gray-50"
-                          }`}
-                          onClick={() => setToolsOpen(false)}
-                        >
-                          <div className={`w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0 transition-all duration-150 ${
-                            active ? "bg-rose-500" : `${tool.color} group-hover:scale-105`
-                          }`}>
-                            <tool.icon size={16} className={active ? "text-white" : tool.iconColor} />
-                          </div>
-                          <div className="min-w-0">
-                            <p className={`text-xs font-semibold leading-tight ${
-                              active ? "text-rose-600" : "text-gray-800 group-hover:text-rose-600"
-                            } transition-colors`}>
-                              {tool.label}
-                            </p>
-                            <p className="text-[10px] text-gray-400 mt-0.5 leading-tight">{tool.desc}</p>
-                          </div>
-                        </Link>
-                      );
-                    })}
-                  </div>
-
-                  {/* Footer */}
-                  <div className="px-5 py-3 border-t border-gray-100 bg-gray-50/80 flex items-center justify-between">
-                    <Link
-                      to="/about"
-                      className="text-xs text-gray-500 hover:text-rose-600 transition-colors font-medium flex items-center gap-1.5"
-                      onClick={() => setToolsOpen(false)}
-                    >
-                      <Info size={11} /> About Us
-                    </Link>
-                    <span className="text-xs text-gray-200">|</span>
-                    <Link
-                      to="/blog"
-                      className="text-xs font-semibold text-rose-500 hover:text-rose-700 transition-colors"
-                      onClick={() => setToolsOpen(false)}
-                    >
-                      Read our Blog →
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            )}
-          </div>
-
-          {/* Blog link */}
-          <Link
-            to="/blog"
-            className={`flex items-center gap-1.5 px-3.5 py-2 rounded-full font-medium whitespace-nowrap transition-all duration-200 text-sm ${
-              location.pathname === "/blog" || location.pathname.startsWith("/blog/")
-                ? "bg-rose-600 text-white shadow-sm shadow-rose-200"
-                : "text-gray-700 hover:bg-rose-50 hover:text-rose-600"
-            }`}
-          >
-            <BookOpen size={13} />
-            Blog
-          </Link>
-
-          {/* About link */}
-          <Link
-            to="/about"
-            className={`flex items-center gap-1.5 px-3.5 py-2 rounded-full font-medium whitespace-nowrap transition-all duration-200 text-sm ${
-              location.pathname === "/about"
-                ? "bg-rose-600 text-white shadow-sm shadow-rose-200"
-                : "text-gray-700 hover:bg-rose-50 hover:text-rose-600"
-            }`}
-          >
-            <Info size={13} />
-            About
-          </Link>
-
-          {/* CTA */}
-          <Link
-            to="/"
-            className="ml-2 flex items-center gap-1.5 px-4 py-2 rounded-full bg-gradient-to-r from-rose-500 to-rose-600 text-white text-sm font-semibold shadow-sm hover:shadow-rose-200 hover:from-rose-600 hover:to-rose-700 transition-all duration-200"
-          >
-            <Heart size={13} fill="white" />
-            Try Now
-          </Link>
-        </nav>
+            <Link
+              to="/"
+              className="ml-2 flex items-center gap-1.5 px-4 py-2 rounded-full bg-gradient-to-r from-rose-500 to-rose-600 text-white text-sm font-semibold shadow-sm hover:from-rose-600 hover:to-rose-700 transition-all duration-200"
+            >
+              <Heart size={13} fill="white" />
+              Try Now
+            </Link>
+          </nav>
+        </div>
       </div>
 
-      {/* Mobile Drawer */}
+      {/* ── Tools scroll strip (desktop only) ── */}
+      <div className="hidden md:block bg-white border-b border-gray-100 relative">
+        {/* Left fade + arrow */}
+        {canScrollLeft && (
+          <div className="absolute left-0 top-0 bottom-0 z-10 flex items-center">
+            <div className="w-10 h-full bg-gradient-to-r from-white to-transparent" />
+            <button
+              onClick={() => scrollBy("left")}
+              className="absolute left-1 bg-white border border-gray-200 rounded-full shadow-sm w-7 h-7 flex items-center justify-center text-gray-500 hover:text-rose-600 hover:border-rose-200 transition-all"
+            >
+              <ChevronLeft size={14} />
+            </button>
+          </div>
+        )}
+
+        {/* Scrollable tools row */}
+        <div
+          ref={scrollRef}
+          className="flex items-center gap-1 px-4 lg:px-8 py-2 overflow-x-auto max-w-7xl mx-auto"
+          style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+        >
+          {allTools.map((tool) => {
+            const active = location.pathname === tool.to;
+            return (
+              <Link
+                key={tool.to}
+                to={tool.to}
+                className={`flex items-center gap-2 px-3.5 py-1.5 rounded-full whitespace-nowrap text-xs font-semibold transition-all duration-150 flex-shrink-0 ${
+                  active
+                    ? "bg-rose-600 text-white shadow-sm"
+                    : "text-gray-600 hover:bg-rose-50 hover:text-rose-600 border border-gray-200 hover:border-rose-200"
+                }`}
+              >
+                <div className={`w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 ${
+                  active ? "bg-white/20" : tool.color
+                }`}>
+                  <tool.icon size={11} className={active ? "text-white" : tool.iconColor} />
+                </div>
+                {tool.label}
+              </Link>
+            );
+          })}
+        </div>
+
+        {/* Right fade + arrow */}
+        {canScrollRight && (
+          <div className="absolute right-0 top-0 bottom-0 z-10 flex items-center justify-end">
+            <div className="w-10 h-full bg-gradient-to-l from-white to-transparent" />
+            <button
+              onClick={() => scrollBy("right")}
+              className="absolute right-1 bg-white border border-gray-200 rounded-full shadow-sm w-7 h-7 flex items-center justify-center text-gray-500 hover:text-rose-600 hover:border-rose-200 transition-all"
+            >
+              <ChevronRight size={14} />
+            </button>
+          </div>
+        )}
+      </div>
+
+      {/* ── Mobile Drawer ── */}
       {isOpen && (
         <>
           <div
