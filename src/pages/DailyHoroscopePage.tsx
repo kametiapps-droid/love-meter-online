@@ -15,6 +15,15 @@ const DailyHoroscopePage = () => {
         title="Daily Love Horoscope - Free Zodiac Reading for Today"
         description="Read your free daily love horoscope. Get personalized zodiac predictions for romance, relationships, and love life based on your star sign."
         path="/daily-horoscope"
+        keywords="daily love horoscope, zodiac horoscope today, love prediction, star sign horoscope, free horoscope, daily zodiac reading"
+        dateModified="2026-05-25"
+        faqSchema={[
+          { question: "Is the daily love horoscope updated every day?", answer: "Yes! Each reading is generated fresh daily for all 12 zodiac signs. Check back every morning for a new prediction about your love energy, lucky number, and best romantic match of the day." },
+          { question: "How do I find my horoscope?", answer: "Simply select your zodiac sign from the list and your personalized daily love horoscope will appear instantly. Your reading includes a love forecast, lucky number, best match sign, and actionable romantic advice." },
+          { question: "Is the horoscope accurate?", answer: "Our horoscopes are inspired by traditional astrology principles and are designed for entertainment and reflection. While not scientifically proven, many people find the themes resonate and encourage them to be more intentional in their relationships." },
+          { question: "What is a love lucky number?", answer: "Your daily lucky number is a fun astrological detail meant to add a little extra magic to your day. Some people watch for it in dates, times, or addresses as a positive sign for their love life." },
+          { question: "Is the daily horoscope free?", answer: "Yes, completely free! Read your daily love horoscope for any of the 12 zodiac signs anytime, with no registration or payment needed." },
+        ]}
       />
       <FloatingHearts />
       <Header />

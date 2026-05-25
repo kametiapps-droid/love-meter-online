@@ -15,8 +15,15 @@ const ZodiacCompatibilityPage = () => {
         title="Zodiac Compatibility - Check Your Star Sign Love Match"
         description="Discover your zodiac love compatibility. Find out which star signs are your best match and explore astrological relationship insights for free."
         path="/zodiac-compatibility"
-        keywords="zodiac compatibility, star sign compatibility, astrology love match, zodiac love, horoscope compatibility"
-        dateModified="2026-04-09"
+        keywords="zodiac compatibility, star sign compatibility, astrology love match, zodiac love, horoscope compatibility, zodiac signs love"
+        dateModified="2026-05-25"
+        faqSchema={[
+          { question: "Which zodiac signs are most compatible?", answer: "Signs of the same element pair well: Fire (Aries, Leo, Sagittarius), Earth (Taurus, Virgo, Capricorn), Air (Gemini, Libra, Aquarius), and Water (Cancer, Scorpio, Pisces). Classic high-compatibility pairings include Aries & Leo, Taurus & Virgo, Gemini & Libra, and Scorpio & Pisces." },
+          { question: "Is zodiac compatibility accurate?", answer: "Zodiac compatibility is based on traditional astrology and is intended for entertainment and self-reflection. Real relationship compatibility depends on communication, shared values, and mutual respect. Use it as a fun and insightful starting point!" },
+          { question: "What are the 4 elements in astrology?", answer: "The four elements are Fire (bold & passionate), Earth (stable & practical), Air (intellectual & communicative), and Water (emotional & intuitive). Each element governs three zodiac signs and shapes how they approach love and relationships." },
+          { question: "Can incompatible signs have a great relationship?", answer: "Absolutely. Astrology highlights tendencies, not destinies. Many couples with challenging sign combinations thrive because of strong communication, mutual respect, and genuine effort. Opposite signs often create powerful, balancing partnerships." },
+          { question: "Is the zodiac compatibility checker free?", answer: "Yes, completely free! Simply select your zodiac sign and your partner's sign, and you'll instantly see your compatibility score and a detailed description. No sign-up or payment required." },
+        ]}
       />
       <FloatingHearts />
       <Header />

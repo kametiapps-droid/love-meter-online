@@ -15,6 +15,15 @@ const LoveLetterPage = () => {
         title="Love Letter Generator - Write Romantic Letters Instantly"
         description="Create beautiful, personalized love letters with our free Love Letter Generator. Express your feelings with romantic words crafted just for you."
         path="/love-letter-generator"
+        keywords="love letter generator, write love letter, romantic letter, love message generator, free love letter, personalized love letter"
+        dateModified="2026-05-25"
+        faqSchema={[
+          { question: "How do I generate a love letter?", answer: "Select your preferred tone (romantic, sweet, poetic, or passionate), enter the names, and click Generate. The tool creates a unique, heartfelt love letter for you instantly — ready to copy, share, or personalise further." },
+          { question: "Is the love letter generator free?", answer: "Yes, completely free! Generate as many letters as you like with no account or payment required. Each one is uniquely crafted based on your selected settings." },
+          { question: "Can I edit or personalise the letter?", answer: "Absolutely. The generated letter is a starting point — copy it and add your own personal memories, inside jokes, and specific details to make it truly one-of-a-kind. Adding your own touch always makes it more meaningful." },
+          { question: "Can I save or print my love letter?", answer: "Yes! Use the copy button to save your letter to clipboard, then paste it into any app, email, or document. You can also print it directly from your browser for a handwritten-feel keepsake." },
+          { question: "What occasions can I use the love letter for?", answer: "The generator works for any romantic occasion — Valentine's Day, anniversaries, birthdays, just because moments, long-distance relationship notes, proposals, or simply to tell someone how you feel." },
+        ]}
       />
       <FloatingHearts />
       <Header />

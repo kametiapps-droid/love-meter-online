@@ -15,6 +15,15 @@ const CoupleNameGeneratorPage = () => {
         title="Couple Name Generator - Create Fun Mashup Names for Couples"
         description="Generate fun celebrity-style couple names by combining two names. Create your unique relationship nickname with our free Couple Name Generator."
         path="/couple-name-generator"
+        keywords="couple name generator, ship name generator, couple nickname, celebrity couple name, relationship name, mashup name"
+        dateModified="2026-05-25"
+        faqSchema={[
+          { question: "How does the couple name generator work?", answer: "Enter both partners' names and the generator blends them together to create unique couple names — also known as ship names. It combines syllables, sounds, and letters from both names to produce creative and fun results." },
+          { question: "What is a ship name?", answer: "A ship name (or couple name) is a portmanteau of two people's names merged into one — popularised by celebrity couples like 'Brangelina' (Brad + Angelina). It's a fun way for couples to have their own unique shared identity." },
+          { question: "Can I generate multiple couple names?", answer: "Yes! The generator produces several name options from different blending styles. Pick your favourite or try different name combinations to find the one that feels most like 'you' as a couple." },
+          { question: "Are the generated names unique?", answer: "The generated names are based on the specific combination of the two names you enter. The same names will always produce the same results, so you can always come back to find your couple name." },
+          { question: "Is the couple name generator free?", answer: "100% free with no sign-up needed. Generate as many couple names as you like!" },
+        ]}
       />
       <FloatingHearts />
       <Header />

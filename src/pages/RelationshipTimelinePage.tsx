@@ -15,6 +15,15 @@ const RelationshipTimelinePage = () => {
         title="Relationship Timeline - Track Your Love Journey Together"
         description="Create and visualize your relationship timeline. Track milestones, anniversaries, and special moments in your love story."
         path="/relationship-timeline"
+        keywords="relationship timeline, love milestones, couple timeline, anniversary tracker, relationship journey, love story timeline"
+        dateModified="2026-05-25"
+        faqSchema={[
+          { question: "What is a relationship timeline?", answer: "A relationship timeline is a visual record of the key milestones in your love story — from your first date and first kiss to your anniversary, moving in together, and beyond. It's a beautiful way to celebrate how far you've come as a couple." },
+          { question: "How do I create my relationship timeline?", answer: "Enter your relationship start date and the tool will automatically calculate your milestones. You can add custom events to personalise the timeline with your own special moments and memories." },
+          { question: "Can I share my relationship timeline?", answer: "Yes! Once generated, you can share your timeline with your partner or on social media to celebrate your love story with friends and family." },
+          { question: "Is the relationship timeline free?", answer: "Completely free. Create and explore as many timelines as you like with no sign-up required." },
+          { question: "What milestones does the timeline include?", answer: "The timeline includes common milestones like your first date, first month, 100 days, six months, one year, and beyond. You can also mark personal milestones that are unique to your relationship." },
+        ]}
       />
       <FloatingHearts />
       <Header />

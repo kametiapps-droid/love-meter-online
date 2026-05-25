@@ -15,6 +15,15 @@ const LoveFortuneBallPage = () => {
         title="Love Fortune Ball - Ask a Love Question & Get Your Answer"
         description="Shake the magic Love Fortune Ball and get instant answers to your love questions. A fun, mystical love prediction tool for entertainment."
         path="/love-fortune-ball"
+        keywords="love fortune ball, love prediction, magic 8 ball love, love question answer, will he love me, love fortune teller"
+        dateModified="2026-05-25"
+        faqSchema={[
+          { question: "How does the Love Fortune Ball work?", answer: "Think of your love question, then shake or click the fortune ball. It randomly selects from a set of mystical responses — yes, no, maybe, and everything in between. It's a modern take on the classic Magic 8-Ball, designed just for love questions!" },
+          { question: "What kind of questions should I ask?", answer: "Ask yes/no style love questions for best results — like 'Does he like me?', 'Should I text her first?', or 'Are we meant to be together?' The ball responds best to specific, closed questions about your romantic life." },
+          { question: "Is the fortune ball prediction accurate?", answer: "The Love Fortune Ball is purely for entertainment! Responses are randomly selected and shouldn't be taken as actual advice. Use it for fun, laughs, and a little playful love magic — real decisions should come from your heart." },
+          { question: "Can I ask the same question multiple times?", answer: "Yes! Shake the ball as many times as you like. If you get different answers, it's all part of the fun — the cosmos are keeping you in suspense!" },
+          { question: "Is the Love Fortune Ball free?", answer: "Completely free — shake it as many times as you want with no sign-up or payment required." },
+        ]}
       />
       <FloatingHearts />
       <Header />

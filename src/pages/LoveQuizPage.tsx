@@ -15,6 +15,15 @@ const LoveQuizPage = () => {
         title="Love Quiz - How Strong Is Your Relationship? Take the Test"
         description="Take our fun Love Quiz to discover your relationship style and how strong your bond really is. Free personality-based love test with instant results."
         path="/love-quiz"
+        keywords="love quiz, relationship quiz, love style quiz, love personality test, how strong is your relationship, free love test"
+        dateModified="2026-05-25"
+        faqSchema={[
+          { question: "What is the Love Style Quiz?", answer: "The Love Style Quiz is a fun personality test that helps you discover how you express and experience love in relationships. Based on your answers, it reveals your unique romantic style and what you need to feel loved and secure." },
+          { question: "How many questions are in the quiz?", answer: "The quiz is short and fun — designed to be completed in just a few minutes. Each question is carefully crafted to reveal genuine insights about your approach to love without taking up too much of your time." },
+          { question: "What are the different love styles?", answer: "The quiz identifies several romantic personalities — from passionate romantics and steady loyalists to independent adventurers and deep emotional connectors. Each style comes with strengths, needs, and tips for better relationships." },
+          { question: "Can my partner and I take the quiz together?", answer: "Absolutely! Taking the quiz separately and then comparing your love styles can be a great conversation starter. Understanding each other's romantic needs leads to better communication and a stronger bond." },
+          { question: "Is the Love Quiz free?", answer: "Yes, 100% free. Take it as many times as you like — no sign-up, no payment, no hidden fees." },
+        ]}
       />
       <FloatingHearts />
       <Header />

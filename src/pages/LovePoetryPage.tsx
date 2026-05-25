@@ -112,6 +112,15 @@ const LovePoetryPage = () => {
         title="Love Poetry - Beautiful Romantic Poems & Verses"
         description="Read beautiful love poems and romantic verses. Explore collections of poetry about eternal love, heartbreak, devotion, and passion."
         path="/love-poetry"
+        keywords="love poetry, romantic poems, love poems, short love poems, beautiful poetry, two line poems, love verses"
+        dateModified="2026-05-25"
+        faqSchema={[
+          { question: "Can I share these love poems?", answer: "Absolutely! These poems are meant to be shared with your loved ones. Copy them into a text message, write them in a greeting card, post them on social media, or whisper them to someone special. Love is meant to be expressed and shared freely." },
+          { question: "What makes two-line poems special?", answer: "Two-line poems, or couplets, are powerful because they distill complex emotions into their purest essence. Every word must earn its place, making each line impactful and memorable. They're perfect for quick emotional connections and easy to remember and share." },
+          { question: "Are these poems original?", answer: "Yes, all the love poems in this collection are original compositions created specifically for Love Calculator. They draw inspiration from classical poetry traditions while expressing timeless themes of love, passion, devotion, and longing in a fresh and contemporary voice." },
+          { question: "How can I use these poems for my partner?", answer: "You can write them inside a love letter, include them in a Valentine's Day card, send them as a good morning text, post them on social media dedicated to your partner, engrave them on a gift, or simply read them aloud during a romantic dinner." },
+          { question: "What are the best occasions for love poetry?", answer: "Love poetry is perfect for Valentine's Day, anniversaries, birthdays, weddings, engagement celebrations, date nights, or simply any ordinary day when you want to make someone feel extraordinarily loved and appreciated." },
+        ]}
       />
       <div className="min-h-screen flex flex-col romantic-gradient-bg relative overflow-hidden">
         <Header />

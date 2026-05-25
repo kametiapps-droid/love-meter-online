@@ -15,6 +15,15 @@ const KidsNameGeneratorPage = () => {
         title="Kids Name Generator - Baby Name Ideas Based on Astrology"
         description="Find the perfect baby name with our Kids Name Generator. Get personalized name suggestions based on birth dates and zodiac astrology."
         path="/kids-name-generator"
+        keywords="baby name generator, kids name generator, zodiac baby names, astrology baby names, unique baby names, name ideas for baby"
+        dateModified="2026-05-25"
+        faqSchema={[
+          { question: "How does the baby name generator work?", answer: "Enter the parents' names and optionally select a zodiac sign or birth month preference. The generator suggests baby names that blend the parents' names and align with the chosen zodiac sign's traits and traditional meanings." },
+          { question: "Are the names based on real astrology?", answer: "The suggestions are inspired by zodiac sign traits and traditional name meanings that align with each sign's characteristics. For example, Aries names tend to reflect boldness and leadership, while Pisces names evoke creativity and sensitivity." },
+          { question: "How many baby names does it suggest?", answer: "The generator provides multiple name suggestions across different styles — traditional, modern, unique, and culturally diverse. Each suggestion includes the name's meaning for extra inspiration." },
+          { question: "Can I use these names for my child?", answer: "Absolutely! All suggestions are real names suitable for use. They're presented as inspiration — the final choice is always yours. Consider the meaning, how it sounds with your surname, and whether it feels right for your family." },
+          { question: "Is the kids name generator free?", answer: "Yes, completely free! Explore as many zodiac sign and name combinations as you like with no sign-up required." },
+        ]}
       />
       <FloatingHearts />
       <Header />
