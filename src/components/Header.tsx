@@ -4,6 +4,7 @@ import { useState, useEffect, useRef } from "react";
 import {
   Menu, X, Heart, Stars, ClipboardList, Sun, BookOpen,
   Sparkles, Baby, Send, Calendar, Feather, Info, ChevronLeft, ChevronRight,
+  CalendarDays, Wand2,
 } from "lucide-react";
 
 const allTools = [
@@ -17,6 +18,8 @@ const allTools = [
   { to: "/love-letter-generator", label: "Love Letters", icon: Send },
   { to: "/relationship-timeline", label: "Timeline", icon: Calendar },
   { to: "/love-poetry", label: "Love Poetry", icon: Feather },
+  { to: "/date-calculator", label: "Date Calculator", icon: CalendarDays },
+  { to: "/stylish-name-generator", label: "Stylish Names", icon: Wand2 },
 ];
 
 const mobileOnlyLinks = [
@@ -31,6 +34,10 @@ const Header = () => {
   const [canScrollRight, setCanScrollRight] = useState(true);
   const scrollRef = useRef<HTMLDivElement>(null);
   const location = useLocation();
+
+  useEffect(() => {
+    setIsOpen(false);
+  }, [location]);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8);

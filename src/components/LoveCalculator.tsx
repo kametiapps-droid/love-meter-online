@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import { Heart, Sparkles, Share2, RotateCcw, Download } from "lucide-react";
+import { Heart, Sparkles, Share2, RotateCcw, Download, Copy, MessageCircle, Twitter, Facebook, Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { toast } from "sonner";
@@ -196,6 +196,7 @@ const LoveCalculator = () => {
   const [showResult, setShowResult] = useState(false);
   const [isSharing, setIsSharing] = useState(false);
   const [confetti, setConfetti] = useState(false);
+  const [showSharePanel, setShowSharePanel] = useState(false);
   const [factIndex, setFactIndex] = useState(0);
   const cardRef = useRef<HTMLDivElement>(null);
 
@@ -231,7 +232,30 @@ const LoveCalculator = () => {
     }, 1500);
   };
 
-  const reset = () => { setName1(""); setName2(""); setResult(null); setShowResult(false); setConfetti(false); };
+  const reset = () => { setName1(""); setName2(""); setResult(null); setShowResult(false); setConfetti(false); setShowSharePanel(false); };
+
+  const getShareText = () => {
+    if (result === null) return "";
+    const { message, rank } = getCompatibilityMessage(result);
+    return buildLoveCalculatorShareText({ message, name1, name2, rank, result });
+  };
+
+  const shareWhatsApp = () => {
+    window.open(`https://wa.me/?text=${encodeURIComponent(getShareText())}`, "_blank");
+  };
+  const shareTwitter = () => {
+    window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(getShareText())}`, "_blank");
+  };
+  const shareFacebook = () => {
+    window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent("https://lovecalculator.space")}&quote=${encodeURIComponent(getShareText())}`, "_blank");
+  };
+  const shareTelegram = () => {
+    window.open(`https://t.me/share/url?url=${encodeURIComponent("https://lovecalculator.space")}&text=${encodeURIComponent(getShareText())}`, "_blank");
+  };
+  const copyShareText = async () => {
+    const copied = await copyTextSafely(getShareText());
+    toast.success(copied ? "Copied to clipboard! 📋" : "Could not copy.");
+  };
 
   const shareResult = async () => {
     if (result === null) return;
@@ -683,27 +707,65 @@ const LoveCalculator = () => {
                 <p className="text-sm text-emerald-800 leading-relaxed">{fact}</p>
               </div>
 
-              {/* Action Buttons */}
-              <div className="flex flex-wrap gap-3 justify-center pt-1">
-                <Button
-                  onClick={shareResult} disabled={isSharing}
-                  className="rounded-xl bg-primary hover:bg-primary/90 text-primary-foreground font-semibold"
+              {/* Share Button → opens social panel */}
+              <div className="space-y-3 pt-1">
+                <button
+                  onClick={() => setShowSharePanel(p => !p)}
+                  className="w-full flex items-center justify-center gap-2 h-12 rounded-xl font-semibold text-white transition-all duration-200"
+                  style={{ background: "linear-gradient(135deg,#be123c,#f43f5e)", boxShadow: "0 4px 16px rgba(190,18,60,0.35)" }}
                 >
-                  <Share2 className="w-4 h-4 mr-2" /> Share Result
-                </Button>
-                <Button
-                  onClick={downloadCard}
-                  variant="outline"
-                  className="rounded-xl border-2 border-rose-200 hover:bg-rose-50 text-rose-600 font-semibold"
-                >
-                  <Download className="w-4 h-4 mr-2" /> Download Card
-                </Button>
-                <Button
-                  onClick={reset} variant="outline"
-                  className="rounded-xl border-2 border-muted-foreground/30 hover:bg-muted text-foreground"
-                >
-                  <RotateCcw className="w-4 h-4 mr-2" /> Try Again
-                </Button>
+                  <Share2 className="w-4 h-4" />
+                  Share Result ↓
+                </button>
+
+                {showSharePanel && (
+                  <div className="rounded-xl p-4 space-y-3 animate-fade-in-up" style={{ background: "linear-gradient(135deg,#fff0f3,#fff5f8)", border: "1px solid #ffd6e0" }}>
+                    <p className="text-xs font-bold text-rose-500 uppercase tracking-widest text-center">Share on</p>
+                    <div className="grid grid-cols-2 gap-2">
+                      {/* WhatsApp */}
+                      <button onClick={shareWhatsApp}
+                        className="flex items-center justify-center gap-2 py-2.5 px-3 rounded-xl font-semibold text-white text-sm transition-all active:scale-95"
+                        style={{ background: "#25D366" }}>
+                        <MessageCircle className="w-4 h-4" /> WhatsApp
+                      </button>
+                      {/* Facebook */}
+                      <button onClick={shareFacebook}
+                        className="flex items-center justify-center gap-2 py-2.5 px-3 rounded-xl font-semibold text-white text-sm transition-all active:scale-95"
+                        style={{ background: "#1877F2" }}>
+                        <Facebook className="w-4 h-4" /> Facebook
+                      </button>
+                      {/* Twitter / X */}
+                      <button onClick={shareTwitter}
+                        className="flex items-center justify-center gap-2 py-2.5 px-3 rounded-xl font-semibold text-white text-sm transition-all active:scale-95"
+                        style={{ background: "#000" }}>
+                        <Twitter className="w-4 h-4" /> Twitter / X
+                      </button>
+                      {/* Telegram */}
+                      <button onClick={shareTelegram}
+                        className="flex items-center justify-center gap-2 py-2.5 px-3 rounded-xl font-semibold text-white text-sm transition-all active:scale-95"
+                        style={{ background: "#229ED9" }}>
+                        <Send className="w-4 h-4" /> Telegram
+                      </button>
+                    </div>
+                    {/* Copy text */}
+                    <button onClick={copyShareText}
+                      className="w-full flex items-center justify-center gap-2 py-2.5 rounded-xl font-semibold text-rose-600 text-sm transition-all active:scale-95"
+                      style={{ background: "#fff", border: "1.5px solid #fda4af" }}>
+                      <Copy className="w-4 h-4" /> Copy Result Text
+                    </button>
+                  </div>
+                )}
+
+                <div className="flex gap-3 justify-center">
+                  <Button onClick={downloadCard} variant="outline"
+                    className="rounded-xl border-2 border-rose-200 hover:bg-rose-50 text-rose-600 font-semibold flex-1">
+                    <Download className="w-4 h-4 mr-2" /> Download Card
+                  </Button>
+                  <Button onClick={reset} variant="outline"
+                    className="rounded-xl border-2 border-muted-foreground/30 hover:bg-muted text-foreground flex-1">
+                    <RotateCcw className="w-4 h-4 mr-2" /> Try Again
+                  </Button>
+                </div>
               </div>
 
               <p className="text-xs text-muted-foreground/60 text-center">Share your love bond with friends! 🔥</p>

@@ -4,9 +4,93 @@ import InternalLinks from "@/components/InternalLinks";
 import BlogPreview from "@/components/BlogPreview";
 import SEO from "@/components/SEO";
 import heroImage from "@/assets/poetry-hero.jpg";
-import { Heart, Feather, Sparkles, BookHeart, Copy, Check } from "lucide-react";
+import { Heart, Feather, Sparkles, BookHeart, Copy, Check, Share2 } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
+
+const urduPoems = [
+  { line1: "تیری محبت میری روح میں اترتی چلی گئی،", line2: "ہر دھڑکن تیرے نام سے سنورتی چلی گئی۔" },
+  { line1: "رات خاموش تھی مگر دل بولتا رہا،", line2: "تیرا ذکر میری سانسوں میں گھولتا رہا۔" },
+  { line1: "چاند بھی تیرے حسن کا چراغ لگتا ہے،", line2: "ہر ستارہ تیرا کوئی خواب لگتا ہے۔" },
+  { line1: "میں جب بھی تنہا راستوں پہ چلتا ہوں،", line2: "تیری یادوں کے سائے ساتھ رکھتا ہوں۔" },
+  { line1: "تیری ہنسی دل کا سکون بن جاتی ہے،", line2: "اداس راتوں کی روشنی بن جاتی ہے۔" },
+  { line1: "ہوا جب تیرے شہر سے گزر کر آتی ہے،", line2: "میرے دل میں عجیب خوشبو بسا جاتی ہے۔" },
+  { line1: "میں نے ہر دعا میں تیرا نام لکھا ہے،", line2: "اپنی محبت کو تیرے نام کیا ہے۔" },
+  { line1: "تیری آنکھوں میں عجیب سا جادو رہتا ہے،", line2: "میرا دل ہر وقت بے قابو رہتا ہے۔" },
+  { line1: "محبت شاید ایسی ہی ہوتی ہے،", line2: "ایک شخص میں پوری دنیا ہوتی ہے۔" },
+  { line1: "تیری آواز بارش جیسی لگتی ہے،", line2: "دل کے صحرا پر رحمت جیسی لگتی ہے۔" },
+  { line1: "میں جب آئینہ دیکھتا ہوں،", line2: "تیرے عشق میں خود کو دیکھتا ہوں۔" },
+  { line1: "تیری مسکان صبح جیسی لگتی ہے،", line2: "تیری خاموشی دعا جیسی لگتی ہے۔" },
+  { line1: "دل ہر وقت تیرا انتظار کرتا ہے،", line2: "ہر خواب میں تیرا دیدار کرتا ہے۔" },
+  { line1: "تیری یاد رات بھر جگاتی رہتی ہے،", line2: "میری تنہائی کو سجاتی رہتی ہے۔" },
+  { line1: "میں لفظ ہوں تو معنی تم ہو،", line2: "میں راستہ ہوں تو منزل تم ہو۔" },
+  { line1: "تیری محبت قسمت کا تحفہ لگتی ہے،", line2: "ہر دعا کی خوبصورت وجہ لگتی ہے۔" },
+  { line1: "کبھی بارش میں تیرا عکس دکھائی دیتا ہے،", line2: "کبھی چاند میں تیرا چہرہ دکھائی دیتا ہے۔" },
+  { line1: "تیری باتوں میں عجیب سا سکون ہے،", line2: "تیری چاہت میں مکمل جنون ہے۔" },
+  { line1: "میرا دل صرف تیرا نام لیتا ہے،", line2: "ہر لمحہ تجھے ہی یاد کرتا ہے۔" },
+  { line1: "تیری دوری بھی قریب لگتی ہے،", line2: "تیری خاموشی بھی عجیب لگتی ہے۔" },
+  { line1: "میں جب بھی اداس ہوتا ہوں،", line2: "تیری یادوں کے قریب ہوتا ہوں۔" },
+  { line1: "تیری محبت نے بدل دیا مجھے،", line2: "پہلے سے زیادہ مکمل کر دیا مجھے۔" },
+  { line1: "چاہت وہ نہیں جو سب کو دکھائی دے،", line2: "چاہت وہ ہے جو دل میں چھپی رہے۔" },
+  { line1: "تیری آنکھیں محبت کی کتاب لگتی ہیں،", line2: "ہر نظر ایک جواب لگتی ہے۔" },
+  { line1: "میں وقت روکنا چاہتا ہوں،", line2: "صرف تیرے ساتھ جینا چاہتا ہوں۔" },
+  { line1: "تیرا ذکر میری عادت بن گیا،", line2: "تیرا عشق میری عبادت بن گیا۔" },
+  { line1: "رات کے آخری پہر جب چاند نکلتا ہے،", line2: "میرا دل صرف تیرا نام پڑھتا ہے۔" },
+  { line1: "تیری خوشبو ہواؤں میں بسی رہتی ہے،", line2: "میری ہر دعا تجھ پہ رکی رہتی ہے۔" },
+  { line1: "محبت کی یہ حد بھی عجیب ہوتی ہے،", line2: "ایک شخص پوری زندگی ہوتا ہے۔" },
+  { line1: "میں اگر دریا ہوں تو ساحل تم ہو،", line2: "میں اگر مسافر ہوں تو منزل تم ہو۔" },
+  { line1: "تیری ہنسی میری جان لگتی ہے،", line2: "یہ دنیا تیرے بغیر ویران لگتی ہے۔" },
+  { line1: "تیری ایک جھلک کافی لگتی ہے،", line2: "پوری دنیا ہلکی لگتی ہے۔" },
+  { line1: "دل کو اب کسی اور کی طلب نہیں،", line2: "تیری محبت سے بڑی کوئی وجہ نہیں۔" },
+  { line1: "تیری یادوں کا چراغ جلتا رہتا ہے،", line2: "میرا دل رات بھر دھڑکتا رہتا ہے۔" },
+  { line1: "ہر ستارہ تیری بات کرتا لگتا ہے،", line2: "یہ چاند بھی تیرا ساتھ دیتا لگتا ہے۔" },
+  { line1: "تیری محبت خواب جیسی لگتی ہے،", line2: "ہر دعا کے جواب جیسی لگتی ہے۔" },
+  { line1: "تیری چاہت میری طاقت بن گئی،", line2: "میری خاموش زندگی کی آواز بن گئی۔" },
+  { line1: "تیری باتیں دل میں گھر کر جاتی ہیں،", line2: "اداس روح کو ہنسا جاتی ہیں۔" },
+  { line1: "تیری مسکراہٹ بہار بن جاتی ہے،", line2: "میری ہر رات سنوار جاتی ہے۔" },
+  { line1: "تیری یاد کبھی پرانی نہیں ہوتی،", line2: "محبت کبھی کہانی نہیں ہوتی۔" },
+  { line1: "دل ہر پل تیرا نام لیتا ہے،", line2: "تیری چاہت میں جیتا مرتا ہے۔" },
+  { line1: "تیری آنکھوں میں چاند اترتا لگتا ہے،", line2: "میرا دل وہیں ٹھہرتا لگتا ہے۔" },
+  { line1: "محبت لفظوں میں کہاں مکمل ہوتی ہے،", line2: "یہ تو خاموش دلوں میں زندہ رہتی ہے۔" },
+  { line1: "میں جب بھی دعا کے لئے ہاتھ اٹھاتا ہوں،", line2: "سب سے پہلے تیرا نام لاتا ہوں۔" },
+  { line1: "تیری محبت زندگی لگتی ہے،", line2: "ہر خوشی کی روشنی لگتی ہے۔" },
+  { line1: "تیرا ساتھ میرا سکون بن جائے،", line2: "میری زندگی کا قانون بن جائے۔" },
+  { line1: "تیری یادیں میرا سرمایہ ہیں،", line2: "تیری باتیں میرا سہارا ہیں۔" },
+  { line1: "میری دنیا تیرے گرد گھومتی ہے،", line2: "ہر خوشی تجھ سے شروع ہوتی ہے۔" },
+  { line1: "تیری آنکھوں میں کھو جانا چاہتا ہوں،", line2: "ہمیشہ تیرا ہو جانا چاہتا ہوں۔" },
+  { line1: "چاندنی راتوں میں تیرا ذکر رہتا ہے،", line2: "میری دھڑکن میں تیرا اثر رہتا ہے۔" },
+  { line1: "تیری محبت کا رنگ الگ لگتا ہے،", line2: "ہر موسم تجھ سے خوبصورت لگتا ہے۔" },
+  { line1: "تیری آواز دل کو چھو جاتی ہے،", line2: "خاموش روح کو جگا جاتی ہے۔" },
+  { line1: "تیری محبت دعا بن کر ملی ہے،", line2: "میری قسمت تجھ سے جا ملی ہے۔" },
+  { line1: "یہ عشق شاید کبھی ختم نہ ہو،", line2: "تیرا نام دل سے کبھی کم نہ ہو۔" },
+  { line1: "ہر راستہ تیرے پاس آتا لگتا ہے،", line2: "میرا دل صرف تجھے چاہتا لگتا ہے۔" },
+  { line1: "تیری محبت میری پہچان بن گئی،", line2: "میری ادھوری دنیا کی جان بن گئی۔" },
+  { line1: "تیری یادوں کا ہر لمحہ دل میں اتر جاتا ہے،", line2: "خاموش راتوں میں تیرا نام بکھر جاتا ہے۔" },
+  { line1: "چاندنی جب بھی میرے آنگن میں ٹھہرتی ہے،", line2: "تیرا چہرہ میری آنکھوں میں سنور جاتا ہے۔" },
+  { line1: "تیری ہنسی دل کے زخم بھلا دیتی ہے،", line2: "تیری ایک نظر روح کو سکون دے جاتی ہے۔" },
+  { line1: "تیری آنکھوں میں ایک الگ جہاں لگتا ہے،", line2: "جیسے خوابوں کا کوئی آسمان لگتا ہے۔" },
+  { line1: "میں نے محبت کو تجھ میں مکمل دیکھا ہے،", line2: "ہر احساس کو تیرے دل میں روشن دیکھا ہے۔" },
+  { line1: "تیری خاموشی بھی باتیں کرتی لگتی ہے،", line2: "تیری دوری بھی قریب سی لگتی ہے۔" },
+  { line1: "دل کی دھڑکن میں تیرا نام رہتا ہے،", line2: "ہر خواب میں تیرا سلام رہتا ہے۔" },
+  { line1: "چاہت وہ نہیں جو لفظوں میں بیان ہو،", line2: "چاہت وہ ہے جو خاموشی میں محسوس ہو۔" },
+  { line1: "تیری خوشبو میری سانسوں میں بستی ہے،", line2: "تیری یاد میری راتوں میں جگتی ہے۔" },
+  { line1: "میں نے ہر دعا میں تیرا نام لکھا ہے،", line2: "اپنی محبت کو تیرے نام کیا ہے۔" },
+  { line1: "تیری مسکراہٹ بہار جیسی لگتی ہے،", line2: "تیری آواز ستار جیسی لگتی ہے۔" },
+  { line1: "زندگی کی ہر خوشی تیرے ساتھ اچھی لگتی ہے،", line2: "تیری موجودگی ہر کمی پوری کرتی ہے۔" },
+  { line1: "تیری ایک جھلک دن بنا دیتی ہے،", line2: "تیری یاد رات سجا دیتی ہے۔" },
+  { line1: "محبت اگر عبادت ہے تو تو دعا لگتی ہے،", line2: "میرے دل کی سب سے حسین صدا لگتی ہے۔" },
+  { line1: "تیری محبت نے دل کو بدل دیا ہے،", line2: "ہر درد کو خوبصورت بنا دیا ہے۔" },
+  { line1: "خاموش لمحوں میں تیرا ذکر رہتا ہے،", line2: "میری ہر سوچ میں تیرا عکس رہتا ہے۔" },
+  { line1: "کبھی دور جا کر بھی قریب لگتے ہو،", line2: "میری روح کے سب سے حسین نصیب لگتے ہو۔" },
+  { line1: "تیری محبت قسمت کا تحفہ لگتی ہے،", line2: "میرے دل کی سب سے قیمتی دعا لگتی ہے۔" },
+  { line1: "میں اگر شعر ہوں تو معنی تم ہو،", line2: "میں اگر خواب ہوں تو تعبیر تم ہو۔" },
+  { line1: "دل کی دنیا تیرے نام سے روشن ہے،", line2: "میری ہر خوشی تیرے ہونے سے روشن ہے۔" },
+  { line1: "تیری چاہت نے مجھے جینا سکھایا ہے،", line2: "ہر اندھیرے میں امید جگایا ہے۔" },
+  { line1: "محبت کا سفر تیرے ساتھ خوبصورت ہے،", line2: "ہر لمحہ تیرے نام سے جنت ہے۔" },
+  { line1: "تیرا نام لبوں پر دعا بن کر رہتا ہے،", line2: "میرا دل صرف تیرا پتہ کہتا ہے۔" },
+  { line1: "تیری یادیں میری سب سے بڑی دولت ہیں،", line2: "تیری باتیں میری سب سے خوبصورت عادت ہیں۔" },
+  { line1: "کبھی چاند، کبھی پھول، کبھی بارش لگتے ہو،", line2: "ہر موسم میں تم صرف محبت لگتے ہو۔" },
+];
 
 
 const poems = [
@@ -91,6 +175,49 @@ const poems = [
 ];
 
 const categoryIcons = [Heart, Feather, Sparkles, BookHeart, Heart, Feather];
+
+const UrduPoetryCard = ({ poem, index }: { poem: { line1: string; line2: string }; index: number }) => {
+  const [copied, setCopied] = useState(false);
+  const text = `${poem.line1}\n${poem.line2}`;
+  const copy = async () => {
+    try { await navigator.clipboard.writeText(text); } catch { /* ignore */ }
+    setCopied(true); toast.success("شعر کاپی ہو گیا! 📋"); setTimeout(() => setCopied(false), 2000);
+  };
+  const shareWA = () => window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, "_blank");
+  const colors = ["#be123c","#7c3aed","#d97706","#0891b2","#059669","#9333ea","#dc2626"];
+  const accent = colors[index % colors.length];
+  return (
+    <div className="relative rounded-2xl p-5 transition-all duration-200 hover:scale-[1.01]"
+      style={{ background: "rgba(255,255,255,0.9)", border: `1.5px solid ${accent}22`, boxShadow: `0 4px 20px ${accent}18` }}>
+      <div className="absolute top-2 left-2 w-1.5 h-8 rounded-full" style={{ background: accent }} />
+      <div className="pr-16 pl-4">
+        <p className="text-base leading-relaxed text-gray-800 font-medium text-right" dir="rtl" style={{ fontFamily: "'Noto Nastaliq Urdu', serif", lineHeight: "2.2" }}>
+          {poem.line1}
+        </p>
+        <p className="text-base leading-relaxed text-gray-800 font-medium text-right mt-1" dir="rtl" style={{ fontFamily: "'Noto Nastaliq Urdu', serif", lineHeight: "2.2" }}>
+          {poem.line2}
+        </p>
+      </div>
+      <div className="absolute top-3 right-3 flex gap-1.5">
+        <button onClick={shareWA} title="Share on WhatsApp"
+          className="w-8 h-8 rounded-full flex items-center justify-center transition-colors"
+          style={{ background: "#25D366", color: "#fff" }}>
+          <Share2 className="w-3.5 h-3.5" />
+        </button>
+        <button onClick={copy} title="Copy"
+          className="w-8 h-8 rounded-full flex items-center justify-center transition-colors"
+          style={{ background: copied ? accent : "#f3f4f6", color: copied ? "#fff" : accent }}>
+          {copied ? <Check className="w-3.5 h-3.5" /> : <Copy className="w-3.5 h-3.5" />}
+        </button>
+      </div>
+      <div className="mt-3 flex items-center gap-1 pl-4">
+        <Heart className="w-3 h-3 fill-current" style={{ color: accent }} />
+        <Heart className="w-3 h-3 fill-current opacity-50" style={{ color: accent }} />
+        <Heart className="w-3 h-3 fill-current opacity-25" style={{ color: accent }} />
+      </div>
+    </div>
+  );
+};
 
 const LovePoetryPage = () => {
   const [copiedId, setCopiedId] = useState<string | null>(null);
@@ -193,6 +320,29 @@ const LovePoetryPage = () => {
               </section>
             );
           })}
+
+          {/* Urdu Poetry Section */}
+          <section className="py-12 px-4">
+            <div className="max-w-4xl mx-auto">
+              <div className="text-center mb-10">
+                <div className="inline-flex items-center gap-3 mb-4">
+                  <span className="text-3xl">🌹</span>
+                  <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground">
+                    اردو محبت کے اشعار
+                  </h2>
+                  <span className="text-3xl">🌹</span>
+                </div>
+                <p className="text-muted-foreground text-base max-w-2xl mx-auto" dir="rtl">
+                  محبت کی خوبصورت دو لائنوں میں — کاپی کریں اور اپنے چاہنے والے کو بھیجیں
+                </p>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+                {urduPoems.map((poem, i) => (
+                  <UrduPoetryCard key={i} poem={poem} index={i} />
+                ))}
+              </div>
+            </div>
+          </section>
 
           {/* About Section */}
           <section className="py-12 px-4">

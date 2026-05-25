@@ -52,6 +52,8 @@ const LovePoetryPage = lazy(() => import("./pages/LovePoetryPage"));
 const LoveLetterPage = lazy(() => import("./pages/LoveLetterPage"));
 const RelationshipTimelinePage = lazy(() => import("./pages/RelationshipTimelinePage"));
 const AboutUs = lazy(() => import("./pages/AboutUs"));
+const DateCalculatorPage = lazy(() => import("./pages/DateCalculatorPage"));
+const StylishNameGeneratorPage = lazy(() => import("./pages/StylishNameGeneratorPage"));
 
 const PageLoader = () => (
   <div className="min-h-screen flex items-center justify-center romantic-gradient-bg">
@@ -73,6 +75,8 @@ const App = () => (
             <Route path="/" element={<Index />} />
             <Route path="/love-calculator" element={<LoveCalculatorPage />} />
             <Route path="/love-poetry" element={<LovePoetryPage />} />
+            <Route path="/date-calculator" element={<DateCalculatorPage />} />
+            <Route path="/stylish-name-generator" element={<StylishNameGeneratorPage />} />
             <Route path="/zodiac-compatibility" element={<ZodiacCompatibilityPage />} />
             <Route path="/love-quiz" element={<LoveQuizPage />} />
             <Route path="/daily-horoscope" element={<DailyHoroscopePage />} />
