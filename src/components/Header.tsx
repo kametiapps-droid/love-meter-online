@@ -16,16 +16,16 @@ const mainNavLinks = [
 ];
 
 const moreLinks = [
-  { to: "/love-fortune-ball", label: "Fortune Ball", icon: Sparkles },
-  { to: "/couple-name-generator", label: "Couple Names", icon: Heart },
-  { to: "/kids-name-generator", label: "Kids Names", icon: Baby },
-  { to: "/love-letter-generator", label: "Love Letters", icon: Send },
-  { to: "/relationship-timeline", label: "Timeline", icon: Calendar },
-  { to: "/love-poetry", label: "Poetry", icon: Feather },
-  { to: "/about", label: "About", icon: Info },
+  { to: "/love-fortune-ball", label: "Fortune Ball", desc: "Ask the magic ball", icon: Sparkles },
+  { to: "/couple-name-generator", label: "Couple Names", desc: "Create your ship name", icon: Heart },
+  { to: "/kids-name-generator", label: "Kids Names", desc: "Zodiac baby names", icon: Baby },
+  { to: "/love-letter-generator", label: "Love Letters", desc: "Write romantic letters", icon: Send },
+  { to: "/relationship-timeline", label: "Timeline", desc: "Your love story milestones", icon: Calendar },
+  { to: "/love-poetry", label: "Love Poetry", desc: "Beautiful romantic poems", icon: Feather },
 ];
 
-const allLinks = [...mainNavLinks, ...moreLinks];
+const aboutLink = { to: "/about", label: "About", desc: "Learn about us", icon: Info };
+const allLinks = [...mainNavLinks, ...moreLinks, aboutLink];
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -107,27 +107,71 @@ const Header = () => {
             </button>
 
             {moreOpen && (
-              <div className="absolute right-0 top-full pt-2 z-50">
-                <div className="w-52 bg-white rounded-xl shadow-2xl border border-rose-100 overflow-hidden">
-                  <div className="py-1.5">
+              <div className="absolute right-0 top-full pt-3 z-50">
+                <div className="w-[380px] bg-white rounded-2xl shadow-2xl border border-rose-100/80 overflow-hidden">
+                  {/* Mega-menu header */}
+                  <div className="px-5 py-3.5 flex items-center justify-between" style={{ background: "linear-gradient(135deg, #be123c 0%, #f43f5e 100%)" }}>
+                    <div>
+                      <p className="text-white font-bold text-sm">More Love Tools</p>
+                      <p className="text-white/60 text-xs">Explore all our free tools</p>
+                    </div>
+                    <div className="flex gap-1">
+                      <div className="w-2 h-2 rounded-full bg-white/30" />
+                      <div className="w-2 h-2 rounded-full bg-white/50" />
+                      <div className="w-2 h-2 rounded-full bg-white/80" />
+                    </div>
+                  </div>
+
+                  {/* 2-column grid of tools */}
+                  <div className="grid grid-cols-2 gap-1.5 p-3">
                     {moreLinks.map((link) => {
                       const active = location.pathname === link.to;
                       return (
                         <Link
                           key={link.to}
                           to={link.to}
-                          className={`flex items-center gap-3 px-4 py-2.5 text-sm transition-colors ${
+                          className={`flex items-center gap-3 px-3 py-3 rounded-xl transition-all duration-150 group ${
                             active
-                              ? "bg-rose-50 text-rose-600 font-semibold"
-                              : "text-gray-700 hover:bg-rose-50 hover:text-rose-600"
+                              ? "bg-rose-50 ring-1 ring-rose-200"
+                              : "hover:bg-rose-50/70"
                           }`}
                           onClick={() => setMoreOpen(false)}
                         >
-                          <link.icon size={14} className="text-rose-400 flex-shrink-0" />
-                          {link.label}
+                          <div className={`w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0 transition-colors ${
+                            active
+                              ? "bg-rose-500"
+                              : "bg-rose-100 group-hover:bg-rose-200"
+                          }`}>
+                            <link.icon size={15} className={active ? "text-white" : "text-rose-500"} />
+                          </div>
+                          <div className="min-w-0">
+                            <p className={`text-xs font-semibold leading-tight truncate ${active ? "text-rose-600" : "text-gray-800 group-hover:text-rose-600"}`}>
+                              {link.label}
+                            </p>
+                            <p className="text-[10px] text-gray-400 truncate mt-0.5">{link.desc}</p>
+                          </div>
                         </Link>
                       );
                     })}
+                  </div>
+
+                  {/* Footer link */}
+                  <div className="px-4 py-3 border-t border-gray-100 bg-gray-50/80 flex items-center justify-between">
+                    <Link
+                      to="/about"
+                      className="text-xs text-gray-500 hover:text-rose-600 transition-colors font-medium flex items-center gap-1"
+                      onClick={() => setMoreOpen(false)}
+                    >
+                      <Info size={11} />
+                      About Us
+                    </Link>
+                    <Link
+                      to="/blog"
+                      className="text-xs text-rose-500 hover:text-rose-700 font-semibold transition-colors flex items-center gap-1"
+                      onClick={() => setMoreOpen(false)}
+                    >
+                      Visit Blog →
+                    </Link>
                   </div>
                 </div>
               </div>
