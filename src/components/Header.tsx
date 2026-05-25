@@ -1,6 +1,6 @@
 import logo from "@/assets/logo.png";
 import { Link, useLocation } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import {
   Menu, X, ChevronDown,
   Heart, Stars, ClipboardList, Sun, BookOpen,
@@ -28,40 +28,47 @@ const mobileOnlyLinks = [
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [toolsOpen, setToolsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
 
   const isToolActive = allTools.some(t => t.to === location.pathname);
 
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 8);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
     <header
-      className="w-full sticky top-0 z-50 safe-area-top"
-      style={{ background: "linear-gradient(135deg, #be123c 0%, #e11d48 40%, #f43f5e 100%)" }}
+      className={`w-full sticky top-0 z-50 bg-white transition-shadow duration-300 ${
+        scrolled ? "shadow-md" : "shadow-sm border-b border-rose-100"
+      }`}
     >
-      <div className="absolute bottom-0 left-0 right-0 h-px bg-white/20" />
-
       <div className="flex items-center justify-between h-16 px-4 lg:px-8 max-w-7xl mx-auto">
 
-        {/* Logo */}
-        <div className="flex items-center gap-3">
-          <button
-            className="md:hidden p-1.5 text-white hover:bg-white/15 rounded-lg transition-colors"
-            onClick={() => setIsOpen(!isOpen)}
-            aria-label={isOpen ? "Close menu" : "Open menu"}
-          >
-            {isOpen ? <X size={22} /> : <Menu size={22} />}
-          </button>
+        {/* Hamburger (mobile) */}
+        <button
+          className="md:hidden p-2 text-rose-600 hover:bg-rose-50 rounded-lg transition-colors mr-1"
+          onClick={() => setIsOpen(!isOpen)}
+          aria-label={isOpen ? "Close menu" : "Open menu"}
+        >
+          {isOpen ? <X size={22} /> : <Menu size={22} />}
+        </button>
 
-          <Link to="/" className="flex items-center gap-2.5" onClick={() => setIsOpen(false)}>
-            <img src={logo} alt="Love Calculator Logo" className="w-9 h-9 object-contain drop-shadow-sm" />
-            <div className="flex flex-col leading-none">
-              <span className="font-display text-base font-bold text-white tracking-tight">Love Calculator</span>
-              <span className="text-white/60 text-[10px] font-medium tracking-wider uppercase hidden sm:block">Free Love Tools</span>
-            </div>
-          </Link>
-        </div>
+        {/* Logo */}
+        <Link to="/" className="flex items-center gap-2.5" onClick={() => setIsOpen(false)}>
+          <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-rose-500 to-rose-700 flex items-center justify-center shadow-sm overflow-hidden">
+            <img src={logo} alt="Love Calculator Logo" className="w-7 h-7 object-contain" />
+          </div>
+          <div className="flex flex-col leading-none">
+            <span className="font-bold text-gray-900 text-[15px] tracking-tight">Love Calculator</span>
+            <span className="text-rose-500 text-[10px] font-semibold tracking-wider uppercase hidden sm:block">Free Love Tools</span>
+          </div>
+        </Link>
 
         {/* Desktop Nav */}
-        <nav className="hidden md:flex items-center gap-1 text-sm">
+        <nav className="hidden md:flex items-center gap-1 ml-auto text-sm">
 
           {/* All Tools mega-menu */}
           <div
@@ -72,8 +79,8 @@ const Header = () => {
             <button
               className={`flex items-center gap-2 px-4 py-2 rounded-full font-semibold whitespace-nowrap transition-all duration-200 text-sm ${
                 isToolActive
-                  ? "bg-white text-rose-600 shadow-sm"
-                  : "text-white hover:bg-white/15 border border-white/30"
+                  ? "bg-rose-600 text-white shadow-sm shadow-rose-200"
+                  : "text-gray-700 hover:bg-rose-50 hover:text-rose-600 border border-gray-200 hover:border-rose-200"
               }`}
             >
               <LayoutGrid size={14} />
@@ -85,21 +92,18 @@ const Header = () => {
             </button>
 
             {toolsOpen && (
-              <div className="absolute left-0 top-full pt-3 z-50">
-                <div className="w-[520px] bg-white rounded-2xl shadow-2xl border border-rose-100/80 overflow-hidden">
+              <div className="absolute left-0 top-full pt-2 z-50">
+                <div className="w-[520px] bg-white rounded-2xl shadow-2xl border border-gray-100 overflow-hidden">
 
                   {/* Mega-menu header */}
-                  <div
-                    className="px-5 py-4 flex items-center justify-between"
-                    style={{ background: "linear-gradient(135deg, #be123c 0%, #f43f5e 100%)" }}
-                  >
+                  <div className="px-5 py-3.5 flex items-center justify-between bg-gradient-to-r from-rose-50 to-pink-50 border-b border-rose-100">
                     <div>
-                      <p className="text-white font-bold text-sm">All Love Tools</p>
-                      <p className="text-white/65 text-xs mt-0.5">10 free tools to explore your love life</p>
+                      <p className="text-gray-900 font-bold text-sm">All Love Tools</p>
+                      <p className="text-gray-500 text-xs mt-0.5">10 free tools to explore your love life</p>
                     </div>
-                    <div className="flex items-center gap-1.5">
-                      {[0.3, 0.5, 0.8].map((op, i) => (
-                        <div key={i} className="w-2 h-2 rounded-full" style={{ background: `rgba(255,255,255,${op})` }} />
+                    <div className="flex items-center gap-1">
+                      {["bg-rose-300", "bg-rose-400", "bg-rose-500"].map((c, i) => (
+                        <div key={i} className={`w-2 h-2 rounded-full ${c}`} />
                       ))}
                     </div>
                   </div>
@@ -144,7 +148,7 @@ const Header = () => {
                     >
                       <Info size={11} /> About Us
                     </Link>
-                    <span className="text-xs text-gray-300">|</span>
+                    <span className="text-xs text-gray-200">|</span>
                     <Link
                       to="/blog"
                       className="text-xs font-semibold text-rose-500 hover:text-rose-700 transition-colors"
@@ -163,8 +167,8 @@ const Header = () => {
             to="/blog"
             className={`flex items-center gap-1.5 px-3.5 py-2 rounded-full font-medium whitespace-nowrap transition-all duration-200 text-sm ${
               location.pathname === "/blog" || location.pathname.startsWith("/blog/")
-                ? "bg-white text-rose-600 shadow-sm"
-                : "text-white/85 hover:text-white hover:bg-white/15"
+                ? "bg-rose-600 text-white shadow-sm shadow-rose-200"
+                : "text-gray-700 hover:bg-rose-50 hover:text-rose-600"
             }`}
           >
             <BookOpen size={13} />
@@ -176,12 +180,21 @@ const Header = () => {
             to="/about"
             className={`flex items-center gap-1.5 px-3.5 py-2 rounded-full font-medium whitespace-nowrap transition-all duration-200 text-sm ${
               location.pathname === "/about"
-                ? "bg-white text-rose-600 shadow-sm"
-                : "text-white/85 hover:text-white hover:bg-white/15"
+                ? "bg-rose-600 text-white shadow-sm shadow-rose-200"
+                : "text-gray-700 hover:bg-rose-50 hover:text-rose-600"
             }`}
           >
             <Info size={13} />
             About
+          </Link>
+
+          {/* CTA */}
+          <Link
+            to="/"
+            className="ml-2 flex items-center gap-1.5 px-4 py-2 rounded-full bg-gradient-to-r from-rose-500 to-rose-600 text-white text-sm font-semibold shadow-sm hover:shadow-rose-200 hover:from-rose-600 hover:to-rose-700 transition-all duration-200"
+          >
+            <Heart size={13} fill="white" />
+            Try Now
           </Link>
         </nav>
       </div>
@@ -190,25 +203,24 @@ const Header = () => {
       {isOpen && (
         <>
           <div
-            className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 md:hidden"
+            className="fixed inset-0 bg-black/40 backdrop-blur-sm z-40 md:hidden"
             onClick={() => setIsOpen(false)}
           />
           <nav className="fixed top-0 left-0 w-72 h-full bg-white z-50 shadow-2xl md:hidden flex flex-col">
             {/* Drawer header */}
-            <div
-              className="flex items-center justify-between px-5 py-4 border-b border-rose-100"
-              style={{ background: "linear-gradient(135deg, #be123c 0%, #f43f5e 100%)" }}
-            >
+            <div className="flex items-center justify-between px-5 py-4 border-b border-gray-100 bg-gradient-to-r from-rose-50 to-pink-50">
               <Link to="/" className="flex items-center gap-3" onClick={() => setIsOpen(false)}>
-                <img src={logo} alt="Logo" className="w-9 h-9 object-contain" />
+                <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-rose-500 to-rose-700 flex items-center justify-center shadow-sm overflow-hidden">
+                  <img src={logo} alt="Logo" className="w-7 h-7 object-contain" />
+                </div>
                 <div className="flex flex-col leading-none">
-                  <span className="font-display text-base font-bold text-white">Love Calculator</span>
-                  <span className="text-white/60 text-[10px] font-medium uppercase tracking-wider">Free Love Tools</span>
+                  <span className="font-bold text-gray-900 text-[15px]">Love Calculator</span>
+                  <span className="text-rose-500 text-[10px] font-semibold uppercase tracking-wider">Free Love Tools</span>
                 </div>
               </Link>
               <button
                 onClick={() => setIsOpen(false)}
-                className="p-1.5 text-white/80 hover:text-white hover:bg-white/15 rounded-lg transition-colors"
+                className="p-1.5 text-gray-500 hover:text-rose-600 hover:bg-rose-50 rounded-lg transition-colors"
               >
                 <X size={20} />
               </button>
@@ -267,7 +279,14 @@ const Header = () => {
 
             {/* Drawer footer */}
             <div className="px-5 py-4 border-t border-gray-100 bg-gray-50">
-              <p className="text-xs text-gray-400 text-center">💕 Free love tools for everyone</p>
+              <Link
+                to="/"
+                className="flex items-center justify-center gap-2 w-full py-2.5 rounded-full bg-gradient-to-r from-rose-500 to-rose-600 text-white text-sm font-semibold shadow-sm"
+                onClick={() => setIsOpen(false)}
+              >
+                <Heart size={13} fill="white" />
+                Try Love Calculator
+              </Link>
             </div>
           </nav>
         </>
