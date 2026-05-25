@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Heart, Stars, ClipboardList, Sun, Sparkles, Baby, BookOpen, Send, Calendar } from "lucide-react";
+import { Heart, Stars, ClipboardList, Sun, Sparkles, Baby, BookOpen, Send, Calendar, Feather, CalendarDays, Wand2 } from "lucide-react";
 
 const tools = [
   { path: "/zodiac-compatibility", label: "Zodiac Compatibility", icon: Stars, description: "Check your star sign love match", color: "from-purple-500 to-indigo-500" },
@@ -10,7 +10,10 @@ const tools = [
   { path: "/kids-name-generator", label: "Kids Name Generator", icon: Baby, description: "Find perfect baby names for your family", color: "from-teal-500 to-cyan-500" },
   { path: "/love-letter-generator", label: "Love Letter Generator", icon: Send, description: "Write beautiful romantic letters", color: "from-pink-500 to-fuchsia-500" },
   { path: "/relationship-timeline", label: "Relationship Timeline", icon: Calendar, description: "Create your love story timeline", color: "from-blue-500 to-indigo-500" },
-  { path: "/love-poetry", label: "Love Poetry", icon: BookOpen, description: "Read beautiful romantic poems", color: "from-rose-400 to-pink-500" },
+  { path: "/love-poetry", label: "Love Poetry", icon: Feather, description: "Read beautiful romantic poems", color: "from-rose-400 to-pink-500" },
+  { path: "/date-calculator", label: "Date Calculator", icon: CalendarDays, description: "How long have you been together?", color: "from-emerald-500 to-teal-500" },
+  { path: "/stylish-name-generator", label: "Stylish Name Generator", icon: Wand2, description: "Fancy Unicode name styles for bios", color: "from-fuchsia-500 to-violet-500" },
+  { path: "/blog", label: "Love Blog", icon: BookOpen, description: "Tips, guides & relationship advice", color: "from-orange-400 to-rose-400" },
 ];
 
 const ToolCards = () => {
@@ -18,10 +21,10 @@ const ToolCards = () => {
     <section className="py-12 px-4">
       <div className="max-w-5xl mx-auto">
         <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground text-center mb-3">
-          Explore All Love Tools ❤️
+          Explore All Free Love Tools ❤️
         </h2>
         <p className="text-center text-muted-foreground mb-8 max-w-2xl mx-auto">
-          Discover our complete collection of free romantic tools and calculators
+          12 free romantic tools — calculators, generators, quizzes, poetry & more
         </p>
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4">
           {tools.map((tool) => (

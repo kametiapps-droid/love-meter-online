@@ -35,9 +35,25 @@ const Header = () => {
   const scrollRef = useRef<HTMLDivElement>(null);
   const location = useLocation();
 
+  const closeMenu = () => setIsOpen(false);
+
   useEffect(() => {
-    setIsOpen(false);
-  }, [location]);
+    closeMenu();
+  }, [location.pathname]);
+
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+      document.body.style.touchAction = "none";
+    } else {
+      document.body.style.overflow = "";
+      document.body.style.touchAction = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+      document.body.style.touchAction = "";
+    };
+  }, [isOpen]);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8);
@@ -80,15 +96,11 @@ const Header = () => {
       }}
     >
       {/* ── Top bar ── */}
-      <div
-        style={{
-          borderBottom: "1px solid rgba(255,255,255,0.15)",
-        }}
-      >
+      <div style={{ borderBottom: "1px solid rgba(255,255,255,0.15)" }}>
         <div className="flex items-center h-16 px-4 lg:px-8 max-w-7xl mx-auto">
 
-          {/* Logo — always LEFT */}
-          <Link to="/" className="flex items-center gap-2.5" onClick={() => setIsOpen(false)}>
+          {/* Logo */}
+          <Link to="/" className="flex items-center gap-2.5" onClick={closeMenu}>
             <div
               className="w-10 h-10 rounded-xl flex items-center justify-center overflow-hidden flex-shrink-0"
               style={{
@@ -110,16 +122,15 @@ const Header = () => {
             </div>
           </Link>
 
-          {/* Spacer */}
           <div className="flex-1" />
 
-          {/* Mobile right side: Try Now + Hamburger */}
+          {/* Mobile right side */}
           <div className="flex md:hidden items-center gap-2">
             <Link
               to="/"
               className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-bold whitespace-nowrap"
               style={{ background: "#fff", color: "#be123c", boxShadow: "0 2px 10px rgba(0,0,0,0.12)" }}
-              onClick={() => setIsOpen(false)}
+              onClick={closeMenu}
             >
               <Heart size={11} fill="#be123c" color="#be123c" />
               Try Now
@@ -127,8 +138,9 @@ const Header = () => {
             <button
               className="p-2 rounded-lg transition-colors"
               style={{ color: "rgba(255,255,255,0.9)", background: "rgba(255,255,255,0.12)" }}
-              onClick={() => setIsOpen(!isOpen)}
+              onClick={() => setIsOpen(prev => !prev)}
               aria-label={isOpen ? "Close menu" : "Open menu"}
+              aria-expanded={isOpen}
             >
               {isOpen ? <X size={22} /> : <Menu size={22} />}
             </button>
@@ -160,16 +172,10 @@ const Header = () => {
                 </Link>
               );
             })}
-
-            {/* CTA */}
             <Link
               to="/"
               className="ml-1 flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-bold whitespace-nowrap transition-all duration-200"
-              style={{
-                background: "#fff",
-                color: "#be123c",
-                boxShadow: "0 4px 15px rgba(0,0,0,0.15)",
-              }}
+              style={{ background: "#fff", color: "#be123c", boxShadow: "0 4px 15px rgba(0,0,0,0.15)" }}
               onMouseEnter={e => (e.currentTarget.style.background = "#fef2f2")}
               onMouseLeave={e => (e.currentTarget.style.background = "#fff")}
             >
@@ -182,29 +188,18 @@ const Header = () => {
 
       {/* ── Tools scroll strip (desktop only) ── */}
       <div className="hidden md:block relative">
-        {/* Left fade + arrow */}
         {canScrollLeft && (
           <div className="absolute left-0 top-0 bottom-0 z-10 flex items-center">
-            <div
-              className="w-12 h-full"
-              style={{ background: "linear-gradient(to right, rgba(190,18,60,0.9), transparent)" }}
-            />
+            <div className="w-12 h-full" style={{ background: "linear-gradient(to right, rgba(190,18,60,0.9), transparent)" }} />
             <button
               onClick={() => scrollBy("left")}
               className="absolute left-2 w-7 h-7 flex items-center justify-center rounded-full transition-all"
-              style={{
-                background: "rgba(255,255,255,0.2)",
-                backdropFilter: "blur(8px)",
-                border: "1px solid rgba(255,255,255,0.3)",
-                color: "#fff",
-              }}
+              style={{ background: "rgba(255,255,255,0.2)", backdropFilter: "blur(8px)", border: "1px solid rgba(255,255,255,0.3)", color: "#fff" }}
             >
               <ChevronLeft size={14} />
             </button>
           </div>
         )}
-
-        {/* Scrollable tools row */}
         <div
           ref={scrollRef}
           className="flex items-center gap-1.5 px-4 lg:px-8 py-2.5 overflow-x-auto max-w-7xl mx-auto"
@@ -224,12 +219,8 @@ const Header = () => {
                   color: active ? "#be123c" : "rgba(255,255,255,0.92)",
                   boxShadow: active ? "0 2px 12px rgba(0,0,0,0.12)" : "none",
                 }}
-                onMouseEnter={e => {
-                  if (!active) e.currentTarget.style.background = "rgba(255,255,255,0.25)";
-                }}
-                onMouseLeave={e => {
-                  if (!active) e.currentTarget.style.background = "rgba(255,255,255,0.15)";
-                }}
+                onMouseEnter={e => { if (!active) e.currentTarget.style.background = "rgba(255,255,255,0.25)"; }}
+                onMouseLeave={e => { if (!active) e.currentTarget.style.background = "rgba(255,255,255,0.15)"; }}
               >
                 <tool.icon size={11} />
                 {tool.label}
@@ -237,23 +228,13 @@ const Header = () => {
             );
           })}
         </div>
-
-        {/* Right fade + arrow */}
         {canScrollRight && (
           <div className="absolute right-0 top-0 bottom-0 z-10 flex items-center justify-end">
-            <div
-              className="w-12 h-full"
-              style={{ background: "linear-gradient(to left, rgba(190,18,60,0.9), transparent)" }}
-            />
+            <div className="w-12 h-full" style={{ background: "linear-gradient(to left, rgba(190,18,60,0.9), transparent)" }} />
             <button
               onClick={() => scrollBy("right")}
               className="absolute right-2 w-7 h-7 flex items-center justify-center rounded-full transition-all"
-              style={{
-                background: "rgba(255,255,255,0.2)",
-                backdropFilter: "blur(8px)",
-                border: "1px solid rgba(255,255,255,0.3)",
-                color: "#fff",
-              }}
+              style={{ background: "rgba(255,255,255,0.2)", backdropFilter: "blur(8px)", border: "1px solid rgba(255,255,255,0.3)", color: "#fff" }}
             >
               <ChevronRight size={14} />
             </button>
@@ -264,18 +245,24 @@ const Header = () => {
       {/* ── Mobile Drawer ── */}
       {isOpen && (
         <>
+          {/* Backdrop — handles both click and touch */}
           <div
-            className="fixed inset-0 z-40 md:hidden"
-            style={{ background: "rgba(0,0,0,0.5)", backdropFilter: "blur(4px)" }}
-            onClick={() => setIsOpen(false)}
+            className="fixed inset-0 z-40 md:hidden cursor-pointer"
+            style={{ background: "rgba(0,0,0,0.55)", backdropFilter: "blur(4px)", WebkitBackdropFilter: "blur(4px)" }}
+            onClick={closeMenu}
+            onTouchEnd={(e) => { e.preventDefault(); closeMenu(); }}
+            aria-hidden="true"
           />
-          <nav className="fixed top-0 right-0 w-72 h-screen bg-white z-50 shadow-2xl md:hidden flex flex-col">
+          <nav
+            className="fixed top-0 right-0 w-72 h-screen bg-white z-50 shadow-2xl md:hidden flex flex-col"
+            style={{ overflowY: "auto" }}
+          >
             {/* Drawer header */}
             <div
-              className="flex items-center justify-between px-5 py-4 border-b border-rose-100"
+              className="flex items-center justify-between px-5 py-4 border-b border-rose-100 flex-shrink-0"
               style={{ background: "linear-gradient(135deg, #be123c 0%, #f43f5e 100%)" }}
             >
-              <Link to="/" className="flex items-center gap-3" onClick={() => setIsOpen(false)}>
+              <Link to="/" className="flex items-center gap-3" onClick={closeMenu}>
                 <div
                   className="w-9 h-9 rounded-xl flex items-center justify-center overflow-hidden"
                   style={{ background: "rgba(255,255,255,0.2)", border: "1.5px solid rgba(255,255,255,0.35)" }}
@@ -290,9 +277,10 @@ const Header = () => {
                 </div>
               </Link>
               <button
-                onClick={() => setIsOpen(false)}
+                onClick={closeMenu}
                 className="p-1.5 rounded-lg transition-colors"
                 style={{ color: "rgba(255,255,255,0.8)", background: "rgba(255,255,255,0.15)" }}
+                aria-label="Close menu"
               >
                 <X size={20} />
               </button>
@@ -312,7 +300,7 @@ const Header = () => {
                         ? "bg-rose-50 text-rose-600 border-l-2 border-rose-500"
                         : "text-gray-700 hover:bg-rose-50 hover:text-rose-600"
                     }`}
-                    onClick={() => setIsOpen(false)}
+                    onClick={closeMenu}
                   >
                     <div
                       className="w-7 h-7 rounded-lg flex items-center justify-center flex-shrink-0"
@@ -337,7 +325,7 @@ const Header = () => {
                         ? "bg-rose-50 text-rose-600 border-l-2 border-rose-500"
                         : "text-gray-700 hover:bg-rose-50 hover:text-rose-600"
                     }`}
-                    onClick={() => setIsOpen(false)}
+                    onClick={closeMenu}
                   >
                     <div
                       className="w-7 h-7 rounded-lg flex items-center justify-center flex-shrink-0"
@@ -352,12 +340,12 @@ const Header = () => {
             </div>
 
             {/* Drawer footer */}
-            <div className="px-5 py-4 border-t border-gray-100 bg-gray-50">
+            <div className="px-5 py-4 border-t border-gray-100 bg-gray-50 flex-shrink-0">
               <Link
                 to="/"
                 className="flex items-center justify-center gap-2 w-full py-2.5 rounded-full text-sm font-bold text-white shadow-sm"
                 style={{ background: "linear-gradient(135deg, #be123c, #f43f5e)" }}
-                onClick={() => setIsOpen(false)}
+                onClick={closeMenu}
               >
                 <Heart size={13} fill="white" color="white" />
                 Try Love Calculator

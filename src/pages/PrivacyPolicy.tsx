@@ -183,7 +183,7 @@ const PrivacyPolicy = () => {
                   If you have any questions about this Privacy Policy, please contact us at:
                 </p>
                 <p className="mt-2">
-                  <strong>Email:</strong> privacy@lovecalculator.space<br />
+                  <strong>Email:</strong> iftechstudio@gmail.com<br />
                   <strong>Website:</strong> lovecalculator.space
                 </p>
               </section>

@@ -19,7 +19,7 @@ export default defineConfig(() => ({
     },
   },
   build: {
-    sourcemap: true,
+    sourcemap: false,
     rollupOptions: {
       output: {
         manualChunks: {
@@ -51,6 +51,8 @@ export default defineConfig(() => ({
         "love-letter-generator": path.resolve(__dirname, "love-letter-generator.html"),
         "relationship-timeline": path.resolve(__dirname, "relationship-timeline.html"),
         "love-poetry": path.resolve(__dirname, "love-poetry.html"),
+        "date-calculator": path.resolve(__dirname, "date-calculator.html"),
+        "stylish-name-generator": path.resolve(__dirname, "stylish-name-generator.html"),
         blog: path.resolve(__dirname, "blog.html"),
         "blog-love-relationships-guide": path.resolve(__dirname, "blog/love-relationships-guide.html"),
         "blog-zodiac-compatibility-guide": path.resolve(__dirname, "blog/zodiac-compatibility-guide.html"),
