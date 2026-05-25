@@ -262,7 +262,7 @@ const Header = () => {
             style={{ background: "rgba(0,0,0,0.5)", backdropFilter: "blur(4px)" }}
             onClick={() => setIsOpen(false)}
           />
-          <nav className="fixed top-0 left-0 w-72 h-full bg-white z-50 shadow-2xl md:hidden flex flex-col">
+          <nav className="fixed top-0 right-0 w-72 h-screen bg-white z-50 shadow-2xl md:hidden flex flex-col">
             {/* Drawer header */}
             <div
               className="flex items-center justify-between px-5 py-4 border-b border-rose-100"
@@ -302,7 +302,7 @@ const Header = () => {
                     to={tool.to}
                     className={`flex items-center gap-3.5 px-5 py-3 text-sm font-medium transition-colors ${
                       active
-                        ? "bg-rose-50 text-rose-600 border-r-2 border-rose-500"
+                        ? "bg-rose-50 text-rose-600 border-l-2 border-rose-500"
                         : "text-gray-700 hover:bg-rose-50 hover:text-rose-600"
                     }`}
                     onClick={() => setIsOpen(false)}
@@ -327,7 +327,7 @@ const Header = () => {
                     to={link.to}
                     className={`flex items-center gap-3.5 px-5 py-3 text-sm font-medium transition-colors ${
                       active
-                        ? "bg-rose-50 text-rose-600 border-r-2 border-rose-500"
+                        ? "bg-rose-50 text-rose-600 border-l-2 border-rose-500"
                         : "text-gray-700 hover:bg-rose-50 hover:text-rose-600"
                     }`}
                     onClick={() => setIsOpen(false)}

@@ -256,181 +256,297 @@ const LoveCalculator = () => {
     const n1 = name1.split(" ")[0];
     const n2 = name2.split(" ")[0];
 
-    const W = 800, H = 1080;
+    const W = 1080, H = 1920;
     const canvas = document.createElement("canvas");
     canvas.width = W; canvas.height = H;
     const c = canvas.getContext("2d")!;
 
-    /* ── background gradient ── */
-    const bg = c.createLinearGradient(0, 0, W, H);
-    bg.addColorStop(0, "#4a0018");
-    bg.addColorStop(0.45, "#be123c");
-    bg.addColorStop(1, "#ff6b9d");
-    c.fillStyle = bg;
-    c.roundRect(0, 0, W, H, 32);
-    c.fill();
-
-    /* ── decorative soft circles ── */
-    const circles = [
-      { x: 80, y: 100, r: 160, a: 0.07 },
-      { x: 720, y: 200, r: 130, a: 0.06 },
-      { x: 100, y: 900, r: 200, a: 0.06 },
-      { x: 700, y: 950, r: 150, a: 0.07 },
-    ];
-    circles.forEach(({ x, y, r, a }) => {
+    /* helpers */
+    const drawHeartPath = (cx: number, cy: number, s: number) => {
       c.beginPath();
-      c.arc(x, y, r, 0, Math.PI * 2);
-      c.fillStyle = `rgba(255,255,255,${a})`;
-      c.fill();
+      c.moveTo(cx, cy + s * 0.35);
+      c.bezierCurveTo(cx, cy, cx - s, cy, cx - s, cy - s * 0.42);
+      c.bezierCurveTo(cx - s, cy - s * 0.92, cx, cy - s * 0.92, cx, cy - s * 0.42);
+      c.bezierCurveTo(cx, cy - s * 0.92, cx + s, cy - s * 0.92, cx + s, cy - s * 0.42);
+      c.bezierCurveTo(cx + s, cy, cx, cy, cx, cy + s * 0.35);
+      c.closePath();
+    };
+
+    const wrapText = (text: string, maxW: number): string[] => {
+      const words = text.split(" ");
+      const lines: string[] = [];
+      let line = "";
+      for (const w of words) {
+        const test = line ? line + " " + w : w;
+        if (c.measureText(test).width > maxW) { lines.push(line); line = w; }
+        else line = test;
+      }
+      if (line) lines.push(line);
+      return lines;
+    };
+
+    /* ── BACKGROUND ── deep layered gradient */
+    const bg = c.createLinearGradient(0, 0, W * 0.6, H);
+    bg.addColorStop(0, "#1a0010");
+    bg.addColorStop(0.3, "#6b0026");
+    bg.addColorStop(0.65, "#c4173e");
+    bg.addColorStop(1, "#ff4d82");
+    c.fillStyle = bg;
+    c.fillRect(0, 0, W, H);
+
+    /* pink diagonal overlay for depth */
+    const overlay = c.createLinearGradient(W, 0, 0, H);
+    overlay.addColorStop(0, "rgba(255,100,140,0.18)");
+    overlay.addColorStop(0.5, "rgba(0,0,0,0)");
+    overlay.addColorStop(1, "rgba(80,0,30,0.25)");
+    c.fillStyle = overlay;
+    c.fillRect(0, 0, W, H);
+
+    /* ── big blurred bokeh circles ── */
+    const bokeh = [
+      { x: 180, y: 200, r: 280, a: 0.08 },
+      { x: 900, y: 350, r: 220, a: 0.07 },
+      { x: 80, y: 1100, r: 320, a: 0.06 },
+      { x: 980, y: 1400, r: 260, a: 0.08 },
+      { x: 540, y: 960, r: 200, a: 0.05 },
+    ];
+    bokeh.forEach(({ x, y, r, a }) => {
+      const g = c.createRadialGradient(x, y, 0, x, y, r);
+      g.addColorStop(0, `rgba(255,180,210,${a * 2})`);
+      g.addColorStop(1, "rgba(255,120,160,0)");
+      c.fillStyle = g;
+      c.beginPath(); c.arc(x, y, r, 0, Math.PI * 2); c.fill();
     });
 
-    /* ── small decorative hearts (scattered) ── */
-    const drawHeart = (cx: number, cy: number, size: number, alpha: number) => {
+    /* ── scattered small hearts ── */
+    const miniHearts = [
+      [60, 80, 16, 0.18], [1010, 110, 12, 0.14], [30, 500, 10, 0.12],
+      [1050, 620, 14, 0.15], [90, 1300, 9, 0.11], [1000, 1200, 11, 0.13],
+      [540, 80, 8, 0.1], [220, 300, 7, 0.09], [850, 1700, 10, 0.12],
+      [150, 1700, 8, 0.1], [950, 250, 6, 0.08],
+    ];
+    miniHearts.forEach(([x, y, s, a]) => {
       c.save();
-      c.globalAlpha = alpha;
+      c.globalAlpha = a;
       c.fillStyle = "#fff";
-      c.translate(cx, cy);
-      c.beginPath();
-      c.moveTo(0, size * 0.3);
-      c.bezierCurveTo(0, 0, -size, 0, -size, -size * 0.4);
-      c.bezierCurveTo(-size, -size * 0.9, 0, -size * 0.9, 0, -size * 0.4);
-      c.bezierCurveTo(0, -size * 0.9, size, -size * 0.9, size, -size * 0.4);
-      c.bezierCurveTo(size, 0, 0, 0, 0, size * 0.3);
-      c.closePath();
+      drawHeartPath(x, y, s);
       c.fill();
       c.restore();
-    };
-    [[60, 60, 12, 0.15], [740, 80, 9, 0.12], [30, 400, 8, 0.1],
-     [770, 500, 10, 0.12], [100, 780, 7, 0.1], [680, 820, 11, 0.13],
-     [400, 50, 7, 0.1], [200, 200, 6, 0.08]
-    ].forEach(([x, y, s, a]) => drawHeart(x, y, s, a));
-
-    /* ── title ── */
-    c.fillStyle = "rgba(255,255,255,0.65)";
-    c.font = "500 26px Georgia, serif";
-    c.textAlign = "center";
-    c.letterSpacing = "4px";
-    c.fillText("LOVE COMPATIBILITY", W / 2, 72);
-    c.letterSpacing = "0px";
-
-    /* ── big heart shape ── */
-    const hx = W / 2, hy = 310, hs = 155;
-    const heartGrad = c.createRadialGradient(hx, hy - 40, 20, hx, hy, hs * 1.4);
-    heartGrad.addColorStop(0, "rgba(255,255,255,0.32)");
-    heartGrad.addColorStop(1, "rgba(255,255,255,0.08)");
-    c.save();
-    c.shadowColor = "rgba(0,0,0,0.2)";
-    c.shadowBlur = 30;
-    c.translate(hx, hy);
-    c.beginPath();
-    c.moveTo(0, hs * 0.35);
-    c.bezierCurveTo(0, 0, -hs, 0, -hs, -hs * 0.45);
-    c.bezierCurveTo(-hs, -hs * 0.95, 0, -hs * 0.95, 0, -hs * 0.45);
-    c.bezierCurveTo(0, -hs * 0.95, hs, -hs * 0.95, hs, -hs * 0.45);
-    c.bezierCurveTo(hs, 0, 0, 0, 0, hs * 0.35);
-    c.closePath();
-    c.fillStyle = heartGrad;
-    c.fill();
-    c.strokeStyle = "rgba(255,255,255,0.4)";
-    c.lineWidth = 2;
-    c.stroke();
-    c.restore();
-
-    /* ── names inside the heart ── */
-    c.textAlign = "center";
-    c.fillStyle = "#fff";
-    c.font = `bold ${n1.length + n2.length > 16 ? 28 : 32}px Georgia, serif`;
-    c.shadowColor = "rgba(0,0,0,0.3)";
-    c.shadowBlur = 8;
-    c.fillText(`${n1}  ♥  ${n2}`, W / 2, hy - 20);
-    c.font = "italic 20px Georgia, serif";
-    c.fillStyle = "rgba(255,255,255,0.75)";
-    c.fillText(`#${ship}`, W / 2, hy + 20);
-    c.shadowBlur = 0;
-
-    /* ── big percentage ── */
-    c.textAlign = "center";
-    c.font = `bold 120px Georgia, serif`;
-    c.fillStyle = "#fff";
-    c.shadowColor = "rgba(0,0,0,0.25)";
-    c.shadowBlur = 20;
-    c.fillText(`${result}%`, W / 2, 560);
-    c.shadowBlur = 0;
-
-    /* ── rank badge (pill) ── */
-    const rankText = rank;
-    c.font = "bold 20px Arial, sans-serif";
-    const rw = c.measureText(rankText).width + 48;
-    const rx = W / 2 - rw / 2, ry = 582;
-    c.fillStyle = "rgba(255,255,255,0.18)";
-    c.strokeStyle = "rgba(255,255,255,0.4)";
-    c.lineWidth = 1.5;
-    c.beginPath();
-    c.roundRect(rx, ry, rw, 38, 19);
-    c.fill(); c.stroke();
-    c.fillStyle = "#fff";
-    c.textAlign = "center";
-    c.fillText(rankText, W / 2, ry + 26);
-
-    /* ── divider ── */
-    c.strokeStyle = "rgba(255,255,255,0.2)";
-    c.lineWidth = 1;
-    c.beginPath();
-    c.moveTo(80, 648); c.lineTo(720, 648);
-    c.stroke();
-
-    /* ── compatibility bars ── */
-    const barColors = ["#ffb3c6", "#ffd6a5", "#c9b8ff", "#a8f5d0"];
-    const barLabels = ["Emotional", "Passion", "Intellectual", "Trust"];
-    dimData.forEach((d, i) => {
-      const bx = 80, by = 668 + i * 72, bw = 640, bh = 16;
-      c.font = "600 18px Arial, sans-serif";
-      c.textAlign = "left";
-      c.fillStyle = "rgba(255,255,255,0.8)";
-      c.fillText(barLabels[i], bx, by + 14);
-      c.textAlign = "right";
-      c.fillStyle = barColors[i];
-      c.fillText(`${d.value}%`, bx + bw, by + 14);
-      c.fillStyle = "rgba(255,255,255,0.15)";
-      c.beginPath(); c.roundRect(bx, by + 22, bw, bh, 8); c.fill();
-      const filled = (d.value / 100) * bw;
-      const barG = c.createLinearGradient(bx, 0, bx + filled, 0);
-      barG.addColorStop(0, barColors[i]);
-      barG.addColorStop(1, "#fff");
-      c.fillStyle = barG;
-      c.beginPath(); c.roundRect(bx, by + 22, filled, bh, 8); c.fill();
     });
 
-    /* ── message ── */
+    /* ── sparkle stars ── */
+    const stars = [
+      [110, 160], [970, 200], [55, 900], [1030, 800],
+      [300, 1750], [780, 1750], [540, 1800],
+    ];
+    stars.forEach(([sx, sy]) => {
+      c.save();
+      c.globalAlpha = 0.35;
+      c.fillStyle = "#fff";
+      c.font = "28px serif";
+      c.textAlign = "center";
+      c.fillText("✦", sx, sy);
+      c.restore();
+    });
+
+    /* ═══════════════════════════════════
+       SECTION 1 — TOP TITLE
+    ═══════════════════════════════════ */
+    c.textAlign = "center";
+    /* decorative side lines */
+    c.strokeStyle = "rgba(255,255,255,0.25)";
+    c.lineWidth = 1.5;
+    c.beginPath(); c.moveTo(60, 115); c.lineTo(340, 115); c.stroke();
+    c.beginPath(); c.moveTo(740, 115); c.lineTo(1020, 115); c.stroke();
+
+    c.font = "400 30px Georgia, serif";
+    c.fillStyle = "rgba(255,255,255,0.6)";
+    c.fillText("L O V E   C O M P A T I B I L I T Y", W / 2, 124);
+
+    /* ═══════════════════════════════════
+       SECTION 2 — BIG HEART + NAMES
+    ═══════════════════════════════════ */
+    const hcx = W / 2, hcy = 480, hs = 240;
+
+    /* outer glow */
+    const glowGrad = c.createRadialGradient(hcx, hcy, 0, hcx, hcy, hs * 1.8);
+    glowGrad.addColorStop(0, "rgba(255,80,120,0.35)");
+    glowGrad.addColorStop(1, "rgba(255,80,120,0)");
+    c.fillStyle = glowGrad;
+    c.beginPath(); c.arc(hcx, hcy, hs * 1.8, 0, Math.PI * 2); c.fill();
+
+    /* main heart — solid gradient fill */
+    const heartFill = c.createLinearGradient(hcx - hs, hcy - hs, hcx + hs, hcy + hs * 0.5);
+    heartFill.addColorStop(0, "#ff6b9d");
+    heartFill.addColorStop(0.5, "#e8194a");
+    heartFill.addColorStop(1, "#8b0030");
+    c.save();
+    c.shadowColor = "rgba(180,0,60,0.7)";
+    c.shadowBlur = 60;
+    drawHeartPath(hcx, hcy, hs);
+    c.fillStyle = heartFill;
+    c.fill();
+    c.restore();
+
+    /* heart inner highlight (top shine) */
+    const shine = c.createRadialGradient(hcx - hs * 0.3, hcy - hs * 0.55, 0, hcx - hs * 0.1, hcy - hs * 0.35, hs * 0.65);
+    shine.addColorStop(0, "rgba(255,255,255,0.3)");
+    shine.addColorStop(1, "rgba(255,255,255,0)");
+    drawHeartPath(hcx, hcy, hs);
+    c.fillStyle = shine;
+    c.fill();
+
+    /* heart border */
+    drawHeartPath(hcx, hcy, hs);
+    c.strokeStyle = "rgba(255,255,255,0.45)";
+    c.lineWidth = 3;
+    c.stroke();
+
+    /* names BELOW heart */
+    const nameFontSize = (n1.length + n2.length) > 18 ? 52 : 62;
+    c.font = `bold ${nameFontSize}px Georgia, serif`;
+    c.fillStyle = "#fff";
+    c.shadowColor = "rgba(0,0,0,0.4)";
+    c.shadowBlur = 16;
+    c.textAlign = "center";
+    c.fillText(`${n1}  ♥  ${n2}`, W / 2, 790);
+    c.shadowBlur = 0;
+
+    /* ship name */
+    c.font = "italic 32px Georgia, serif";
+    c.fillStyle = "rgba(255,210,230,0.85)";
+    c.fillText(`${ship} — A Perfect Union`, W / 2, 845);
+
+    /* ── ornamental divider ── */
     c.strokeStyle = "rgba(255,255,255,0.2)";
     c.lineWidth = 1;
-    c.beginPath();
-    c.moveTo(80, 968); c.lineTo(720, 968);
-    c.stroke();
-    c.font = `italic 22px Georgia, serif`;
+    c.beginPath(); c.moveTo(100, 890); c.lineTo(W - 100, 890); c.stroke();
+    c.font = "24px serif";
+    c.fillStyle = "rgba(255,255,255,0.35)";
+    c.fillText("✦  ✦  ✦", W / 2, 918);
+    c.beginPath(); c.moveTo(100, 938); c.lineTo(W - 100, 938); c.stroke();
+
+    /* ═══════════════════════════════════
+       SECTION 3 — BIG SCORE
+    ═══════════════════════════════════ */
+    /* score glow circle */
+    const scoreGlow = c.createRadialGradient(W / 2, 1060, 0, W / 2, 1060, 200);
+    scoreGlow.addColorStop(0, "rgba(255,200,220,0.2)");
+    scoreGlow.addColorStop(1, "rgba(255,200,220,0)");
+    c.fillStyle = scoreGlow;
+    c.beginPath(); c.arc(W / 2, 1060, 200, 0, Math.PI * 2); c.fill();
+
+    /* score number */
+    c.font = "bold 200px Georgia, serif";
     c.textAlign = "center";
-    c.fillStyle = "rgba(255,255,255,0.85)";
-    const words = message.split(" ");
-    let line = "", lines: string[] = [];
-    for (const w of words) {
-      const test = line + (line ? " " : "") + w;
-      if (c.measureText(test).width > 620) { lines.push(line); line = w; }
-      else line = test;
-    }
-    if (line) lines.push(line);
-    lines.forEach((l, i) => c.fillText(l, W / 2, 996 + i * 28));
+    const scoreGrad = c.createLinearGradient(W / 2 - 180, 960, W / 2 + 180, 1120);
+    scoreGrad.addColorStop(0, "#ffe4ef");
+    scoreGrad.addColorStop(0.4, "#ffffff");
+    scoreGrad.addColorStop(1, "#ffb3cd");
+    c.fillStyle = scoreGrad;
+    c.shadowColor = "rgba(0,0,0,0.3)";
+    c.shadowBlur = 30;
+    c.fillText(`${result}%`, W / 2, 1140);
+    c.shadowBlur = 0;
+
+    /* rank badge pill */
+    c.font = "bold 28px Arial, sans-serif";
+    const rw2 = c.measureText(rank).width + 64;
+    const rx2 = W / 2 - rw2 / 2, ry2 = 1162;
+    const pillGrad = c.createLinearGradient(rx2, ry2, rx2 + rw2, ry2 + 50);
+    pillGrad.addColorStop(0, "rgba(255,255,255,0.22)");
+    pillGrad.addColorStop(1, "rgba(255,255,255,0.1)");
+    c.fillStyle = pillGrad;
+    c.strokeStyle = "rgba(255,255,255,0.5)";
+    c.lineWidth = 2;
+    c.beginPath(); c.roundRect(rx2, ry2, rw2, 52, 26); c.fill(); c.stroke();
+    c.fillStyle = "#fff";
+    c.textAlign = "center";
+    c.fillText(rank, W / 2, ry2 + 35);
+
+    /* ── divider ── */
+    c.strokeStyle = "rgba(255,255,255,0.18)";
+    c.lineWidth = 1;
+    c.beginPath(); c.moveTo(100, 1244); c.lineTo(W - 100, 1244); c.stroke();
+
+    /* ═══════════════════════════════════
+       SECTION 4 — COMPATIBILITY BARS
+    ═══════════════════════════════════ */
+    const barDefs = [
+      { label: "Emotional",    icon: "♡", color1: "#ff8fab", color2: "#ffb3c6" },
+      { label: "Passion",      icon: "✦", color1: "#ff9a3c", color2: "#ffd6a5" },
+      { label: "Intellectual", icon: "◈", color1: "#a78bfa", color2: "#ddd6fe" },
+      { label: "Trust",        icon: "◉", color1: "#34d399", color2: "#a7f3d0" },
+    ];
+    const bx = 100, bw = 880, bh = 20;
+    dimData.forEach((d, i) => {
+      const by = 1274 + i * 100;
+      const { label, icon, color1, color2 } = barDefs[i];
+
+      /* icon + label */
+      c.font = "600 28px Arial, sans-serif";
+      c.textAlign = "left";
+      c.fillStyle = color2;
+      c.fillText(`${icon}  ${label}`, bx, by + 20);
+
+      /* percent */
+      c.textAlign = "right";
+      c.fillStyle = "#fff";
+      c.font = "bold 28px Arial, sans-serif";
+      c.fillText(`${d.value}%`, bx + bw, by + 20);
+
+      /* track */
+      c.fillStyle = "rgba(255,255,255,0.12)";
+      c.beginPath(); c.roundRect(bx, by + 32, bw, bh, 10); c.fill();
+
+      /* filled bar */
+      const barG = c.createLinearGradient(bx, 0, bx + (d.value / 100) * bw, 0);
+      barG.addColorStop(0, color1);
+      barG.addColorStop(1, color2);
+      c.fillStyle = barG;
+      c.shadowColor = color1;
+      c.shadowBlur = 10;
+      c.beginPath(); c.roundRect(bx, by + 32, (d.value / 100) * bw, bh, 10); c.fill();
+      c.shadowBlur = 0;
+    });
+
+    /* ── divider ── */
+    c.strokeStyle = "rgba(255,255,255,0.18)";
+    c.lineWidth = 1;
+    c.beginPath(); c.moveTo(100, 1694); c.lineTo(W - 100, 1694); c.stroke();
+
+    /* ═══════════════════════════════════
+       SECTION 5 — MESSAGE
+    ═══════════════════════════════════ */
+    /* big quote mark */
+    c.font = "bold 100px Georgia, serif";
+    c.fillStyle = "rgba(255,255,255,0.15)";
+    c.textAlign = "left";
+    c.fillText("\u201C", 90, 1790);
+
+    c.font = "italic 36px Georgia, serif";
+    c.fillStyle = "rgba(255,230,240,0.92)";
+    c.textAlign = "center";
+    const msgLines = wrapText(message, 820);
+    msgLines.forEach((l, i) => c.fillText(l, W / 2, 1775 + i * 46));
+
+    /* closing quote */
+    c.font = "bold 100px Georgia, serif";
+    c.fillStyle = "rgba(255,255,255,0.15)";
+    c.textAlign = "right";
+    c.fillText("\u201D", W - 90, 1820);
 
     /* ── branding ── */
-    c.font = "500 16px Arial, sans-serif";
-    c.fillStyle = "rgba(255,255,255,0.35)";
+    c.font = "500 26px Arial, sans-serif";
+    c.fillStyle = "rgba(255,255,255,0.3)";
     c.textAlign = "center";
-    c.fillText("lovecalculator.space", W / 2, 1055);
+    c.fillText("✦  lovecalculator.space  ✦", W / 2, 1888);
 
     canvas.toBlob(blob => {
       if (!blob) { toast.error("Could not generate card."); return; }
       const url = URL.createObjectURL(blob);
       const a = document.createElement("a");
-      a.href = url; a.download = `${n1}-${n2}-love.png`; a.click();
+      a.href = url; a.download = `${n1}-${n2}-love-card.png`; a.click();
       URL.revokeObjectURL(url);
       toast.success("Beautiful card downloaded! 💕");
     }, "image/png");
