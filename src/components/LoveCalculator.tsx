@@ -250,30 +250,190 @@ const LoveCalculator = () => {
 
   const downloadCard = () => {
     if (!result) return;
-    const { rank, emoji, message } = getCompatibilityMessage(result);
+    const { rank, message } = getCompatibilityMessage(result);
     const ship = getShipName(name1, name2);
-    const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="600" height="340">
-      <defs>
-        <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" style="stop-color:#be123c"/>
-          <stop offset="100%" style="stop-color:#f43f5e"/>
-        </linearGradient>
-      </defs>
-      <rect width="600" height="340" rx="24" fill="url(#bg)"/>
-      <text x="300" y="54" font-family="Georgia,serif" font-size="22" fill="rgba(255,255,255,0.7)" text-anchor="middle">Love Compatibility</text>
-      <text x="300" y="108" font-family="Georgia,serif" font-size="72" font-weight="bold" fill="white" text-anchor="middle">${result}%</text>
-      <text x="300" y="148" font-family="Arial,sans-serif" font-size="18" fill="rgba(255,255,255,0.9)" text-anchor="middle">${name1} ❤ ${name2}</text>
-      <text x="300" y="182" font-family="Arial,sans-serif" font-size="15" fill="rgba(255,255,255,0.75)" text-anchor="middle">${rank}</text>
-      <text x="300" y="220" font-family="Arial,sans-serif" font-size="14" fill="rgba(255,255,255,0.7)" text-anchor="middle">Ship Name: ${ship}</text>
-      <text x="300" y="268" font-family="Arial,sans-serif" font-size="13" fill="rgba(255,255,255,0.65)" text-anchor="middle">${message}</text>
-      <text x="300" y="318" font-family="Arial,sans-serif" font-size="12" fill="rgba(255,255,255,0.45)" text-anchor="middle">lovecalculator.app</text>
-    </svg>`;
-    const blob = new Blob([svg], { type: "image/svg+xml" });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement("a");
-    a.href = url; a.download = `${name1}-${name2}-love.svg`; a.click();
-    URL.revokeObjectURL(url);
-    toast.success("Card downloaded!");
+    const dimData = getDimensions(name1, name2, result);
+    const n1 = name1.split(" ")[0];
+    const n2 = name2.split(" ")[0];
+
+    const W = 800, H = 1080;
+    const canvas = document.createElement("canvas");
+    canvas.width = W; canvas.height = H;
+    const c = canvas.getContext("2d")!;
+
+    /* ── background gradient ── */
+    const bg = c.createLinearGradient(0, 0, W, H);
+    bg.addColorStop(0, "#4a0018");
+    bg.addColorStop(0.45, "#be123c");
+    bg.addColorStop(1, "#ff6b9d");
+    c.fillStyle = bg;
+    c.roundRect(0, 0, W, H, 32);
+    c.fill();
+
+    /* ── decorative soft circles ── */
+    const circles = [
+      { x: 80, y: 100, r: 160, a: 0.07 },
+      { x: 720, y: 200, r: 130, a: 0.06 },
+      { x: 100, y: 900, r: 200, a: 0.06 },
+      { x: 700, y: 950, r: 150, a: 0.07 },
+    ];
+    circles.forEach(({ x, y, r, a }) => {
+      c.beginPath();
+      c.arc(x, y, r, 0, Math.PI * 2);
+      c.fillStyle = `rgba(255,255,255,${a})`;
+      c.fill();
+    });
+
+    /* ── small decorative hearts (scattered) ── */
+    const drawHeart = (cx: number, cy: number, size: number, alpha: number) => {
+      c.save();
+      c.globalAlpha = alpha;
+      c.fillStyle = "#fff";
+      c.translate(cx, cy);
+      c.beginPath();
+      c.moveTo(0, size * 0.3);
+      c.bezierCurveTo(0, 0, -size, 0, -size, -size * 0.4);
+      c.bezierCurveTo(-size, -size * 0.9, 0, -size * 0.9, 0, -size * 0.4);
+      c.bezierCurveTo(0, -size * 0.9, size, -size * 0.9, size, -size * 0.4);
+      c.bezierCurveTo(size, 0, 0, 0, 0, size * 0.3);
+      c.closePath();
+      c.fill();
+      c.restore();
+    };
+    [[60, 60, 12, 0.15], [740, 80, 9, 0.12], [30, 400, 8, 0.1],
+     [770, 500, 10, 0.12], [100, 780, 7, 0.1], [680, 820, 11, 0.13],
+     [400, 50, 7, 0.1], [200, 200, 6, 0.08]
+    ].forEach(([x, y, s, a]) => drawHeart(x, y, s, a));
+
+    /* ── title ── */
+    c.fillStyle = "rgba(255,255,255,0.65)";
+    c.font = "500 26px Georgia, serif";
+    c.textAlign = "center";
+    c.letterSpacing = "4px";
+    c.fillText("LOVE COMPATIBILITY", W / 2, 72);
+    c.letterSpacing = "0px";
+
+    /* ── big heart shape ── */
+    const hx = W / 2, hy = 310, hs = 155;
+    const heartGrad = c.createRadialGradient(hx, hy - 40, 20, hx, hy, hs * 1.4);
+    heartGrad.addColorStop(0, "rgba(255,255,255,0.32)");
+    heartGrad.addColorStop(1, "rgba(255,255,255,0.08)");
+    c.save();
+    c.shadowColor = "rgba(0,0,0,0.2)";
+    c.shadowBlur = 30;
+    c.translate(hx, hy);
+    c.beginPath();
+    c.moveTo(0, hs * 0.35);
+    c.bezierCurveTo(0, 0, -hs, 0, -hs, -hs * 0.45);
+    c.bezierCurveTo(-hs, -hs * 0.95, 0, -hs * 0.95, 0, -hs * 0.45);
+    c.bezierCurveTo(0, -hs * 0.95, hs, -hs * 0.95, hs, -hs * 0.45);
+    c.bezierCurveTo(hs, 0, 0, 0, 0, hs * 0.35);
+    c.closePath();
+    c.fillStyle = heartGrad;
+    c.fill();
+    c.strokeStyle = "rgba(255,255,255,0.4)";
+    c.lineWidth = 2;
+    c.stroke();
+    c.restore();
+
+    /* ── names inside the heart ── */
+    c.textAlign = "center";
+    c.fillStyle = "#fff";
+    c.font = `bold ${n1.length + n2.length > 16 ? 28 : 32}px Georgia, serif`;
+    c.shadowColor = "rgba(0,0,0,0.3)";
+    c.shadowBlur = 8;
+    c.fillText(`${n1}  ♥  ${n2}`, W / 2, hy - 20);
+    c.font = "italic 20px Georgia, serif";
+    c.fillStyle = "rgba(255,255,255,0.75)";
+    c.fillText(`#${ship}`, W / 2, hy + 20);
+    c.shadowBlur = 0;
+
+    /* ── big percentage ── */
+    c.textAlign = "center";
+    c.font = `bold 120px Georgia, serif`;
+    c.fillStyle = "#fff";
+    c.shadowColor = "rgba(0,0,0,0.25)";
+    c.shadowBlur = 20;
+    c.fillText(`${result}%`, W / 2, 560);
+    c.shadowBlur = 0;
+
+    /* ── rank badge (pill) ── */
+    const rankText = rank;
+    c.font = "bold 20px Arial, sans-serif";
+    const rw = c.measureText(rankText).width + 48;
+    const rx = W / 2 - rw / 2, ry = 582;
+    c.fillStyle = "rgba(255,255,255,0.18)";
+    c.strokeStyle = "rgba(255,255,255,0.4)";
+    c.lineWidth = 1.5;
+    c.beginPath();
+    c.roundRect(rx, ry, rw, 38, 19);
+    c.fill(); c.stroke();
+    c.fillStyle = "#fff";
+    c.textAlign = "center";
+    c.fillText(rankText, W / 2, ry + 26);
+
+    /* ── divider ── */
+    c.strokeStyle = "rgba(255,255,255,0.2)";
+    c.lineWidth = 1;
+    c.beginPath();
+    c.moveTo(80, 648); c.lineTo(720, 648);
+    c.stroke();
+
+    /* ── compatibility bars ── */
+    const barColors = ["#ffb3c6", "#ffd6a5", "#c9b8ff", "#a8f5d0"];
+    const barLabels = ["Emotional", "Passion", "Intellectual", "Trust"];
+    dimData.forEach((d, i) => {
+      const bx = 80, by = 668 + i * 72, bw = 640, bh = 16;
+      c.font = "600 18px Arial, sans-serif";
+      c.textAlign = "left";
+      c.fillStyle = "rgba(255,255,255,0.8)";
+      c.fillText(barLabels[i], bx, by + 14);
+      c.textAlign = "right";
+      c.fillStyle = barColors[i];
+      c.fillText(`${d.value}%`, bx + bw, by + 14);
+      c.fillStyle = "rgba(255,255,255,0.15)";
+      c.beginPath(); c.roundRect(bx, by + 22, bw, bh, 8); c.fill();
+      const filled = (d.value / 100) * bw;
+      const barG = c.createLinearGradient(bx, 0, bx + filled, 0);
+      barG.addColorStop(0, barColors[i]);
+      barG.addColorStop(1, "#fff");
+      c.fillStyle = barG;
+      c.beginPath(); c.roundRect(bx, by + 22, filled, bh, 8); c.fill();
+    });
+
+    /* ── message ── */
+    c.strokeStyle = "rgba(255,255,255,0.2)";
+    c.lineWidth = 1;
+    c.beginPath();
+    c.moveTo(80, 968); c.lineTo(720, 968);
+    c.stroke();
+    c.font = `italic 22px Georgia, serif`;
+    c.textAlign = "center";
+    c.fillStyle = "rgba(255,255,255,0.85)";
+    const words = message.split(" ");
+    let line = "", lines: string[] = [];
+    for (const w of words) {
+      const test = line + (line ? " " : "") + w;
+      if (c.measureText(test).width > 620) { lines.push(line); line = w; }
+      else line = test;
+    }
+    if (line) lines.push(line);
+    lines.forEach((l, i) => c.fillText(l, W / 2, 996 + i * 28));
+
+    /* ── branding ── */
+    c.font = "500 16px Arial, sans-serif";
+    c.fillStyle = "rgba(255,255,255,0.35)";
+    c.textAlign = "center";
+    c.fillText("lovecalculator.space", W / 2, 1055);
+
+    canvas.toBlob(blob => {
+      if (!blob) { toast.error("Could not generate card."); return; }
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url; a.download = `${n1}-${n2}-love.png`; a.click();
+      URL.revokeObjectURL(url);
+      toast.success("Beautiful card downloaded! 💕");
+    }, "image/png");
   };
 
   const compat = result !== null ? getCompatibilityMessage(result) : null;

@@ -78,19 +78,9 @@ const Header = () => {
           borderBottom: "1px solid rgba(255,255,255,0.15)",
         }}
       >
-        <div className="flex items-center justify-between h-16 px-4 lg:px-8 max-w-7xl mx-auto">
+        <div className="flex items-center h-16 px-4 lg:px-8 max-w-7xl mx-auto">
 
-          {/* Hamburger (mobile only) */}
-          <button
-            className="md:hidden p-2 rounded-lg transition-colors mr-1"
-            style={{ color: "rgba(255,255,255,0.9)", background: "rgba(255,255,255,0.12)" }}
-            onClick={() => setIsOpen(!isOpen)}
-            aria-label={isOpen ? "Close menu" : "Open menu"}
-          >
-            {isOpen ? <X size={22} /> : <Menu size={22} />}
-          </button>
-
-          {/* Logo */}
+          {/* Logo — always LEFT */}
           <Link to="/" className="flex items-center gap-2.5" onClick={() => setIsOpen(false)}>
             <div
               className="w-10 h-10 rounded-xl flex items-center justify-center overflow-hidden flex-shrink-0"
@@ -113,8 +103,32 @@ const Header = () => {
             </div>
           </Link>
 
+          {/* Spacer */}
+          <div className="flex-1" />
+
+          {/* Mobile right side: Try Now + Hamburger */}
+          <div className="flex md:hidden items-center gap-2">
+            <Link
+              to="/"
+              className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-bold whitespace-nowrap"
+              style={{ background: "#fff", color: "#be123c", boxShadow: "0 2px 10px rgba(0,0,0,0.12)" }}
+              onClick={() => setIsOpen(false)}
+            >
+              <Heart size={11} fill="#be123c" color="#be123c" />
+              Try Now
+            </Link>
+            <button
+              className="p-2 rounded-lg transition-colors"
+              style={{ color: "rgba(255,255,255,0.9)", background: "rgba(255,255,255,0.12)" }}
+              onClick={() => setIsOpen(!isOpen)}
+              aria-label={isOpen ? "Close menu" : "Open menu"}
+            >
+              {isOpen ? <X size={22} /> : <Menu size={22} />}
+            </button>
+          </div>
+
           {/* Desktop right nav */}
-          <nav className="hidden md:flex items-center gap-2 ml-auto">
+          <nav className="hidden md:flex items-center gap-2">
             {[
               { to: "/blog", label: "Blog", icon: BookOpen },
               { to: "/about", label: "About", icon: Info },
