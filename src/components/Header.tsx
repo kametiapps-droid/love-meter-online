@@ -7,16 +7,16 @@ import {
 } from "lucide-react";
 
 const allTools = [
-  { to: "/", label: "Love Calculator", icon: Heart, color: "bg-rose-100", iconColor: "text-rose-500" },
-  { to: "/zodiac-compatibility", label: "Zodiac Match", icon: Stars, color: "bg-violet-100", iconColor: "text-violet-500" },
-  { to: "/love-quiz", label: "Love Quiz", icon: ClipboardList, color: "bg-pink-100", iconColor: "text-pink-500" },
-  { to: "/daily-horoscope", label: "Daily Horoscope", icon: Sun, color: "bg-amber-100", iconColor: "text-amber-500" },
-  { to: "/love-fortune-ball", label: "Fortune Ball", icon: Sparkles, color: "bg-indigo-100", iconColor: "text-indigo-500" },
-  { to: "/couple-name-generator", label: "Couple Names", icon: Heart, color: "bg-red-100", iconColor: "text-red-500" },
-  { to: "/kids-name-generator", label: "Baby Names", icon: Baby, color: "bg-teal-100", iconColor: "text-teal-500" },
-  { to: "/love-letter-generator", label: "Love Letters", icon: Send, color: "bg-sky-100", iconColor: "text-sky-500" },
-  { to: "/relationship-timeline", label: "Timeline", icon: Calendar, color: "bg-emerald-100", iconColor: "text-emerald-500" },
-  { to: "/love-poetry", label: "Love Poetry", icon: Feather, color: "bg-fuchsia-100", iconColor: "text-fuchsia-500" },
+  { to: "/", label: "Love Calculator", icon: Heart },
+  { to: "/zodiac-compatibility", label: "Zodiac Match", icon: Stars },
+  { to: "/love-quiz", label: "Love Quiz", icon: ClipboardList },
+  { to: "/daily-horoscope", label: "Daily Horoscope", icon: Sun },
+  { to: "/love-fortune-ball", label: "Fortune Ball", icon: Sparkles },
+  { to: "/couple-name-generator", label: "Couple Names", icon: Heart },
+  { to: "/kids-name-generator", label: "Baby Names", icon: Baby },
+  { to: "/love-letter-generator", label: "Love Letters", icon: Send },
+  { to: "/relationship-timeline", label: "Timeline", icon: Calendar },
+  { to: "/love-poetry", label: "Love Poetry", icon: Feather },
 ];
 
 const mobileOnlyLinks = [
@@ -59,17 +59,31 @@ const Header = () => {
 
   return (
     <header
-      className={`w-full sticky top-0 z-50 bg-white transition-shadow duration-300 ${
-        scrolled ? "shadow-md" : "shadow-sm"
-      }`}
+      className="w-full sticky top-0 z-50"
+      style={{
+        background: scrolled
+          ? "rgba(190, 18, 60, 0.82)"
+          : "linear-gradient(135deg, #be123c 0%, #e11d48 50%, #f43f5e 100%)",
+        backdropFilter: "blur(20px)",
+        WebkitBackdropFilter: "blur(20px)",
+        boxShadow: scrolled
+          ? "0 8px 32px rgba(190,18,60,0.35)"
+          : "0 4px 24px rgba(190,18,60,0.2)",
+        transition: "all 0.3s ease",
+      }}
     >
       {/* ── Top bar ── */}
-      <div className="border-b border-gray-100">
+      <div
+        style={{
+          borderBottom: "1px solid rgba(255,255,255,0.15)",
+        }}
+      >
         <div className="flex items-center justify-between h-16 px-4 lg:px-8 max-w-7xl mx-auto">
 
           {/* Hamburger (mobile only) */}
           <button
-            className="md:hidden p-2 text-rose-600 hover:bg-rose-50 rounded-lg transition-colors mr-1"
+            className="md:hidden p-2 rounded-lg transition-colors mr-1"
+            style={{ color: "rgba(255,255,255,0.9)", background: "rgba(255,255,255,0.12)" }}
             onClick={() => setIsOpen(!isOpen)}
             aria-label={isOpen ? "Close menu" : "Open menu"}
           >
@@ -78,46 +92,67 @@ const Header = () => {
 
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2.5" onClick={() => setIsOpen(false)}>
-            <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-rose-500 to-rose-700 flex items-center justify-center shadow-sm overflow-hidden">
+            <div
+              className="w-10 h-10 rounded-xl flex items-center justify-center overflow-hidden flex-shrink-0"
+              style={{
+                background: "rgba(255,255,255,0.18)",
+                backdropFilter: "blur(10px)",
+                border: "1.5px solid rgba(255,255,255,0.35)",
+                boxShadow: "0 4px 15px rgba(0,0,0,0.12)",
+              }}
+            >
               <img src={logo} alt="Love Calculator Logo" className="w-7 h-7 object-contain" />
             </div>
             <div className="flex flex-col leading-none">
-              <span className="font-bold text-gray-900 text-[15px] tracking-tight">Love Calculator</span>
-              <span className="text-rose-500 text-[10px] font-semibold tracking-wider uppercase hidden sm:block">Free Love Tools</span>
+              <span className="font-bold text-white text-[15px] tracking-tight" style={{ textShadow: "0 1px 4px rgba(0,0,0,0.15)" }}>
+                Love Calculator
+              </span>
+              <span className="text-[10px] font-semibold tracking-wider uppercase hidden sm:block" style={{ color: "rgba(255,255,255,0.7)" }}>
+                Free Love Tools
+              </span>
             </div>
           </Link>
 
           {/* Desktop right nav */}
-          <nav className="hidden md:flex items-center gap-1 ml-auto text-sm">
-            <Link
-              to="/blog"
-              className={`flex items-center gap-1.5 px-3.5 py-2 rounded-full font-medium whitespace-nowrap transition-all duration-200 text-sm ${
-                location.pathname === "/blog" || location.pathname.startsWith("/blog/")
-                  ? "bg-rose-600 text-white shadow-sm"
-                  : "text-gray-700 hover:bg-rose-50 hover:text-rose-600"
-              }`}
-            >
-              <BookOpen size={13} />
-              Blog
-            </Link>
+          <nav className="hidden md:flex items-center gap-2 ml-auto">
+            {[
+              { to: "/blog", label: "Blog", icon: BookOpen },
+              { to: "/about", label: "About", icon: Info },
+            ].map((item) => {
+              const active = location.pathname === item.to || (item.to === "/blog" && location.pathname.startsWith("/blog/"));
+              return (
+                <Link
+                  key={item.to}
+                  to={item.to}
+                  className="flex items-center gap-1.5 px-3.5 py-2 rounded-full text-sm font-medium whitespace-nowrap transition-all duration-200"
+                  style={{
+                    background: active ? "rgba(255,255,255,0.25)" : "rgba(255,255,255,0.1)",
+                    backdropFilter: "blur(8px)",
+                    border: "1px solid rgba(255,255,255,0.25)",
+                    color: "#fff",
+                  }}
+                  onMouseEnter={e => (e.currentTarget.style.background = "rgba(255,255,255,0.22)")}
+                  onMouseLeave={e => (e.currentTarget.style.background = active ? "rgba(255,255,255,0.25)" : "rgba(255,255,255,0.1)")}
+                >
+                  <item.icon size={13} />
+                  {item.label}
+                </Link>
+              );
+            })}
 
-            <Link
-              to="/about"
-              className={`flex items-center gap-1.5 px-3.5 py-2 rounded-full font-medium whitespace-nowrap transition-all duration-200 text-sm ${
-                location.pathname === "/about"
-                  ? "bg-rose-600 text-white shadow-sm"
-                  : "text-gray-700 hover:bg-rose-50 hover:text-rose-600"
-              }`}
-            >
-              <Info size={13} />
-              About
-            </Link>
-
+            {/* CTA */}
             <Link
               to="/"
-              className="ml-2 flex items-center gap-1.5 px-4 py-2 rounded-full bg-gradient-to-r from-rose-500 to-rose-600 text-white text-sm font-semibold shadow-sm hover:from-rose-600 hover:to-rose-700 transition-all duration-200"
+              className="ml-1 flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-bold whitespace-nowrap transition-all duration-200"
+              style={{
+                background: "#fff",
+                color: "#be123c",
+                boxShadow: "0 4px 15px rgba(0,0,0,0.15)",
+              }}
+              onMouseEnter={e => (e.currentTarget.style.background = "#fef2f2")}
+              onMouseLeave={e => (e.currentTarget.style.background = "#fff")}
             >
-              <Heart size={13} fill="white" />
+              <Heart size={13} fill="#be123c" color="#be123c" />
               Try Now
             </Link>
           </nav>
@@ -125,14 +160,23 @@ const Header = () => {
       </div>
 
       {/* ── Tools scroll strip (desktop only) ── */}
-      <div className="hidden md:block bg-white border-b border-gray-100 relative">
+      <div className="hidden md:block relative">
         {/* Left fade + arrow */}
         {canScrollLeft && (
           <div className="absolute left-0 top-0 bottom-0 z-10 flex items-center">
-            <div className="w-10 h-full bg-gradient-to-r from-white to-transparent" />
+            <div
+              className="w-12 h-full"
+              style={{ background: "linear-gradient(to right, rgba(190,18,60,0.9), transparent)" }}
+            />
             <button
               onClick={() => scrollBy("left")}
-              className="absolute left-1 bg-white border border-gray-200 rounded-full shadow-sm w-7 h-7 flex items-center justify-center text-gray-500 hover:text-rose-600 hover:border-rose-200 transition-all"
+              className="absolute left-2 w-7 h-7 flex items-center justify-center rounded-full transition-all"
+              style={{
+                background: "rgba(255,255,255,0.2)",
+                backdropFilter: "blur(8px)",
+                border: "1px solid rgba(255,255,255,0.3)",
+                color: "#fff",
+              }}
             >
               <ChevronLeft size={14} />
             </button>
@@ -142,7 +186,7 @@ const Header = () => {
         {/* Scrollable tools row */}
         <div
           ref={scrollRef}
-          className="flex items-center gap-1 px-4 lg:px-8 py-2 overflow-x-auto max-w-7xl mx-auto"
+          className="flex items-center gap-1.5 px-4 lg:px-8 py-2.5 overflow-x-auto max-w-7xl mx-auto"
           style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
         >
           {allTools.map((tool) => {
@@ -151,17 +195,22 @@ const Header = () => {
               <Link
                 key={tool.to}
                 to={tool.to}
-                className={`flex items-center gap-2 px-3.5 py-1.5 rounded-full whitespace-nowrap text-xs font-semibold transition-all duration-150 flex-shrink-0 ${
-                  active
-                    ? "bg-rose-600 text-white shadow-sm"
-                    : "text-gray-600 hover:bg-rose-50 hover:text-rose-600 border border-gray-200 hover:border-rose-200"
-                }`}
+                className="flex items-center gap-2 px-3.5 py-1.5 rounded-full whitespace-nowrap text-xs font-semibold transition-all duration-150 flex-shrink-0"
+                style={{
+                  background: active ? "#fff" : "rgba(255,255,255,0.15)",
+                  backdropFilter: "blur(8px)",
+                  border: active ? "none" : "1px solid rgba(255,255,255,0.25)",
+                  color: active ? "#be123c" : "rgba(255,255,255,0.92)",
+                  boxShadow: active ? "0 2px 12px rgba(0,0,0,0.12)" : "none",
+                }}
+                onMouseEnter={e => {
+                  if (!active) e.currentTarget.style.background = "rgba(255,255,255,0.25)";
+                }}
+                onMouseLeave={e => {
+                  if (!active) e.currentTarget.style.background = "rgba(255,255,255,0.15)";
+                }}
               >
-                <div className={`w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 ${
-                  active ? "bg-white/20" : tool.color
-                }`}>
-                  <tool.icon size={11} className={active ? "text-white" : tool.iconColor} />
-                </div>
+                <tool.icon size={11} />
                 {tool.label}
               </Link>
             );
@@ -171,10 +220,19 @@ const Header = () => {
         {/* Right fade + arrow */}
         {canScrollRight && (
           <div className="absolute right-0 top-0 bottom-0 z-10 flex items-center justify-end">
-            <div className="w-10 h-full bg-gradient-to-l from-white to-transparent" />
+            <div
+              className="w-12 h-full"
+              style={{ background: "linear-gradient(to left, rgba(190,18,60,0.9), transparent)" }}
+            />
             <button
               onClick={() => scrollBy("right")}
-              className="absolute right-1 bg-white border border-gray-200 rounded-full shadow-sm w-7 h-7 flex items-center justify-center text-gray-500 hover:text-rose-600 hover:border-rose-200 transition-all"
+              className="absolute right-2 w-7 h-7 flex items-center justify-center rounded-full transition-all"
+              style={{
+                background: "rgba(255,255,255,0.2)",
+                backdropFilter: "blur(8px)",
+                border: "1px solid rgba(255,255,255,0.3)",
+                color: "#fff",
+              }}
             >
               <ChevronRight size={14} />
             </button>
@@ -186,24 +244,34 @@ const Header = () => {
       {isOpen && (
         <>
           <div
-            className="fixed inset-0 bg-black/40 backdrop-blur-sm z-40 md:hidden"
+            className="fixed inset-0 z-40 md:hidden"
+            style={{ background: "rgba(0,0,0,0.5)", backdropFilter: "blur(4px)" }}
             onClick={() => setIsOpen(false)}
           />
           <nav className="fixed top-0 left-0 w-72 h-full bg-white z-50 shadow-2xl md:hidden flex flex-col">
             {/* Drawer header */}
-            <div className="flex items-center justify-between px-5 py-4 border-b border-gray-100 bg-gradient-to-r from-rose-50 to-pink-50">
+            <div
+              className="flex items-center justify-between px-5 py-4 border-b border-rose-100"
+              style={{ background: "linear-gradient(135deg, #be123c 0%, #f43f5e 100%)" }}
+            >
               <Link to="/" className="flex items-center gap-3" onClick={() => setIsOpen(false)}>
-                <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-rose-500 to-rose-700 flex items-center justify-center shadow-sm overflow-hidden">
+                <div
+                  className="w-9 h-9 rounded-xl flex items-center justify-center overflow-hidden"
+                  style={{ background: "rgba(255,255,255,0.2)", border: "1.5px solid rgba(255,255,255,0.35)" }}
+                >
                   <img src={logo} alt="Logo" className="w-7 h-7 object-contain" />
                 </div>
                 <div className="flex flex-col leading-none">
-                  <span className="font-bold text-gray-900 text-[15px]">Love Calculator</span>
-                  <span className="text-rose-500 text-[10px] font-semibold uppercase tracking-wider">Free Love Tools</span>
+                  <span className="font-bold text-white text-[15px]">Love Calculator</span>
+                  <span className="text-[10px] font-semibold uppercase tracking-wider" style={{ color: "rgba(255,255,255,0.7)" }}>
+                    Free Love Tools
+                  </span>
                 </div>
               </Link>
               <button
                 onClick={() => setIsOpen(false)}
-                className="p-1.5 text-gray-500 hover:text-rose-600 hover:bg-rose-50 rounded-lg transition-colors"
+                className="p-1.5 rounded-lg transition-colors"
+                style={{ color: "rgba(255,255,255,0.8)", background: "rgba(255,255,255,0.15)" }}
               >
                 <X size={20} />
               </button>
@@ -225,10 +293,11 @@ const Header = () => {
                     }`}
                     onClick={() => setIsOpen(false)}
                   >
-                    <div className={`w-7 h-7 rounded-lg flex items-center justify-center flex-shrink-0 ${
-                      active ? "bg-rose-500" : tool.color
-                    }`}>
-                      <tool.icon size={13} className={active ? "text-white" : tool.iconColor} />
+                    <div
+                      className="w-7 h-7 rounded-lg flex items-center justify-center flex-shrink-0"
+                      style={{ background: active ? "#f43f5e" : "#fef2f2" }}
+                    >
+                      <tool.icon size={13} color={active ? "#fff" : "#f43f5e"} />
                     </div>
                     {tool.label}
                   </Link>
@@ -249,10 +318,11 @@ const Header = () => {
                     }`}
                     onClick={() => setIsOpen(false)}
                   >
-                    <div className={`w-7 h-7 rounded-lg flex items-center justify-center flex-shrink-0 ${
-                      active ? "bg-rose-500" : "bg-gray-100"
-                    }`}>
-                      <link.icon size={13} className={active ? "text-white" : "text-gray-500"} />
+                    <div
+                      className="w-7 h-7 rounded-lg flex items-center justify-center flex-shrink-0"
+                      style={{ background: active ? "#f43f5e" : "#f3f4f6" }}
+                    >
+                      <link.icon size={13} color={active ? "#fff" : "#6b7280"} />
                     </div>
                     {link.label}
                   </Link>
@@ -264,10 +334,11 @@ const Header = () => {
             <div className="px-5 py-4 border-t border-gray-100 bg-gray-50">
               <Link
                 to="/"
-                className="flex items-center justify-center gap-2 w-full py-2.5 rounded-full bg-gradient-to-r from-rose-500 to-rose-600 text-white text-sm font-semibold shadow-sm"
+                className="flex items-center justify-center gap-2 w-full py-2.5 rounded-full text-sm font-bold text-white shadow-sm"
+                style={{ background: "linear-gradient(135deg, #be123c, #f43f5e)" }}
                 onClick={() => setIsOpen(false)}
               >
-                <Heart size={13} fill="white" />
+                <Heart size={13} fill="white" color="white" />
                 Try Love Calculator
               </Link>
             </div>
