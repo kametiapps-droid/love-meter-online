@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import InternalLinks from "@/components/InternalLinks";
 import BlogPreview from "@/components/BlogPreview";
+import ShareButtons from "@/components/ShareButtons";
 import FloatingHearts from "@/components/FloatingHearts";
 import { Wand2, Copy, Check, Heart } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -279,6 +280,7 @@ const StylishNameGeneratorPage = () => {
             </div>
           </section>
 
+          <ShareButtons title="Stylish Name Generator" description="Generate beautiful fancy text styles from your name!" />
           <BlogPreview />
           <InternalLinks currentPage="/stylish-name-generator" />
         </main>

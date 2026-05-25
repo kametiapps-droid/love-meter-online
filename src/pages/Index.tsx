@@ -5,6 +5,7 @@ import FloatingHearts from "@/components/FloatingHearts";
 import HomeSEOContent from "@/components/HomeSEOContent";
 import ToolCards from "@/components/ToolCards";
 import BlogPreview from "@/components/BlogPreview";
+import ShareButtons from "@/components/ShareButtons";
 import SEO from "@/components/SEO";
 import { Heart } from "lucide-react";
 
@@ -63,6 +64,9 @@ const Index = () => {
 
         {/* Tool Cards Section */}
         <ToolCards />
+
+        {/* Share Buttons */}
+        <ShareButtons title="Love Calculator" description="Free love compatibility test by name — try it now!" />
 
         {/* Blog Preview Section */}
         <BlogPreview />

@@ -4,6 +4,7 @@ import LoveFortuneBall from "@/components/LoveFortuneBall";
 import FloatingHearts from "@/components/FloatingHearts";
 import InternalLinks from "@/components/InternalLinks";
 import BlogPreview from "@/components/BlogPreview";
+import ShareButtons from "@/components/ShareButtons";
 import SEO from "@/components/SEO";
 import { Sparkles } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -134,6 +135,7 @@ const LoveFortuneBallPage = () => {
           </div>
         </section>
 
+        <ShareButtons title="Love Fortune Ball" description="Ask the magic fortune ball your love question!" />
         <BlogPreview />
 
         <InternalLinks currentPage="/love-fortune-ball" />

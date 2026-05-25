@@ -4,6 +4,7 @@ import LoveCalculator from "@/components/LoveCalculator";
 import FloatingHearts from "@/components/FloatingHearts";
 import SEO from "@/components/SEO";
 import InternalLinks from "@/components/InternalLinks";
+import ShareButtons from "@/components/ShareButtons";
 import { Heart } from "lucide-react";
 
 const LoveCalculatorPage = () => {
@@ -115,6 +116,7 @@ const LoveCalculatorPage = () => {
           </div>
         </section>
 
+        <ShareButtons title="Love Calculator" description="Calculate your love compatibility percentage by name!" />
         <InternalLinks />
       </main>
 

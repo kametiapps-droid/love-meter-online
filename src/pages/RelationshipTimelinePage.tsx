@@ -4,6 +4,7 @@ import FloatingHearts from "@/components/FloatingHearts";
 import RelationshipTimeline from "@/components/RelationshipTimeline";
 import InternalLinks from "@/components/InternalLinks";
 import BlogPreview from "@/components/BlogPreview";
+import ShareButtons from "@/components/ShareButtons";
 import SEO from "@/components/SEO";
 import { Calendar } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -129,6 +130,7 @@ const RelationshipTimelinePage = () => {
           </div>
         </section>
 
+        <ShareButtons title="Relationship Timeline" description="Create a beautiful visual timeline of your love story!" />
         <BlogPreview />
 
         <InternalLinks currentPage="/relationship-timeline" />

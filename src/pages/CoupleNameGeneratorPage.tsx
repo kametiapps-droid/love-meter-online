@@ -4,6 +4,7 @@ import CoupleNameGenerator from "@/components/CoupleNameGenerator";
 import FloatingHearts from "@/components/FloatingHearts";
 import InternalLinks from "@/components/InternalLinks";
 import BlogPreview from "@/components/BlogPreview";
+import ShareButtons from "@/components/ShareButtons";
 import SEO from "@/components/SEO";
 import { Heart } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -134,6 +135,7 @@ const CoupleNameGeneratorPage = () => {
           </div>
         </section>
 
+        <ShareButtons title="Couple Name Generator" description="Create your fun celebrity-style couple name!" />
         <BlogPreview />
 
         <InternalLinks currentPage="/couple-name-generator" />

@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Heart, Stars, ClipboardList, Sun, Sparkles, Baby, BookOpen, Send, Calendar } from "lucide-react";
+import { Heart, Stars, ClipboardList, Sun, Sparkles, Baby, BookOpen, Send, Calendar, CalendarDays, Wand2 } from "lucide-react";
 
 interface InternalLinksProps {
   currentPage?: string;
@@ -15,9 +15,10 @@ const allTools = [
   { path: "/kids-name-generator", label: "Kids Name Generator", icon: Baby, description: "Find perfect baby names" },
   { path: "/love-letter-generator", label: "Love Letter Generator", icon: Send, description: "Write beautiful love letters" },
   { path: "/relationship-timeline", label: "Relationship Timeline", icon: Calendar, description: "Create your love story timeline" },
+  { path: "/date-calculator", label: "Date Calculator", icon: CalendarDays, description: "Calculate your time together" },
+  { path: "/stylish-name-generator", label: "Stylish Name Generator", icon: Wand2, description: "Create fancy Unicode name styles" },
   { path: "/love-poetry", label: "Love Poetry", icon: BookOpen, description: "Beautiful romantic love poems" },
   { path: "/blog", label: "Love Blog", icon: BookOpen, description: "Read love & relationship articles" },
-  { path: "/about", label: "About Us", icon: Heart, description: "Learn more about Love Calculator" },
 ];
 
 const InternalLinks = ({ currentPage }: InternalLinksProps) => {

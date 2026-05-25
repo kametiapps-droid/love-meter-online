@@ -4,6 +4,7 @@ import ZodiacCompatibility from "@/components/ZodiacCompatibility";
 import FloatingHearts from "@/components/FloatingHearts";
 import InternalLinks from "@/components/InternalLinks";
 import BlogPreview from "@/components/BlogPreview";
+import ShareButtons from "@/components/ShareButtons";
 import SEO from "@/components/SEO";
 import { Stars } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -146,6 +147,7 @@ const ZodiacCompatibilityPage = () => {
           </div>
         </section>
 
+        <ShareButtons title="Zodiac Compatibility" description="Check your star sign love match for free!" />
         <BlogPreview />
 
         <InternalLinks currentPage="/zodiac-compatibility" />

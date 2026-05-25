@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import InternalLinks from "@/components/InternalLinks";
 import BlogPreview from "@/components/BlogPreview";
+import ShareButtons from "@/components/ShareButtons";
 import FloatingHearts from "@/components/FloatingHearts";
 import { CalendarDays, Heart, Clock, Gift, Diff } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -354,6 +355,7 @@ const DateCalculatorPage = () => {
             </div>
           </section>
 
+          <ShareButtons title="Date Calculator" description="Calculate how long you've been together as a couple!" />
           <BlogPreview />
           <InternalLinks currentPage="/date-calculator" />
         </main>

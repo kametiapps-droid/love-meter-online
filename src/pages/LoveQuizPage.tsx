@@ -4,6 +4,7 @@ import LoveQuiz from "@/components/LoveQuiz";
 import FloatingHearts from "@/components/FloatingHearts";
 import InternalLinks from "@/components/InternalLinks";
 import BlogPreview from "@/components/BlogPreview";
+import ShareButtons from "@/components/ShareButtons";
 import SEO from "@/components/SEO";
 import { ClipboardList } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -146,6 +147,7 @@ const LoveQuizPage = () => {
           </div>
         </section>
 
+        <ShareButtons title="Love Style Quiz" description="Discover your love personality with this free quiz!" />
         <BlogPreview />
 
         <InternalLinks currentPage="/love-quiz" />

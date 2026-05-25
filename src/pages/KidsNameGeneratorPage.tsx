@@ -4,6 +4,7 @@ import KidsNameGenerator from "@/components/KidsNameGenerator";
 import FloatingHearts from "@/components/FloatingHearts";
 import InternalLinks from "@/components/InternalLinks";
 import BlogPreview from "@/components/BlogPreview";
+import ShareButtons from "@/components/ShareButtons";
 import SEO from "@/components/SEO";
 import { Baby } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -134,6 +135,7 @@ const KidsNameGeneratorPage = () => {
           </div>
         </section>
 
+        <ShareButtons title="Kids Name Generator" description="Find beautiful baby names inspired by astrology!" />
         <BlogPreview />
 
         <InternalLinks currentPage="/kids-name-generator" />

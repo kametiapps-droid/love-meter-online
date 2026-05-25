@@ -4,6 +4,7 @@ import DailyHoroscope from "@/components/DailyHoroscope";
 import FloatingHearts from "@/components/FloatingHearts";
 import InternalLinks from "@/components/InternalLinks";
 import BlogPreview from "@/components/BlogPreview";
+import ShareButtons from "@/components/ShareButtons";
 import SEO from "@/components/SEO";
 import { Sun } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -143,6 +144,7 @@ const DailyHoroscopePage = () => {
           </div>
         </section>
 
+        <ShareButtons title="Daily Love Horoscope" description="Read your free daily love horoscope now!" />
         <BlogPreview />
 
         <InternalLinks currentPage="/daily-horoscope" />
