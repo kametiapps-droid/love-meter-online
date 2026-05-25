@@ -212,23 +212,6 @@ const LoveQuiz = () => {
   return (
     <section id="quiz" className="w-full py-12 md:py-16 px-4">
       <div className="max-w-4xl mx-auto">
-        {/* Header */}
-        <div className="text-center mb-10">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary/80 backdrop-blur-sm mb-4">
-            <Sparkles className="w-4 h-4 text-primary" />
-            <span className="text-sm font-medium text-foreground">
-              Discover Your Style
-            </span>
-          </div>
-          <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Love Style Quiz
-          </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
-            Answer 7 fun questions to discover your unique love style and find out 
-            what kind of partner is perfect for you! 💝
-          </p>
-        </div>
-
         {/* Quiz Card */}
         <div className="card-romantic rounded-2xl p-6 md:p-10 max-w-2xl mx-auto">
           {!showResult ? (

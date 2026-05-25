@@ -231,19 +231,6 @@ const LoveLetterGenerator = () => {
   return (
     <section id="love-letter" className="py-12 px-4">
       <div className="max-w-3xl mx-auto">
-        <div className="text-center mb-8">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary/80 backdrop-blur-sm mb-4">
-            <Send className="w-4 h-4 text-primary" />
-            <span className="text-sm font-medium text-foreground">Love Letter Generator</span>
-          </div>
-          <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-3">
-            Write a Beautiful <span className="text-gradient">Love Letter</span> 💌
-          </h2>
-          <p className="text-muted-foreground max-w-xl mx-auto">
-            Choose a style, enter your loved one's name, and we'll create a heartfelt love letter you can share!
-          </p>
-        </div>
-
         <div className="card-romantic rounded-2xl p-6 md:p-8">
           <div className="space-y-6">
             <div>

@@ -99,23 +99,6 @@ const LoveFortuneBall = () => {
   return (
     <section id="fortune" className="w-full py-12 md:py-16 px-4">
       <div className="max-w-4xl mx-auto">
-        {/* Header */}
-        <div className="text-center mb-10">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary/80 backdrop-blur-sm mb-4">
-            <Sparkles className="w-4 h-4 text-purple-500" />
-            <span className="text-sm font-medium text-foreground">
-              Mystical Love Answers
-            </span>
-          </div>
-          <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Love Fortune Ball
-          </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
-            Ask any yes/no question about love and let the mystical fortune ball 
-            reveal your destiny! 🔮
-          </p>
-        </div>
-
         {/* Fortune Ball Card */}
         <div className="card-romantic rounded-2xl p-6 md:p-10 max-w-xl mx-auto">
           <div className="space-y-6">

@@ -225,23 +225,6 @@ const ZodiacCompatibility = () => {
   return (
     <section id="zodiac" className="w-full py-12 md:py-16 px-4">
       <div className="max-w-4xl mx-auto">
-        {/* Header */}
-        <div className="text-center mb-10">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary/80 backdrop-blur-sm mb-4">
-            <Star className="w-4 h-4 text-gold fill-gold" />
-            <span className="text-sm font-medium text-foreground">
-              Zodiac Love Match
-            </span>
-          </div>
-          <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Zodiac Sign Compatibility
-          </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
-            Discover how the stars align for your love story. Select your zodiac signs 
-            and uncover your cosmic compatibility!
-          </p>
-        </div>
-
         {/* Calculator Card */}
         <div className="card-romantic rounded-2xl p-8 md:p-10 max-w-xl mx-auto">
           <div className="space-y-6">

@@ -79,19 +79,6 @@ const RelationshipTimeline = () => {
   return (
     <section id="timeline" className="py-12 px-4">
       <div className="max-w-3xl mx-auto">
-        <div className="text-center mb-8">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary/80 backdrop-blur-sm mb-4">
-            <Calendar className="w-4 h-4 text-primary" />
-            <span className="text-sm font-medium text-foreground">Relationship Timeline</span>
-          </div>
-          <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-3">
-            Your <span className="text-gradient">Love Story</span> Timeline 📅
-          </h2>
-          <p className="text-muted-foreground max-w-xl mx-auto">
-            Document your special moments and create a beautiful visual timeline of your relationship journey!
-          </p>
-        </div>
-
         <div className="card-romantic rounded-2xl p-6 md:p-8">
           {!showTimeline ? (
             <div className="space-y-6">
