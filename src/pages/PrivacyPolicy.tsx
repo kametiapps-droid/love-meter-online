@@ -43,7 +43,7 @@ const PrivacyPolicy = () => {
           <div className="card-romantic rounded-2xl p-8 md:p-12">
             <div className="prose prose-pink max-w-none text-muted-foreground space-y-6">
               <p className="text-sm text-muted-foreground">
-                Last updated: January 27, 2026
+                Last updated: May 25, 2026
               </p>
 
               <section>
@@ -89,16 +89,27 @@ const PrivacyPolicy = () => {
               </section>
 
               <section>
-                <h2 className="text-xl font-semibold text-foreground mb-3">4. Third-Party Advertising</h2>
+                <h2 className="text-xl font-semibold text-foreground mb-3">4. Google AdSense &amp; Third-Party Advertising</h2>
                 <p>
-                  We use third-party advertising partners to display advertisements on our website. These partners may use cookies to serve ads based on your prior visits to our website and other websites.
+                  We use <strong>Google AdSense</strong> to display advertisements on our website. Google AdSense is an advertising service provided by Google LLC. Google and its partners may use cookies to serve ads based on your prior visits to our website and other websites across the internet.
                 </p>
                 <p className="mt-3">
-                  You may opt out of personalized advertising by visiting your browser's privacy settings or using{" "}
+                  Google's use of advertising cookies enables it and its partners to serve ads to you based on your visit to our site and/or other sites on the internet. You may opt out of personalized advertising by visiting{" "}
                   <a href="https://www.google.com/settings/ads" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
                     Google Ads Settings
+                  </a>{" "}
+                  or by visiting{" "}
+                  <a href="https://www.aboutads.info/choices/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+                    aboutads.info
+                  </a>
+                  . You can also opt out of a third-party vendor's use of cookies by visiting{" "}
+                  <a href="https://www.networkadvertising.org/choices/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+                    networkadvertising.org
                   </a>
                   .
+                </p>
+                <p className="mt-3">
+                  Our publisher ID is <strong>pub-9600331042737400</strong>. We comply with Google's Publisher Policies and do not click our own ads or encourage others to do so.
                 </p>
               </section>
 
