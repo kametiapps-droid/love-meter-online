@@ -50,10 +50,10 @@ const AboutUs = () => {
                   Our founder noticed that while there were countless tools for productivity, fitness, and finance, there were surprisingly few high-quality, free platforms dedicated to the most important aspect of human life — love and relationships. That gap inspired the creation of Love Calculator.
                 </p>
                 <p>
-                  From our humble beginnings as a single-page love calculator, we've grown into a platform offering over a dozen interactive tools — from zodiac compatibility checks and love quizzes to couple name generators, romantic poetry collections, and a comprehensive relationship blog with 22+ in-depth articles.
+                  From our humble beginnings as a single-page love calculator, we've grown into a platform offering 12 free interactive tools — from zodiac compatibility checks and love quizzes to couple name generators, romantic poetry collections, and a comprehensive relationship blog with 24 in-depth articles.
                 </p>
                 <p>
-                  Today, Love Calculator serves thousands of users from over 100 countries every month. Our growing global community of love enthusiasts inspires us to keep building new features, writing insightful content, and making the experience more delightful with every update. We're proud to be a go-to destination for anyone curious about love, compatibility, and romance.
+                  Our growing global community of love enthusiasts inspires us to keep building new features, writing insightful content, and making the experience more delightful with every update. We're proud to be a go-to destination for anyone curious about love, compatibility, and romance.
                 </p>
               </div>
             </div>
@@ -139,10 +139,10 @@ const AboutUs = () => {
               </div>
               <div className="card-romantic rounded-xl p-6">
                 <h3 className="font-semibold text-foreground mb-2 flex items-center gap-2">
-                  <BookOpen className="w-5 h-5 text-primary" /> Relationship Blog (22+ Articles)
+                  <BookOpen className="w-5 h-5 text-primary" /> Relationship Blog (24 Articles)
                 </h3>
                 <p className="text-muted-foreground text-sm">
-                  Our <Link to="/blog" className="text-primary hover:underline">Love & Relationship Blog</Link> features 22+ in-depth, expert-quality articles on topics including trust building, emotional intelligence, self-love, love languages, zodiac compatibility, anniversary ideas, love across cultures, romantic date ideas, healthy communication, and much more. New articles are published regularly to keep our content library growing.
+                  Our <Link to="/blog" className="text-primary hover:underline">Love & Relationship Blog</Link> features 24 in-depth, expert-quality articles on topics including trust building, emotional intelligence, self-love, love languages, zodiac compatibility, anniversary ideas, love across cultures, romantic date ideas, healthy communication, and much more. New articles are published regularly to keep our content library growing.
                 </p>
               </div>
               <div className="card-romantic rounded-xl p-6">
@@ -150,7 +150,7 @@ const AboutUs = () => {
                   <PenTool className="w-5 h-5 text-primary" /> Creative Romance Tools
                 </h3>
                 <p className="text-muted-foreground text-sm">
-                  Express your love creatively with our <Link to="/love-letter-generator" className="text-primary hover:underline">Love Letter Generator</Link>, browse our curated collection of 48+ <Link to="/love-poetry" className="text-primary hover:underline">Love Poems</Link>, or document your relationship milestones with the <Link to="/relationship-timeline" className="text-primary hover:underline">Relationship Timeline</Link> creator. These tools help you articulate your deepest feelings and celebrate your unique love story.
+                  Express your love creatively with our <Link to="/love-letter-generator" className="text-primary hover:underline">Love Letter Generator</Link>, browse our curated collection of 28 <Link to="/love-poetry" className="text-primary hover:underline">Love Poems</Link> (English &amp; Urdu), or document your relationship milestones with the <Link to="/relationship-timeline" className="text-primary hover:underline">Relationship Timeline</Link> creator. These tools help you articulate your deepest feelings and celebrate your unique love story.
                 </p>
               </div>
               <div className="card-romantic rounded-xl p-6">
@@ -212,9 +212,9 @@ const AboutUs = () => {
                 { emoji: "🔒", title: "Privacy Protected", desc: "We never store your personal data. No names, no results, no tracking of your inputs. Your love life stays private." },
                 { emoji: "📱", title: "Works Everywhere", desc: "Fully responsive design that works perfectly on phones, tablets, laptops, and desktops. Use our tools anywhere, anytime." },
                 { emoji: "🚀", title: "Fast & Reliable", desc: "Built with modern web technology for instant loading and smooth performance. No lag, no waiting, no frustration." },
-                { emoji: "📚", title: "Expert Content", desc: "22+ in-depth articles backed by relationship research, psychology, and cultural studies. Real value, not clickbait." },
+                { emoji: "📚", title: "Expert Content", desc: "24 in-depth articles backed by relationship research, psychology, and cultural studies. Real value, not clickbait." },
                 { emoji: "🔄", title: "Regularly Updated", desc: "We continuously add new tools, articles, and features based on user feedback and trending topics in love and relationships." },
-                { emoji: "🌐", title: "Global Community", desc: "Used by thousands of people from 100+ countries. Love truly knows no borders, and neither does Love Calculator." },
+                { emoji: "🌐", title: "Global Community", desc: "Used by people around the world. Love truly knows no borders, and neither does Love Calculator." },
                 { emoji: "♿", title: "Accessible to All", desc: "We build with accessibility in mind, ensuring our tools can be used by everyone regardless of ability." },
               ].map((item, i) => (
                 <div key={i} className="card-romantic rounded-lg p-4 flex items-start gap-3">
@@ -239,7 +239,7 @@ const AboutUs = () => {
               Loved Around the World
             </h2>
             <p className="text-muted-foreground leading-relaxed max-w-xl mx-auto mb-6">
-              Love Calculator is used by thousands of people from every corner of the globe. Our tools are accessible on any device — desktop, tablet, or mobile — and are completely free to use, with no registration required.
+              Love Calculator is used by people from every corner of the globe. Our tools are accessible on any device — desktop, tablet, or mobile — and are completely free to use, with no registration required.
             </p>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-lg mx-auto">
               <div className="card-romantic rounded-xl p-4">
@@ -247,16 +247,16 @@ const AboutUs = () => {
                 <p className="text-xs text-muted-foreground">Love Tools</p>
               </div>
               <div className="card-romantic rounded-xl p-4">
-                <p className="font-display text-2xl font-bold text-primary">22+</p>
+                <p className="font-display text-2xl font-bold text-primary">24</p>
                 <p className="text-xs text-muted-foreground">Blog Articles</p>
               </div>
               <div className="card-romantic rounded-xl p-4">
-                <p className="font-display text-2xl font-bold text-primary">48+</p>
+                <p className="font-display text-2xl font-bold text-primary">28</p>
                 <p className="text-xs text-muted-foreground">Love Poems</p>
               </div>
               <div className="card-romantic rounded-xl p-4">
-                <p className="font-display text-2xl font-bold text-primary">100+</p>
-                <p className="text-xs text-muted-foreground">Countries</p>
+                <p className="font-display text-2xl font-bold text-primary">100%</p>
+                <p className="text-xs text-muted-foreground">Free Forever</p>
               </div>
             </div>
           </div>
