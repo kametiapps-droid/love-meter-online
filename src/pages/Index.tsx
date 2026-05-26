@@ -12,9 +12,9 @@ import { Heart, Stars, Sparkles, Shield, Zap, Users, CheckCircle, ArrowRight, Fe
 
 const stats = [
   { value: "12+", label: "Free Love Tools" },
-  { value: "5M+", label: "Tests Taken" },
   { value: "100%", label: "Free Forever" },
-  { value: "4.9★", label: "User Rating" },
+  { value: "24/7", label: "Always Available" },
+  { value: "0", label: "Data Stored" },
 ];
 
 const howItWorks = [
