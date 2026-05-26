@@ -64,6 +64,13 @@ const Header = () => {
     return () => window.removeEventListener("scroll", onScroll);
   }, [isOpen]);
 
+  useEffect(() => {
+    if (!isOpen) return;
+    const onTouchMove = () => closeMenu();
+    document.addEventListener("touchmove", onTouchMove, { passive: true });
+    return () => document.removeEventListener("touchmove", onTouchMove);
+  }, [isOpen]);
+
   const checkScroll = () => {
     const el = scrollRef.current;
     if (!el) return;
