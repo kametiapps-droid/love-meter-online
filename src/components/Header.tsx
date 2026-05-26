@@ -56,10 +56,13 @@ const Header = () => {
   }, [isOpen]);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 8);
+    const onScroll = () => {
+      setScrolled(window.scrollY > 8);
+      if (isOpen) closeMenu();
+    };
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
-  }, []);
+  }, [isOpen]);
 
   const checkScroll = () => {
     const el = scrollRef.current;
