@@ -99,7 +99,7 @@ const Header = () => {
                 boxShadow: "0 4px 15px rgba(0,0,0,0.12)",
               }}
             >
-              <img src={logo} alt="Love Calculator Logo" className="w-7 h-7 object-contain" />
+              <img src={logo} alt="Love Calculator Logo" className="w-7 h-7 object-contain" width="28" height="28" fetchPriority="high" />
             </div>
             <div className="flex flex-col leading-none">
               <span className="font-bold text-white text-[15px] tracking-tight" style={{ textShadow: "0 1px 4px rgba(0,0,0,0.15)" }}>
@@ -256,7 +256,7 @@ const Header = () => {
                   className="w-9 h-9 rounded-xl flex items-center justify-center overflow-hidden"
                   style={{ background: "rgba(255,255,255,0.2)", border: "1.5px solid rgba(255,255,255,0.35)" }}
                 >
-                  <img src={logo} alt="Logo" className="w-7 h-7 object-contain" />
+                  <img src={logo} alt="Logo" className="w-7 h-7 object-contain" width="28" height="28" />
                 </div>
                 <div className="flex flex-col leading-none">
                   <span className="font-bold text-white text-[15px]">Love Calculator</span>

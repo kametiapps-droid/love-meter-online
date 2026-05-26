@@ -22,13 +22,19 @@
       onload="this.media='all'"
     />
 
-    <!-- Google tag (gtag.js) -->
-    <script defer src="https://www.googletagmanager.com/gtag/js?id=G-20WTE2KT7W"></script>
+    <!-- Google tag (gtag.js) — deferred, non-blocking -->
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-      gtag('config', 'G-20WTE2KT7W');
+      gtag('config', 'G-20WTE2KT7W', { send_page_view: false });
+      window.addEventListener('load', function() {
+        var s = document.createElement('script');
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=G-20WTE2KT7W';
+        s.async = true;
+        document.head.appendChild(s);
+        gtag('event', 'page_view');
+      });
     </script>
     
     <title>Love Calculator - Free Love Compatibility Test</title>
