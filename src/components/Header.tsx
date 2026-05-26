@@ -66,9 +66,17 @@ const Header = () => {
 
   useEffect(() => {
     if (!isOpen) return;
-    const onTouchMove = () => closeMenu();
+    let startY = 0;
+    const onTouchStart = (e: TouchEvent) => { startY = e.touches[0].clientY; };
+    const onTouchMove = (e: TouchEvent) => {
+      if (Math.abs(e.touches[0].clientY - startY) > 10) closeMenu();
+    };
+    document.addEventListener("touchstart", onTouchStart, { passive: true });
     document.addEventListener("touchmove", onTouchMove, { passive: true });
-    return () => document.removeEventListener("touchmove", onTouchMove);
+    return () => {
+      document.removeEventListener("touchstart", onTouchStart);
+      document.removeEventListener("touchmove", onTouchMove);
+    };
   }, [isOpen]);
 
   const checkScroll = () => {
