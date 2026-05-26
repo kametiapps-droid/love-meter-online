@@ -20,6 +20,8 @@ export default defineConfig(() => ({
   },
   build: {
     sourcemap: false,
+    target: "es2020",
+    cssCodeSplit: false,
     rollupOptions: {
       output: {
         manualChunks: {
@@ -36,6 +38,7 @@ export default defineConfig(() => ({
           ],
           "vendor-query": ["@tanstack/react-query"],
           "vendor-form": ["react-hook-form", "@hookform/resolvers", "zod"],
+          "vendor-icons": ["lucide-react"],
         },
       },
       input: {

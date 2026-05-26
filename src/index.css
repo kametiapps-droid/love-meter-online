@@ -57,14 +57,6 @@
     --shadow-button: 0 8px 30px -5px hsl(350 80% 50% / 0.4);
     --shadow-glow: 0 0 40px hsl(350 80% 60% / 0.3);
 
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
   .dark {
@@ -146,23 +138,15 @@
   }
 }
 
-/* Floating Hearts Animation */
+/* Floating Hearts Animation — GPU-compositable only (no layout triggers) */
 @keyframes float-heart {
   0%, 100% {
-    transform: translateY(0) rotate(0deg) scale(1);
+    transform: translateY(0px);
     opacity: 0.6;
   }
-  25% {
-    transform: translateY(-20px) rotate(5deg) scale(1.05);
-    opacity: 0.8;
-  }
   50% {
-    transform: translateY(-10px) rotate(-5deg) scale(1);
-    opacity: 0.7;
-  }
-  75% {
-    transform: translateY(-25px) rotate(3deg) scale(1.02);
-    opacity: 0.9;
+    transform: translateY(-22px);
+    opacity: 0.85;
   }
 }
 
@@ -208,6 +192,7 @@
 
 .animate-float-heart {
   animation: float-heart 4s ease-in-out infinite;
+  will-change: transform;
 }
 
 .animate-pulse-heart {
@@ -246,7 +231,3 @@
   padding-bottom: env(safe-area-inset-bottom, 0px);
 }
 
-/* Bottom nav spacing */
-main, .main-content {
-  padding-bottom: 4.5rem;
-}
