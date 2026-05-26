@@ -157,7 +157,7 @@ const Disclaimer = () => {
                   If you have any questions about this Disclaimer, please contact us at:
                 </p>
                 <p className="mt-2">
-                  <strong>Email:</strong> info@lovecalculator.space<br />
+                  <strong>Email:</strong> iftechstudio@gmail.com<br />
                   <strong>Website:</strong> lovecalculator.space
                 </p>
               </section>

@@ -162,7 +162,7 @@ const TermsOfService = () => {
                   If you have any questions about these Terms of Service, please contact us at:
                 </p>
                 <p className="mt-2">
-                  <strong>Email:</strong> terms@lovecalculator.space<br />
+                  <strong>Email:</strong> iftechstudio@gmail.com<br />
                   <strong>Website:</strong> lovecalculator.space
                 </p>
               </section>

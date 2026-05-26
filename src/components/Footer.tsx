@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import logo from "@/assets/logo.png";
-import { Heart, Stars, ClipboardList, Sun, Sparkles, Baby, Send, Calendar, Feather } from "lucide-react";
+import { Heart, Stars, ClipboardList, Sun, Sparkles, Baby, Send, Calendar, Feather, CalendarDays, Wand2 } from "lucide-react";
 import SocialShareBar from "./SocialShareBar";
 
 const toolLinks = [
@@ -14,6 +14,8 @@ const toolLinks = [
   { to: "/love-letter-generator", label: "Love Letters", icon: Send },
   { to: "/relationship-timeline", label: "Timeline", icon: Calendar },
   { to: "/love-poetry", label: "Poetry", icon: Feather },
+  { to: "/date-calculator", label: "Date Calculator", icon: CalendarDays },
+  { to: "/stylish-name-generator", label: "Stylish Names", icon: Wand2 },
 ];
 
 const blogLinks = [
