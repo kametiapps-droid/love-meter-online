@@ -42,41 +42,12 @@ const Header = () => {
   }, [location.pathname]);
 
   useEffect(() => {
-    if (isOpen) {
-      document.body.style.overflow = "hidden";
-      document.body.style.touchAction = "none";
-    } else {
-      document.body.style.overflow = "";
-      document.body.style.touchAction = "";
-    }
-    return () => {
-      document.body.style.overflow = "";
-      document.body.style.touchAction = "";
-    };
-  }, [isOpen]);
-
-  useEffect(() => {
     const onScroll = () => {
       setScrolled(window.scrollY > 8);
       if (isOpen) closeMenu();
     };
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
-  }, [isOpen]);
-
-  useEffect(() => {
-    if (!isOpen) return;
-    let startY = 0;
-    const onTouchStart = (e: TouchEvent) => { startY = e.touches[0].clientY; };
-    const onTouchMove = (e: TouchEvent) => {
-      if (Math.abs(e.touches[0].clientY - startY) > 10) closeMenu();
-    };
-    document.addEventListener("touchstart", onTouchStart, { passive: true });
-    document.addEventListener("touchmove", onTouchMove, { passive: true });
-    return () => {
-      document.removeEventListener("touchstart", onTouchStart);
-      document.removeEventListener("touchmove", onTouchMove);
-    };
   }, [isOpen]);
 
   const checkScroll = () => {
