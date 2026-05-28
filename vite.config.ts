@@ -2,7 +2,6 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
 import path from "path";
 
-// https://vitejs.dev/config/
 export default defineConfig(() => ({
   server: {
     host: "0.0.0.0",
@@ -12,7 +11,24 @@ export default defineConfig(() => ({
       overlay: false,
     },
   },
-  plugins: [react()],
+  plugins: [
+    react(),
+    {
+      name: "async-main-css",
+      apply: "build" as const,
+      transformIndexHtml: {
+        order: "post" as const,
+        handler(html: string) {
+          return html.replace(
+            /<link rel="stylesheet" crossorigin href="(\/assets\/[^"]+\.css)">/g,
+            (_: string, href: string) =>
+              `<link rel="preload" as="style" href="${href}" onload="this.onload=null;this.rel='stylesheet'">` +
+              `<noscript><link rel="stylesheet" crossorigin href="${href}"></noscript>`
+          );
+        },
+      },
+    },
+  ],
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
@@ -26,16 +42,6 @@ export default defineConfig(() => ({
       output: {
         manualChunks: {
           "vendor-react": ["react", "react-dom", "react-router-dom"],
-          "vendor-ui": [
-            "@radix-ui/react-dialog",
-            "@radix-ui/react-dropdown-menu",
-            "@radix-ui/react-select",
-            "@radix-ui/react-tabs",
-            "@radix-ui/react-tooltip",
-            "@radix-ui/react-accordion",
-            "@radix-ui/react-popover",
-            "@radix-ui/react-slider",
-          ],
           "vendor-query": ["@tanstack/react-query"],
           "vendor-form": ["react-hook-form", "@hookform/resolvers", "zod"],
           "vendor-icons": ["lucide-react"],
@@ -50,7 +56,6 @@ export default defineConfig(() => ({
         "love-fortune-ball": path.resolve(__dirname, "love-fortune-ball.html"),
         "couple-name-generator": path.resolve(__dirname, "couple-name-generator.html"),
         "kids-name-generator": path.resolve(__dirname, "kids-name-generator.html"),
-        
         "love-letter-generator": path.resolve(__dirname, "love-letter-generator.html"),
         "relationship-timeline": path.resolve(__dirname, "relationship-timeline.html"),
         "love-poetry": path.resolve(__dirname, "love-poetry.html"),

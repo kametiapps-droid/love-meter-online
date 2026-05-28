@@ -1,12 +1,9 @@
-import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
-import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { lazy, Suspense } from "react";
+import { lazy, Suspense, useEffect, useState } from "react";
 import ScrollToTop from "./components/ScrollToTop";
 import Index from "./pages/Index";
-import CookieConsent from "./components/CookieConsent";
 
 // Lazy load all pages except Index for performance
 const LoveCalculatorPage = lazy(() => import("./pages/LoveCalculatorPage"));
@@ -55,6 +52,8 @@ const AboutUs = lazy(() => import("./pages/AboutUs"));
 const DateCalculatorPage = lazy(() => import("./pages/DateCalculatorPage"));
 const StylishNameGeneratorPage = lazy(() => import("./pages/StylishNameGeneratorPage"));
 
+const CookieConsent = lazy(() => import("./components/CookieConsent"));
+
 const PageLoader = () => (
   <div className="min-h-screen flex items-center justify-center romantic-gradient-bg">
     <div className="animate-pulse text-primary text-lg">Loading...</div>
@@ -72,10 +71,15 @@ const queryClient = new QueryClient({
   },
 });
 
-const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Toaster />
+const App = () => {
+  const [showCookie, setShowCookie] = useState(false);
+  useEffect(() => {
+    const t = setTimeout(() => setShowCookie(true), 2000);
+    return () => clearTimeout(t);
+  }, []);
+
+  return (
+    <QueryClientProvider client={queryClient}>
       <Sonner />
       <BrowserRouter future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
         <ScrollToTop />
@@ -128,10 +132,14 @@ const App = () => (
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Suspense>
-        <CookieConsent />
+        {showCookie && (
+          <Suspense fallback={null}>
+            <CookieConsent />
+          </Suspense>
+        )}
       </BrowserRouter>
-    </TooltipProvider>
-  </QueryClientProvider>
-);
+    </QueryClientProvider>
+  );
+};
 
 export default App;

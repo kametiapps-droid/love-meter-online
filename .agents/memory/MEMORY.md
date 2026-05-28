@@ -1,0 +1,2 @@
+- [Vite5 async CSS plugin](vite5-async-css.md) — use `order:"post"` + `handler()` not `enforce:"post"` + `transform()` for transformIndexHtml in Vite 5
+- [Radix UI bundling strategy](radix-bundling.md) — removing Radix from manualChunks auto-splits it into lazy page chunks; saves ~32KB gzip on homepage initial load

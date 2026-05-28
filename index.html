@@ -8,11 +8,14 @@
     <!-- Performance: preconnect for analytics only (fonts are self-hosted) -->
     <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin />
     <link rel="preconnect" href="https://www.google-analytics.com" crossorigin />
-    <!-- Self-hosted fonts — preload critical weights to eliminate network dependency chain -->
+    <!-- Preload only Poppins-400 (body font, 7.7KB). Playfair uses font-display:swap so no preload needed -->
     <link rel="preload" as="font" type="font/woff2" href="/fonts/poppins-400.woff2" crossorigin />
-    <link rel="preload" as="font" type="font/woff2" href="/fonts/playfair.woff2" crossorigin />
-    <!-- Inline @font-face — eliminates render-blocking font stylesheet request entirely -->
+    <!-- Critical inline styles: prevents blank-white flash before async CSS loads, and defines @font-face -->
     <style>
+      *,::before,::after{box-sizing:border-box}
+      html{line-height:1.5;-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+      body{margin:0;background:hsl(350,100%,98%);font-family:'Poppins',system-ui,sans-serif;color:hsl(350,40%,20%)}
+      #root{min-height:100vh}
       @font-face{font-family:'Playfair Display';font-style:normal;font-weight:400 700;font-display:swap;src:url('/fonts/playfair.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
       @font-face{font-family:'Poppins';font-style:normal;font-weight:300;font-display:swap;src:url('/fonts/poppins-300.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
       @font-face{font-family:'Poppins';font-style:normal;font-weight:400;font-display:swap;src:url('/fonts/poppins-400.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
@@ -45,11 +48,11 @@
     <link rel="canonical" href="https://www.lovecalculator.space/" />
     <!-- canonical is also set dynamically per page via react-helmet-async -->
 
-    <!-- Favicon & App Icons -->
+    <!-- Favicon & App Icons — favicon.ico is 4KB (was 268KB) -->
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon.png" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/logo.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-32.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/logo.webp" />
     <link rel="shortcut icon" href="/favicon.ico" />
     <link rel="manifest" href="/manifest.json" />
     <meta name="theme-color" content="#E91E63" />
