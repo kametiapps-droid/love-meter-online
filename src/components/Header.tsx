@@ -1,4 +1,5 @@
-import logo from "@/assets/logo.png";
+const logoWebP = "/logo.webp";
+const logoPng = "/logo-56.png";
 import { Link, useLocation } from "react-router-dom";
 import { useState, useEffect, useRef } from "react";
 import {
@@ -107,7 +108,10 @@ const Header = () => {
                 boxShadow: "0 4px 15px rgba(0,0,0,0.12)",
               }}
             >
-              <img src={logo} alt="Love Calculator Logo" className="w-7 h-7 object-contain" width="28" height="28" fetchpriority="high" />
+              <picture>
+                <source srcSet={logoWebP} type="image/webp" />
+                <img src={logoPng} alt="Love Calculator Logo" className="w-7 h-7 object-contain" width="28" height="28" fetchpriority="high" />
+              </picture>
             </div>
             <div className="flex flex-col leading-none">
               <span className="font-bold text-white text-[15px] tracking-tight" style={{ textShadow: "0 1px 4px rgba(0,0,0,0.15)" }}>
@@ -264,7 +268,10 @@ const Header = () => {
                   className="w-9 h-9 rounded-xl flex items-center justify-center overflow-hidden"
                   style={{ background: "rgba(255,255,255,0.2)", border: "1.5px solid rgba(255,255,255,0.35)" }}
                 >
-                  <img src={logo} alt="Logo" className="w-7 h-7 object-contain" width="28" height="28" />
+                  <picture>
+                    <source srcSet={logoWebP} type="image/webp" />
+                    <img src={logoPng} alt="Logo" className="w-7 h-7 object-contain" width="28" height="28" />
+                  </picture>
                 </div>
                 <div className="flex flex-col leading-none">
                   <span className="font-bold text-white text-[15px]">Love Calculator</span>

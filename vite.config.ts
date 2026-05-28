@@ -21,7 +21,7 @@ export default defineConfig(() => ({
   build: {
     sourcemap: false,
     target: "es2020",
-    cssCodeSplit: false,
+    cssCodeSplit: true,
     rollupOptions: {
       output: {
         manualChunks: {
