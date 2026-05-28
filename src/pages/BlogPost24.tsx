@@ -15,7 +15,7 @@ const BlogPost24 = () => {
     <div className="min-h-screen flex flex-col romantic-gradient-bg relative overflow-hidden">
       <SEO
         title="True Love Test: 12 Signs You've Found The One (2026 Guide)"
-        description="Take the ultimate true love test. Discover 12 powerful signs that prove you've found The One — based on psychology, compatibility, and real relationship science. Free guide."
+        description="Take the ultimate true love test. Discover 12 powerful signs you've found The One — based on psychology, compatibility, and real relationship science."
         path="/blog/true-love-test-signs"
         type="article"
         articleSchema={true}

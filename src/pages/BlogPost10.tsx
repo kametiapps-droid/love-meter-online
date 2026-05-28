@@ -15,7 +15,7 @@ const BlogPost10 = () => {
     <div className="min-h-screen flex flex-col romantic-gradient-bg relative overflow-hidden">
       <SEO
         title="The Science of Attraction - Why We Fall in Love"
-        description="Explore the fascinating science behind attraction and love. Learn about the psychology, biology, and chemistry that drive human connection and romantic feelings."
+        description="Explore the science behind attraction and love. Learn about the psychology, biology, and chemistry that drive human connection and romantic feelings."
         path="/blog/science-of-attraction"
         type="article"
         articleSchema={true}

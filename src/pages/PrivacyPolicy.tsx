@@ -11,7 +11,7 @@ const PrivacyPolicy = () => {
     <div className="min-h-screen flex flex-col romantic-gradient-bg relative overflow-hidden">
       <SEO
         title="Privacy Policy - Love Calculator"
-        description="Read our privacy policy to understand how Love Calculator collects, uses, and protects your personal information."
+        description="Read our Privacy Policy to understand how Love Calculator collects, uses, and protects your personal information and data when you use our free tools."
         path="/privacy-policy"
       />
       <FloatingHearts />

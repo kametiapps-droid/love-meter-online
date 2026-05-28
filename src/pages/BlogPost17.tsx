@@ -15,7 +15,7 @@ const BlogPost17 = () => {
     <div className="min-h-screen flex flex-col romantic-gradient-bg relative overflow-hidden">
       <SEO
         title="How to Apologize in a Relationship - Say Sorry"
-        description="Learn how to give a sincere, meaningful apology that heals your relationship. Expert tips on taking responsibility, rebuilding trust, and growing stronger together."
+        description="Learn how to give a sincere apology that heals your relationship. Expert tips on taking responsibility, rebuilding trust, and growing stronger together."
         path="/blog/how-to-apologize-relationship"
         type="article"
         articleSchema={true}

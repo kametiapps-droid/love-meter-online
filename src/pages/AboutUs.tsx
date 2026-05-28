@@ -11,7 +11,7 @@ const AboutUs = () => {
     <div className="min-h-screen flex flex-col romantic-gradient-bg relative overflow-hidden">
       <SEO
         title="About Us - Love Calculator | Our Mission, Story & Team"
-        description="Learn about Love Calculator, our passionate team, our mission to spread love, and the story behind your favorite free online love compatibility tools since 2024."
+        description="Learn about Love Calculator, our team, our mission to spread love, and the story behind your favourite free online love compatibility tools since 2024."
         path="/about"
       />
       <FloatingHearts />

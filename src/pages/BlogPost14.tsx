@@ -15,7 +15,7 @@ const BlogPost14 = () => {
     <div className="min-h-screen flex flex-col romantic-gradient-bg relative overflow-hidden">
       <SEO
         title="Healthy Communication in Relationships - 20 Tips"
-        description="Master the art of healthy communication in your relationship. Learn active listening, conflict resolution, and emotional intelligence skills that strengthen love."
+        description="Master healthy communication in your relationship. Learn active listening, conflict resolution, and emotional intelligence skills that strengthen love bonds."
         path="/blog/healthy-communication-relationships"
         type="article"
         articleSchema={true}

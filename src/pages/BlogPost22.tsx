@@ -15,7 +15,7 @@ const BlogPost22 = () => {
     <div className="min-h-screen flex flex-col romantic-gradient-bg relative overflow-hidden">
       <SEO
         title="Love Around the World - How Cultures Express Love"
-        description="Explore fascinating love traditions, dating customs, and romantic expressions from cultures around the globe. From arranged marriages to love locks, discover how the world loves."
+        description="Explore love traditions and romantic customs from cultures around the globe. From arranged marriages to love locks, discover how the world expresses love."
         path="/blog/love-different-cultures"
         type="article"
         articleSchema={true}

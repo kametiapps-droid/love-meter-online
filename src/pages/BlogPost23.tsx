@@ -15,7 +15,7 @@ const BlogPost23 = () => {
     <div className="min-h-screen flex flex-col romantic-gradient-bg relative overflow-hidden">
       <SEO
         title="Love Compatibility by Name and Date of Birth: Complete Guide 2026"
-        description="Discover how love compatibility is calculated using your name and date of birth. Free love calculator guide using numerology, FLAMES, zodiac and birthdate matching to find your true love percentage."
+        description="Discover how love compatibility is calculated by name and date of birth. Our free guide covers numerology, FLAMES, zodiac signs, and birthdate matching methods."
         path="/blog/love-compatibility-name-date-birth"
         type="article"
         articleSchema={true}
