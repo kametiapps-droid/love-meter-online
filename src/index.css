@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Self-hosted fonts loaded via /fonts/fonts.css in index.html */
+
 @layer base {
   :root {
     /* Romantic Rose Theme */
