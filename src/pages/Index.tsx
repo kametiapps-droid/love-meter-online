@@ -1,14 +1,16 @@
+import { lazy, Suspense, useState, useEffect } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import LoveCalculator from "@/components/LoveCalculator";
-import FloatingHearts from "@/components/FloatingHearts";
-import HomeSEOContent from "@/components/HomeSEOContent";
-import ToolCards from "@/components/ToolCards";
-import BlogPreview from "@/components/BlogPreview";
-import ShareButtons from "@/components/ShareButtons";
 import SEO from "@/components/SEO";
 import { Link } from "react-router-dom";
 import { Heart, Stars, Sparkles, Shield, Zap, Users, CheckCircle, ArrowRight, Feather, Send, CalendarDays } from "lucide-react";
+
+const FloatingHearts = lazy(() => import("@/components/FloatingHearts"));
+const HomeSEOContent = lazy(() => import("@/components/HomeSEOContent"));
+const ToolCards = lazy(() => import("@/components/ToolCards"));
+const BlogPreview = lazy(() => import("@/components/BlogPreview"));
+const ShareButtons = lazy(() => import("@/components/ShareButtons"));
 
 const stats = [
   { value: "12+", label: "Free Love Tools" },
@@ -40,6 +42,18 @@ const loveTips = [
 ];
 
 const Index = () => {
+  const [heartsReady, setHeartsReady] = useState(false);
+
+  useEffect(() => {
+    const id = requestIdleCallback
+      ? requestIdleCallback(() => setHeartsReady(true), { timeout: 2000 })
+      : setTimeout(() => setHeartsReady(true), 1500) as unknown as number;
+    return () => {
+      if (requestIdleCallback) cancelIdleCallback(id as number);
+      else clearTimeout(id as unknown as ReturnType<typeof setTimeout>);
+    };
+  }, []);
+
   return (
     <div className="min-h-screen flex flex-col romantic-gradient-bg relative overflow-hidden">
       <SEO
@@ -59,7 +73,13 @@ const Index = () => {
           { question: "Can I share my results?", answer: "Yes! After calculating your love percentage, you can easily share the results with friends, family, or your special someone using the share button." },
         ]}
       />
-      <FloatingHearts />
+
+      {heartsReady && (
+        <Suspense fallback={null}>
+          <FloatingHearts />
+        </Suspense>
+      )}
+
       <Header />
 
       <main className="flex-1 relative z-10">
@@ -128,7 +148,9 @@ const Index = () => {
         </section>
 
         {/* ── SEO Content (What Is / How Works / Real / Why Us) ── */}
-        <HomeSEOContent />
+        <Suspense fallback={null}>
+          <HomeSEOContent />
+        </Suspense>
 
         {/* ── Features Grid ── */}
         <section className="py-12 px-4 bg-secondary/30">
@@ -159,7 +181,9 @@ const Index = () => {
         </section>
 
         {/* ── Tool Cards ── */}
-        <ToolCards />
+        <Suspense fallback={null}>
+          <ToolCards />
+        </Suspense>
 
         {/* ── Love Tips ── */}
         <section className="py-14 px-4 bg-secondary/20">
@@ -212,10 +236,14 @@ const Index = () => {
         </section>
 
         {/* ── Share Buttons ── */}
-        <ShareButtons title="Love Calculator" description="Free love compatibility test by name — try it now!" />
+        <Suspense fallback={null}>
+          <ShareButtons title="Love Calculator" description="Free love compatibility test by name — try it now!" />
+        </Suspense>
 
         {/* ── Blog Preview ── */}
-        <BlogPreview />
+        <Suspense fallback={null}>
+          <BlogPreview />
+        </Suspense>
 
         {/* ── FAQ ── */}
         <section className="py-12 px-4 bg-secondary/30">

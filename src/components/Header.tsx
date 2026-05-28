@@ -53,8 +53,12 @@ const Header = () => {
   const checkScroll = () => {
     const el = scrollRef.current;
     if (!el) return;
-    setCanScrollLeft(el.scrollLeft > 8);
-    setCanScrollRight(el.scrollLeft < el.scrollWidth - el.clientWidth - 8);
+    requestAnimationFrame(() => {
+      if (!scrollRef.current) return;
+      const { scrollLeft, scrollWidth, clientWidth } = scrollRef.current;
+      setCanScrollLeft(scrollLeft > 8);
+      setCanScrollRight(scrollLeft < scrollWidth - clientWidth - 8);
+    });
   };
 
   useEffect(() => {
@@ -62,7 +66,11 @@ const Header = () => {
     if (!el) return;
     checkScroll();
     el.addEventListener("scroll", checkScroll, { passive: true });
-    return () => el.removeEventListener("scroll", checkScroll);
+    window.addEventListener("resize", checkScroll, { passive: true });
+    return () => {
+      el.removeEventListener("scroll", checkScroll);
+      window.removeEventListener("resize", checkScroll);
+    };
   }, []);
 
   const scrollBy = (dir: "left" | "right") => {
@@ -99,7 +107,7 @@ const Header = () => {
                 boxShadow: "0 4px 15px rgba(0,0,0,0.12)",
               }}
             >
-              <img src={logo} alt="Love Calculator Logo" className="w-7 h-7 object-contain" width="28" height="28" fetchPriority="high" />
+              <img src={logo} alt="Love Calculator Logo" className="w-7 h-7 object-contain" width="28" height="28" fetchpriority="high" />
             </div>
             <div className="flex flex-col leading-none">
               <span className="font-bold text-white text-[15px] tracking-tight" style={{ textShadow: "0 1px 4px rgba(0,0,0,0.15)" }}>
